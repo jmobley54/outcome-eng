@@ -1,0 +1,9 @@
+git@bitbucket.org:aura_software/wp-bright-plugin.git 4a0e92f
+----
+commit 4a0e92fc674574a2c370aaeb697ffdf02dee6f10
+Author: Tyler Lesmann <redhatcat@gmail.com>
+Date:   Wed Nov 16 12:24:10 2016 -0700
+
+    Hotfix for Issue #23
+(installable): bright
+(repo): git@bitbucket.org:aura_software/wp-bright-plugin.git

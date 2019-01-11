@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "bright-courses": {
+      "title": "Bright Courses",
+      "type": "array",
+      "uniqueItems": "true",
+      "items": {
+        "title": "Bright Course",
+        "type": "object",
+        "uniqueItems": true,
+        "properties": {
+          "course-id": {
+            "type": "string"
+          },
+          "quantity-multiplier": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "course-id"
+        ]
+      }
+    },
+    "variations": {
+      "title": "Product Variation Data",
+      "type": "array",
+      "uniqueItems": "true",
+      "items": {
+        "title": "Variation",
+        "type": "object",
+        "uniqueItems": true,
+        "properties": {
+          "variationName": {
+            "type": "string"
+          },
+          "courseGuids": {
+            "type": "array",
+            "uniqueItems": "true",
+            "items": {
+              "title": "courseGuid",
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "variationName"
+        ]
+      }
+    }
+  }
+}

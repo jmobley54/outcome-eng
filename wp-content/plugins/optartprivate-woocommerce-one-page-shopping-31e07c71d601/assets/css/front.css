@@ -1,0 +1,25 @@
+/*
+    Created on : Dec 27, 2013, 8:18:21 PM
+    Author     : piotr
+*/
+
+.one-page-shopping-section > .one-page-shopping-header {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.one-page-shopping-section .shipping_calculator {
+    display: none;
+}
+
+#one-page-shopping-checkout, #one-page-shopping-cart {
+    display: none;
+}
+
+#one-page-shopping-cart-content .cart-collaterals {
+    /*display: none;*/
+}
+
+#one-page-shopping-cart-content .coupon {
+    display: none;
+}

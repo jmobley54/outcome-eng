@@ -1,0 +1,38 @@
++----------------------------------------------+------------------------------------------------------------------------+-------------+
+| concat('https://www.justculture.org/?p=',ID) | post_title                                                             | post_status |
++----------------------------------------------+------------------------------------------------------------------------+-------------+
+| https://www.justculture.org/?p=3165          | About Outcome Engenuity                                                | publish     |
+| https://www.justculture.org/?p=6652          | Creating a Just Culture                                                | publish     |
+| https://www.justculture.org/?p=7158          | Outcome Engenuity Advisors                                             | publish     |
+| https://www.justculture.org/?p=8166          | Just Culture News                                                      | publish     |
+| https://www.justculture.org/?p=8183          | Contact                                                                | publish     |
+| https://www.justculture.org/?p=8216          | Live Training Events                                                   | draft       |
+| https://www.justculture.org/?p=8243          | Solutions                                                              | publish     |
+| https://www.justculture.org/?p=8347          | smile parallax                                                         | publish     |
+| https://www.justculture.org/?p=8470          | Event Investigation - Root Cause Analysis The Just Culture Way         | publish     |
+| https://www.justculture.org/?p=8513          | Human Centered Systems & Just Culture Courses                          | publish     |
+| https://www.justculture.org/?p=8575          | Healthcare Associations Take Charge With Just Culture Initiatives      | publish     |
+| https://www.justculture.org/?p=8672          | Fundamentals Of Just Culture -Atlanta                                  | draft       |
+| https://www.justculture.org/?p=8742          | Just Culture for Managers Online Course - Industry Version             | publish     |
+| https://www.justculture.org/?p=8796          | The Just Culture Certified Instructor                                  | publish     |
+| https://www.justculture.org/?p=8912          | Amazon Purchase Of Online Training Tools                               | publish     |
+| https://www.justculture.org/?p=8931          | the just culture community                                             | publish     |
+| https://www.justculture.org/?p=9012          | Just Culture Certification Course                                      | draft       |
+| https://www.justculture.org/?p=9030          | On-Site Training                                                       | publish     |
+| https://www.justculture.org/?p=9091          | The Certified Instructor Program                                       | publish     |
+| https://www.justculture.org/?p=9108          | New Zealand agency identifies behaviors, others' 'Mistakes'            | publish     |
+| https://www.justculture.org/?p=9137          | The Just Culture Organizational Benchmark™ Survey                      | publish     |
+| https://www.justculture.org/?p=9144          | AONE-$500 Discount                                                     | publish     |
+| https://www.justculture.org/?p=9146          | August 4-6, Jacksonville, FL                                           | publish     |
+| https://www.justculture.org/?p=9216          | ASHRM-$500 Discount                                                    | publish     |
+| https://www.justculture.org/?p=9251          | November 3-5, Flushing, New York - Just Culture Certification Course   | publish     |
+| https://www.justculture.org/?p=9298          | November 3-5, Flushing, NY                                             | publish     |
+| https://www.justculture.org/?p=9307          | Event Investigation - Root Cause Analysis Course                       | publish     |
+| https://www.justculture.org/?p=9376          | November 3-5, Columbia, SC - Just Culture Certification Course         | publish     |
+| https://www.justculture.org/?p=9386          | December 2-4, St. Louis, MO - Just Culture Certification Course        | publish     |
+| https://www.justculture.org/?p=9406          | November 3-5, Pomona, CA - Just Culture Physician Certification Course | publish     |
+| https://www.justculture.org/?p=9447          | November 3-5, Fountain Valley, CA - Just Culture Certification Course  | publish     |
+| https://www.justculture.org/?p=9496          | December 1-3, Newark, DE - Just Culture Physician Certification Course | publish     |
+| https://www.justculture.org/?p=9505          | September 21-23, Bethlehem, PA - Just Culture Certification Course     | publish     |
+| https://www.justculture.org/?p=10526         | December 15-17, Dallas - Just Culture Certification Course             | publish     |
++----------------------------------------------+------------------------------------------------------------------------+-------------+

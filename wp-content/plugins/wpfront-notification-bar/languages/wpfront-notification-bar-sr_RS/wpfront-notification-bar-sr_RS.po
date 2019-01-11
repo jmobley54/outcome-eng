@@ -1,0 +1,502 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPFront Notification Bar\n"
+"POT-Creation-Date: 2014-03-12 17:05-0700\n"
+"PO-Revision-Date: 2014-10-06 10:51+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: WPFront <contact@wpfront.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/base/class-wpfront-base-menu.php:52
+msgid "Name"
+msgstr "Naziv"
+
+#: ../classes/base/class-wpfront-base-menu.php:53
+msgid "Version"
+msgstr "Verzija"
+
+#: ../classes/base/class-wpfront-base-menu.php:54
+msgid "Rating"
+msgstr "Ocene"
+
+#: ../classes/base/class-wpfront-base-menu.php:55
+msgid "Description"
+msgstr "Opis"
+
+#: ../classes/base/class-wpfront-base-menu.php:69
+#, php-format
+msgid "based on %s rating(s)"
+msgstr "Na osnovu %s ocena(s)"
+
+#: ../classes/base/class-wpfront-base-menu.php:105
+msgid "Unable to communicate with WordPress.org"
+msgstr "Ne može da ostvari komunikaciju sa WordPress.org"
+
+#: ../classes/base/class-wpfront-base-menu.php:123
+#: ../classes/base/class-wpfront-base-menu.php:217
+msgid "WPFront Plugins"
+msgstr "WPFront Plugins"
+
+#: ../classes/base/class-wpfront-base-menu.php:147
+#, php-format
+msgid "By %s"
+msgstr "Autori: %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:154
+#, php-format
+msgid "More information about %s"
+msgstr "Više informacija o:%s"
+
+#: ../classes/base/class-wpfront-base-menu.php:154
+msgid "Details"
+msgstr "Detalji"
+
+#: ../classes/base/class-wpfront-base-menu.php:163
+#, php-format
+msgid "Install %s"
+msgstr "Instaliraj %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:163
+msgid "Install Now"
+msgstr "Instaliraj sada"
+
+#: ../classes/base/class-wpfront-base-menu.php:168
+#, php-format
+msgid "Update to version %s"
+msgstr "Ažuriraj na %s verziju"
+
+#: ../classes/base/class-wpfront-base-menu.php:168
+msgid "Update Now"
+msgstr "Ažuriraj sada"
+
+#: ../classes/base/class-wpfront-base-menu.php:173
+msgid "This plugin is already installed and is up to date"
+msgstr "Ovaj plugin već je instaliran i ažuriran "
+
+#: ../classes/base/class-wpfront-base-menu.php:173
+msgid "Installed"
+msgstr "Instaliran"
+
+#: ../classes/base/class-wpfront-base-menu.php:175
+#: ../classes/base/class-wpfront-base.php:105
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: ../classes/base/class-wpfront-base-menu.php:177
+msgid "Activate"
+msgstr "Aktiviraj"
+
+#: ../classes/base/class-wpfront-base-menu.php:199
+msgid "Feedback"
+msgstr "Povratne informacije"
+
+#: ../classes/base/class-wpfront-base-menu.php:216
+msgid "WPFront"
+msgstr "WPFront"
+
+#: ../classes/base/class-wpfront-base-menu.php:217
+msgid "All Plugins"
+msgstr "Svi plugin-i"
+
+#: ../classes/base/class-wpfront-base.php:130
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nemate odgovarajuće dozvole za pristup ovoj stranici."
+
+#: ../classes/base/class-wpfront-base.php:150
+msgid ""
+"If you have a caching plugin, clear the cache for the new settings to take "
+"effect."
+msgstr ""
+"Ako imate keširan plugin, očistite keš da bi nova podešavanja imala efekta."
+
+#: ../classes/base/class-wpfront-base.php:168
+msgid "Settings Description"
+msgstr "Opis podešavanja"
+
+#: ../classes/base/class-wpfront-base.php:170
+msgid "Plugin FAQ"
+msgstr "Često postavljana pitanja o plugin-u"
+
+#: ../classes/base/class-wpfront-base.php:172
+msgid "Feature Request"
+msgstr "Zahtev za funkcijama"
+
+#: ../classes/base/class-wpfront-base.php:174
+msgid "Report Bug"
+msgstr "Obavestite nas o greškama"
+
+#: ../classes/base/class-wpfront-base.php:176
+msgid "Write Review"
+msgstr "Napišite pregled"
+
+#: ../classes/base/class-wpfront-base.php:178
+msgid "Contact Me (syam@wpfront.com)"
+msgstr "Pišite mi (syam@wpfront.com)"
+
+#: ../classes/base/class-wpfront-base.php:180
+msgid "Buy me a Beer or Coffee"
+msgstr "Častite me pivom ili kafom"
+
+#: ../classes/base/class-wpfront-base.php:197
+msgid "Save Changes"
+msgstr "Sačuvaj izmene"
+
+#: ../classes/class-wpfront-notification-bar-options.php:41
+msgid "Enabled"
+msgstr "Štikliran"
+
+#: ../classes/class-wpfront-notification-bar-options.php:42
+msgid "Position"
+msgstr "Pozicija"
+
+#: ../classes/class-wpfront-notification-bar-options.php:43
+msgid "Bar Height"
+msgstr "Visina trake sa menijem"
+
+#: ../classes/class-wpfront-notification-bar-options.php:44
+msgid "Message Text"
+msgstr "Tekst poruke"
+
+#: ../classes/class-wpfront-notification-bar-options.php:45
+msgid "Display After"
+msgstr "Prikaži posle"
+
+#: ../classes/class-wpfront-notification-bar-options.php:46
+msgid "Animation Duration"
+msgstr "Trajanje animacije"
+
+#: ../classes/class-wpfront-notification-bar-options.php:47
+msgid "Display Close Button"
+msgstr "Prikaži taster “Zatvori”"
+
+#: ../classes/class-wpfront-notification-bar-options.php:48
+msgid "Auto Close After"
+msgstr "Automatski zatvori posle"
+
+#: ../classes/class-wpfront-notification-bar-options.php:49
+msgid "Display Button"
+msgstr "Prikaži taster"
+
+#: ../classes/class-wpfront-notification-bar-options.php:50
+msgid "Button Text"
+msgstr "Tekst tastera"
+
+#: ../classes/class-wpfront-notification-bar-options.php:51
+msgid "Button Action"
+msgstr "Aktivnost tastera"
+
+#: ../classes/class-wpfront-notification-bar-options.php:52
+msgid "Open URL:"
+msgstr "Otvori URL:"
+
+#: ../classes/class-wpfront-notification-bar-options.php:53
+msgid "Open URL in new tab/window"
+msgstr "Otvori URL u novom tabulatoru/prozoru"
+
+#: ../classes/class-wpfront-notification-bar-options.php:54
+msgid "Execute JavaScript"
+msgstr "Izvrši JavaScript"
+
+#: ../classes/class-wpfront-notification-bar-options.php:55
+msgid "Close Bar on Button Click"
+msgstr "Zatvori traku sa menijem klikom na taster"
+
+#: ../classes/class-wpfront-notification-bar-options.php:56
+msgid "Display Shadow"
+msgstr "Prikaži senku"
+
+#: ../classes/class-wpfront-notification-bar-options.php:57
+msgid "Fixed at Position"
+msgstr "Fiksiranu na položaju"
+
+#: ../classes/class-wpfront-notification-bar-options.php:58
+msgid "Message Text Color"
+msgstr "Boja teksta poruke"
+
+#: ../classes/class-wpfront-notification-bar-options.php:59
+#: ../classes/class-wpfront-notification-bar-options.php:61
+msgid "From Color"
+msgstr "Od boje"
+
+#: ../classes/class-wpfront-notification-bar-options.php:60
+#: ../classes/class-wpfront-notification-bar-options.php:62
+msgid "To Color"
+msgstr "Do boje"
+
+#: ../classes/class-wpfront-notification-bar-options.php:63
+msgid "Button Text Color"
+msgstr "Boja teksta tastera"
+
+#: ../classes/class-wpfront-notification-bar-options.php:64
+msgid "Display on Pages"
+msgstr "Prikaži na stranicama"
+
+#: ../classes/class-wpfront-notification-bar-options.php:67
+msgid "Display Reopen Button"
+msgstr "Prikaži taster “Ponovo otvori”"
+
+#: ../classes/class-wpfront-notification-bar-options.php:68
+msgid "Reopen Button Color"
+msgstr "Boja tastera “Ponovo otvori”"
+
+#: ../classes/class-wpfront-notification-bar-options.php:69
+msgid "Keep Closed"
+msgstr "Neka ostane zatvoren "
+
+#: ../classes/class-wpfront-notification-bar-options.php:70
+msgid "Keep Closed For"
+msgstr "Neka ostane zatvoren za"
+
+#: ../classes/class-wpfront-notification-bar-options.php:71
+msgid "Position Offset"
+msgstr "Offset pozicija"
+
+#: ../classes/class-wpfront-notification-bar-options.php:72
+msgid "Custom CSS"
+msgstr "Prilagođeni CSS"
+
+#: ../classes/class-wpfront-notification-bar-options.php:73
+msgid "Close Button Color"
+msgstr "Boja tastera “Zatvori”"
+
+#: ../classes/class-wpfront-notification-bar-options.php:76
+msgid "Display for User Roles"
+msgstr "Prikaži za korisničke uloge"
+
+#: ../classes/class-wpfront-notification-bar-options.php:78
+msgid "Display on Scroll"
+msgstr "Prikaži skrolovanjem "
+
+#: ../classes/class-wpfront-notification-bar-options.php:79
+msgid "Scroll Offset"
+msgstr "Skroluj offset"
+
+#: ../classes/class-wpfront-notification-bar-options.php:80
+msgid "Start Date"
+msgstr "Početni datum"
+
+#: ../classes/class-wpfront-notification-bar-options.php:81
+msgid "End Date"
+msgstr "Završni datum"
+
+#: ../classes/class-wpfront-notification-bar.php:62
+msgid "WPFront Notification Bar"
+msgstr "WPFront Notification Bar"
+
+#: ../classes/class-wpfront-notification-bar.php:62
+msgid "Notification Bar"
+msgstr "Notification Bar"
+
+#: ../classes/class-wpfront-notification-bar.php:176
+#: ../classes/class-wpfront-notification-bar.php:180
+msgid "[Page]"
+msgstr "[Stranica]"
+
+#: ../classes/class-wpfront-notification-bar.php:176
+msgid "Home"
+msgstr "Početna"
+
+#: ../classes/class-wpfront-notification-bar.php:185
+msgid "[Post]"
+msgstr "[Post]"
+
+#: ../templates/options-template.php:32
+msgid "WPFront Notification Bar Settings"
+msgstr "Podešavanja WPFront trake za obaveštenja"
+
+#: ../templates/options-template.php:34
+msgid "Display"
+msgstr "Prikaži"
+
+#: ../templates/options-template.php:50
+msgid "Top"
+msgstr "Vrh"
+
+#: ../templates/options-template.php:51
+msgid "Bottom"
+msgstr "Dno"
+
+#: ../templates/options-template.php:60
+msgid "[Sticky Bar, bar will stay at position regardless of scrolling.]"
+msgstr "[Sticky Bar traka će ostati na istom mestu bez obzira na skrolovanje.]"
+
+#: ../templates/options-template.php:68
+msgid "[Displays the bar on window scroll.]"
+msgstr "[Prikazuje traku prilikom skrolovanja prozora.]"
+
+#: ../templates/options-template.php:76 ../templates/options-template.php:84
+#: ../templates/options-template.php:92
+msgid "px"
+msgstr "px"
+
+#: ../templates/options-template.php:76
+msgid "Number of pixels to be scrolled before the bar appears."
+msgstr "Broj piksela za skrolovanje pre nego što se traka pojavi."
+
+#: ../templates/options-template.php:84
+msgid "Set 0px to auto fit contents."
+msgstr "Podesite na 0px da biste automatski uklopili sadržaj."
+
+#: ../templates/options-template.php:92
+msgid ""
+"(Top bar only) If you find the bar overlapping, try increasing this value. "
+"(eg. WordPress 3.8 Twenty Fourteen theme, set 48px)"
+msgstr ""
+"(Traka samo na vrhu) Ako vam se traka preklapa, pokušajte da povećate ovu "
+"vrednost. (Npr. WordPress 3.8 Twenty Fourteen temu podesite na 48px)"
+
+#: ../templates/options-template.php:100 ../templates/options-template.php:108
+#: ../templates/options-template.php:124
+msgid "second(s)"
+msgstr "sekund(e)"
+
+#: ../templates/options-template.php:100
+msgid ""
+"Set 0 second(s) to display immediately. Do not work in \"Display on Scroll\" "
+"mode."
+msgstr ""
+"Podesite na 0 sekundi da biste odmah prikazali. Nemojte raditi u režimu "
+"\"Prikaži skrolovanjem\" "
+
+#: ../templates/options-template.php:108
+msgid "Set 0 second(s) for no animation."
+msgstr "Podesite vrednost na 0 sekundi ako nećete animaciju."
+
+#: ../templates/options-template.php:116
+msgid "[Displays a close button at the top right corner of the bar.]"
+msgstr "[Prikazuje taster “Zatvori” u gornjem desnom uglu trake.]"
+
+#: ../templates/options-template.php:124
+msgid ""
+"Set 0 second(s) to disable auto close. Do not work in \"Display on Scroll\" "
+"mode."
+msgstr ""
+"Podesite vrednost na 0 sekundi da biste deaktivirali automatsko zatvaranje. "
+"Nemojte raditi u režimu \"Prikaži skrolovanjem\" "
+
+#: ../templates/options-template.php:140
+msgid "A reopen button will be displayed after the bar is closed."
+msgstr "Kad se traka zatvori, prikazaće se taster “Ponovo otvori”."
+
+#: ../templates/options-template.php:148
+msgid "Once closed, bar will display closed on other pages."
+msgstr "Kad se zatvori, traka će ostati zatvorena i na drugim stranicama."
+
+#: ../templates/options-template.php:156
+msgid "day(s)"
+msgstr "dan(i)"
+
+#: ../templates/options-template.php:156
+msgid ""
+"Bar will be kept closed for the number of days specified from last closed "
+"date."
+msgstr ""
+"Traka će ostati zatvorena onoliko dana koliko ste naveli od poslednjeg "
+"datuma zatvaranja."
+
+#: ../templates/options-template.php:161
+msgid "Content"
+msgstr "Sadržaj"
+
+#: ../templates/options-template.php:170
+msgid "[HTML tags are allowed. e.g. Add <br /> for break.]"
+msgstr "[Dozvoljene su HTML oznake. npr. Dodajte <br /> za pauzu.]"
+
+#: ../templates/options-template.php:178
+msgid "[Displays a button next to the message.]"
+msgstr "[Prikazuje taster pored poruke.]"
+
+#: ../templates/options-template.php:223
+msgid "Filter"
+msgstr "Filter"
+
+#: ../templates/options-template.php:230 ../templates/options-template.php:238
+msgid "[YYYY-MM-DD]"
+msgstr "[YYYY-MM-DD]"
+
+#: ../templates/options-template.php:248
+msgid "All pages."
+msgstr "Sve stranice"
+
+#: ../templates/options-template.php:253
+msgid "Only in landing page."
+msgstr "Samo na odredišnoj stranici."
+
+#: ../templates/options-template.php:253
+msgid "[The first page they visit on your website.]"
+msgstr "[Prva stranica koju posete na vašem web site-u.]"
+
+#: ../templates/options-template.php:258
+msgid "Include in following pages"
+msgstr "Uključi na sledećim stranicama"
+
+#: ../templates/options-template.php:278
+msgid "Exclude in following pages"
+msgstr "Skloni  sa sledećih stranica"
+
+#: ../templates/options-template.php:305
+msgid "All users."
+msgstr "Svi korisnici"
+
+#: ../templates/options-template.php:310
+msgid "All logged in users."
+msgstr "Svi prijavljeni korisnici"
+
+#: ../templates/options-template.php:315
+msgid "Guest users. [Non-logged in users]"
+msgstr "Gosti [Neprijavljeni korisnici]"
+
+#: ../templates/options-template.php:320
+msgid "For following user roles"
+msgstr "Za sledeće korisničke uloge"
+
+#: ../templates/options-template.php:340
+msgid "[No Role]"
+msgstr "[Bez uloge]"
+
+#: ../templates/options-template.php:346
+msgid "[Guest]"
+msgstr "[Gost]"
+
+#: ../templates/options-template.php:354
+msgid "Color"
+msgstr "Boja"
+
+#: ../templates/options-template.php:358
+msgid "Bar Color"
+msgstr "Boja trake"
+
+#: ../templates/options-template.php:369 ../templates/options-template.php:394
+msgid "[Select two different colors to create a gradient.]"
+msgstr "[Odaberite dve različite boje da biste postigli dinamičnost]"
+
+#: ../templates/options-template.php:383
+msgid "Button Color"
+msgstr "Boja tastera"
+
+#: ../templates/options-template.php:432
+msgid "[Normal, Hover, X]"
+msgstr "[Normalna, nakon prevlačenja mišem, X]"
+
+#: ../templates/options-template.php:437
+msgid "CSS"
+msgstr "CSS"
+
+#: ../templates/options-template.php:453
+msgid "Plugin Ideas"
+msgstr "Ideje za plugin"
+
+#~ msgid "Animate Display"
+#~ msgstr "Animate Display"
+
+#~ msgid "Animate Display Delay"
+#~ msgstr "Animate Display Delay"

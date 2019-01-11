@@ -1,0 +1,337 @@
+#. Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WPFront Notification Bar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Tue Feb 11 2014 22:14:28 GMT+0100 (Mitteleuropäische Zeit)\n"
+"POT-Revision-Date: Tue Feb 11 2014 22:22:52 GMT+0100 (Mitteleuropäische Zeit)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
+"_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
+"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
+"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;"
+"comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../templates/options-template.php:34
+msgid "WPFront Notification Bar Settings"
+msgstr ""
+
+#: ../templates/options-template.php:44
+msgid ""
+"If you have a caching plugin, clear the cache for the new settings to take "
+"effect."
+msgstr ""
+
+#: ../templates/options-template.php:49
+msgid "Display"
+msgstr ""
+
+#: ../templates/options-template.php:65
+msgid "Top"
+msgstr ""
+
+#: ../templates/options-template.php:66
+msgid "Bottom"
+msgstr ""
+
+#: ../templates/options-template.php:75
+msgid "[Sticky Bar, bar will stay at position regardless of scrolling.]"
+msgstr ""
+
+#: ../templates/options-template.php:83 ../templates/options-template.php:91
+msgid "px"
+msgstr ""
+
+#: ../templates/options-template.php:83
+msgid "Set 0px to auto fit contents."
+msgstr ""
+
+#: ../templates/options-template.php:91
+msgid ""
+"(Top bar only) If you find the bar overlapping, try increasing this value. (eg. "
+"WordPress 3.8 Twenty Fourteen theme, set 48px)"
+msgstr ""
+
+#: ../templates/options-template.php:99 ../templates/options-template.php:107 ../templates/options-template.php:123
+msgid "second(s)"
+msgstr ""
+
+#: ../templates/options-template.php:99
+msgid "Set 0 second(s) to display immediately."
+msgstr ""
+
+#: ../templates/options-template.php:107
+msgid "Set 0 second(s) for no animation."
+msgstr ""
+
+#: ../templates/options-template.php:115
+msgid "[Displays a close button at the top right corner of the bar.]"
+msgstr ""
+
+#: ../templates/options-template.php:123
+msgid "Set 0 second(s) to disable auto close."
+msgstr ""
+
+#: ../templates/options-template.php:139
+msgid "A reopen button will be displayed after the bar is closed."
+msgstr ""
+
+#: ../templates/options-template.php:147
+msgid "Once closed, bar will display closed on other pages."
+msgstr ""
+
+#: ../templates/options-template.php:155
+msgid "day(s)"
+msgstr ""
+
+#: ../templates/options-template.php:155
+msgid "Bar will be kept closed for the number of days specified from last closed date."
+msgstr ""
+
+#: ../templates/options-template.php:160
+msgid "Content"
+msgstr ""
+
+#: ../templates/options-template.php:169
+msgid "[HTML tags are allowed. e.g. Add <br /> for break.]"
+msgstr ""
+
+#: ../templates/options-template.php:177
+msgid "[Displays a button next to the message.]"
+msgstr ""
+
+#: ../templates/options-template.php:222
+msgid "Filter"
+msgstr ""
+
+#: ../templates/options-template.php:231
+msgid "All pages."
+msgstr ""
+
+#: ../templates/options-template.php:236
+msgid "Only in landing page."
+msgstr ""
+
+#: ../templates/options-template.php:236
+msgid "[The first page they visit on your website.]"
+msgstr ""
+
+#: ../templates/options-template.php:241
+msgid "Include in following pages"
+msgstr ""
+
+#: ../templates/options-template.php:259
+msgid "Exclude in following pages"
+msgstr ""
+
+#: ../templates/options-template.php:279
+msgid "Color"
+msgstr ""
+
+#: ../templates/options-template.php:283
+msgid "Bar Color"
+msgstr ""
+
+#: ../templates/options-template.php:294 ../templates/options-template.php:319
+msgid "[Select two different colors to create a gradient.]"
+msgstr ""
+
+#: ../templates/options-template.php:308
+msgid "Button Color"
+msgstr ""
+
+#: ../templates/options-template.php:357
+msgid "[Normal, Hover, X]"
+msgstr ""
+
+#: ../templates/options-template.php:362
+msgid "CSS"
+msgstr ""
+
+#: ../templates/options-template.php:376
+msgid "Plugin Ideas"
+msgstr ""
+
+#: ../templates/options-template.php:378
+msgid "Settings Description"
+msgstr ""
+
+#: ../templates/options-template.php:380
+msgid "Plugin FAQ"
+msgstr ""
+
+#: ../templates/options-template.php:382
+msgid "Feature Request"
+msgstr ""
+
+#: ../templates/options-template.php:384
+msgid "Report Bug"
+msgstr ""
+
+#: ../templates/options-template.php:386
+msgid "Write Review"
+msgstr ""
+
+#: ../templates/options-template.php:388
+msgid "Contact Me (syam@wpfront.com)"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:114
+msgid "WPFront Notification Bar"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:114
+msgid "Notification Bar"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:146
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:156
+msgid "Settings"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:216
+msgid "Save Changes"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:231 ../classes/class-wpfront-notification-bar.php:235
+msgid "[Page]"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:231
+msgid "Home"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar.php:240
+msgid "[Post]"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:41
+msgid "Enabled"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:42
+msgid "Position"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:43
+msgid "Bar Height"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:44
+msgid "Message Text"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:45
+msgid "Display After"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:46
+msgid "Animation Duration"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:47
+msgid "Display Close Button"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:48
+msgid "Auto Close After"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:49
+msgid "Display Button"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:50
+msgid "Button Text"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:51
+msgid "Button Action"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:52
+msgid "Open URL:"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:53
+msgid "Open URL in new tab/window"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:54
+msgid "Execute JavaScript"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:55
+msgid "Close Bar on Button Click"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:56
+msgid "Display Shadow"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:57
+msgid "Fixed at Position"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:58
+msgid "Message Text Color"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:59 ../classes/class-wpfront-notification-bar-options.php:61
+msgid "From Color"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:60 ../classes/class-wpfront-notification-bar-options.php:62
+msgid "To Color"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:63
+msgid "Button Text Color"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:64
+msgid "Display on Pages"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:67
+msgid "Display Reopen Button"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:68
+msgid "Reopen Button Color"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:69
+msgid "Keep Closed"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:70
+msgid "Keep Closed For"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:71
+msgid "Position Offset"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:72
+msgid "Custom CSS"
+msgstr ""
+
+#: ../classes/class-wpfront-notification-bar-options.php:73
+msgid "Close Button Color"
+msgstr ""

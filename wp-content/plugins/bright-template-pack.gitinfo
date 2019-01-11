@@ -1,0 +1,9 @@
+git@bitbucket.org:aura_software/wp-bright-template-pack.git ddd83c0
+----
+commit ddd83c0f2381c8686428e0cc2aff26e402c6fec8
+Author: Bret Weinraub <bret@aura-software.com>
+Date:   Fri Jun 19 13:29:42 2015 -0600
+
+    2.8.2 - fetch scripts from https
+(installable): bright-template-pack
+(repo): git@bitbucket.org:aura_software/wp-bright-template-pack.git

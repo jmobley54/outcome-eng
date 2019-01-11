@@ -1,0 +1,294 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cimy User Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-02 16:48-0800\n"
+"PO-Revision-Date: 2013-06-02 16:50-0800\n"
+"Last-Translator: Marco Cimmino <cimmino.marco@gmail.com>\n"
+"Language-Team:  <cimmino.marco@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /var/www/wp-content/plugins/cimy-user-manager\n"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:116
+msgid "Cimy User Manager"
+msgstr "Cimy User Manager"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:150
+msgid "You must activate Cimy User Extra Fields to export data from that plug-in"
+msgstr "Bisogna attivare Cimy User Extra Fields per esportare dati da quel plug-in"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:172
+msgid "Import Users"
+msgstr "Importa Utenti"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:180
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:285
+msgid "ERRORS"
+msgstr "ERRORI"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:187
+msgid "USERS SUCCESSFULLY ADDED"
+msgstr "UTENTI AGGIUNTI CON SUCCESSO"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:194
+msgid "USERS SUCCESSFULLY MODIFIED"
+msgstr "UTENTI MODIFICATI CON SUCCESSO"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:221
+msgid "Select the CSV file"
+msgstr "Selezionare il file CSV"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:227
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:327
+msgid "Select field delimiter"
+msgstr "Selezionare il delimitatore di campi"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:229
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:329
+msgid "If your CSV file is like: \"field1\",\"field2\" then you need to use comma"
+msgstr "Se il file CSV appare come: \"field1\",\"field2\" allora bisogna utilizzare la virgola"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:233
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:333
+msgid "Select text delimiter"
+msgstr "Selezionare il delimitatore di testo"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:235
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:335
+msgid "If your CSV file is like: \"field1\",\"field2\" then you need to use double quote"
+msgstr "Se il file CSV appare come: \"field1\",\"field2\" allora bisogna utilizzare le virgolette"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:239
+msgid "Create users"
+msgstr "Creare gli utenti"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:241
+msgid "Select this option to let the plug-in create users."
+msgstr "Selezionare questa opzione per permettere al plug-in di creare gli utenti."
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:241
+msgid "<strong>REMEMBER</strong>: for new users <strong>do not</strong> enter any USERID, but <strong>specify</strong> an unique USERNAME and EMAIL"
+msgstr "<strong>RICORDA</strong>: per i nuovi utenti <strong>non</strong> introdurre lo USERID, ma <strong>specifica</strong> degli unici USERNAME ed EMAIL"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:245
+msgid "Email notifications"
+msgstr "Notifiche via email"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:247
+msgid "Send an email to the new users created."
+msgstr "Inviare una email ai nuovi utenti creati."
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:253
+msgid "Send an email to the existing users with the new password."
+msgstr "Inviare una email agli utenti esistenti con la nuova password."
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:259
+msgid "Import"
+msgstr "Importa"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:268
+msgid "Export Users"
+msgstr "Esporta Utenti"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:276
+msgid "FILE GENERATED"
+msgstr "FILE GENERATO"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:278
+msgid "Download Export File"
+msgstr ""
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:292
+msgid "USERS SUCCESSFULLY EXPORTED"
+msgstr "UTENTI ESPORTATI CON SUCCESSO"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:316
+msgid "Upload path"
+msgstr "Percorso di upload"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:320
+msgid "is created and writable"
+msgstr "è creata e scrivibile"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:322
+msgid "is NOT created or webserver does NOT have permission to write on it"
+msgstr "NON è stata creata o il webserver NON ha il permesso di scrittura su di essa"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:339
+msgid "Sort by"
+msgstr "Ordinare per"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:342
+msgid "Registered date"
+msgstr "Data di registrazione"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:343
+msgid "Login Name"
+msgstr "Nome login"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:344
+msgid "Email"
+msgstr ""
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:345
+msgid "Display Name"
+msgstr "Nome pubblico"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:346
+msgid "Website"
+msgstr ""
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:347
+msgid "Post Count"
+msgstr "Numero di articoli"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:355
+msgid "Enable Excel compatibility mode"
+msgstr "Abilita la modalità compatibile con Excel"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:360
+msgid "Use UTF-16LE encoding"
+msgstr "Utilizzare la codifica UTF-16LE"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:365
+msgid "Select this option if you want more Microsoft Excel compatibility"
+msgstr "Selezionare questa opzione se si vuole una migliore compatibilità con Microsoft Excel"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:369
+msgid "Add also Cimy User Extra Fields data"
+msgstr "Aggiungere i dati di Cimy User Extra Fields"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:371
+msgid "Select this option to let the plug-in export also data present into Cimy User Extra Fields"
+msgstr "Selezionare questa opzione per permettere al plug-in di esportare i dati presenti in Cimy User Extra Fields"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:386
+msgid "Export"
+msgstr "Esporta"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:420
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:424
+msgid "Cannot open the file"
+msgstr "Impossibile aprire il file"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:553
+#, php-format
+msgid "(line %s)"
+msgstr "(linea %s)"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:589
+#, php-format
+msgid "username '%s' has some invalid characters, used this username instead: '%s'"
+msgstr "il nome utente '%s' ha alcuni caratteri non validi, è stato usato questo: '%s'"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:614
+msgid "no username provided neither ID, whatever you are trying to do this will be skipped"
+msgstr "nessun nome utente nè ID trovato, qualsiasi cosa si sta provando di fare questo viene saltato"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:626
+msgid "userid is missing"
+msgstr "id utente mancante"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:628
+#, php-format
+msgid "userid '%s' is not present in the DB"
+msgstr "l'id utente '%s' non è presente nel DB"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:633
+msgid "and"
+msgstr "e"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:636
+msgid "username is missing"
+msgstr "username mancante"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:638
+#, php-format
+msgid "the username '%s' is not present in the DB"
+msgstr "il nome utente '%s' non è presente nel DB"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:650
+msgid "username missing cannot add an user without it"
+msgstr "il nome utente è mancante, non posso aggiungere un utente senza"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:656
+#, php-format
+msgid "username '%s' already present in the DB (line %s)"
+msgstr "il nome utente '%s' è già presente nel DB (linea %s)"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:665
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:791
+#, php-format
+msgid "e-mail '%s' has some invalid characters, used this address instead: '%s'"
+msgstr "e-mail '%s' ha alcuni caratteri non validi, è stato usato questo indirizzo: '%s'"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:671
+#, php-format
+msgid "e-mail '%s' already present in the DB, dropped this new user: '%s'"
+msgstr "e-mail '%s' già presente nel DB, saltato questo nuovo utente: '%s'"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:676
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:682
+#, php-format
+msgid "e-mail field empty, dropped this new user: '%s'"
+msgstr "il campo e-mail è vuoto, saltato l'utente: '%s'"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:698
+msgid "seems you do not have 'create_users' capability"
+msgstr "sembra che non si disponga del permesso di creare gli utenti 'create_users'"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:704
+#, php-format
+msgid "%s, dropped this new user: '%s'"
+msgstr "%s, il seguente utente è stato saltato: '%s'"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:730
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:731
+#, php-format
+msgid "Password: %s"
+msgstr ""
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:737
+#, php-format
+msgid "[%s] Your new password"
+msgstr ""
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:798
+#, php-format
+msgid "e-mail '%s' already present in the DB, dropped this modification"
+msgstr "e-mail '%s' già presente nel DB, saltata questa modifica"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:871
+msgid "Cimy User Extra Fields is not active, impossible to import any extra fields data"
+msgstr "Cimy User Extra Fields non è attivo, impossibile importare qualsiasi dato nei campi extra"
+
+#: /var/www/wp-content/plugins/cimy-user-manager/cimy_user_manager.php:875
+#, php-format
+msgid "'%s' field doesn't exist"
+msgstr "il campo '%s' non esiste"
+
+#~ msgid "Select date format"
+#~ msgstr "Seleziona il formato della data"
+
+#~ msgid "Select the date/time format to represent registration dates (if any)"
+#~ msgstr ""
+#~ "Seleziona il formato della data/ora per rappresentare le date di "
+#~ "registrazione (se presenti)"
+
+#~ msgid "More info about date/time format are on this"
+#~ msgstr "Più informazioni circa il formato della data/ora sono a questo"
+
+#~ msgid "LINK"
+#~ msgstr "LINK"

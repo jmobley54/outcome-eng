@@ -1,0 +1,6 @@
+
+if [ ! -d /tmp/wordpress/wp-content/plugins/woocommerce ]; then
+    cd /tmp/wordpress/wp-content/plugins/woocommerce 
+    wget https://downloads.wordpress.org/plugin/woocommerce.zip
+    unzip woocommerce.zip
+fi

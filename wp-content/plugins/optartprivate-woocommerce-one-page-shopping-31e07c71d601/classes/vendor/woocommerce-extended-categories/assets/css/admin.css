@@ -1,0 +1,12 @@
+/* 
+    Created on : 2014-02-13, 20:17:51
+    Author     : Piotr Szczygieł
+*/
+
+.wc-extended-categories select {
+    width: 100%;
+}
+
+.wc-extended-categories input[type=checkbox] {
+    width: auto;
+}

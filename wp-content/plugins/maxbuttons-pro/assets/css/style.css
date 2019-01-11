@@ -1,0 +1,574 @@
+#maxbuttons {
+  /** Crumbs in single pack view */
+  /** License Page **/ }
+  #maxbuttons .export_table .mb-container {
+    margin: 0;
+    float: none; }
+  #maxbuttons .export_table .mb-center {
+    text-align: left !important; }
+  #maxbuttons .export_table .mb-center .mb-text {
+    text-align: center !important; }
+  #maxbuttons .search-box input[type="text"] {
+    width: 150px; }
+  #maxbuttons .ad-wrap {
+    margin-top: 60px; }
+  #maxbuttons #view_icons .modal_close {
+    padding-right: 15px;
+    padding-top: 5px;
+    display: inline-block; }
+    #maxbuttons #view_icons .modal_close:hover {
+      cursor: pointer; }
+  #maxbuttons .option-container .inside .option.font2 .checkbox {
+    margin-right: 2px; }
+  #maxbuttons .option-container .inside .option.text_color {
+    margin-bottom: 35px; }
+  #maxbuttons .option-container .inside .option.font2 .radio {
+    margin-right: 0; }
+  #maxbuttons .option-container .inside .option.font2 .input.font2 {
+    margin-right: 2px; }
+  #maxbuttons .option-container .inside .option.font2 .font_size2 {
+    margin-right: 0; }
+  #maxbuttons .option-container .inside .option .control-group.font_weight2 {
+    margin-left: 28px; }
+  #maxbuttons .option-container .inside .option .control-group.text_align2 {
+    margin-left: 48px; }
+  #maxbuttons .option-container .inside .option.padding_top2 .input {
+    margin-right: 30px; }
+  #maxbuttons .option-container .inside .option.padding_top2 {
+    margin-bottom: 35px; }
+  #maxbuttons .data_attr_plus {
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer; }
+    #maxbuttons .data_attr_plus:before {
+      content: '+';
+      font-size: 26px;
+      text-align: center;
+      padding: 5px;
+      display: inline-block; }
+  #maxbuttons #picker-modal .search-box {
+    display: none;
+    position: absolute;
+    left: 350px; }
+  #maxbuttons .manage-fonts i {
+    padding-top: 6px;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px; }
+  #maxbuttons .add-fonts .loading_overlay {
+    background-color: #eee;
+    opacity: 0.9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 12000; }
+  #maxbuttons .add-fonts .loading {
+    font-size: 22px;
+    color: #000;
+    z-index: 12001;
+    width: 124px;
+    height: 31px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -62px; }
+    #maxbuttons .add-fonts .loading span, #maxbuttons .add-fonts .loading img {
+      float: left;
+      margin-right: 5px; }
+    #maxbuttons .add-fonts .loading span {
+      line-height: 32px;
+      vertical-align: middle; }
+  @media (max-width: 960px) {
+    #maxbuttons .add-fonts .modal_content p {
+      margin: 5px 0; } }
+  #maxbuttons .add-fonts .controls {
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    background: #f3f3f3;
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ccc; }
+  #maxbuttons .font_manager {
+    height: 450px;
+    max-height: 65vh;
+    width: 100%;
+    position: relative; }
+    #maxbuttons .font_manager .font_search span {
+      font-size: 15px;
+      font-weight: 700; }
+    #maxbuttons .font_manager .font_wrap {
+      max-height: 80%;
+      overflow-x: auto;
+      overflow-y: none;
+      margin-top: 15px; }
+    #maxbuttons .font_manager .font_left, #maxbuttons .font_manager .font_right {
+      display: inline-block;
+      text-align: left;
+      width: 50%; }
+      #maxbuttons .font_manager .font_left .items, #maxbuttons .font_manager .font_right .items {
+        margin-top: 15px;
+        margin-left: 10px;
+        line-height: 20px;
+        font-size: 14px;
+        list-style: none; }
+        #maxbuttons .font_manager .font_left .items li label, #maxbuttons .font_manager .font_right .items li label {
+          padding: 5px 0;
+          width: 100%;
+          display: inline-block; }
+          #maxbuttons .font_manager .font_left .items li label span, #maxbuttons .font_manager .font_right .items li label span {
+            margin-left: 10px; }
+        #maxbuttons .font_manager .font_left .items li span, #maxbuttons .font_manager .font_right .items li span {
+          margin-left: 5px; }
+        #maxbuttons .font_manager .font_left .items li input, #maxbuttons .font_manager .font_right .items li input {
+          display: none; }
+        #maxbuttons .font_manager .font_left .items input:checked + label, #maxbuttons .font_manager .font_right .items input:checked + label {
+          background-color: #0073aa;
+          color: #fff;
+          font-weight: 700; }
+    #maxbuttons .font_manager .font_left {
+      float: left; }
+    #maxbuttons .font_manager .font_example {
+      display: block;
+      padding: 10px 20px;
+      clear: both;
+      border: 1px solid #000000;
+      font-size: 20px; }
+      @media (max-width: 960px) {
+        #maxbuttons .font_manager .font_example {
+          display: none; } }
+      #maxbuttons .font_manager .font_example .example_text {
+        display: none; }
+        #maxbuttons .font_manager .font_example .example_text span {
+          margin-right: 10%; }
+  #maxbuttons .max-modal.view-icons .modal_content {
+    height: inherit; }
+    #maxbuttons .max-modal.view-icons .modal_content .controls {
+      margin-bottom: 25px; }
+  #maxbuttons .icon-list {
+    list-style-type: none;
+    clear: both;
+    display: inline-block; }
+    #maxbuttons .icon-list li {
+      float: left;
+      margin-right: 5px;
+      background: #fff;
+      transition: all 0.5s ease;
+      padding: 10px;
+      border: 1px solid #eeeeee;
+      cursor: pointer;
+      font-size: 25px;
+      width: 20px;
+      height: 20px; }
+      #maxbuttons .icon-list li:hover {
+        background: #eee; }
+  #maxbuttons .font-awesome-preview .mode {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center; }
+  #maxbuttons .font-awesome-preview .the-icon {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 8px;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #maxbuttons .font-awesome-preview .remove_fa_icon {
+    display: block;
+    display: none;
+    font-size: 12px;
+    color: #ff0000;
+    cursor: pointer;
+    text-align: center; }
+  #maxbuttons .font-awesome-preview.hidden {
+    display: none !important; }
+  #maxbuttons .select_icon button {
+    font-size: 13px; }
+  #maxbuttons .use_fa_icon .the_switch {
+    background: #6fbeb5; }
+    #maxbuttons .use_fa_icon .the_switch:after {
+      background: #179588; }
+  #maxbuttons .icon-search {
+    position: relative;
+    	/*
+    	.active-filters {
+    		text-align: left;
+    		.label { margin: 5px 0; }
+    		.active
+    		{
+    				display: inline-block;
+    				vertical-align: middle;
+    				li {
+    				color: #fff;
+    				background-color: #179588;
+    				border: 1px solid #ccc;
+    
+    				&:after {
+    					content: "\f158";
+    					font-family: 'Dashicons';
+    					//border-radius: 50%;
+    					//border: 1px solid #000;
+    					position: absolute;
+    					top: -8px;
+    					right: 5px;
+    					font-size: 16px;
+    					color: #000;
+    
+    				  }
+    				}
+    		}
+     } */ }
+    #maxbuttons .icon-search input {
+      height: 30px;
+      width: 400px;
+      font-size: 14px; }
+    #maxbuttons .icon-search .spinner {
+      position: absolute;
+      right: 0;
+      top: 8px; }
+    #maxbuttons .icon-search .label {
+      font-weight: 700;
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: middle; }
+    #maxbuttons .icon-search .category-filter {
+      clear: both;
+      margin: 10px 0;
+      display: inline-block; }
+      #maxbuttons .icon-search .category-filter .categories, #maxbuttons .icon-search .category-filter .active, #maxbuttons .icon-search .category-filter .styles {
+        list-style-type: none;
+        cursor: pointer;
+        margin: 5px 0; }
+        #maxbuttons .icon-search .category-filter .categories li, #maxbuttons .icon-search .category-filter .active li, #maxbuttons .icon-search .category-filter .styles li {
+          float: left;
+          margin-right: 5px;
+          background: #000;
+          color: #fff;
+          padding: 5px;
+          position: relative; }
+          #maxbuttons .icon-search .category-filter .categories li.selected, #maxbuttons .icon-search .category-filter .active li.selected, #maxbuttons .icon-search .category-filter .styles li.selected {
+            background-color: #179588; }
+          #maxbuttons .icon-search .category-filter .categories li.unselected, #maxbuttons .icon-search .category-filter .active li.unselected, #maxbuttons .icon-search .category-filter .styles li.unselected {
+            background-color: #ccc; }
+    #maxbuttons .icon-search .styles {
+      clear: both; }
+  #maxbuttons .icon_hover_option_preview.hidden, #maxbuttons .icon_hover_image_button.hidden {
+    display: none !important; }
+  #maxbuttons .the_icon_preview {
+    max-width: 350px;
+    min-width: 250px;
+    min-height: 150px;
+    max-height: 250px;
+    display: block;
+    float: left;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 8px; }
+    #maxbuttons .the_icon_preview img {
+      max-width: inherit;
+      max-height: inherit; }
+    #maxbuttons .the_icon_preview .remove_icon {
+      font-size: 25px;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      cursor: pointer; }
+  #maxbuttons .option .the_icon_data {
+    float: left;
+    display: inline-block;
+    margin-left: 25px;
+    height: auto; }
+    #maxbuttons .option .the_icon_data label {
+      float: left;
+      width: 150px !important;
+      line-height: 18px;
+      clear: left;
+      margin: 5px 10px 5px 0 !important; }
+    #maxbuttons .option .the_icon_data span {
+      float: left; }
+    #maxbuttons .option .the_icon_data:after {
+      clear: both; }
+  #maxbuttons #icon_url_button {
+    clear: left;
+    display: block; }
+  #maxbuttons .pack {
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 20px; }
+    #maxbuttons .pack a {
+      text-decoration: none; }
+    #maxbuttons .pack h3 {
+      margin: 10px 0px 5px 0px;
+      min-height: 45px; }
+    #maxbuttons .pack h4 {
+      margin: 0px; }
+    #maxbuttons .pack p {
+      min-height: 70px; }
+    #maxbuttons .pack .image {
+      width: 240px;
+      height: 180px; }
+      #maxbuttons .pack .image img:hover {
+        -webkit-box-shadow: 0px 0px 4px #111111;
+        -moz-box-shadow: 0px 0px 4px #111111;
+        box-shadow: 0px 0px 4px #111111; }
+  #maxbuttons .pack-meta {
+    margin-top: 20px; }
+    #maxbuttons .pack-meta a {
+      text-decoration: none; }
+    #maxbuttons .pack-meta img {
+      float: left;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      max-width: 190px;
+      height: auto; }
+  #maxbuttons .pack-list-header {
+    background-color: #fff;
+    width: 70%;
+    border: 0px solid #ccc;
+    margin: 10px auto;
+    padding: 15px;
+    clear: both;
+    position: relative;
+    -webkit-box-shadow: 2px 2px 2px #ccc;
+    -moz-box-shadow: 2px 2px 2px #ccc;
+    box-shadow: 2px 2px 2px #ccc; }
+    #maxbuttons .pack-list-header h3 {
+      font-size: 26px;
+      line-height: 1;
+      margin: 10px 0; }
+    #maxbuttons .pack-list-header p {
+      margin: 2px 0; }
+    #maxbuttons .pack-list-header .import_button {
+      position: absolute;
+      right: 15px;
+      top: 10px; }
+      #maxbuttons .pack-list-header .import_button button {
+        width: 100px;
+        height: 75px;
+        font-weight: 700; }
+  #maxbuttons .pack-list {
+    width: 100%;
+    position: relative;
+    display: table;
+    clear: left;
+    border-spacing: 10px;
+    table-layout: fixed; }
+    #maxbuttons .pack-list .row {
+      display: table-row; }
+    #maxbuttons .pack-list .pack-button {
+      display: table-cell;
+      width: 32%;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 2px 2px #ccc;
+      -moz-box-shadow: 2px 2px 2px #ccc;
+      box-shadow: 2px 2px 2px #ccc;
+      position: relative;
+      padding: 15px 15px 25px 15px;
+      overflow: hidden; }
+      #maxbuttons .pack-list .pack-button .shortcode-container {
+        margin: 0 auto; }
+      #maxbuttons .pack-list .pack-button .name {
+        display: inline-block;
+        margin-top: 20px;
+        clear: left;
+        position: absolute;
+        bottom: 2px;
+        left: 5px;
+        width: 100%; }
+    #maxbuttons .pack-list input[type="checkbox"] {
+      display: none; }
+      #maxbuttons .pack-list input[type="checkbox"] + label {
+        border: 3px solid transparent; }
+    #maxbuttons .pack-list input[type="checkbox"]:checked + label {
+      border: 3px solid #0073aa;
+      -webkit-box-shadow: 2px 2px 2px #0073aa;
+      -moz-box-shadow: 2px 2px 2px #0073aa;
+      box-shadow: 2px 2px 2px #0073aa; }
+  #maxbuttons .free_preview .results {
+    margin-top: 10px; }
+  #maxbuttons .pack-crumbs {
+    display: inline-block;
+    margin: 0 0 0 8px; }
+    #maxbuttons .pack-crumbs li {
+      float: left;
+      margin-right: 10px;
+      font-size: 14px; }
+      #maxbuttons .pack-crumbs li:before {
+        content: "\00BB";
+        font-size: 20px;
+        margin-right: 5px; }
+  #maxbuttons .import {
+    margin: 5px 0 15px 0;
+    padding: 15px;
+    border: 1px solid #b4b9be; }
+    #maxbuttons .import h3, #maxbuttons .import p, #maxbuttons .import form {
+      text-align: center; }
+    #maxbuttons .import .mb-message {
+      font-size: 14px;
+      text-align: center; }
+    #maxbuttons .import p {
+      font-size: 22px;
+      color: #a0a5aa; }
+    #maxbuttons .import h3 {
+      font-size: 30px;
+      color: #a0a5aa;
+      margin: 10px 0; }
+  #maxbuttons .export-list {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 0 10px;
+    position: relative; }
+    #maxbuttons .export-list .heading {
+      display: table-row; }
+      #maxbuttons .export-list .heading span {
+        display: table-cell;
+        background-color: #ccc;
+        font-weight: 700;
+        padding: 5px;
+        text-align: left;
+        margin-left: 5px; }
+    #maxbuttons .export-list label.export-button {
+      display: table-row;
+      margin: 15px 0; }
+      #maxbuttons .export-list label.export-button div {
+        background-color: #fff;
+        padding: 20px;
+        display: table-cell;
+        text-align: left;
+        position: relative; }
+      #maxbuttons .export-list label.export-button span.selected {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        background: #0073aa;
+        font-size: 35px;
+        display: none; }
+    #maxbuttons .export-list input[type="checkbox"] {
+      display: none; }
+    #maxbuttons .export-list input[type="checkbox"] + label div {
+      border-top: 2px solid transparent; }
+      #maxbuttons .export-list input[type="checkbox"] + label div:first-child {
+        border-left: 2px solid transparent; }
+    #maxbuttons .export-list input[type="checkbox"]:checked + label div {
+      border-top: 2px solid #0073aa; }
+      #maxbuttons .export-list input[type="checkbox"]:checked + label div:first-child {
+        border-left: 2px solid #0073aa; }
+      #maxbuttons .export-list input[type="checkbox"]:checked + label div span.selected {
+        display: block; }
+  #maxbuttons.maxbuttons-settings input {
+    vertical-align: middle; }
+  #maxbuttons.maxbuttons-settings .customcss {
+    width: 90%;
+    height: 200px;
+    white-space: pre-wrap; }
+  #maxbuttons.maxbuttons-settings .input.mbcolor label {
+    width: auto !important; }
+  #maxbuttons.maxbuttons-settings .input.mbcolor .wp-picker-holder {
+    position: absolute;
+    top: 40px; }
+  #maxbuttons #license_not_active {
+    display: none; }
+  #maxbuttons .license_warning {
+    padding: 0;
+    border: 1px solid #000;
+    margin: 25px 0;
+    display: inline-block;
+    background: #fefefe;
+    width: 60%; }
+    #maxbuttons .license_warning h3 {
+      margin-top: 0;
+      background-color: #000000;
+      padding: 10px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center; }
+    #maxbuttons .license_warning p {
+      padding: 5px 5px;
+      margin: 5px 0;
+      font-size: 15px;
+      text-align: center;
+      line-height: 22px; }
+    #maxbuttons .license_warning .enter_license {
+      font-size: 18px;
+      text-align: center; }
+      #maxbuttons .license_warning .enter_license a {
+        text-decoration: none; }
+  #maxbuttons.maxbuttons-license .title .active {
+    color: #1f9b46; }
+  #maxbuttons.maxbuttons-license .title .not-active {
+    color: #ff0000; }
+  #maxbuttons.maxbuttons-license h3.license-data {
+    margin-bottom: 0px;
+    margin-left: 20px; }
+  #maxbuttons.maxbuttons-license .license-field {
+    font-size: 14px; }
+    #maxbuttons.maxbuttons-license .license-field span {
+      width: 200px;
+      display: inline-block;
+      font-weight: bold; }
+    #maxbuttons.maxbuttons-license .license-field.expired {
+      color: #ff0000;
+      font-weight: bold; }
+      #maxbuttons.maxbuttons-license .license-field.expired .renew-license {
+        margin-left: 45px; }
+  #maxbuttons.maxbuttons-license .license-field input[type='text'] {
+    width: 400px;
+    margin: 0;
+    font-size: 16px; }
+  #maxbuttons.maxbuttons-license .license-field input[type='submit'] {
+    margin-top: 10px;
+    width: 250px; }
+  #maxbuttons.maxbuttons-license p.license-note {
+    font-style: italic;
+    color: #808080;
+    padding-bottom: 0px;
+    margin-bottom: 0px; }
+  #maxbuttons.maxbuttons-license #activation_progress {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    display: block; }
+    #maxbuttons.maxbuttons-license #activation_progress .content {
+      display: inline-block; }
+    #maxbuttons.maxbuttons-license #activation_progress img {
+      margin-top: 20px;
+      float: left;
+      margin-right: 15px; }
+  #maxbuttons.maxbuttons-license #ajax_error, #maxbuttons.maxbuttons-license #activation_success {
+    border: 1px solid #ff0000;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    width: 50%; }
+    #maxbuttons.maxbuttons-license #ajax_error h4, #maxbuttons.maxbuttons-license #activation_success h4 {
+      font-size: 16px;
+      line-height: 20px; }
+    #maxbuttons.maxbuttons-license #ajax_error p, #maxbuttons.maxbuttons-license #activation_success p {
+      font-size: 14px; }
+  #maxbuttons.maxbuttons-license #activation_success {
+    border-color: #ccc; }
+  #maxbuttons div.update-nag {
+    border-left: 4px solid #ffba00; }
+
+#maxbuttons-wp-image-picker .media-menu .media-menu-item, #maxbuttons-wp-image-picker .setting.align, #maxbuttons-wp-image-picker div.setting {
+  display: none; }
+#maxbuttons-wp-image-picker .setting[data-setting="caption"], #maxbuttons-wp-image-picker .setting[data-setting="description"], #maxbuttons-wp-image-picker .media-types-required-info {
+  display: none; }

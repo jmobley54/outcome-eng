@@ -1,0 +1,1 @@
+tinymce.create("tinymce.plugins.maxButtons",{init:function(n,t){n.addButton("maxbutton",{title:"Insert MaxButton",image:"undefined"!=typeof mbtrans?mbtrans.icon:null,onclick:function(){var n=new window.maxFoundry.maxMedia;n.init(),n.openModal()}})},createControl:function(n,t){return null}}),tinymce.PluginManager.add("maxButtons_tinymce",tinymce.plugins.maxButtons);

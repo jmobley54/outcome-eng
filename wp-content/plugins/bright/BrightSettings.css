@@ -1,0 +1,212 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.brightsettings .sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+.bright-SuggestListBox .gwt-SuggestBox {
+  min-width: 480px;
+  padding-left: 30px;
+  background: url('brightsettings/search-icon.png');
+  background-repeat: no-repeat;
+}
+
+.bright-SuggestListBox .gwt-ListBox {
+  min-width: 480px;
+}
+
+.bright-SuggestListBox .gwt-Button {
+  width: 100%;
+}
+
+/** Elevate dialogs above WP menus in version 4.5 */
+.gwt-DialogBox {
+  z-index: 10000;
+}
+
+/** Elevate dialogs above WP menus in version 4.5 */
+.gwt-SuggestBoxPopup{
+  z-index: 10001;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/** Most GWT widgets already have a style name defined */
+.brightsettings .gwt-DialogBox {
+  width: 400px;
+}
+
+.brightsettings .dialogVPanel {
+  margin: 5px;
+}
+
+.brightsettings .serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+.brightsettings #closeButton {
+  margin: 15px 6px 6px;
+}
+
+.brightsettings .edit-cell-list {
+  margin: 10px;
+}
+
+.brightsettings .bright-cell {
+  padding: 2px;
+  margin-bottom: 2px;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.brightsettings .bright-cell .name {
+  font-weight: bold;
+}
+
+.brightsettings .gwt-Label {
+  font-weight: bold;
+  font-size: 12pt;
+  margin-right: 2px;
+}
+
+.brightsettings .gwt-DialogBox .button-panel {
+  margin: 0 auto;
+}
+
+.brightsettings .gwt-DialogBox .custom-panel {
+  border: 1px solid #ccc;
+}
+
+.brightsettings .bright-DualListBox .button-panel {
+  padding-top: 40px;
+  width: 50px;
+}
+
+.brightsettings .bright-DualListBox .button-panel .gwt-Button {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+}
+
+.brightsettings .bright-DualListBox select {
+  width: 300px;
+}
+
+.bright-invitation-form .gwt-TextBox[name="name"]{
+  width: 470px;
+}
+
+.bright-invitation-form .gwt-TextArea[name="description"]{
+  width: 470px;
+}
+
+.bright-DualListBox .gwt-Button {
+  width: 50px;
+}
+
+.bright-DualListBox .gwt-ListBox {
+  min-width: 500px;
+}
+
+.bright-DualListBox .gwt-TextBox {
+  width: 465px;
+  padding-left: 30px;
+  background: url('brightsettings/search-icon.png');
+  background-repeat: no-repeat;
+  background-position; left top;
+}
+
+.brightsettings .bright-LogBox {
+  border: 1px solid #bbb;
+  padding: 3px;
+}
+
+.brightsettings .bright-LogBox .gwt-Label {
+  font-size: 10px;
+  font-normal: normal;
+}
+
+.brightsettings .bright-LogBox .error .gwt-Label {
+  color: red;
+}
+
+.brightsettings .bright-LogBox .gwt-Label.time {
+  color: #666;
+}
+
+.brightsettings .edit-cell,
+.brightsettings .preview-cell,
+.brightsettings .register-cell {
+  padding: 2px;
+}
+
+.brightsettings .edit-cell button,
+.brightsettings .preview-cell button,
+.brightsettings .register-cell button {
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-width: 0;
+}
+
+.brightsettings .edit-cell button {
+  background-image: url("brightsettings/edit.png");
+}
+
+.brightsettings .preview-cell button {
+  background-image: url("brightsettings/preview.png");
+}
+
+.brightsettings .register-cell button {
+  background-image: url("brightsettings/books.png");
+}
+
+.brightsettings .edit-cell button:hover:after,
+.brightsettings .preview-cell button:hover:after,
+.brightsettings .register-cell button:hover:after {
+  font-size: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #ffd;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  z-index: 99;
+}
+
+.brightsettings .edit-cell button:hover:after {
+  content: "Edit";
+}
+
+.brightsettings .preview-cell button:hover:after {
+  content: "Preview";
+}
+
+.brightsettings .register-cell button:hover:after {
+  content: "Register Learners";
+}
+
+.gwt-DialogBox .invalid-input {
+  border: 1px solid red;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupContent {
+  height: 200px;
+  overflow-y: scroll;
+}

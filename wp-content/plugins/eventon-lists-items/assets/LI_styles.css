@@ -1,0 +1,155 @@
+/**
+ * EventON Lists and Items Styles
+ * @version 0.4
+ */
+
+/* fonts */
+    .EVOLI .evoli_title, 
+    .EVOLI ul li .inner h2, 
+    .EVOLI_section{
+        font-family: 'roboto','arial narrow';
+        font-weight: 700;
+    }
+    .EVOLI ul li .inner p,
+    .EVOLI .EVOLI_container p.EVOLI_back_btn,
+    p.EVOLI_section em
+    {font-family: 'open sans',arial}
+
+.EVOLI{overflow: hidden; width: 100%; padding-bottom: 20px;}
+
+.EVOLI_container{}
+.EVOLI_list, .EVOLI_event_list{float: left;}
+.EVOLI_event_list{display: none;}
+.EVOLI_list.loading:before{
+    content:""; width: 100%; height: 100%;
+    background: #fff7ec url('evo-loader.gif') center center no-repeat;
+    display: block; position: absolute;
+    z-index: 3; opacity: 0.5;
+}
+.EVOLI .evoli_title, .EVOLI ul li .inner h2, .EVOLI_section{
+    text-transform: uppercase;
+}
+.EVOLI .evoli_title{
+    color:#484848;
+    font-size: 28px; 
+    margin: 0;padding: 0;
+    padding-bottom: 20px;  
+}
+.EVOLI .EVOLI_container p.EVOLI_back_btn{
+    margin: 0;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    color:#fff;
+    background-color: #6b6b6b;
+    display:inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+}
+.EVOLI_back_btn:hover{opacity: 0.6}
+.EVOLI_back_btn i.fa{margin-right: 8px;}
+.EVOLI_section{
+    color:#6b6b6b;
+    margin: 0; padding: 10px 0;
+    font-size: 20px;   
+}
+p.EVOLI_section span{display: inline-block; padding-left: 10px; font-style: normal; opacity: 1;}
+p.EVOLI_section em{ opacity: 0.5;}
+.EVOLI_event_list_in .calendar_header{display: none;}
+body .EVOLI ul{
+    outline-style: none; list-style-type: none;
+    margin: 0;padding: 0;
+    border-top:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;    
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.EVOLI ul li{
+    border-left:3px solid #e5e5e5;
+    border-right:1px solid #e5e5e5;    
+    border-bottom:none; border-top:none;
+    position: relative;
+    padding: 0; margin: 0;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    transition: all .15s ease;
+}
+.EVOLI ul li:after{
+    content:""; display: block; position: absolute;bottom: 0;
+    height:1px;
+    background-color: #e5e5e5;
+    width: 100%;
+}
+.EVOLI ul li .inner{    
+    padding: 10px;
+    padding-right: 40px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+        -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    transition: all .15s ease;
+}
+.EVOLI ul li .inner:after{
+    position: absolute; right: 15px;top: 50%; margin-top: -7px;
+    opacity: 0.2;
+    content:"\f054";
+    display: inline-block;
+    font: normal normal normal 14px/1 evo_FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.EVOLI ul li:hover{border-left-width: 6px;}
+    .EVOLI ul li:hover .inner:after{opacity: 0.5;}
+.EVOLI ul li.noevents .inner{cursor: default; padding-right: 10px;}
+    .EVOLI ul li.noevents .inner:hover{border-left-width:3px; background-color: #fff }
+    .EVOLI ul li.noevents .inner:after{display: none;}
+.EVOLI ul li.lefter .inner{   padding-left: 70px;}
+.EVOLI ul.event_type li.lefter .inner{   padding-left: 50px;}
+
+.EVOLI ul li .inner:hover{ background-color:#fffbf1 }
+.EVOLI ul li.lefter span.it_image,.EVOLI ul li.lefter span.it_icon{
+    display: block;
+    position: absolute;
+    left: 10px; top: 10px;
+}
+.EVOLI ul li.lefter span.it_image img{ width: 40px; height: auto;
+    border-radius: 50%;
+}
+/* organizer */
+.EVOLI ul.event_organizer li.lefter span.it_image img{width: 65px;}
+.EVOLI ul.event_organizer li.lefter .inner{padding-left: 90px;}
+
+.EVOLI ul li.lefter span.it_icon i{color: #a0a0a0;}
+.EVOLI ul li .inner > * {margin: 0;padding: 0;}
+.EVOLI ul li .inner h2{
+    color:#6b6b6b;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.EVOLI ul li .inner p{
+    font-size: 14px;
+    color: #8c8c8c;
+    font-style: italic;
+}
+    .EVOLI ul li .inner p.type_name{font-size: 12px;opacity: 0.7;}
+    .EVOLI.list_items p.type_name{display: none;}
+    .EVOLI ul li .inner p.description{padding-bottom: 10px;}
+
+/* sep month fix */
+    .EVOLI_container #eventon_loadbar_section{border:none;}
+    .EVOLI_container.sepm #evcal_list.eventon_events_list{border:none;}
+    .EVOLI_container.sepm .eventon_events_list .eventon_list_event {border-right:1px solid #e5e5e5; }
+    .EVOLI_container .EVOLI_event_list_in .eventon_events_list {
+        border-radius: 5px; overflow: hidden;
+        border-top:1px solid #e5e5e5;
+    }

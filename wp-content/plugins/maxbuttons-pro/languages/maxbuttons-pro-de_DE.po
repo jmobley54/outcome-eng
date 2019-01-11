@@ -1,0 +1,692 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MaxButtons Pro\n"
+"POT-Creation-Date: 2015-06-26 16:04+0100\n"
+"PO-Revision-Date: 2015-06-28 15:28+0100\n"
+"Last-Translator: Roland Stumpp <support@mediaoffice.de>\n"
+"Language-Team: mediaOffice GbR <support@mediaoffice.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;sprintf;printf\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../MaxButtons\n"
+
+#: ../blocks/colorpro.php:45
+msgid "Icon color"
+msgstr "Farbe des Icon"
+
+#: ../blocks/google.php:117
+msgid "Google Event Tracking for Button Clicks"
+msgstr "Google Analytics Ereignis Tracking für Klicks auf einen Button"
+
+#: ../blocks/google.php:118
+msgid "Getting Started"
+msgstr "Erste Schritte"
+
+#: ../blocks/google.php:122
+msgid "Google Event Tracking"
+msgstr "Google Ereignis-Tracking"
+
+#: ../blocks/google.php:125
+msgid "Enable Event Tracking"
+msgstr "Google-Ereignis-Tracking aktivieren"
+
+#: ../blocks/google.php:131
+msgid "Category"
+msgstr "Kategorie"
+
+#: ../blocks/google.php:134
+msgid ""
+"Category is a group name for a set of buttons you want to track.  For "
+"example you might track your Buy Now buttons as a group."
+msgstr ""
+"Kategorie ist ein Gruppenname für ein Set von Buttons, die Sie per Analytics "
+"tracken wollen.  Zum Beispiel könnten Sie Ihre Sofort-Kaufen-Buttons als "
+"Gruppe per Tracking verfolgen."
+
+#: ../blocks/google.php:138
+msgid "Action"
+msgstr "Aktion"
+
+#: ../blocks/google.php:141
+msgid "The type of interaction (i.e. click, play, buy)"
+msgstr "Die Art der Interaktion (z. Bsp. klicken, spielen, kaufen)"
+
+#: ../blocks/google.php:146
+msgid "Label"
+msgstr "Beschriftung"
+
+#: ../blocks/google.php:149
+msgid "Useful for categorizing events (i.e. 'front-page' )"
+msgstr ""
+"Nützlich für die Kategorisierung von Veranstaltungen (z. Bsp. Startseite)"
+
+#: ../blocks/google.php:153
+msgid "Value"
+msgstr "Wert"
+
+#: ../blocks/google.php:156
+msgid ""
+"Value lets you assign the value to you of a user clicking on this button"
+msgstr ""
+"Mit Wert können Sie dem Klick auf den Button eine ID oder Wert zuweisen. "
+
+#: ../blocks/google.php:162
+msgid "Interaction"
+msgstr "Interaktion"
+
+#: ../blocks/google.php:165
+msgid ""
+"When checked  Google Analytics will see this event as a visitor interaction. "
+"This lowers the bounce rate.   We recommend checking this setting."
+msgstr ""
+"Wenn diese Option aktiviert ist, zeichnet Google Analytics den Klick als "
+"Besucher Interaktion auf. Das senkt die Absprungrate. Wir empfehlen diese "
+"Option zu aktivieren. "
+
+#: ../blocks/google.php:171
+msgid "Both event category and action are required fields"
+msgstr ""
+"Die Felder Kategorie und Aktion sind Pflichtfelder im Google Ereignis "
+"Tracking"
+
+#: ../blocks/google.php:180
+msgid "Adding Google Event Tracking to your button"
+msgstr "Fügt Google Analytics Ereignis Tracking zu Ihrem Button hinzu"
+
+#: ../blocks/google.php:183
+msgid ""
+"Google Event tracking allows you to receive an event notification in Google "
+"Analytics everytime a visitor \n"
+"\t\t\tclicks your button."
+msgstr ""
+"Das Google Ereignis Tracking bietet die Option, jedesmal eine Ereignis "
+"Information in Google Analytics zu hinterlegen, wenn ein Besucher \n"
+"\t\t\tauf Deinen Button klickt."
+
+#: ../blocks/google.php:186
+msgid "Setting up Event Tracking"
+msgstr "Google Ereignis-Tracking einrichten (Englisch)"
+
+#: ../blocks/google.php:188
+msgid "Setup"
+msgstr "Einrichtung"
+
+#: ../blocks/google.php:190
+#, php-format
+msgid ""
+"Setup Google Analytics on your WordPress site. You can either manually "
+"insert the correct Analytics code or \n"
+"\t\t\t\tuse a popular plugin like %sGoogle Analytics%s, %sGoogle Analytics "
+"Dashboard for WP%s or one of the many others"
+msgstr ""
+"Einrichtung von Google Analytics auf Deiner WordPress Seite. Sie können den "
+"richtigen Analytics Code manuell einrichten oder \n"
+"\t\t\t\teines der bekannten Plugins nutzen wie %sGoogle Analytics%s, "
+"%sGoogle Analytics Dashboard for WP%s oder eines der vielen anderen Plugins. "
+
+#: ../blocks/google.php:193
+#, php-format
+msgid ""
+"Click the checkbox %s'Enable Event Tracking'%s to activate the tracking for "
+"the button"
+msgstr ""
+"Markieren Sie das Kontrollkästchen %s'Google-Ereignis-Tracking aktivieren'%s "
+"um das Tracking für den Button einzuschalten"
+
+#: ../blocks/google.php:195
+msgid ""
+"The fields Event category and Event Action are required for Google Analytics "
+"and you should fill them out. This controls how your events will be ordered "
+"in Google Analytics."
+msgstr ""
+"Die Felder Kategorie und Aktion sind Pflichtfelder im Google Ereignis "
+"Tracking und erforderlich für Google Analytics. Sie steuern wie das Ereignis "
+"Tracking in Google Analytics angesprochen wird. "
+
+#: ../blocks/google.php:196
+msgid ""
+"Save the button and test if the event are being inserted into your GA account"
+msgstr ""
+"Speichern Sie den Button und prüfen Sie in Ihrem Google Analytics Account ob "
+"das Ereignis Tracking eingebunden ist. "
+
+#: ../blocks/icon.php:162
+msgid "Icon"
+msgstr "Icon"
+
+#: ../blocks/icon.php:165
+msgid "Use Font Awesome Icon"
+msgstr "Verwenden Sie Awesome Icons"
+
+#: ../blocks/icon.php:178
+msgid "Select Icon"
+msgstr "Wählen Sie ein Icon für den Button aus."
+
+#: ../blocks/icon.php:182
+msgid "Choose from 479 icons"
+msgstr "Wählen Sie aus 479 Icons"
+
+#: ../blocks/icon.php:200
+msgid "Image"
+msgstr "Bild"
+
+#: ../blocks/icon.php:203
+msgid "Select..."
+msgstr "Auswählen..."
+
+#: ../blocks/icon.php:209
+msgid "Position"
+msgstr "Position"
+
+#: ../blocks/icon.php:224
+msgid "Icon Size"
+msgstr "Icon Größe"
+
+#: ../blocks/icon.php:226 ../blocks/icon.php:233 ../blocks/icon.php:240
+#: ../blocks/icon.php:247 ../blocks/icon.php:254 ../blocks/textpro.php:318
+#: ../blocks/textpro.php:325 ../blocks/textpro.php:332
+msgid "Default:"
+msgstr "Standard:"
+
+#: ../blocks/icon.php:231
+msgid "Padding Top"
+msgstr "Innenabstand Oben"
+
+#: ../blocks/icon.php:238
+msgid "Padding Bottom"
+msgstr "Innenabstand unten"
+
+#: ../blocks/icon.php:245
+msgid "Padding Left"
+msgstr "Innenabstand Links"
+
+#: ../blocks/icon.php:252
+msgid "Padding Right"
+msgstr "Innenabstand Rechts"
+
+#: ../blocks/icon.php:259
+msgid "Alt Text"
+msgstr "Alternativ Text"
+
+#: ../blocks/textpro.php:150
+msgid "Text"
+msgstr "Textfeld"
+
+#: ../blocks/textpro.php:159
+msgid "Words"
+msgstr "Wörter"
+
+#: ../blocks/textpro.php:160
+msgid "Font"
+msgstr "Schriftart"
+
+#: ../blocks/textpro.php:160
+msgid "see examples"
+msgstr "siehe Beispiele"
+
+#: ../blocks/textpro.php:161
+msgid "Size"
+msgstr "Größe"
+
+#: ../blocks/textpro.php:162
+msgid "Style"
+msgstr "Stil"
+
+#: ../blocks/textpro.php:163
+msgid "Weight"
+msgstr "Gewicht"
+
+#: ../blocks/textpro.php:164
+msgid "Align"
+msgstr "Ausrichten"
+
+#: ../blocks/textpro.php:165
+#, php-format
+msgid "Padding%sTop"
+msgstr "Innenabstand%sOben"
+
+#: ../blocks/textpro.php:166
+#, php-format
+msgid "Padding%sBottom"
+msgstr "Innenabstand%sUnten"
+
+#: ../blocks/textpro.php:167
+#, php-format
+msgid "Padding%sLeft"
+msgstr "Innenabstand%sLinks"
+
+#: ../blocks/textpro.php:168
+#, php-format
+msgid "Padding%sRight"
+msgstr "Innenabstand%sRechts"
+
+#: ../blocks/textpro.php:171
+msgid "Line 1"
+msgstr "Zeile 1"
+
+#: ../blocks/textpro.php:243
+msgid "Line 2"
+msgstr "Zeile 2"
+
+#: ../blocks/textpro.php:316
+msgid "Shadow Offset Left"
+msgstr "Schatten Links"
+
+#: ../blocks/textpro.php:323
+msgid "Shadow Offset Top"
+msgstr "Schatten Oben"
+
+#: ../blocks/textpro.php:330
+msgid "Shadow Width"
+msgstr "Schattenbreite"
+
+#: ../classes/maxbuttons-packs-class.php:77
+#, php-format
+msgid "The %s%s%s button pack file was imported successfully."
+msgstr "Die %s%s%s Button-Paket Datei wurde erfolgreich importiert."
+
+#: ../classes/maxbuttons-packs-class.php:82
+#, php-format
+msgid "The %s%s%s button pack file could not be unzipped."
+msgstr "Die %s%s%s Button-Paket zip Datei konnte nicht entpackt werden."
+
+#: ../classes/maxbuttons-packs-class.php:87
+#, php-format
+msgid "The %s%s%s button pack file could not be saved to the filesystem."
+msgstr "Die %s%s%s Button-Pakete Datei konnte nicht gespeichert werden."
+
+#: ../classes/maxbuttons-packs-class.php:92
+#, php-format
+msgid "Only %sZIP%s files are supported for importing button packs."
+msgstr ""
+"Nury %sZIP%s Dateiformate werden zum Import von Button-Paketen unterstützt."
+
+#: ../classes/maxbuttons-packs-class.php:97
+msgid "No file was selected."
+msgstr "Keine Datei ausgewählt."
+
+#: ../classes/maxbuttons-packs-class.php:220
+#, php-format
+msgid "%sBy: "
+msgstr "%sBy: "
+
+#: ../classes/maxbuttons-packs-class.php:236
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../classes/maxbuttons-packs-class.php:240
+msgid "Show"
+msgstr "Anzeigen"
+
+#: ../classes/maxbuttons-packs-class.php:243
+#: ../classes/maxbuttons-packs-class.php:247
+#: ../includes/maxbuttons-packs.php:100
+msgid "Download this pack"
+msgstr "Dieses Paket herunterladen"
+
+#: ../classes/maxbuttons-packs-class.php:261
+#, php-format
+msgid "%sButton%s"
+msgstr "%sButton%s"
+
+#: ../classes/maxbuttons-packs-class.php:262
+#, php-format
+msgid "%sName and Description%s"
+msgstr "%sName und Beschreibung%s"
+
+#: ../classes/maxbuttons-packs-class.php:264
+#, php-format
+msgid "%sActions%s"
+msgstr "%sAktionen%s"
+
+#: ../classes/maxbuttons-packs-class.php:326
+msgid "Use this button"
+msgstr "Verwenden Sie diesen Button"
+
+#: ../classes/maxbuttons-packs-class.php:361
+msgid "Error occured when contacting Pack server"
+msgstr "Ein Fehler ist aufgetreten beim Kontakt zum Pakete Server."
+
+#: ../classes/maxbuttons-packs-class.php:383
+msgid "Without valid license it's not possible to install free packs."
+msgstr "Ohne gültige Lizenz könen Sie keine Button Frei-Pakete installieren."
+
+#: ../classes/maxbuttons-packs-class.php:443
+msgid "Server did not return a valid package link"
+msgstr "Der Server konnte keinen gültigen Paket Link ermitteln"
+
+#: ../classes/maxbuttons-packs-class.php:450
+msgid "Failed to get package from server"
+msgstr "Fehler beim Paket Download vom Server"
+
+#: ../classes/maxbuttons-packs-class.php:469
+msgid "Download Failed"
+msgstr "Download fehlgeschlagen"
+
+#: ../classes/maxbuttons-pro-class.php:71
+msgid "MaxButtons Pro : Packs"
+msgstr "MaxButtons Pro: Pakete"
+
+#: ../classes/maxbuttons-pro-class.php:72
+#: ../classes/maxbuttonspro-admin-helper.php:38
+#: ../includes/maxbuttonspro-admin-helper.php:38
+msgid "Packs"
+msgstr "Button Pakete"
+
+#: ../classes/maxbuttons-pro-class.php:85
+msgid "MaxButtons Pro : Export"
+msgstr "MaxButtons Pro: Export"
+
+#: ../classes/maxbuttons-pro-class.php:86
+#: ../classes/maxbuttonspro-admin-helper.php:42
+#: ../includes/maxbuttonspro-admin-helper.php:42
+msgid "Export"
+msgstr "Export"
+
+#: ../classes/maxbuttons-pro-class.php:90
+msgid "MaxButtons Pro : License"
+msgstr "MaxButtons Pro: Lizenz"
+
+#: ../classes/maxbuttons-pro-class.php:91
+#: ../classes/maxbuttonspro-admin-helper.php:46
+#: ../includes/maxbuttonspro-admin-helper.php:46
+msgid "License"
+msgstr "Lizenz"
+
+#: ../classes/maxbuttons-pro-class.php:256
+#, php-format
+msgid "MaxButtons release: %s"
+msgstr "MaxButtons Entwicklungsstand: %s"
+
+#: ../classes/maxbuttons-pro-class.php:269
+msgid "Buttons"
+msgstr "Buttons"
+
+#: ../classes/maxbuttons-pro-class.php:285
+msgid "Wrong nonce"
+msgstr "Es gab ein Problem"
+
+#: ../classes/maxbuttons-pro-class.php:287
+msgid "Nonce field was not passed or invalid."
+msgstr "Eingabe wurde nicht bestätigt oder ist falsch."
+
+#: ../classes/maxbuttons-pro-class.php:306
+msgid "Missing fields"
+msgstr "Fehlende Felder"
+
+#: ../classes/maxbuttons-pro-class.php:308
+msgid "Not all required fields were filled out"
+msgstr "Nicht alle Pflichtfelder wurden ausgefüllt"
+
+#: ../classes/maxbuttonspro-admin-helper.php:25
+#: ../includes/maxbuttonspro-admin-helper.php:25
+msgid "Brought to you by"
+msgstr "Präsentiert von"
+
+#: ../classes/maxbuttonspro-admin-helper.php:27
+#: ../includes/maxbuttonspro-admin-helper.php:27
+#, php-format
+msgid "makers of %sMaxGalleria%s and %sMaxInbound%s"
+msgstr "Macher von %sMaxGalleria%s und %sMaxInbound%s"
+
+#: ../classes/maxbuttonspro-admin-helper.php:96
+#: ../includes/maxbuttonspro-admin-helper.php:96
+msgid ""
+"No valid license found. Please activate your license for support, updates, "
+"free packs and more"
+msgstr ""
+"Keine gültige Lizenz gefunden. Bitte aktivieren Sie Ihre Lizenz für Support, "
+"Updates, kostenlose Packs und mehr"
+
+#: ../classes/maxbuttonspro-admin-helper.php:124
+#: ../includes/maxbuttonspro-admin-helper.php:110
+msgid "Search Buttons"
+msgstr "Buttons suchen"
+
+#: ../includes/maxbuttons-collection-edit.php:3
+msgid "MaxButtons Pro : Edit Collection"
+msgstr "MaxButtons Pro: Button Kollektion bearbeiten"
+
+#: ../includes/maxbuttons-collections.php:3
+msgid "MaxButtons Pro : Collections"
+msgstr "MaxButtons Pro: Button Kollektionen"
+
+#: ../includes/maxbuttons-collections.php:10
+msgid "Add New"
+msgstr "Neu hinzufügen"
+
+#: ../includes/maxbuttons-export.php:44
+msgid "Pack name is required for export"
+msgstr "Ein Paket Name ist für den Export erforderlich"
+
+#: ../includes/maxbuttons-export.php:47
+msgid ""
+"Export directory does not exist and could not be created, check your "
+"permissions"
+msgstr ""
+"Das Export Verzeichnis ist nicht vorhanden und konnte nicht erstellt werden. "
+"Bitte überprüfen Sie Ihre Berechtigungen."
+
+#: ../includes/maxbuttons-export.php:50
+msgid "Export directory not writable! Check your permissions"
+msgstr ""
+"Das Export-Verzeichnis nicht beschreibbar! Überprüfen Sie Ihre Berechtigungen"
+
+#: ../includes/maxbuttons-export.php:53
+msgid "Unkown export error occured"
+msgstr "Ein unbekannter Fehler ist beim Export aufgetreten"
+
+#: ../includes/maxbuttons-export.php:83
+msgid "MaxButtons Pro: Export"
+msgstr "MaxButtons Pro: Export"
+
+#: ../includes/maxbuttons-export.php:100
+msgid "Export Buttons"
+msgstr "Export Buttons"
+
+#: ../includes/maxbuttons-export.php:103
+msgid ""
+"Exporting your buttons creates a button pack zip file. Fill out the short "
+"form below, then select which buttons to export."
+msgstr ""
+"Die Export-Funktion erzeugt eine Button-Pakete Datei im zip Format. Füllen "
+"Sie das untenstehende Formular aus und wählen dann aus, welche Buttons "
+"exportiert werden sollen. "
+
+#: ../includes/maxbuttons-export.php:109
+msgid "Pack Name"
+msgstr "Paketname"
+
+#: ../includes/maxbuttons-export.php:116
+msgid "Pack<br />Description"
+msgstr "Paket<br />Beschreibung"
+
+#: ../includes/maxbuttons-export.php:123
+msgid "Pack Author"
+msgstr "Paket Autor"
+
+#: ../includes/maxbuttons-export.php:130
+msgid "Pack Author URL"
+msgstr "Paket Autor URL"
+
+#: ../includes/maxbuttons-export.php:140
+msgid "Button"
+msgstr "Button"
+
+#: ../includes/maxbuttons-export.php:141
+msgid "Name and Description"
+msgstr "Name und Beschreibung"
+
+#: ../includes/maxbuttons-export.php:142
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: ../includes/maxbuttons-font-examples.php:63
+msgid "This is"
+msgstr "Dies ist"
+
+#: ../includes/maxbuttons-license.php:82
+msgid "MaxButtons Pro: License"
+msgstr "MaxButtons Pro: Lizenz"
+
+#: ../includes/maxbuttons-license.php:103
+msgid "Your license key is being activated, please wait..."
+msgstr "Ihr Lizenzschlüssel wird gerade aktiviert wird, bitte warten ..."
+
+#: ../includes/maxbuttons-license.php:110
+msgid "Your license key has been activated. Enjoy using MaxButtons Pro."
+msgstr ""
+"Ihr Lizenzschlüssel wurde erfolgreich aktiviert. Viel Spaß bei der Nutzung "
+"von MaxButtons Pro."
+
+#: ../includes/maxbuttons-license.php:114
+#, php-format
+msgid ""
+"There was an error activating your license key. Please try again or "
+"%scontact us%s so we can investigate the issue."
+msgstr ""
+"Beim aktivieren Ihres Lizenzschlüssels ist ein Fehler aufgetreten. Bitte "
+"probieren Sie noch einmal oder %skontaktieren uns%s damit wir den Fehler "
+"beheben können. "
+
+#: ../includes/maxbuttons-license.php:119
+msgid "Please fill out all fields"
+msgstr "Bitte alle Felder ausfüllen! "
+
+#: ../includes/maxbuttons-license.php:123
+msgid ""
+"MaxButtons Pro has not been activated. Activation is required to receive "
+"plugin updates and support."
+msgstr ""
+"MaxButtons Pro ist nicht aktiviert. Die Aktivierung ist erforderlich, um "
+"Plugin-Updates und Support zu erhalten."
+
+#: ../includes/maxbuttons-license.php:127
+msgid "Your license is active. Enjoy using MaxButtons Pro."
+msgstr "Ihren Lizenz ist aktiv. Viel Spaß bei der Nutzung von Max-Buttons Pro"
+
+#: ../includes/maxbuttons-license.php:132
+msgid "Your License key"
+msgstr "Ihr Lizenzschlüssel"
+
+#: ../includes/maxbuttons-license.php:134
+msgid "Your Email address"
+msgstr "Ihre E-Mail Adresse"
+
+#: ../includes/maxbuttons-license.php:137
+msgid "Activate license"
+msgstr "Lizenz aktivieren"
+
+#: ../includes/maxbuttons-license.php:139
+msgid "Update license"
+msgstr "Die Lizenz aktualisieren"
+
+#: ../includes/maxbuttons-license.php:141
+#, php-format
+msgid "Your license key can be found in your %sMaxButtons account%s."
+msgstr ""
+"Sie finden Ihren Lizenzschlüssel in Ihrem %sMaxButtons Benutzerkonto%s."
+
+#: ../includes/maxbuttons-offers.php:10
+msgid "Every Button We’ve Got!"
+msgstr "Angebot für alle verfügbaren Buttons! "
+
+#: ../includes/maxbuttons-offers.php:13
+msgid ""
+"Over 4,000 Professionally Designed, Production Ready WordPress Buttons in "
+"190 packs.  At $75 for everything it’s quite a deal!"
+msgstr ""
+"Über 4.000 Buttons mit professionellem Design, produziert als WordPress "
+"Buttons in 190 Paketen. Nur 75,00 $ für alle zusammen ist ein Schnäppchen!"
+
+#: ../includes/maxbuttons-offers.php:14
+#, php-format
+msgid ""
+"This includes all %s%s%s current button packs%s and all new button packs for "
+"one year."
+msgstr ""
+"Das beinhaltet alle %s%s%s aktuellen Button-Pakete%s und alle neuen Button-"
+"Pakete für ein ganzes Jahr!"
+
+#: ../includes/maxbuttons-offers.php:18
+msgid "Get All our Buttons Now!"
+msgstr "Holen Sie sich jetzt alle Max Buttons!"
+
+#: ../includes/maxbuttons-pack.php:29
+msgid "MaxButtons Pro: Button Pack"
+msgstr "MaxButtons Pro: Button-Paket"
+
+#: ../includes/maxbuttons-pack.php:40
+msgid "Button Pack"
+msgstr "Button Paket"
+
+#: ../includes/maxbuttons-packs.php:37
+msgid "MaxButtons Pro: Packs"
+msgstr "MaxButtons Pro: Pakete"
+
+#: ../includes/maxbuttons-packs.php:54
+msgid "Import Button Pack"
+msgstr "Button-Paket importieren"
+
+#: ../includes/maxbuttons-packs.php:55
+msgid "Select a button pack file to upload then click \"Import\"."
+msgstr ""
+"Wählen Sie ein Button-Paket zum hochladen aus und klicken \"Importieren\". "
+
+#: ../includes/maxbuttons-packs.php:60
+msgid "Import"
+msgstr "Importieren"
+
+#: ../includes/maxbuttons-packs.php:66
+msgid "Available Button Packs"
+msgstr "Verfügbare Button-Pakete"
+
+#: ../includes/maxbuttons-packs.php:67
+msgid "Free Button Packs"
+msgstr "Kostenlose Button Pakete"
+
+#: ../includes/maxbuttons-packs.php:90
+msgid "Loading free packs"
+msgstr "Kostenfreie Button Pakete laden"
+
+#: ../includes/maxbuttons-packs.php:94
+msgid "Close"
+msgstr "Schließen"
+
+#: ../maxbuttons-pro.php:21
+#, php-format
+msgid ""
+"From version 3 MaxButtons requires at least PHP 5.3 . You are running "
+"version: %s "
+msgstr ""
+"Ab der MaxButtons Version 3 ist mindestens PHP 5.3 erforderlich. Sie "
+"benutzen aktuell die PHP Version: %s "
+
+#: ../maxbuttons-pro.php:36
+msgid ""
+"Already found an instance of MaxButtons running. Please check if you are "
+"trying to activate two MaxButtons plugins and deactivate one. "
+msgstr ""
+"Sie haben bereits eine Version von MaxButtons in Funktion. Bitte "
+"kontrollieren Sie, ob eventuell 2 Plugins aktiviert sind und deaktivieren "
+"ein Plugin."
+
+#: ../wp-updates-plugin.php:87
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"Ein unerwarteter HTTP-Fehler trat während der API-Anfrage auf. </p><p> <a "
+"href=\"?\" onclick=\"document.location.reload(); return false;\">Versuchen "
+"Sie es erneut</a>"
+
+#: ../wp-updates-plugin.php:91
+msgid "An unknown error occurred"
+msgstr "Ein unbekannter Fehler ist aufgetreten"

@@ -1,0 +1,9 @@
+git@code.aura-software.com:aura/wp-bright-template-pack.git c824deb
+----
+commit c824debdc8be1a618d95f6b0f34899bfe7704ec9
+Author: Bret Weinraub <bret@aura-software.com>
+Date:   Sat Oct 14 12:13:26 2017 +0200
+
+    Only include d3.js if the Bright site options include 'd3'.
+(installable): bright-template-pack
+(repo): git@code.aura-software.com:aura/wp-bright-template-pack.git

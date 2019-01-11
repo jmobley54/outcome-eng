@@ -100,8 +100,8 @@ else:
     define('DB_USER',          'database_username');
     define('DB_PASSWORD',      'database_password');
     define('DB_HOST',          'database_host');
-    define('DB_CHARSET',       'utf8');
-    define('DB_COLLATE',       '');
+    define('DB_CHARSET', 'utf8');
+    define('DB_COLLATE', '');
     define('AUTH_KEY',         'put your unique phrase here');
     define('SECURE_AUTH_KEY',  'put your unique phrase here');
     define('LOGGED_IN_KEY',    'put your unique phrase here');
@@ -146,6 +146,10 @@ define('WPLANG', '');
 if ( ! defined( 'WP_DEBUG' ) ) {
     define('WP_DEBUG', false);
 }
+
+define('MULTISITE', false);
+define('SUBDOMAIN_INSTALL', false);
+define('WP_ALLOW_MULTISITE', false);
 
 /* That's all, stop editing! Happy Pressing. */
 

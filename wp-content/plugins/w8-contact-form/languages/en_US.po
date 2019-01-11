@@ -1,0 +1,900 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: v\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-13 10:18+0100\n"
+"PO-Revision-Date: 2016-01-13 10:19+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ..\\\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: templates\\documentation\n"
+"X-Poedit-SearchPathExcluded-1: *.js\n"
+
+#: modules/manual.update.php:36 modules/manual.update.php:39
+#: modules/manual.update.php:42
+msgid "Security check failed, Update process terminated."
+msgstr ""
+
+#: modules/manual.update.php:49
+msgid "File doesn't exists or damaged."
+msgstr ""
+
+#: modules/manual.update.php:53
+msgid "ZIP Uploaded..."
+msgstr ""
+
+#: modules/manual.update.php:83 templates/settings_contacts.php:25
+#: templates/settings_contacts.php:50
+msgid "Failed to create folders..."
+msgstr ""
+
+#: modules/manual.update.php:89
+msgid "ZIP unpacked, collecting datas..."
+msgstr ""
+
+#: modules/manual.update.php:92
+msgid ""
+"ZIP file is not compatible with this plugin or it is not a valid WordPress "
+"Plugin"
+msgstr ""
+
+#: modules/manual.update.php:93
+msgid "Plugin name doesn't match. Is this the same plugin?"
+msgstr ""
+
+#: modules/manual.update.php:98
+msgid "Current Version: "
+msgstr ""
+
+#: modules/manual.update.php:99
+msgid "Uploaded Version: "
+msgstr ""
+
+#: modules/manual.update.php:101
+msgid "START UPDATE"
+msgstr ""
+
+#: modules/manual.update.php:101
+msgid "DO NOT UPDATE (Delete uploaded temp files)"
+msgstr ""
+
+#: modules/manual.update.php:105
+msgid "Changelog"
+msgstr ""
+
+#: modules/manual.update.php:109
+msgid "There was an error unzipping the file. Is it a valid ZIP file?"
+msgstr ""
+
+#: modules/manual.update.php:129
+msgid "Update Files has been successfully removed."
+msgstr ""
+
+#: modules/manual.update.php:135
+msgid "Copying files..."
+msgstr ""
+
+#: modules/manual.update.php:137
+msgid "Removing temp folder..."
+msgstr ""
+
+#: modules/manual.update.php:139
+msgid "Plugin files has been successfully updated..."
+msgstr ""
+
+#: modules/manual.update.php:146
+msgid "Plugin Activation Initialized Successfully..."
+msgstr ""
+
+#: modules/manual.update.php:152
+msgid ""
+"After uploaded the ZIP file you can decide to continue the update process or "
+"discard the changes."
+msgstr ""
+
+#: modules/manual.update.php:156
+msgid "Browse the new version ZIP file:"
+msgstr ""
+
+#: modules/manual.update.php:157
+msgid "UPLOAD"
+msgstr ""
+
+#: settings.php:54 settings.php:327 settings.php:329
+#: templates/settings_contacts.php:93 templates/settings_contacts.php:96
+#: templates/settings_contacts.php:151 templates/settings_contacts.php:158
+msgid "Add Image"
+msgstr ""
+
+#: settings.php:54 settings.php:328 settings.php:329
+#: templates/settings_contacts.php:89 templates/settings_contacts.php:96
+#: templates/settings_contacts.php:155 templates/settings_contacts.php:158
+msgid "REMOVE"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:186
+msgid "DELETE"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:97
+#: templates/settings_contacts.php:159
+msgid "Enter the name"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:98
+#: templates/settings_contacts.php:160
+msgid "Enter the title"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:99
+#: templates/settings_contacts.php:161
+msgid "Enter the subject"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:100
+#: templates/settings_contacts.php:162
+msgid "Email address"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:101
+#: templates/settings_contacts.php:163
+msgid "Description"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:103
+#: templates/settings_contacts.php:165
+msgid "Facebook URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:104
+#: templates/settings_contacts.php:166
+msgid "Google Plus URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:105
+#: templates/settings_contacts.php:167
+msgid "Twitter URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:106
+#: templates/settings_contacts.php:168
+msgid "Pinterest URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:107
+#: templates/settings_contacts.php:169
+msgid "LinkedIn URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:108
+#: templates/settings_contacts.php:170
+msgid "Skype Username"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:109
+#: templates/settings_contacts.php:171
+msgid "Tumblr URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:110
+#: templates/settings_contacts.php:172
+msgid "Flickr URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:111
+#: templates/settings_contacts.php:173
+msgid "Foursquare URL"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:112
+#: templates/settings_contacts.php:174
+msgid "YouTube URL"
+msgstr ""
+
+#: settings.php:54 settings.php:88 settings.php:204
+#: templates/settings_contacts.php:118 templates/settings_contacts.php:180
+msgid "Sender Name"
+msgstr ""
+
+#: settings.php:54 settings.php:89 settings.php:205
+#: templates/settings_contacts.php:119 templates/settings_contacts.php:181
+msgid "Sender Email Address"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:120
+#: templates/settings_contacts.php:182
+msgid "Message"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:115
+#: templates/settings_contacts.php:177
+msgid "Auto Reply"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:116
+msgid ""
+"Leave the fields blank to disable autoreply or use the global autoreply "
+"option."
+msgstr ""
+
+#: settings.php:54
+msgid "All log entries has been deleted."
+msgstr ""
+
+#: settings.php:54
+msgid "Delete Contact"
+msgstr ""
+
+#: settings.php:54
+msgid "Clear Logs"
+msgstr ""
+
+#: settings.php:54
+msgid "No log entries found."
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:97
+#: templates/settings_contacts.php:159
+msgid "Name"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:98
+#: templates/settings_contacts.php:160
+msgid "Title"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:99
+#: templates/settings_contacts.php:161
+msgid "Subject"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:100
+#: templates/settings_contacts.php:162
+msgid "Email Address"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:101
+#: templates/settings_contacts.php:163
+msgid "Short Description"
+msgstr ""
+
+#: settings.php:54
+msgid "Cancel"
+msgstr ""
+
+#: settings.php:54 templates/settings_contacts.php:201
+#: templates/settings_customfields.php:37
+msgid "SAVE"
+msgstr ""
+
+#: settings.php:54
+msgid "Error during the save process"
+msgstr ""
+
+#: settings.php:54
+msgid "Saved Successfully"
+msgstr ""
+
+#: settings.php:90
+msgid "Hide icon"
+msgstr ""
+
+#: settings.php:90 settings.php:91 settings.php:92 settings.php:94
+#: settings.php:95 settings.php:96 settings.php:97 settings.php:98
+#: settings.php:100 settings.php:101 settings.php:203 settings.php:221
+#: settings.php:222
+msgid "On"
+msgstr ""
+
+#: settings.php:90 settings.php:91 settings.php:92 settings.php:94
+#: settings.php:95 settings.php:96 settings.php:97 settings.php:98
+#: settings.php:100 settings.php:101 settings.php:203 settings.php:221
+#: settings.php:222
+msgid "Off"
+msgstr ""
+
+#: settings.php:91
+msgid "Lock screen"
+msgstr ""
+
+#: settings.php:92
+msgid "Display Close Icon"
+msgstr ""
+
+#: settings.php:93
+msgid "Background Transparency (percentage)"
+msgstr ""
+
+#: settings.php:94
+msgid "Display once per user"
+msgstr ""
+
+#: settings.php:95
+msgid "Display globally"
+msgstr ""
+
+#: settings.php:95
+msgid "(use [contact_form_slider] shortcode in the content)"
+msgstr ""
+
+#: settings.php:96
+msgid "Auto open at bottom of the page"
+msgstr ""
+
+#: settings.php:97
+msgid "Enable sending copy"
+msgstr ""
+
+#: settings.php:98
+msgid "Hide Contact Photo"
+msgstr ""
+
+#: settings.php:99
+msgid "Captcha"
+msgstr ""
+
+#: settings.php:99
+msgid "Image"
+msgstr ""
+
+#: settings.php:99
+msgid "Math"
+msgstr ""
+
+#: settings.php:99
+msgid "Hidden Field"
+msgstr ""
+
+#: settings.php:99 settings.php:152 settings.php:365 settings.php:431
+#: settings.php:446
+msgid "Disabled"
+msgstr ""
+
+#: settings.php:100
+msgid "Disable on mobile"
+msgstr ""
+
+#: settings.php:101
+msgid "Keep Settings"
+msgstr ""
+
+#: settings.php:138
+msgid "Icon Vertical Distance (5-95 / in percentage)"
+msgstr ""
+
+#: settings.php:139
+msgid "Icon size (the default icon only)"
+msgstr ""
+
+#: settings.php:139
+msgid "Small"
+msgstr ""
+
+#: settings.php:139
+msgid "Medium"
+msgstr ""
+
+#: settings.php:139
+msgid "Large"
+msgstr ""
+
+#: settings.php:140
+msgid "Direction"
+msgstr ""
+
+#: settings.php:140
+msgid "Left"
+msgstr ""
+
+#: settings.php:140
+msgid "Right"
+msgstr ""
+
+#: settings.php:141
+msgid "Default Icon"
+msgstr ""
+
+#: settings.php:142
+msgid "Icon url (optional - leave empty for default)"
+msgstr ""
+
+#: settings.php:143
+msgid "Animation"
+msgstr ""
+
+#: settings.php:144
+msgid "Reverse Header Blocks"
+msgstr ""
+
+#: settings.php:144 settings.php:191
+msgid "No"
+msgstr ""
+
+#: settings.php:144 settings.php:191
+msgid "Yes"
+msgstr ""
+
+#: settings.php:145
+msgid "Height"
+msgstr ""
+
+#: settings.php:145
+msgid "Full"
+msgstr ""
+
+#: settings.php:145 settings.php:160 settings.php:161 settings.php:162
+#: settings.php:163 settings.php:164
+msgid "Normal"
+msgstr ""
+
+#: settings.php:146
+msgid "Background Animation"
+msgstr ""
+
+#: settings.php:147
+msgid "Background Animation Target"
+msgstr ""
+
+#: settings.php:148
+msgid "Exclude Elements from Animation"
+msgstr ""
+
+#: settings.php:149
+msgid "Style"
+msgstr ""
+
+#: settings.php:150
+msgid "Skin"
+msgstr ""
+
+#: settings.php:151
+msgid "Photo Style"
+msgstr ""
+
+#: settings.php:152
+msgid "Photo Border Color"
+msgstr ""
+
+#: settings.php:153
+msgid "Icon animation"
+msgstr ""
+
+#: settings.php:154
+msgid "Font Family"
+msgstr ""
+
+#: settings.php:155
+msgid "Name Font Size"
+msgstr ""
+
+#: settings.php:156
+msgid "Title Font Size"
+msgstr ""
+
+#: settings.php:157
+msgid "Description Font Size"
+msgstr ""
+
+#: settings.php:158
+msgid "Fields Font Size"
+msgstr ""
+
+#: settings.php:159
+msgid "Button Font Size"
+msgstr ""
+
+#: settings.php:160
+msgid "Name Font Weight"
+msgstr ""
+
+#: settings.php:160 settings.php:161 settings.php:162 settings.php:163
+#: settings.php:164
+msgid "Bold"
+msgstr ""
+
+#: settings.php:161
+msgid "Title Font Weight"
+msgstr ""
+
+#: settings.php:162
+msgid "Description Font Weight"
+msgstr ""
+
+#: settings.php:163
+msgid "Fields Font Weight"
+msgstr ""
+
+#: settings.php:164
+msgid "Button Font Weight"
+msgstr ""
+
+#: settings.php:165
+msgid "Background"
+msgstr ""
+
+#: settings.php:165 settings.php:166 settings.php:167 settings.php:168
+#: settings.php:169
+msgid "Theme Default"
+msgstr ""
+
+#: settings.php:166
+msgid "Default Text Color"
+msgstr ""
+
+#: settings.php:167
+msgid "Submit Button Background"
+msgstr ""
+
+#: settings.php:168
+msgid "Submit Button Background Hover"
+msgstr ""
+
+#: settings.php:169
+msgid "Submit Button Text Color"
+msgstr ""
+
+#: settings.php:183
+msgid "Placeholder for name field"
+msgstr ""
+
+#: settings.php:184
+msgid "Placeholder for email field"
+msgstr ""
+
+#: settings.php:185
+msgid "Placeholder for message field"
+msgstr ""
+
+#: settings.php:186
+msgid "Placeholder for captcha field"
+msgstr ""
+
+#: settings.php:187
+msgid "Text for Send Copy checkbox"
+msgstr ""
+
+#: settings.php:188
+msgid "Send button text"
+msgstr ""
+
+#: settings.php:189
+msgid "Success message"
+msgstr ""
+
+#: settings.php:190
+msgid "Failed message"
+msgstr ""
+
+#: settings.php:191
+msgid "Use WordPress Translation Engine"
+msgstr ""
+
+#: settings.php:203
+msgid "Global Auto-Reply"
+msgstr ""
+
+#: settings.php:206
+msgid "Auto-Reply Message"
+msgstr ""
+
+#: settings.php:212
+msgid "Enter you custom CSS code"
+msgstr ""
+
+#: settings.php:221
+msgid "Logging Status"
+msgstr ""
+
+#: settings.php:221
+msgid ""
+"Enable logging to save interactions with the contact form. Use it for "
+"testing purposes."
+msgstr ""
+
+#: settings.php:222
+msgid "Keep Logs"
+msgstr ""
+
+#: settings.php:222
+msgid ""
+"Keep the logs after uninstall the plugin. Use it before updating the plugin "
+"to the new version."
+msgstr ""
+
+#: settings.php:344
+msgid "Usable Tags:"
+msgstr ""
+
+#: settings.php:358
+msgid "Light"
+msgstr ""
+
+#: settings.php:359
+msgid "Dark"
+msgstr ""
+
+#: settings.php:366
+msgid "Move Right"
+msgstr ""
+
+#: settings.php:367
+msgid "Move Left"
+msgstr ""
+
+#: settings.php:368
+msgid "Move Right ZoomOut"
+msgstr ""
+
+#: settings.php:369
+msgid "Move Left ZoomOut"
+msgstr ""
+
+#: settings.php:370
+msgid "Move Bottom-Right ZoomOut"
+msgstr ""
+
+#: settings.php:371
+msgid "Move Bottom-Left ZoomOut"
+msgstr ""
+
+#: settings.php:372
+msgid "Move Top-Right ZoomOut"
+msgstr ""
+
+#: settings.php:373
+msgid "Move Top-Left ZoomOut"
+msgstr ""
+
+#: settings.php:374
+msgid "Perspective Left"
+msgstr ""
+
+#: settings.php:375
+msgid "Perspective Right"
+msgstr ""
+
+#: settings.php:381
+msgid "Default"
+msgstr ""
+
+#: settings.php:382
+msgid "Minimal"
+msgstr ""
+
+#: settings.php:383
+msgid "Wood"
+msgstr ""
+
+#: settings.php:384
+msgid "Blue Textil"
+msgstr ""
+
+#: settings.php:385
+msgid "Blue Tiles"
+msgstr ""
+
+#: settings.php:386
+msgid "Blurry Blue"
+msgstr ""
+
+#: settings.php:387
+msgid "Bubble Soap"
+msgstr ""
+
+#: settings.php:388
+msgid "Cracks"
+msgstr ""
+
+#: settings.php:389
+msgid "Elegant Dark Blue"
+msgstr ""
+
+#: settings.php:390
+msgid "Flower Light Blue"
+msgstr ""
+
+#: settings.php:391
+msgid "Green"
+msgstr ""
+
+#: settings.php:392
+msgid "Stripes Orange"
+msgstr ""
+
+#: settings.php:509 settings.php:517 settings.php:525 settings.php:533
+#: settings.php:541 settings.php:549 settings.php:557 settings.php:565
+#: settings.php:573 settings.php:581
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: templates/settings_autoreply.php:1 templates/settings_contacts.php:1
+#: templates/settings_customcss.php:1 templates/settings_customfields.php:1
+#: templates/settings_general.php:1 templates/settings_help.php:1
+#: templates/settings_logs.php:1 templates/settings_styles.php:1
+#: templates/settings_translations.php:1 templates/settings_update.php:1
+msgid "LOADING"
+msgstr ""
+
+#: templates/settings_autoreply.php:1 templates/settings_contacts.php:1
+#: templates/settings_customcss.php:1 templates/settings_customfields.php:1
+#: templates/settings_general.php:1 templates/settings_help.php:1
+#: templates/settings_logs.php:1 templates/settings_styles.php:1
+#: templates/settings_translations.php:1 templates/settings_update.php:1
+msgid "Please wait..."
+msgstr ""
+
+#: templates/settings_autoreply.php:4
+msgid "Auto-Reply"
+msgstr ""
+
+#: templates/settings_autoreply.php:5 templates/settings_help.php:7
+msgid "Documentation"
+msgstr ""
+
+#: templates/settings_contacts.php:4
+msgid "Contacts"
+msgstr ""
+
+#: templates/settings_contacts.php:74
+msgid ""
+"Getting datas from external URL is not possible, becase allow_url_fopen and/"
+"or cURL is disabled on your server."
+msgstr ""
+
+#: templates/settings_contacts.php:178
+msgid ""
+"Leave the fields blank to disable auto-reply or use the global auto-reply "
+"option."
+msgstr ""
+
+#: templates/settings_contacts.php:197
+msgid "Install Demo Contacts"
+msgstr ""
+
+#: templates/settings_contacts.php:199
+msgid "Loading demo contacts doesn't save it automatically."
+msgstr ""
+
+#: templates/settings_contacts.php:202
+msgid "ADD NEW CONTACT"
+msgstr ""
+
+#: templates/settings_contacts.php:207
+msgid ""
+"This contact will be permanently deleted and cannot be recovered. Are you "
+"sure?"
+msgstr ""
+
+#: templates/settings_customcss.php:4
+msgid "Custom CSS"
+msgstr ""
+
+#: templates/settings_customfields.php:4
+msgid "Custom Fields"
+msgstr ""
+
+#: templates/settings_customfields.php:6
+msgid ""
+"Fields with marked * are mandatory to save the custom field. The row marked "
+"with red background if it has missing parameters during the save process."
+msgstr ""
+
+#: templates/settings_customfields.php:39
+msgid "ADD TEXT FIELD"
+msgstr ""
+
+#: templates/settings_customfields.php:40
+msgid "ADD TEXTAREA"
+msgstr ""
+
+#: templates/settings_customfields.php:41
+msgid "ADD RADIO BUTTONS"
+msgstr ""
+
+#: templates/settings_customfields.php:42
+msgid "ADD CHECKBOX"
+msgstr ""
+
+#: templates/settings_customfields.php:43
+msgid "ADD SELECT BOX"
+msgstr ""
+
+#: templates/settings_customfields.php:44
+msgid "ADD HIDDEN FIELD"
+msgstr ""
+
+#: templates/settings_general.php:4
+msgid "General Settings"
+msgstr ""
+
+#: templates/settings_help.php:4
+msgid "Help"
+msgstr ""
+
+#: templates/settings_help.php:7
+msgid "To see the full documentation, please click on the following link:"
+msgstr ""
+
+#: templates/settings_logs.php:4
+msgid "Logs"
+msgstr ""
+
+#: templates/settings_logs.php:12
+msgid "CLEAR LOGS"
+msgstr ""
+
+#: templates/settings_logs.php:13
+msgid "DISPLAY LOGS"
+msgstr ""
+
+#: templates/settings_logs.php:18
+msgid ""
+"The logs will be permanently deleted and cannot be recovered. Are you sure?"
+msgstr ""
+
+#: templates/settings_styles.php:4
+msgid "Styles"
+msgstr ""
+
+#: templates/settings_translations.php:4
+msgid "Translations"
+msgstr ""
+
+#: templates/settings_update.php:4
+msgid "Update"
+msgstr ""
+
+#: w8-contact-form.php:818
+msgid "Enter your name"
+msgstr ""
+
+#: w8-contact-form.php:819
+msgid "Enter your email address"
+msgstr ""
+
+#: w8-contact-form.php:820
+msgid "Type your message..."
+msgstr ""
+
+#: w8-contact-form.php:821
+msgid "Enter the numbers"
+msgstr ""
+
+#: w8-contact-form.php:822
+msgid "Send a copy to my email address"
+msgstr ""
+
+#: w8-contact-form.php:823
+msgid "Send"
+msgstr ""
+
+#: w8-contact-form.php:824
+msgid "Message sent successfully"
+msgstr ""
+
+#: w8-contact-form.php:825
+msgid "FAILED"
+msgstr ""
+
+#: w8-contact-form.php:886
+msgid "Copy of the email has not been sent to the Client"
+msgstr ""
+
+#: w8-contact-form.php:889
+msgid "Copy of the email has been sent to the Client"
+msgstr ""
+
+#: w8-contact-form.php:930
+msgid "Sender: "
+msgstr ""

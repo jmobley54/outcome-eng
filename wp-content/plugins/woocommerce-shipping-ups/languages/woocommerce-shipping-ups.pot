@@ -1,0 +1,613 @@
+# Copyright (C) 2018 WooCommerce
+# This file is distributed under the same license as the WooCommerce UPS Shipping plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce UPS Shipping 3.2.13\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-shipping-ups\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-10-11T15:10:53-06:00\n"
+"PO-Revision-Date: 2018-10-11T15:10:53-06:00\n"
+"X-Generator: WP-CLI 2.0.1\n"
+"X-Domain: woocommerce-shipping-ups\n"
+
+#. Plugin Name of the plugin
+msgid "WooCommerce UPS Shipping"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://woocommerce.com/products/ups-shipping-method/"
+msgstr ""
+
+#. Description of the plugin
+msgid "WooCommerce UPS Shipping allows a store to obtain shipping rates for your orders dynamically via the UPS Shipping API."
+msgstr ""
+
+#. Author of the plugin
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://woocommerce.com"
+msgstr ""
+
+#: woocommerce-shipping-ups.php:135
+msgid "Support"
+msgstr ""
+
+#: woocommerce-shipping-ups.php:136
+msgid "Docs"
+msgstr ""
+
+#: woocommerce-shipping-ups.php:145
+msgid "WooCommerce UPS Shipping requires %s to be installed and active."
+msgstr ""
+
+#: woocommerce-shipping-ups.php:225
+msgid "UPS now supports shipping zones. The zone settings were added to a new UPS method on the \"Rest of the World\" Zone. See the zones %1$shere%2$s "
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:148
+#: includes/class-wc-shipping-ups-deprecated.php:675
+#: includes/class-wc-shipping-ups-privacy.php:12
+#: includes/class-wc-shipping-ups.php:189
+#: includes/class-wc-shipping-ups.php:692
+msgid "UPS"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:149
+msgid "The <strong>UPS</strong> extension obtains rates dynamically from the UPS API during cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:293
+#: includes/class-wc-shipping-ups.php:361
+msgid "UPS is enabled, but you have not entered all of your UPS details!"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:300
+#: includes/class-wc-shipping-ups.php:370
+msgid "UPS is enabled, and Parcel Packing Method is set to 'Pack into boxes', but no UPS Packaging is selected and there are no custom boxes defined. Items will be packed individually."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:314
+#: includes/class-wc-shipping-ups.php:384
+msgid "UPS is enabled, but there are no services enabled."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:351
+#: includes/class-wc-shipping-ups.php:419
+msgid "Origin Country"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:372
+#: includes/class-wc-shipping-ups.php:440
+msgid "Services"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:377
+#: includes/class-wc-shipping-ups.php:445
+msgid "Service Code"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:378
+#: includes/class-wc-shipping-ups.php:446
+msgid "Name"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:379
+#: includes/class-wc-shipping-ups.php:447
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:380
+#: includes/class-wc-shipping-ups.php:448
+msgid "Price Adjustment (%s)"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:381
+#: includes/class-wc-shipping-ups.php:449
+msgid "Price Adjustment (%)"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:387
+#: includes/class-wc-shipping-ups.php:455
+msgid "<strong>Domestic Rates</strong>: Next Day Air, 2nd Day Air, Ground, 3 Day Select, Next Day Air Saver, Next Day Air Early AM, 2nd Day Air AM"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:388
+#: includes/class-wc-shipping-ups.php:456
+msgid "<strong>International Rates</strong>: Worldwide Express, Worldwide Expedited, Standard, Worldwide Express Plus, UPS Saver"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:457
+#: includes/class-wc-shipping-ups.php:524
+msgid "Custom Boxes"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:463
+#: includes/class-wc-shipping-ups.php:530
+msgid "Outer Length"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:464
+#: includes/class-wc-shipping-ups.php:531
+msgid "Outer Width"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:465
+#: includes/class-wc-shipping-ups.php:532
+msgid "Outer Height"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:466
+#: includes/class-wc-shipping-ups.php:533
+msgid "Inner Length"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:467
+#: includes/class-wc-shipping-ups.php:534
+msgid "Inner Width"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:468
+#: includes/class-wc-shipping-ups.php:535
+msgid "Inner Height"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:469
+#: includes/class-wc-shipping-ups.php:536
+msgid "Weight of Box"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:470
+#: includes/class-wc-shipping-ups.php:537
+msgid "Max Weight"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:476
+#: includes/class-wc-shipping-ups.php:543
+msgid "Add Box"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:477
+#: includes/class-wc-shipping-ups.php:544
+msgid "Remove selected box(es)"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:480
+#: includes/class-wc-shipping-ups.php:547
+msgid "Items will be packed into these boxes depending based on item dimensions and volume. Outer dimensions will be passed to UPS, whereas inner dimensions will be used for packing. Items not fitting into boxes will be packed individually."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:622
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:624
+msgid "Enable this shipping method"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:628
+#: includes/class-wc-shipping-ups.php:840
+msgid "API Settings"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:630
+msgid "You need to obtain UPS account credentials by registering on %svia their website%s."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:634
+#: includes/class-wc-shipping-ups.php:846
+msgid "UPS User ID"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:636
+#: includes/class-wc-shipping-ups-deprecated.php:644
+#: includes/class-wc-shipping-ups-deprecated.php:652
+#: includes/class-wc-shipping-ups-deprecated.php:660
+#: includes/class-wc-shipping-ups.php:848
+#: includes/class-wc-shipping-ups.php:856
+#: includes/class-wc-shipping-ups.php:864
+#: includes/class-wc-shipping-ups.php:872
+msgid "Obtained from UPS after getting an account."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:642
+#: includes/class-wc-shipping-ups.php:854
+msgid "UPS Password"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:650
+#: includes/class-wc-shipping-ups.php:862
+msgid "UPS Access Key"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:658
+#: includes/class-wc-shipping-ups.php:870
+msgid "UPS Account Number"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:666
+#: includes/class-wc-shipping-ups.php:683
+msgid "Method & Origin Settings"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:672
+#: includes/class-wc-shipping-ups.php:689
+msgid "Method Title"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:674
+#: includes/class-wc-shipping-ups.php:691
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:679
+msgid "Method Availability"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:684
+msgid "All Countries"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:685
+#: includes/class-wc-shipping-ups-deprecated.php:689
+msgid "Specific Countries"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:697
+#: includes/class-wc-shipping-ups.php:696
+msgid "Origin City"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:699
+#: includes/class-wc-shipping-ups.php:698
+msgid "Enter the city for the <strong>sender</strong>."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:704
+#: includes/class-wc-shipping-ups.php:703
+msgid "Origin Postcode"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:706
+#: includes/class-wc-shipping-ups.php:705
+msgid "Enter the zip/postcode for the <strong>sender</strong>."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:714
+#: includes/class-wc-shipping-ups.php:713
+msgid "Services and Packaging"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:716
+#: includes/class-wc-shipping-ups.php:715
+msgid "Please enable all of the different services you'd like to offer customers."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:716
+msgid "By enabling a service, it doesn't gaurantee that it will be offered, as the plugin will only offer the available rates based on the package, the origin and the destination."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:723
+#: includes/class-wc-shipping-ups.php:722
+msgid "Offer Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:728
+#: includes/class-wc-shipping-ups.php:727
+msgid "Offer the customer all returned rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:729
+#: includes/class-wc-shipping-ups.php:728
+msgid "Offer the customer the cheapest rate only"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:733
+#: includes/class-wc-shipping-ups.php:732
+msgid "Negotiated Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:734
+#: includes/class-wc-shipping-ups.php:733
+msgid "Enable negotiated rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:737
+msgid "Enable this %sonly%s if this shipping account has %snegotiated rates%s available."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:740
+#: includes/class-wc-shipping-ups.php:743
+msgid "Delivery Confirmation"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:741
+#: includes/class-wc-shipping-ups-deprecated.php:782
+#: includes/class-wc-shipping-ups.php:889
+msgid "Enable debug mode"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:744
+#: includes/class-wc-shipping-ups.php:749
+msgid "No Signature Required"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:745
+msgid "Signature Required: $%s per package"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:746
+msgid "Adult Signature Required: $%s per package"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:749
+#: includes/class-wc-shipping-ups.php:746
+msgid "Optionally you may charge customers for signature on delivery. This will just add the specified amount above to the returned rates."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:753
+#: includes/class-wc-shipping-ups.php:755
+msgid "Parcel Packing Method"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:758
+#: includes/class-wc-shipping-ups.php:760
+msgid "Default: Pack items individually"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:759
+#: includes/class-wc-shipping-ups.php:761
+msgid "Recommended: Pack into boxes with weights and dimensions"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:763
+#: includes/class-wc-shipping-ups.php:765
+msgid "UPS Packaging"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:765
+#: includes/class-wc-shipping-ups.php:767
+msgid "Select UPS standard packaging options to enable"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:775
+#: includes/class-wc-shipping-ups.php:777
+msgid "Advanced Options"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:777
+#: includes/class-wc-shipping-ups.php:779
+msgid "Only modify the following options if needed. They will most likely alter the regularly offered rate(s)."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:781
+#: includes/class-wc-shipping-ups.php:888
+msgid "Debug Mode"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:785
+#: includes/class-wc-shipping-ups.php:892
+msgid "Enable debug mode to show debugging information on your cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:789
+#: includes/class-wc-shipping-ups.php:783
+msgid "Origin Address"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:791
+#: includes/class-wc-shipping-ups.php:785
+msgid "Sometimes you may need to enter the address for the <strong>sender / origin</strong>."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:796
+#: includes/class-wc-shipping-ups.php:790
+msgid "Residential"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:797
+#: includes/class-wc-shipping-ups.php:791
+msgid "Enable residential address flag"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:800
+#: includes/class-wc-shipping-ups.php:794
+msgid "Enable this to indicate to UPS that the receiver / customer is a residential address."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:804
+#: includes/class-wc-shipping-ups.php:798
+msgid "Insured Value"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:805
+#: includes/class-wc-shipping-ups.php:799
+msgid "Request Insurance to be included in UPS rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:808
+#: includes/class-wc-shipping-ups.php:802
+msgid "Enable insured value option to include insurance in UPS rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:812
+#: includes/class-wc-shipping-ups.php:806
+msgid "Pickup Type"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:815
+#: includes/class-wc-shipping-ups.php:814
+msgid "This will adjust the rate you get, so only change it if needed."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:822
+#: includes/class-wc-shipping-ups.php:818
+msgid "Fallback"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:824
+#: includes/class-wc-shipping-ups.php:820
+msgid "If UPS returns no matching rates, offer this amount for shipping so that the user can still checkout. Leave blank to disable. Enter a numeric value with no currency symbols."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:829
+#: includes/class-wc-shipping-ups.php:825
+msgid "Weight/Dimension Units"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:831
+#: includes/class-wc-shipping-ups.php:827
+msgid "If you see \"This measurement system is not valid for the selected country\" errors, switch this to metric units."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:834
+#: includes/class-wc-shipping-ups.php:831
+msgid "LB / IN"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:835
+#: includes/class-wc-shipping-ups.php:832
+msgid "KG / CM"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:888
+#: includes/class-wc-shipping-ups.php:946
+msgid "UPS: Country not supplied. Rates not requested."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:894
+msgid "UPS: No Origin Postcode has been set. Please %sadd one%s so rates can be calculated!"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:905
+#: includes/class-wc-shipping-ups.php:970
+msgid "UPS: No Services are enabled in admin panel."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:931
+#: includes/class-wc-shipping-ups.php:997
+msgid "UPS: Using cached response."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:944
+#: includes/class-wc-shipping-ups.php:1013
+msgid "Failed loading XML"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:1003
+#: includes/class-wc-shipping-ups.php:1078
+msgid "[UPS] No rate returned for service code %1$s, %2$s (UPS code: %3$s)"
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:1048
+#: includes/class-wc-shipping-ups.php:1117
+msgid "UPS: Using Fallback setting."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:1210
+#: includes/class-wc-shipping-ups-deprecated.php:1430
+#: includes/class-wc-shipping-ups.php:1296
+#: includes/class-wc-shipping-ups.php:1609
+msgid "Product #%d is virtual. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:1215
+#: includes/class-wc-shipping-ups.php:1301
+msgid "Product #%d is missing weight. Aborting."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-deprecated.php:1449
+#: includes/class-wc-shipping-ups.php:1627
+msgid "UPS Parcel Packing Method is set to Pack into Boxes. Product #%d is missing dimensions. Aborting."
+msgstr ""
+
+#: includes/class-wc-shipping-ups-privacy.php:20
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:190
+msgid "The UPS extension obtains rates dynamically from the UPS API during cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:715
+msgid "By enabling a service, it doesn't guarantee that it will be offered, as the plugin will only offer the available rates based on the package, the origin and the destination."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:737
+msgid "Enable this %1$sonly%2$s if this shipping account has %3$snegotiated rates%4$s available."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:750
+msgid "Signature Required"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:751
+msgid "Adult Signature Required"
+msgstr ""
+
+#. translators: %1$s: Current customer classification option, %2$s default classification option
+#: includes/class-wc-shipping-ups.php:810
+msgid "Disabled because Customer Classification is set to \"%1$s\".<br /> Pickup Type is only used when Customer Classification is \"%2$s\"."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:833
+msgid "Automatic (based on customer address)"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:842
+msgid "You need to obtain UPS account credentials by registering on %1$svia their website%2$s."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:878
+msgid "Customer Classification"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:881
+msgid "This option only valid if origin country is US."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:952
+msgid "UPS: No Origin Postcode has been set. Please edit your UPS shipping method in your shipping zone(s) and add an Origin Postcode so rates can be calculated!"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:990
+msgid "Cannot retrieve rate: "
+msgstr ""
+
+#. translators: 1) UPS service name 2) currency for the rate 3) store's currency
+#: includes/class-wc-shipping-ups.php:1035
+msgid "[UPS] Rate for %1$s is in %2$s but store currency is %3$s."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1706
+msgid "Rate chart from shipper's country."
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1707
+msgid "Rates associated with shipper number"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1708
+msgid "Daily rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1709
+msgid "Retail rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1710
+msgid "Regional rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1711
+msgid "General list rates"
+msgstr ""
+
+#: includes/class-wc-shipping-ups.php:1712
+msgid "Standard list rates"
+msgstr ""

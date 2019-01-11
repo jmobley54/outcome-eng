@@ -1,0 +1,14 @@
+# Understanding the Checkout Process
+
+The bright woocommerce integration bridge contains a method called
+
+    managerOrder($wc_order)
+
+that manages all facets of the WooCommerce checkout, as it pertains to Bright.
+
+This document covers 
+ * how and when this routine is called, 
+ * what it does, 
+ * how to check what it did
+ * and how to call it manually or otherwise force it to "run again".
+

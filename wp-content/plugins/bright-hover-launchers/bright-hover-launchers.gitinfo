@@ -1,0 +1,9 @@
+git@code.aura-software.com:aura/bright-hover-launchers.git 7a10e1d
+----
+commit 7a10e1da4b46ade0ef888ba55ee79a7f95d35d6c
+Author: Bret Weinraub <bret@aura-software.com>
+Date:   Thu Dec 1 14:35:32 2016 -0700
+
+    Hopefully, gives a reasonable experience on a touch device.
+(installable): bright-hover-launchers
+(repo): git@code.aura-software.com:aura/bright-hover-launchers.git

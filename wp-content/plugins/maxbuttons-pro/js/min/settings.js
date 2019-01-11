@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){$=e,$("#maxbuttons .color-field").wpColorPicker({width:300,palettes:!1})});

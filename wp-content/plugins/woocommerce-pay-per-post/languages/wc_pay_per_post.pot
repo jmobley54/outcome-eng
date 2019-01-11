@@ -1,0 +1,869 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WooCommerce Pay Per Post\n"
+"POT-Creation-Date: 2018-09-25 12:47-0400\n"
+"PO-Revision-Date: 2018-03-03 21:27-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: woocommerce-pay-per-post.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/class-woocommerce-pay-per-post-admin.php:17
+msgid "WooCommerce PayPerPost"
+msgstr ""
+
+#: admin/class-woocommerce-pay-per-post-admin.php:104
+msgctxt "Default restricted content"
+msgid ""
+"<h1>Oops, Restricted Content</h1>\n"
+"<p>We are sorry but this post is restricted to folks that have purchased "
+"this page.</p>\n"
+"\n"
+"[products ids='{{product_id}}']"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: admin/class-woocommerce-pay-per-post-admin.php:192
+#: admin/partials/whats-new.php:4
+msgid "WooCommerce Pay Per Post"
+msgstr ""
+
+#: admin/class-woocommerce-pay-per-post-admin.php:508
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/help-filters.php:2
+msgid "Available Filters"
+msgstr ""
+
+#: admin/partials/help-filters.php:8
+msgid ""
+"This filter allows you to override the WP Query arguments for the shortcodes."
+msgstr ""
+
+#: admin/partials/help-filters.php:21 admin/partials/help-template-tags.php:10
+#: admin/partials/meta-box-delay-restriction.php:26
+#: admin/partials/meta-box-expiry-restriction.php:26
+#: admin/partials/meta-box-page-view-restriction.php:38
+msgid "Example"
+msgstr ""
+
+#: admin/partials/help-getting-started.php:3
+msgid "Protecting a Post"
+msgstr ""
+
+#: admin/partials/help-shortcodes-templates.php:2
+#: admin/partials/settings-sidebar.php:28
+msgid "Shortcode Templates"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:4 admin/partials/help-shortcodes.php:38
+msgid "Available Shortcodes"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:6 admin/partials/help-shortcodes.php:43
+msgid "Default Shortcode"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:8
+msgid "Attributes"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:15 admin/partials/help-shortcodes.php:53
+msgid ""
+"This is the default template. It displays all of the purchased posts to the "
+"current logged in user."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:20 admin/partials/help-shortcodes.php:58
+msgid ""
+"It displays all of the available protected posts which the current logged in "
+"user has yet to purchase."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:25 admin/partials/help-shortcodes.php:63
+msgid "This will output a list of all protected posts available for purchase."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:35
+msgid "PREMIUM ONLY SHORTCODES"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:45 admin/partials/meta-box-base.php:8
+msgid "Options"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:46
+msgid "The base shortcode comes with a variety of options."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:75
+msgid "This is the default orderby. It orders posts by the post_date."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:80
+msgid "This orders posts by the post ID."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:85
+msgid "This orders posts by the post Title."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:90
+msgid "This orders posts by the menu order."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:102
+msgid "This is the default order. It orders posts in descending order."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:107
+msgid "It orders posts in ascending order."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:116
+msgid ""
+"You can filter just by specific categories by inputting the category slug "
+"into the shortcode.  If you want multiple categories you can separate them "
+"by commas. "
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:116
+msgid "Category Parameters"
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:122
+msgid ""
+"You can filter just by specific tags by inputting the tag slug into the "
+"shortcode.  If you want multiple tags you can separate them by commas."
+msgstr ""
+
+#: admin/partials/help-shortcodes.php:122
+msgid "Tag Parameters"
+msgstr ""
+
+#: admin/partials/help-template-tags.php:2
+msgid "Available Template Tags"
+msgstr ""
+
+#: admin/partials/help-template-tags.php:4
+msgid ""
+"Out of the box this plugin will work with any theme which uses the standard "
+"WordPress function <span class=\"code\">the_content()</span> for those "
+"themes that do not utilize the_content() you can use the following static "
+"functions in your templates."
+msgstr ""
+
+#: admin/partials/help-template-tags.php:7
+msgid ""
+"This checks if the current user has access to the page. It returns true/false"
+msgstr ""
+
+#: admin/partials/help-template-tags.php:9
+msgid ""
+"This returns the content specified in the setting page, or the override "
+"content if specified on post."
+msgstr ""
+
+#: admin/partials/help.php:3
+msgid "WooCommerce Pay Per Post Help"
+msgstr ""
+
+#: admin/partials/meta-box-base.php:4
+msgid "Product Information"
+msgstr ""
+
+#: admin/partials/meta-box-base.php:5
+msgid "Delay Restriction"
+msgstr ""
+
+#: admin/partials/meta-box-base.php:6
+msgid "Page View Restriction"
+msgstr ""
+
+#: admin/partials/meta-box-base.php:7
+msgid "Expiry Restriction"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:6
+msgid ""
+"This allows you to delay the paywall from appearing for a set amount of time."
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:8
+msgid "Enable Delay Restriction"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:18
+#: admin/partials/meta-box-expiry-restriction.php:18
+#: admin/partials/meta-box-page-view-restriction.php:27
+msgid "Minutes"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:19
+#: admin/partials/meta-box-expiry-restriction.php:19
+#: admin/partials/meta-box-page-view-restriction.php:28
+msgid "Hours"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:20
+#: admin/partials/meta-box-expiry-restriction.php:20
+#: admin/partials/meta-box-page-view-restriction.php:29
+msgid "Days"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:21
+#: admin/partials/meta-box-expiry-restriction.php:21
+#: admin/partials/meta-box-page-view-restriction.php:30
+msgid "Weeks"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:22
+#: admin/partials/meta-box-expiry-restriction.php:22
+#: admin/partials/meta-box-page-view-restriction.php:31
+msgid "Months"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:23
+#: admin/partials/meta-box-expiry-restriction.php:23
+#: admin/partials/meta-box-page-view-restriction.php:32
+msgid "Years"
+msgstr ""
+
+#: admin/partials/meta-box-delay-restriction.php:27
+msgid ""
+"For two weeks after publishing this post it is FREE to general public to "
+"view.  After two weeks users must purchase specified product to view content "
+"of post."
+msgstr ""
+
+#: admin/partials/meta-box-expiry-restriction.php:6
+msgid ""
+"This allows you to specify an expiration on this post which would require "
+"the user to repurchase the product associated with this post."
+msgstr ""
+
+#: admin/partials/meta-box-expiry-restriction.php:8
+msgid "Enable Expiry Restriction"
+msgstr ""
+
+#: admin/partials/meta-box-expiry-restriction.php:13
+msgid "Expire after"
+msgstr ""
+
+#: admin/partials/meta-box-expiry-restriction.php:27
+msgid ""
+"You have pages or posts that have embeded video and you want to sell a 2 day "
+"pass to unlimited viewing of the videos.  Once the user purchases the post "
+"they have access for 2 days, and at that time they will have to repurchase "
+"the product to get access again."
+msgstr ""
+
+#: admin/partials/meta-box-options.php:3
+msgid ""
+"Did you want to show to your users how much time is remaining for their "
+"purchase or how many page views they have remaining?."
+msgstr ""
+
+#: admin/partials/meta-box-options.php:5
+msgid "Show user page views remaining / time remaining at top of content?"
+msgstr ""
+
+#: admin/partials/meta-box-options.php:7
+msgid ""
+"Templates can be overwritten in your child theme.  Look at <code>public/"
+"partials/expiration-status.php</code> and <code>public/partials/pageview-"
+"status.php</code>"
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:6
+msgid ""
+"This allows you to limit the number of page views the user who purchased "
+"this product has before the paywall reappears. Options to specify over a set "
+"amount of time or forever."
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:8
+msgid "Enable Page View Restriction"
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:12
+msgid "Post can be viewed"
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:14
+msgid "times before needs to be repurchased."
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:18
+msgid "Calculate page views over specific amount of time?"
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:22
+msgid "Over"
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:35
+msgid "Since Last Purchase Date"
+msgstr ""
+
+#: admin/partials/meta-box-page-view-restriction.php:39
+msgid ""
+"You only want a customer to be able to view this post no more than two times "
+"per week, otherwise they need to repurchase post."
+msgstr ""
+
+#: admin/partials/meta-box-product-info.php:2
+msgid ""
+"This is the id of the product that is required to have been purchased before "
+"a user can view the content of this page. You can select multiple products."
+msgstr ""
+
+#: admin/partials/meta-box-product-info.php:4
+msgid "Select Product(s)"
+msgstr ""
+
+#: admin/partials/meta-box-product-info.php:12
+msgid "Override Restricted Content Message"
+msgstr ""
+
+#: admin/partials/meta-box-product-info.php:13
+msgid ""
+"By default the Restricted Content Message is pulled from the <a href=\"/wp-"
+"admin/admin.php?page=wc-ppp\">Settings</a> page.  But you can override that "
+"on a product level by adding text below."
+msgstr ""
+
+#: admin/partials/meta-box-product-info.php:15
+msgid ""
+"The token <strong>{{product_id}}</strong> will be automatically replaced "
+"with the product ID associated with the page the visitor is on.  You can "
+"also use the token <strong>{{parent_id}}</strong> for when using Product "
+"Variations so you show the parent product.  You can use any WooCommerce "
+"shortcodes in the restricted content text.  Please view <a href=\"https://"
+"docs.woocommerce.com/document/woocommerce-shortcodes/\" target=\"_blank"
+"\">https://docs.woocommerce.com/document/woocommerce-shortcodes/</a>."
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:6
+msgid "Upgrade to Premium Version"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:9
+msgid ""
+"The premium version has a ton of great features including page view "
+"expiration and time based expiration!"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:19
+msgid "Have Questions? Request a Feature?"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:22
+msgid ""
+"If you have any questions or want to suggest a feature request please reach "
+"out to me at mattpram@gmail.com.  If you really dig this plugin consider "
+"leaving me a review!"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:24
+msgid "Additional Help"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:26
+msgid "Getting Started"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:27
+msgid "Shortcodes"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:29
+msgid "Template Tags"
+msgstr ""
+
+#: admin/partials/settings-sidebar.php:30
+msgid "Filters"
+msgstr ""
+
+#: admin/partials/settings.php:3
+msgid "WooCommerce Pay Per Post Settings"
+msgstr ""
+
+#: admin/partials/settings.php:16 admin/partials/settings.php:21
+msgid "Restricted Content Message"
+msgstr ""
+
+#: admin/partials/settings.php:19
+msgid ""
+"Message that gets displayed when visitor goes to page that they have not "
+"purchased.  This message can be overwritten per product if necessary."
+msgstr ""
+
+#: admin/partials/settings.php:27
+msgid ""
+"The token <strong>{{product_id}}</strong> will be automatically replaced "
+"with the product ID associated with the page the visitor is on. You can also "
+"use the token <strong>{{parent_id}}</strong> for when using Product "
+"Variations so you show the parent product.   You can use any WooCommerce "
+"shortcodes in the restricted content text.  Please view <a href=\"https://"
+"docs.woocommerce.com/document/woocommerce-shortcodes/\" target=\"_blank"
+"\">https://docs.woocommerce.com/document/woocommerce-shortcodes/</a>."
+msgstr ""
+
+#: admin/partials/settings.php:34
+msgid "Display on additional Post Types"
+msgstr ""
+
+#: admin/partials/settings.php:37
+msgid ""
+"By default the Pay Per Post Meta Box appears only on standard Wordpress "
+"Pages and Posts.  If you would like the Meta Box to appear for other custom "
+"post types, please enter them below."
+msgstr ""
+
+#: admin/partials/settings.php:38
+msgid "Additional Post Types"
+msgstr ""
+
+#: admin/partials/settings.php:57
+msgid ""
+"<a href=\"\" class=\"post-types-button\">Click here</a> to view the "
+"available post types for your system."
+msgstr ""
+
+#: admin/partials/settings.php:74
+msgid "General Options"
+msgstr ""
+
+#: admin/partials/settings.php:78
+msgid "Only show Virtual or Downloadable Products in Pay Per Post Meta Box?"
+msgstr ""
+
+#: admin/partials/settings.php:81
+msgid ""
+"Some folks have hundreds of products, this will limit the products displayed "
+"in the drop down list on the PPP meta box to just Virtual/Downloadable "
+"products."
+msgstr ""
+
+#: admin/partials/settings.php:84
+msgid "Turn off comments completely on protected pages?"
+msgstr ""
+
+#: admin/partials/settings.php:87
+msgid "Turn off comments completely when user does not have access to page?"
+msgstr ""
+
+#: admin/partials/settings.php:94
+msgid "Turn off comments just for those that have not purchased?"
+msgstr ""
+
+#: admin/partials/settings.php:97
+msgid ""
+"Turn off comments for those that have not purchased? Comments will be "
+"enabled for those that have paid for post/page."
+msgstr ""
+
+#: admin/partials/settings.php:103
+msgid "Allow all administrator users to view all protected posts?"
+msgstr ""
+
+#: admin/partials/settings.php:106
+msgid ""
+"This is useful for debugging, you can enable or disable viewing of protected "
+"content when logged in as an administrator"
+msgstr ""
+
+#: admin/partials/settings.php:109
+msgid "Enable Debugging?"
+msgstr ""
+
+#: admin/partials/settings.php:112
+msgid ""
+"This will create a WooCommerce Pay Per Post log to let you see what is going "
+"on behind the scenes.  Can help to debug why a paywall is showing up or not "
+"showing up."
+msgstr ""
+
+#: admin/partials/settings.php:115
+msgid "Log File Location"
+msgstr ""
+
+#: admin/partials/settings.php:120
+msgid "Delete all settings and records this plugin made on deactivation?"
+msgstr ""
+
+#: admin/partials/settings.php:123
+msgid ""
+"This will remove all customer page view stats, along with all settings, "
+"debug files, and database tables upon deactivation.  <br><strong>THIS CAN "
+"NOT BE UNDONE!</strong>"
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:1
+msgid "WooCommerce Pay Per Post Page Views"
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:2
+msgid ""
+"These are all of the page views for the posts/pages/etc that have been "
+"protected by the Page View protection type.  You can delete single items."
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:6
+#: admin/partials/users-table__premium_only.php:14
+msgid "ID"
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:7
+#: admin/partials/users-table__premium_only.php:15
+msgid "Page/Post Name"
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:8
+#: admin/partials/users-table__premium_only.php:16
+msgid "Timestamp"
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:9
+#: admin/partials/users-table__premium_only.php:17
+msgid "Actions"
+msgstr ""
+
+#: admin/partials/users-table__premium_only.php:26
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/whats-new.php:8
+msgid ""
+"Version 2.1 is FINALLY here and has been completely rewritten from the "
+"ground up!  Over 400 hours have been poured into this new version."
+msgstr ""
+
+#: admin/partials/whats-new.php:15
+msgid "Your database needs to be upgraded as you have "
+msgstr ""
+
+#: admin/partials/whats-new.php:15
+msgid " products that use an outdated version of this plugin!"
+msgstr ""
+
+#: admin/partials/whats-new.php:16
+msgid "It is"
+msgstr ""
+
+#: admin/partials/whats-new.php:17
+msgid "STRONGLY"
+msgstr ""
+
+#: admin/partials/whats-new.php:17
+msgid "recommended that you backup your database before doing any upgrades."
+msgstr ""
+
+#: admin/partials/whats-new.php:42
+msgid "Awesome, the database upgrade was a success"
+msgstr ""
+
+#: admin/partials/whats-new.php:52
+msgid "Introducing awesome Premium features!"
+msgstr ""
+
+#: admin/partials/whats-new.php:54
+msgid "Multiple protection types"
+msgstr ""
+
+#: admin/partials/whats-new.php:57
+msgid "Customizable per page purchase messages"
+msgstr ""
+
+#: admin/partials/whats-new.php:60
+msgid "More powerful / feature rich shortcodes"
+msgstr ""
+
+#: admin/partials/whats-new.php:66
+msgid "Changelog"
+msgstr ""
+
+#: admin/partials/whats-new.php:69
+msgid "Version 2.1.13"
+msgstr ""
+
+#: admin/partials/whats-new.php:71
+msgid ""
+"NEW FEATURE - Added in two new filters wc_pay_per_post_all_product_args and "
+"wc_pay_per_post_virtual_product_args"
+msgstr ""
+
+#: admin/partials/whats-new.php:72
+msgid ""
+"UPDATE - Updated the virtual product filter to adhere to new WooCommerce "
+"meta values"
+msgstr ""
+
+#: admin/partials/whats-new.php:73
+msgid "UPDATE - Addressed more pages to make them translatable"
+msgstr ""
+
+#: admin/partials/whats-new.php:74
+msgid ""
+"BUG FIX - Corrected PHP warning message for invalid argument when using "
+"implode()"
+msgstr ""
+
+#: admin/partials/whats-new.php:76
+msgid "Version 2.1.12"
+msgstr ""
+
+#: admin/partials/whats-new.php:78
+msgid ""
+"BUG FIX - Corrected issue with debug code displaying on protected products"
+msgstr ""
+
+#: admin/partials/whats-new.php:80
+msgid "Version 2.1.11"
+msgstr ""
+
+#: admin/partials/whats-new.php:82
+msgid ""
+"BUG FIX - Fixed issue with comments being displayed through entire site "
+"instead of just on protected posts"
+msgstr ""
+
+#: admin/partials/whats-new.php:84
+msgid "Version 2.1.10"
+msgstr ""
+
+#: admin/partials/whats-new.php:86
+msgid ""
+"BUG FIX - Fixed issue where if multiple products were associated with post "
+"it would only look for the first product"
+msgstr ""
+
+#: admin/partials/whats-new.php:88
+msgid "Version 2.1.9"
+msgstr ""
+
+#: admin/partials/whats-new.php:90
+msgid "Updated composer to default to php 5.6 instead of php 7"
+msgstr ""
+
+#: admin/partials/whats-new.php:93
+msgid "Version 2.1.8"
+msgstr ""
+
+#: admin/partials/whats-new.php:95
+msgid "Multiple updates to conform to WordPress Coding Standards"
+msgstr ""
+
+#: admin/partials/whats-new.php:97
+msgid "Version 2.1.7"
+msgstr ""
+
+#: admin/partials/whats-new.php:99
+msgid "NEW PREMIUM FEATURE Ability to utilize product variations"
+msgstr ""
+
+#: admin/partials/whats-new.php:100
+msgid ""
+"NEW Shortcode replacement for {{parent_id}} which is to be used with "
+"Variations to get the main product ID"
+msgstr ""
+
+#: admin/partials/whats-new.php:101
+msgid "FIXED issue which help page tabs would not work"
+msgstr ""
+
+#: admin/partials/whats-new.php:103
+msgid "Version 2.1.6"
+msgstr ""
+
+#: admin/partials/whats-new.php:105
+msgid ""
+"REFACTOR refactored the way the Select2 javascript library was enqueued to "
+"minimize conflicts with other plugins using Select2"
+msgstr ""
+
+#: admin/partials/whats-new.php:107
+msgid "Version 2.1.5"
+msgstr ""
+
+#: admin/partials/whats-new.php:109
+msgid ""
+"FIXED minor bug with upgrade script that accounts for blank records on "
+"post_meta"
+msgstr ""
+
+#: admin/partials/whats-new.php:111
+msgid "Version 2.1.4"
+msgstr ""
+
+#: admin/partials/whats-new.php:113
+msgid "FIXED bug which if upgraded would still show as FREE license sometimes."
+msgstr ""
+
+#: admin/partials/whats-new.php:114
+msgid "UPDATED Freemius WordPress SDK to latest version"
+msgstr ""
+
+#: admin/partials/whats-new.php:115
+msgid "UPDATED POT File for translations"
+msgstr ""
+
+#: admin/partials/whats-new.php:116
+msgid "UPDATED Spanish translation"
+msgstr ""
+
+#: admin/partials/whats-new.php:117
+msgid "UPDATED French translation"
+msgstr ""
+
+#: admin/partials/whats-new.php:119
+msgid "Version 2.1.3"
+msgstr ""
+
+#: admin/partials/whats-new.php:121
+msgid "FIXED allow for multiple product ids to be show in shortcode"
+msgstr ""
+
+#: admin/partials/whats-new.php:122
+msgid ""
+"FIXED issue with trial subscriptions which still showed upgrade to premium "
+"even though you were in premium trial"
+msgstr ""
+
+#: admin/partials/whats-new.php:124
+msgid "Version 2.1.2"
+msgstr ""
+
+#: admin/partials/whats-new.php:126
+msgid "FIXED PHP Notice on Upgrade complete page"
+msgstr ""
+
+#: admin/partials/whats-new.php:127
+msgid ""
+"FIXED bug which did not account for custom post types in upgrade process"
+msgstr ""
+
+#: admin/partials/whats-new.php:128
+msgid "FIXED bug in shortcode that did not account for custom post types"
+msgstr ""
+
+#: admin/partials/whats-new.php:130
+msgid "Version 2.1.1"
+msgstr ""
+
+#: admin/partials/whats-new.php:132
+msgid ""
+"FIXED bug which if toggle for allow admins to view protected content it "
+"would allow users to view protected content"
+msgstr ""
+
+#: admin/partials/whats-new.php:133
+msgid ""
+"FIXED bug which was double encoding the restricted message before saving in "
+"database."
+msgstr ""
+
+#: admin/partials/whats-new.php:135
+msgid "Version 2.1.0"
+msgstr ""
+
+#: admin/partials/whats-new.php:137
+msgid "Initial Freemium version released."
+msgstr ""
+
+#: admin/partials/whats-new.php:138
+msgid "Added in Delay Restriction"
+msgstr ""
+
+#: admin/partials/whats-new.php:139
+msgid "Added in Page Expiration"
+msgstr ""
+
+#: admin/partials/whats-new.php:140
+msgid "Added in Pageview Restriction"
+msgstr ""
+
+#: admin/partials/whats-new.php:141
+msgid "Added in ability to sort, order and filter shortcode"
+msgstr ""
+
+#: admin/partials/whats-new.php:142
+msgid "Added in ability to remove users pageviews"
+msgstr ""
+
+#: admin/partials/whats-new.php:143
+msgid "And MUCH MORE!"
+msgstr ""
+
+#: includes/class-woocommerce-pay-per-post-activator.php:15
+msgid "Please install and Activate WooCommerce."
+msgstr ""
+
+#: public/class-woocommerce-pay-per-post-public.php:813
+msgctxt "wc_pay_per_post"
+msgid ""
+"<h1>Oops, Restricted Content</h1><p>We are sorry but this post is restricted "
+"to folks that have purchased this page.</p>[products ids='{{product_id}}']"
+msgstr ""
+
+#: public/partials/expiration-status.php:34
+#: public/partials/pageview-status.php:33
+msgid "Order Information"
+msgstr ""
+
+#: public/partials/expiration-status.php:36
+#: public/partials/pageview-status.php:35
+msgid "Order Date"
+msgstr ""
+
+#: public/partials/expiration-status.php:37
+msgid "Expiration Date"
+msgstr ""
+
+#: public/partials/expiration-status.php:38
+msgid "Time Remaining"
+msgstr ""
+
+#: public/partials/pageview-status.php:36
+msgid "Page Views"
+msgstr ""
+
+#: public/partials/pageview-status.php:36
+msgid "out of"
+msgstr ""
+
+#: public/partials/shortcode-purchased.php:16
+msgid "You have not purchased any protected posts."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "pramadillo.com/plugins/woocommerce-pay-per-post"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows for the sale of a specific post/page in WordPress through WooCommerce."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pramadillo"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "pramadillo.com"
+msgstr ""

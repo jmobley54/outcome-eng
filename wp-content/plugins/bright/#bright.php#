@@ -1,0 +1,1064 @@
+<?php
+    /*
+    Plugin Name: Bright Plugin For WordPress
+    Plugin URI: http://aurabright.aura-softare.com/
+    Description: Bright ... a state of the art integration framework for cloud based learning services.
+    Author: Aura Software
+    Version: 6.7.8
+    Author URI: http://www.aura-software.com/
+
+    Source code created by Aura Software, LLC is licensed under a
+    Attribution-NoDerivs 3.0 Unported United States License
+    http://creativecommons.org/licenses/by-nd/3.0/
+    */
+
+$bright_plugin_root = dirname (__FILE__);
+global $bright_token;
+global $bright_embedder_templates;
+global $bright_js_for_footer;
+global $bright_curl_error;
+
+// Disable textureize filter
+// This mangles quotations into unicode likenesses which cause unwanted
+// behavior in Bright templates, like not working at all.
+remove_filter('the_content', 'wptexturize');
+
+require_once($bright_plugin_root.'/menus/settings.php');
+require_once($bright_plugin_root.'/menus/admin.php');
+require_once($bright_plugin_root.'/bright_helper_functions.php');
+require_once($bright_plugin_root.'/bright_php_api.php');
+require_once($bright_plugin_root.'/stub_functions.php');
+require_once($bright_plugin_root.'/user_management.php');
+
+
+global $bright_embedder_templates;
+if (empty($bright_embedder_templates)) {
+  $bright_embedder_templates = array();
+}
+
+if(file_exists($bright_plugin_root.'/embedder_templates.php')) {
+  require_once($bright_plugin_root.'/embedder_templates.php');
+}
+
+if(file_exists($bright_plugin_root.'/local_embedder_templates.php')) {
+  require_once($bright_plugin_root.'/local_embedder_templates.php');
+}
+
+/*
+More capable than file_get_contents in that it supports SSL/TLS even on
+older systems, like Ubuntu 10.04.
+*/
+
+function bright_curl_error() {
+  global $bright_curl_error;
+
+  if (empty($bright_curl_error))
+    return 'empty response returned from bright server.  Typically this means your Bright settings are incorrect; please check and try again.';
+  else
+    return $bright_curl_error;
+
+}
+
+function bright_curl($url, $method=null, $data=null, $showerrors=false) {
+  global $bright_curl_error;
+  bright_log($url,false,"url");
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_SSLVERSION, 3);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+  if ($method == "POST") 
+    // Has a side effect of setting method to POST!
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+  if (!empty($data))
+	bright_log($data,false,"data");
+
+  $response = curl_exec($ch);
+  if (!empty($response))
+	bright_log($response,false,"response");
+
+  $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  bright_log($http_status,false,"response status");
+  $bright_curl_error = curl_error($ch);
+  if (!empty($bright_curl_error))
+	bright_log($bright_curl_error, $showerrors, "bright curl error");
+
+  /* error_log('Bright cURL received: '.$response); */
+  curl_close($ch);
+  return $response;
+}
+
+add_action('admin_menu', 'setup_bright_menu');
+
+/* adds the bright menu to the WP dashboard */
+function setup_bright_menu() {
+  $bright_menu_slug = 'bright_options';
+  add_menu_page( 'Bright Overview', 'Bright' , 'manage_options', $bright_menu_slug, 'bright_menu_overview');
+  add_submenu_page( $bright_menu_slug, 'Bright Settings' , 'Settings', 'manage_options', $bright_menu_slug . "_settings" , 'bright_menu_settings');
+  add_submenu_page( $bright_menu_slug, 'Bright Admin' , 'Admin', 'manage_options', $bright_menu_slug . "_admin" , 'bright_menu_admin');
+  add_submenu_page( $bright_menu_slug, 'Sync User Data' , 'UserMeta Sync', 'manage_options', $bright_menu_slug . "_sync" , 'bright_menu_sync');
+}
+
+function bright_menu_sync() {
+  echo <<<EOF
+  <form name="sync" method="post" action="">
+    
+    <br/>
+    <table>
+      <tr>
+        <td><label title="For large datasets, this can assist in working around timeout errors." for="SkipToday">Skip Records Already Updated Via Full Sync Today:</label></td>
+		<td><input type="checkbox" name="SkipToday"></td>
+		</tr>
+      <tr>
+        <td><label title="For large datasets, this can assist in working around timeout errors." for="MaxRecords">Max records to process:</label></td>
+		<td><input type="number" name="MaxRecords"></td>
+		</tr>
+
+			   <tr>
+   <td>
+    <br/>
+	<input type="submit" name="Submit" class="button-primary" value="Sync User Metadata">
+	</td>
+	</tr>
+	</table>
+  </form>
+  <br/>
+EOF;
+   if (! empty($_POST)) {
+    $args = array();
+    $args['skip-today'] = $_POST['SkipToday'];
+    $args['max-records'] = $_POST['MaxRecords'];
+    bright_update_all_users($args);
+   }
+}
+
+function bright_menu_overview() {
+  global $bright_token;
+  echo '<h2>Bright!</h2>';
+  $links = bright_get_reportage_urls($bright_token);
+  echo '<ul>';
+  foreach ($links as $label => $url) {
+    echo '<li><a href="'.$url.'" target="_blank">'.$label.'</a></li>';
+  }
+  echo '</ul>';
+}
+
+/* filter for expanding bright invitation embed codes in the post content */
+/* add_filter('the_content','bright_content_filter'); */
+
+add_shortcode('bright', 'bright_shortcode_func');
+add_filter('widget_text', 'do_shortcode');
+
+
+function bright_shortcode_func($attr,$content) {
+  return bright_rewrite_embed_code($attr,$content);
+}
+
+function bright_get_course_providers($api_key) {
+  $api_call = 'course_provider';
+  $api_root = get_option('bright_api_url');
+  $url = $api_root . '/' . $api_call . '?' . http_build_query(array(
+    'format' => 'json',
+    'api_key' => $api_key));
+  $json = file_get_contents($url);
+  $json_data = json_decode($json);
+  return $json_data;
+}
+
+function bright_set_current_course_provider() {
+  $user = bright_get_user();
+  if (0 == $user->ID) 
+    return false;
+  else {
+    if (isset($_GET["clear_course_provider_id"])) 
+	  delete_user_option($user->ID, 'bright_course_provider_id');
+	else 
+	  if (isset($_GET["course_provider_id"])) {
+		$provider_id = (int) $_GET["course_provider_id"];
+		if ($provider_id)
+		  update_user_option($user->ID, 'bright_course_provider_id', $provider_id);
+	  }
+  }
+
+}
+
+/**
+ *
+ * Reset the global bright token to null
+ */
+
+function bright_reset_token() {
+  global $bright_token;
+  $bright_token = NULL;
+}
+
+/**
+ * Receive an authentication token from the bright server for client API
+ * operations.
+ *
+ * @param $user is a WP_User, like the one returned by wp_get_current_user();
+ *
+ * Returns a string containing the token or false in the case of failure.
+ */
+function bright_get_authentication_code_for_user($user) {
+  global $bright_token, $bright_curl_error;;
+  if (! empty($bright_token))
+    return $bright_token;
+
+  if ( 0 == $user->ID )
+    return false;
+  else {
+    $api_root = get_option('bright_api_url');
+    $bright_realm_guid = get_option('bright_realm_guid');
+    $bright_secret_key = get_option('bright_secret_key');
+    $bright_scorm_cloud_app_id = get_option('bright_scorm_cloud_app_id');
+    $bright_scorm_cloud_secret_key = get_option('bright_scorm_cloud_secret_key');
+    $course_provider_id = get_user_option('bright_course_provider_id', $user->ID);
+
+    $query_data = array(
+      'format' => 'json',
+      'realm_guid' => $bright_realm_guid,
+      'realm_secret_key' => $bright_secret_key,
+      'user_email' => $user->user_email);
+
+    if ($course_provider_id)
+      $query_data['course_provider_id'] = $course_provider_id;
+    else
+      if (!empty($bright_scorm_cloud_app_id) && !empty($bright_scorm_cloud_secret_key)) {
+        $query_data['sc_app_id'] = $bright_scorm_cloud_app_id;
+        $query_data['sc_secret_key'] = $bright_scorm_cloud_secret_key;
+      }
+
+    if (!empty($bright_realm_guid) && !empty($bright_secret_key)) {
+      $query_data['realm_guid'] = $bright_realm_guid;
+      $query_data['realm_secret_key'] = $bright_secret_key;
+    }
+
+    $auth_url = $api_root.'/api_key';
+
+    $json = bright_curl($auth_url, 'POST', $query_data);
+	if ($bright_curl_error) {
+	  bright_log("bright_get_authentication_code_for_user: call to {$auth_url} failed: \"{$bright_curl_error}\"");
+	  return null;
+	}
+    $json_data = json_decode($json);
+	if (!empty($json_data))
+	  $bright_token = $json_data->access_bright;
+	token_log($json,false,"json data");
+    return $bright_token;
+  }
+}
+
+/*
+ * Call Bright API with a course ID.
+ */
+
+function bright_call_api_for_course($api_call,$api_key,$course) {
+  $api_root = get_option('bright_api_url');
+  if (!empty($course)) {
+    $auth_url = $api_root . '/' . $api_call . '?' . http_build_query(array(
+      'format' => 'json',
+      'api_key' => $api_key,
+      'course_guid' => $course));
+  } else {
+    $auth_url = $api_root . '/' . $api_call . '?' . http_build_query(array(
+      'format' => 'json',
+      'api_key' => $api_key));
+  }
+  $results = bright_curl($auth_url);
+  return $results;
+}
+
+function bright_get_user() {
+  return wp_get_current_user();
+}
+
+function bright_run_stored_query($name,$params) {
+  $api_root = get_option('bright_api_url');
+  $controller = "stored_query";
+  $url = $api_root . '/' . $controller . '/run?' . http_build_query(array(
+    'format' => 'json',
+    'name' => $name,
+    'api_key' => bright_get_authentication_code_for_user(bright_get_user()))) . $params;
+
+  $results = bright_curl($url);
+  return $results;
+}
+
+function bright_get_course_list_with_registrations($api_key) {
+
+
+  $api_root = get_option('bright_api_url');
+  $controller = 'course';
+  if (strstr($api_root,"v1")) {
+    $controller = 'scorm_cloud_course';
+  }
+
+  $auth_url = $api_root . '/' . $controller . '?' . http_build_query(array(
+    'format' => 'json',
+    'api_key' => $api_key,
+    'include_registrations' => 1,
+    'refresh_if_launched' => 1,
+  ));
+
+  $results = bright_curl($auth_url);
+  return $results;
+}
+
+function bright_get_registration_list($api_key) {
+  $api_root = get_option('bright_api_url');
+  $api_call = 'registration';
+  if (strstr($api_root,"v1")) {
+    $api_call = 'scorm_cloud_registration';
+  }
+  $auth_url = $api_root . '/' . $api_call . '?' . http_build_query(array(
+    'format' => 'json',
+    'api_key' => $api_key));
+  $results = bright_curl($auth_url);
+  return $results;
+}
+
+
+/**
+ * Get course data from bright server
+ */
+function bright_get_course_data($api_key, $course) {
+  $api_call = 'course';
+  $api_root = get_option('bright_api_url');
+  if (strstr($api_root,"v1")) {
+    $api_call = 'scorm_cloud_course';
+  }
+
+  return bright_call_api_for_course($api_call,$api_key,$course);
+}
+
+function bright_get_reportage_urls($api_key) {
+  $api_root = get_option('bright_api_url');
+  $api_call = 'util/reportage_urls';
+  $auth_url = $api_root . '/' . $api_call . '?' .
+    http_build_query(array('format' => 'json', 'api_key' => $api_key));
+  $json = bright_curl($auth_url);
+  $json_data = json_decode($json);
+  return $json_data;
+}
+
+function bright_get_template_data($api_key, $template) {
+  $api_call = 'template';
+  $api_root = get_option('bright_api_url');
+  $auth_url = $api_root . '/' . $api_call . '?' . http_build_query(array(
+    'api_key' => $api_key,
+    'format' => 'json',
+    'name' => $template));
+  $json = bright_curl($auth_url);
+  $json_data = json_decode($json);
+  return $json_data[0]->body;
+}
+
+/**
+ * Get registration data from bright server
+ */
+function bright_get_registration_data($api_key, $course) {
+  $api_call = 'registration';
+  $api_root = get_option('bright_api_url');
+  if (strstr($api_root,"v1"))
+    $api_call = 'scorm_cloud_registration';
+
+  $auth_url = $api_root . '/' . $api_call . '?' . http_build_query(array(
+    'format' => 'json',
+    'api_key' => $api_key,
+    'refresh_if_launched' => 1,
+    // fetch only the last record; TODO; not sure if we should be doing this.  Bright.js will set 'registration' to the latest record.  As it stands now
+    // you couldn't write a standard template that showed more than one registration.  BUT a courselister can!
+    'last_only' => 1,
+    'course_guid' => $course));
+  return bright_curl($auth_url);
+}
+
+/* DEPRECATED: use Bright::register_user_to_course() */
+function bright_register_user_to_course($api_key,$user_email,$course) {
+  $api_call = 'registration';
+  $api_root = get_option('bright_api_url');
+  if (strstr($api_root,"v1")) 
+    $api_call = 'scorm_cloud_registration';
+
+  $query_params = array(
+    'api_key' => $api_key,
+    'dont_duplicate' => 1,
+    'format' => 'json',
+    'course_guid' => $course);
+  if (! empty($user_email)) {
+    $query_params['learner_id'] = $user_email;
+  }
+  $auth_url = $api_root . '/' . $api_call . '/gcreate?' . http_build_query($query_params);
+  $return =  bright_curl($auth_url);
+
+  if (empty($bright_curl_error))
+	return $return;
+
+  bright_log("call to {$auth_url} failed: \"{$bright_curl_error}\"", true);
+  return null;
+}
+
+/**
+ * Load JavaScript required for launch boxes
+ */
+
+function bright_stop() {
+ if (in_the_loop()) {
+   $post_id = get_the_ID();
+
+   if(!empty($post_id)) {
+	 $bright_stop = get_post_meta($post_id,'bright-stop',true);
+	 if (!empty($bright_stop))
+	   return true;
+   }
+   return false;
+ }
+ return false;
+}
+
+function bright_load_scripts() {
+  if (bright_stop())
+    return;
+
+  wp_enqueue_script('jquery-i18n',
+    plugins_url('jquery.i18n.min.js', __FILE__),
+    array('jquery'));
+  wp_enqueue_script('handlebars',
+    plugins_url('handlebars-v3.0.1.js', __FILE__),
+    array('jquery'));
+  wp_enqueue_script('bright-lang',
+    plugins_url('bright.lang.js', __FILE__),
+    array('bright'));
+  wp_enqueue_script('underscore5',
+    plugins_url('underscore-min-1.5.1.js',__FILE__),
+    array('jquery'));
+  $bright_js = plugin_dir_path( __FILE__ ) . "/bright.js";
+  if(file_exists($bright_js)) {
+    wp_enqueue_script('bright',
+                      plugins_url('bright.js', __FILE__),
+                      array('jquery-i18n','handlebars','underscore5'));
+  } else {
+    wp_enqueue_script('bright',
+                      plugins_url('bright.min.js', __FILE__),
+                      array('jquery-i18n','handlebars','underscore5'));
+  }
+
+  /* wp_register_style( 'jquery_ui_css', plugins_url('jquery-ui.min.js',__FILE__), false, '1.0.0' ); */
+  /* wp_enqueue_style( 'jquery_ui_css' ); */
+
+  wp_register_style( 'bright_css', plugins_url('bright.css',__FILE__), false, '1.0.0' );
+  wp_enqueue_style( 'bright_css' );
+
+}
+add_action('wp_enqueue_scripts', 'bright_load_scripts');
+
+/**
+ * Add bright auth token to meta tag for Javascript access.
+ *
+ * Has the side-effect of setting $bright_token global.
+ */
+
+function bright_check_compat() {
+  global $bright_usermeta_export;
+
+  if (isset($bright_usermeta_export))
+	return('<div class="error">The support of $bright_usermeta_export was removed in Bright 6.0+.  Please remove this from your site and use the UserMeta Sync bright setting for this.</div>');
+}
+
+
+function bright_fetch_user_attributes($current_user) {
+  $bright_usermeta_export_raw = get_option("bright_usermeta_export");
+  // Set this to an empty array, just in case the option is empty. -TL
+  $usermeta_export = array();
+  // preg_split will produce a one element array in those cases, so
+  // let's make sure there is actually content. -TL
+  if (strlen($bright_usermeta_export_raw) > 0)
+    $usermeta_export = preg_split('/,/',$bright_usermeta_export_raw);
+
+  $user_attributes = array();
+
+  if (! empty($usermeta_export)) {
+    $usermeta = array();
+    foreach ($usermeta_export as $meta_key) {
+      // Interesting quirk to get_user_meta. If $meta_key was a zero-length
+      // string in the following statement, it would return ALL of the
+      // metadata! This is not desirable to us here. -TL
+      if (strlen($meta_key) > 0) {
+        $result = get_user_meta($current_user->ID, $meta_key,true);
+        $usermeta[$meta_key] = $result;
+      }
+    }
+    $user_attributes['meta'] = $usermeta;
+  }
+
+  $user_attributes['site_roles'] = array();
+
+  $user_attributes['email'] = bright_get_user()->user_email;
+
+  if ($current_user->{'roles'}) {
+    foreach($current_user->{'roles'} as $role) {
+      $user_attributes['site_roles'][$role] = true;
+    }
+  }
+
+  $user_attributes['avatar'] = bright_get_avatar_url(get_avatar( $current_user->ID));
+
+  // If BuddyPress is installed and group functionality is on,
+  // we should include the user's BuddyPress groups.
+  if (function_exists('bp_has_groups') && bp_has_groups()) {
+    $groups = groups_get_groups(array(
+      'user_id' => $current_user->id,
+    ));
+    $user_attributes['groups'] = array_map(function ($group) {
+      return array(
+        'id' => $group->id,
+        'slug' => $group->slug,
+        'name' => $group->name,
+      );
+    }, $groups['groups']);
+  }
+
+  return $user_attributes;
+}
+
+function bright_add_token_tag() {
+  // TODO: Ticket #398.
+  global $bright_token;
+
+  if ( ! is_user_logged_in() ) {
+    return;
+  }
+
+  if (bright_stop())
+    return;
+
+  bright_set_current_course_provider();
+  if (empty($bright_token)) {
+    $bright_token = bright_get_authentication_code_for_user(bright_get_user());
+  }
+  if (empty($bright_token))
+    return;
+  $providers = bright_get_course_providers($bright_token);
+  $api_url = get_option('bright_api_url');
+
+  $current_user = bright_get_user();
+  $first_name = get_user_meta($current_user->ID, "first_name",true);
+  $last_name = get_user_meta($current_user->ID, "last_name",true);
+  $email = $current_user->user_email;
+
+  $user_attributes = json_encode(bright_fetch_user_attributes(bright_get_user()));
+
+  $as = "addslashes";
+
+  global $bright_js_for_footer;
+  $usermetajs = <<<EOF
+var bright_user_attributes = "{$as($user_attributes)}";
+EOF;
+
+  $footer_js =  <<<EOF
+// http://blog.errorception.com/2012/11/capture-custom-data-with-your-errors.html
+
+if (typeof (_errs) === "undefined")
+  _errs = {};
+
+_errs.meta = {
+  api_key: '{$bright_token}',
+  email: '{$email}',
+  api_url: '{$api_url}'
+};
+EOF;
+
+  echo bright_return_as_javascript($usermetajs);
+
+  echo "<meta name='bright-token' content='$bright_token'/>\n";
+  echo "<meta name='bright-api-url' content='$api_url'/>\n";
+  echo "<meta name='bright-first-name' content='$first_name'/>\n";
+  echo "<meta name='bright-last-name' content='$last_name'/>\n";
+  echo "<meta name='bright-email' content='$email'/>\n";
+
+  $bright_js_for_footer .= bright_return_as_javascript($footer_js);
+}
+
+add_action('wp_head', 'bright_add_token_tag');
+add_action('admin_head', 'bright_add_token_tag');
+
+function bright_load_custom_wp_admin_style() {
+  global $wp_scripts;
+  $ui = $wp_scripts->query('jquery-ui-core');
+  wp_enqueue_script( 'jquery-ui-dialog');
+  if (!wp_style_is('jquery-ui')) {
+    wp_enqueue_style('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/'.$ui->ver.'/themes/cupertino/jquery-ui.css');
+  }
+  // Only load the GWT stuff on the admin page.
+  if (get_current_screen()->id == 'bright_page_bright_options_admin') {
+    wp_register_style( 'bright_settings_css', plugins_url('BrightSettings.css',__FILE__), false, '1.0.0' );
+    wp_enqueue_style( 'bright_settings_css' );
+    wp_enqueue_script( 'bright_settings_js', plugins_url('/brightsettings/brightsettings.nocache.js', __FILE__) );
+
+  }
+}
+add_action( 'admin_enqueue_scripts', 'bright_load_custom_wp_admin_style' );
+add_action( 'wp_footer', 'dump_bright_js_for_footer');
+
+function dump_bright_js_for_footer() {
+  global $bright_js_for_footer;
+
+  if (bright_stop())
+    return;
+
+  echo $bright_js_for_footer;
+}
+
+/* Filter: bright_templates */
+/* Function: Allows a plugin developer to modify the global $bright_embedder_templates on the fly */
+
+function bright_fetch_template_text($template) {
+  global $bright_embedder_templates;
+  global $bright_token;
+
+  $bright_embedder_templates = apply_filters('bright_templates',$bright_embedder_templates);
+
+  if(!empty($bright_embedder_templates[$template]))
+    $text = $bright_embedder_templates[$template];
+  else {
+    $text = bright_get_template_data($bright_token, $template);
+    if (empty($text))
+      $text = '<div class="error">No embedder template named ' . $template . ' found.  Please check the spelling and/or validate that the container plugin is enabled on this site.</div>';
+  }
+  return $text;
+}
+
+
+function bright_get_avatar_url($get_avatar){
+  preg_match("/src='(.*?)'/i", $get_avatar, $matches);
+  if (count($matches) > 0)
+	return $matches[1];
+  else
+	return null;
+}
+
+function bright_support() {
+  return '<a href="mailto:support@aura-software.com">Bright Support</a>';
+}
+
+/**
+ * Process bright shortcode
+ */
+function bright_rewrite_embed_code($attr, $content) {
+  global $bright_token;
+  global $bright_curl_error;
+
+  do_action('before_bright_rewrite_embed_code');
+
+  if (bright_stop())
+    return;
+
+  $support_text = apply_filters("bright_support_text", bright_support());
+
+  if (empty($bright_token)) {
+    $login_url = apply_filters('login_url','/wp-login.php');
+    $redirect = get_permalink();
+	if ($bright_curl_error) {
+	  $text = "<div class=\"bright_cannot_connect\">An error occurred connecting to the bright server: \"{$bright_curl_error}\".<br/>Please refresh the page to try again or contact us at $support_text if the problem persists.   <br/><strong>Please include the following information:</strong><br/><br/>";
+	  $text .= "<strong>User Agent: </strong>" . $_SERVER["HTTP_USER_AGENT"] . "<br/>";
+	  $text .= "<strong>User Host: </strong>" . $_SERVER["HTTP_HOST"] . "<br/>";
+	  $text .= "<strong>Request URI: </strong>" . $_SERVER["REQUEST_URI"] . "<br/>";
+	  $text .= "<strong>User: </strong>" . bright_get_user()->user_email . "<br/>";
+	  $text .= "<br/><br/>THANKS</div>";
+	} else 
+	  $text = '<div class="bright_not_logged_in">Please <a href="' . $login_url . '?redirect_to=' .  urlencode($redirect) . '">login or register</a> to view this content.</div>';
+
+    return apply_filters('bright_please_login',$text);
+  }
+
+  $bright_token= bright_get_authentication_code_for_user(bright_get_user());
+
+  /* embedder attributes get put into the embed content so they are available from the templates */
+  $embedder_attributes = json_encode($attr);
+
+  global $post;
+
+  $page_attributes = array();
+  $user_attributes = bright_fetch_user_attributes(bright_get_user());
+
+  if ($post->ID) {
+    $post_id = $post->ID;
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ));
+    $page_attributes['featured_image'] = $image[0];
+    $page_attributes['id'] = $post->ID;
+
+    $cats = array();
+    $categories = get_the_category();
+    if($categories){
+      foreach($categories as $cat) {
+        $cats[$cat->slug] = $cat;
+      }
+    }
+    $page_attributes['categories'] = $cats;
+
+    $tags = array();
+
+    $posttags = get_the_tags();
+    if ($posttags) {
+      foreach($posttags as $tag) {
+        $tags[$tag->slug] = $tag;
+      }
+    }
+    $page_attributes['tags'] = $tags;
+  }
+
+  global $bright_js_for_footer;
+
+  $page_attributes = json_encode($page_attributes);
+  $user_attributes = json_encode($user_attributes);
+
+  $course_locale = isset($attr['locale']) ? $attr['locale'] : '';
+  if (isset($attr['class']))
+    $embed_class = $attr['class'];
+
+  $template = $attr['template'];
+  /* don't render this template */
+  /* the basic use of this is in writing documentation about the bright embedder */
+  /* usering ignore="true" means we can actually get the embed code out to the web page */
+  /* since we don't get any formatting, bold='' lets us geta little bit of styling inthere.
+     pretty rickety though */
+
+  if (isset($attr['ignore'])) {
+    $ignore = $attr['ignore'];
+    $bold = $attr['bold'];
+    $ret_text = '[bright ';
+    foreach ($attr as $k => $v) {
+      if ($k == "ignore" || $k == "bold")
+        1;
+	  else
+        if ($k == $bold)
+          $ret_text .= "<strong>{$k}=\"{$v}\"</strong> ";
+        else
+          $ret_text .= "{$k}=\"{$v}\" ";
+    }
+    $ret_text .="][/bright]";
+    return $ret_text;
+  }
+  /* add a CSS class to the bright <div> which includes the template name
+     set it to bright-template-inline if there's no template */
+  $template_class = "bright-template-";
+  if (empty($template))
+    $template_class .= 'inline';
+  else
+    $template_class .= $template;
+
+  $type = isset($attr['type']) ? $attr['type'] : null;
+  // id allows us defined a unique ID for this launch box, as opposed to using the default.
+  if (isset($attr['id']))
+    $id = $attr['id'];
+
+  if(!empty($template))
+    $content = bright_fetch_template_text($template);
+
+  if(empty($type))
+    $type = "course";
+
+  $new_content = '';
+
+  if ($type == "course") {
+	/* the $template_class adds a CSS class to the encapsulating div so all templates of a type can be styled via one block of CSS */
+    if (empty($embed_class))
+      $embed_class = "bright-launchbox";
+
+    $course_id = $attr['course'];
+	$course_id = apply_filters('bright_course_id',
+							   $course_id,
+							   array('attr' => $attr));
+
+    if (empty($course_id)) {
+      $course_id = $_GET['bright_course_id'];
+      if (empty($course_id))
+        return '<div class="bright-error">Bright: No course ID set in your [bright] embed code.</div>';
+    }
+
+    if (empty($id))
+      $id = $course_id;
+
+    $container_id = md5(microtime());
+    $raw_course_data = bright_get_course_data($bright_token, $course_id);
+
+    if (strlen($raw_course_data) < 3)
+      return '<div class="bright-error">Bright: No course with ID of ' . $course_id . ' was found.</div>';
+
+    if (! empty($raw_course_data)) {
+      $bright_js_for_footer .= bright_return_as_javascript("if (typeof bright_courses === 'undefined') {bright_courses = {};}");
+      $bright_js_for_footer .= bright_return_as_javascript("bright_courses['" . $course_id . "'] = " . substr($raw_course_data,1,-1) . ";");
+    }
+    $raw_registration_data = bright_get_registration_data($bright_token, $course_id);
+    if (! empty($raw_registration_data)) {
+      $bright_js_for_footer .= bright_return_as_javascript("bright_courses['" . $course_id . "']['registrations'] = " . $raw_registration_data . ";");
+    }
+
+    /* blowing up?  Before Bright 4.1, this call was wrong and had a bogus argument #, and arguments 3 and 4 were switched*/
+    $raw_course_data = apply_filters('bright_extend_on_course',$raw_course_data,$course_id,$raw_registration_data);
+    $course_data = json_decode($raw_course_data);
+    $customData = $course_data[0]->{'custom'};
+    $embed=rawurlencode($content);
+
+    $as = "addslashes"; // Only way to get it to work inside the EOF
+    $template_js = <<<EOF
+Bright.launchBoxTemplates["{$as($container_id)}"] = {
+  courseId: "{$as($course_id)}",
+  embedLocale: "{$as($course_locale)}",
+  embedClass: "{$as($embed_class)}",
+  embedType: "{$as($type)}",
+  embedAttributes: "{$as($embedder_attributes)}",
+  pageAttributes: "{$as($page_attributes)}",
+  userAttributes: "{$as($user_attributes)}",
+  customData: "{$as($customData)}",
+  template: "{$as($embed)}",
+  isRendered: false
+};
+EOF;
+$bright_js_for_footer .= bright_return_as_javascript($template_js);
+
+    $new_content = <<<EOF
+<div id="bright-launchbox-{$as($container_id)}" class="bright-embedder {$as($template_class)} {$as($embed_class)}"></div>
+EOF;
+
+  } else if ($type === "courselist") {
+    if (empty($id)) {
+      $id = strval(rand());
+    }
+    $container_id = md5($id);
+
+    if (empty($embed_class)) {
+      $embed_class = "bright-courselist";
+    }
+
+    global $render_course_list;
+    global $bright_course_list;
+    if (empty($render_course_list)) {
+      // doing this once should be enough.
+      $bright_course_list = bright_get_course_list_with_registrations($bright_token,NULL);
+      if ($bright_course_list) {
+        $bright_js_for_footer .= bright_return_as_javascript("var bright_courselist = {$bright_course_list};");
+      }
+      else {
+        $bright_js_for_footer .= bright_return_as_javascript("var bright_courselist = [];");
+      }
+      $render_course_list = true;
+    }
+
+    $customData = apply_filters('bright_extend_on_courselist',$bright_course_list,$attr);
+
+    $embed=rawurlencode($content);
+
+    $as = "addslashes"; // Only way to get it to work inside the EOF
+
+    $template_js = <<<EOF
+Bright.courseListTemplates["{$as($container_id)}"] = {
+  embedLocale: "{$as($course_locale)}",
+  embedClass: "{$as($embed_class)}",
+  embedType: "{$as($type)}",
+  embedAttributes: "{$as($embedder_attributes)}",
+  pageAttributes: "{$as($page_attributes)}",
+  userAttributes: "{$as($user_attributes)}",
+  customData: "{$as($customData)}",
+  template: "{$as($embed)}",
+  isRendered: false
+};
+EOF;
+
+$template_js = <<<EOF
+Bright.setCourseListTemplate("{$as($container_id)}", {
+  embedLocale: "{$as($course_locale)}",
+  embedClass: "{$as($embed_class)}",
+  embedType: "{$as($type)}",
+  embedAttributes: "{$as($embedder_attributes)}",
+  pageAttributes: "{$as($page_attributes)}",
+  userAttributes: "{$as($user_attributes)}",
+  customData: "{$as($customData)}",
+  template: "{$as($embed)}",
+  isRendered: false
+});
+EOF;
+
+$bright_js_for_footer .= bright_return_as_javascript($template_js);
+
+    $new_content = <<<EOF
+<div id="bright-courselist-{$as($container_id)}" class="{$as($template_class)} {$as($embed_class)}"></div>
+EOF;
+
+  } else {
+    $new_content = '<div class="bright-error">Bright: No embedder of type ' . $type . ' found.</div>';
+  }
+  return $new_content;
+}
+
+add_action('admin_print_footer_scripts', 'bright_add_quicktags');
+function bright_add_quicktags(){
+  global $bright_embedder_templates;
+  // Don't run if user doesn't have the rights
+  if (!current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
+    return;
+  }
+  // Don't run if not a editor page
+  if(!(strstr($_SERVER['REQUEST_URI'], 'wp-admin/post-new.php') ||
+     strstr($_SERVER['REQUEST_URI'], 'wp-admin/post.php') ||
+     strstr($_SERVER['REQUEST_URI'], 'wp-admin/edit.php'))) {
+    return;
+  }
+
+  $json_templates = json_encode($bright_embedder_templates);
+  $template_names = array_keys($bright_embedder_templates);
+  sort($template_names);
+?>
+<div id="bright-embed-dialog">
+  <div>
+    <select class="course">
+      <option value="">Select a course</option>
+    </select>
+  </div>
+  <div>
+    <select class="template">
+      <option value="">Select a template</option>
+      <optgroup label="Local templates">
+        <?php
+          foreach($template_names as $name) {
+            echo "<option>".htmlspecialchars($name)."</option>";
+          }
+        ?>
+      </optgroup>
+    </select>
+    <input class="confirm insert" type="button" value="Embed Template"/>
+    <input class="confirm insert-all" type="button" value="Insert Template Contents"/>
+    <input class="cancel" type="button" value="Cancel"/>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+// <![CDATA[
+  jQuery.fn.insertAtCaret = function(text) {
+      return this.each(function() {
+          if (document.selection && this.tagName == 'TEXTAREA') {
+              //IE textarea support
+              this.focus();
+              sel = document.selection.createRange();
+              sel.text = text;
+              this.focus();
+          } else if (this.selectionStart || this.selectionStart == '0') {
+              //MOZILLA/NETSCAPE support
+              startPos = this.selectionStart;
+              endPos = this.selectionEnd;
+              scrollTop = this.scrollTop;
+              this.value = this.value.substring(0, startPos) + text + this.value.substring(endPos, this.value.length);
+              this.focus();
+              this.selectionStart = startPos + text.length;
+              this.selectionEnd = startPos + text.length;
+              this.scrollTop = scrollTop;
+          } else {
+              // IE input[type=text] and other browsers
+              this.value += text;
+              this.focus();
+              this.value = this.value;    // forces cursor to end
+          }
+      });
+  };
+
+  (function(){
+    var url = jQuery('meta[name=bright-api-url]').attr('content');
+    var token = jQuery('meta[name=bright-token]').attr('content');
+    var BrightTemplates = <?php echo $json_templates; ?>;
+
+    jQuery('#bright-embed-dialog').dialog({
+      autoOpen: false,
+      minWidth: 800
+    });
+    jQuery('#bright-embed-dialog select').change(function () {
+      var courseId = jQuery('#bright-embed-dialog select.course').val();
+      var templateName = jQuery('#bright-embed-dialog select.template').val();
+      if (courseId && templateName) {
+        jQuery('#bright-embed-dialog .confirm').button('option', 'disabled', false);
+      }
+      else {
+        jQuery('#bright-embed-dialog .confirm').button('option', 'disabled', true);
+      }
+    });
+    jQuery('#bright-embed-dialog input').button();
+    jQuery('#bright-embed-dialog .confirm').button('option', 'disabled', true);
+    jQuery('#bright-embed-dialog .insert').click(function () {
+      var courseId = jQuery('#bright-embed-dialog select.course').val();
+      var templateName = jQuery('#bright-embed-dialog select.template').val();
+      jQuery('#content').insertAtCaret(
+        '[bright course="' + courseId + '" template="' + templateName + '"/]'
+      );
+      jQuery('#bright-embed-dialog').dialog('close');
+    });
+    jQuery('#bright-embed-dialog .insert-all').click(function () {
+      var courseId = jQuery('#bright-embed-dialog select.course').val();
+      var templateName = jQuery('#bright-embed-dialog select.template').val();
+      jQuery('#content').insertAtCaret(
+        '[bright course="' + courseId + '"]' + "\n" +
+            BrightTemplates[templateName] +
+            "\n[/bright]"
+      );
+      jQuery('#bright-embed-dialog').dialog('close');
+    });
+    jQuery('#bright-embed-dialog .cancel').click(function () {
+      jQuery('#bright-embed-dialog').dialog('close');
+    });
+
+    var controller = 'course';
+    if (url.match(/v1/)) {
+      controller = 'scorm_cloud_course';
+    }
+
+    jQuery.ajax({
+      url:url + '/' + controller,
+      data:{
+        api_key:token,
+        format:'json'
+      },
+      dataType:'jsonp',
+      success:function (data) {
+        for (var i = 0; i < data.length; i++) {
+          jQuery('#bright-embed-dialog select.course').append(
+            '<option value="' + data[i].course_guid + '">' +
+                data[i].title + '</option>'
+          );
+        }
+      }
+    });
+
+    jQuery.ajax({
+      url:url + '/template',
+      data:{
+        api_key:token,
+        format:'json'
+      },
+      dataType:'jsonp',
+      success:function (data) {
+        optgroupCode = '<optgroup label="Templates from Bright">';
+        for (var i = 0; i < data.length; i++) {
+          optgroupCode += '<option value="' + data[i].name + '">' +
+              data[i].name + '</option>'
+          BrightTemplates[data[i].name] = data[i].body;
+        }
+        optgroupCode += '</optgroup>';
+        jQuery('#bright-embed-dialog select.template').append(
+          optgroupCode);
+      }
+    });
+
+    if (QTags && QTags.addButton) { // Newer Wordpress, like 3.5.1
+      QTags.addButton('bright_embed', 'Bright Embed', function() {
+        jQuery('#bright-embed-dialog').dialog({autoOpen: true});
+      });
+    }
+    else { // Fallback to clumsy jQuery insert if older Wordpress
+      jQuery("#ed_toolbar").append('<input type="button" class="ed_button" onclick="jQuery(\'#bright-embed-dialog\').dialog({autoOpen: true});return false;" title="Insert a Bright Embed" value="Bright Embed"/>');
+    }
+  }());
+// ]]>
+</script>
+<?php
+}
+

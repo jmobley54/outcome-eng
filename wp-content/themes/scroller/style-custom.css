@@ -1,0 +1,36 @@
+/*  
+
+You cannot edit main style.css file.
+
+All your custom style settings and tweaks can be placed here.
+
+Backup this file before theme update - so after update can be restored!
+ 
+*/
+
+.stuff,
+#header_bottom{ height:140px; bottom:0px; } /* slider + logo section height */
+
+.stuff .flexhead{ height:110px; }
+
+.logo_bottom img{height:100px;}
+
+#servicesbox li:hover{ background: #f2f2f2;}
+
+ul.medpost li .meta, .singlepost .meta,
+ul.medpost li .mainbutton {
+    font-style: italic ;
+    font-weight: normal !important;
+}
+
+.section_template h2 { color:#fff !important; text-shadow:1px 1px 0 #000}
+
+.container_block{padding-top:100px !important; margin-bottom:40px !important;}
+
+#clientsbox li {width: 25%;}
+
+#servicesbox li{ width:28.4%;} /* for 4 columns use  20.3% */
+#servicesbox li:nth-child(3n+1) { clear:left;} /* for 4 columns use (4n+1) */
+
+li.staff{ width:20.3%;} /* for 3 columns use  28.4% */
+li.staff:nth-child(4n+1) { clear:left;} /* for 3 columns use (3n+1) */

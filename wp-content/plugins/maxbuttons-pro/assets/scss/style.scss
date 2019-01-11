@@ -1,0 +1,47 @@
+// TODO split styles in nice files
+
+#maxbuttons{
+	.export_table {
+		.mb-container { margin: 0; float:none; }
+		.mb-center { text-align: left !important; } // default
+		.mb-center .mb-text { text-align: center !important; } // counter since container sets center over the whole thing
+
+	}
+
+	.search-box input[type="text"] {
+		width: 150px;
+	}
+	.ad-wrap { margin-top: 60px; }
+	@import "mixins";
+	@import "editor";
+	@import "elements";
+	@import "collections";
+	@import "profonts";
+	@import "icons";
+	@import "packs";
+	@import "export"; // always after packs
+	@import "settings";
+	@import "license";
+
+	div.update-nag {
+		border-left: 4px solid #ffba00;
+	}
+
+}
+
+// outside of context!
+
+
+// This is the add media WP screen. Hiding not needed elements.
+#maxbuttons-wp-image-picker
+{
+	
+	.media-menu .media-menu-item, .setting.align, div.setting {
+			display: none;
+	}
+	.setting[data-setting="caption"], .setting[data-setting="description"], .media-types-required-info {
+			display: none;
+
+	}
+
+}

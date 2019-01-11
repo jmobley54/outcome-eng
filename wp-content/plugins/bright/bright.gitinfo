@@ -1,0 +1,9 @@
+git@code.aura-software.com:aura/wp-bright-plugin.git 8312fff
+----
+commit 8312fff3a8146b611792948e90be11841a75fc94
+Author: Bret Weinraub <bret@aura-software.com>
+Date:   Wed Aug 23 09:43:36 2017 -0600
+
+    bump up version #
+(installable): bright
+(repo): git@code.aura-software.com:aura/wp-bright-plugin.git

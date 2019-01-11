@@ -1,0 +1,100 @@
+
+/* Paywall */
+
+#wplnst-paywall {
+	margin: 0; padding: 0;
+	width: 620px; height: 470px;
+	background: #fff url(../images/features.png) right center no-repeat;
+}
+
+	#wplnst-only-pro {
+		left: 0; top: 0;
+		margin: 0; padding: 0;
+	}
+
+		#wplnst-only-pro-top {
+			height: 46px;
+			background: #638495 url(../images/icon.png) 8px 8px no-repeat;
+		}
+		
+			#wplnst-only-pro-top p {
+				float: left;
+				color: #ddf0ff;
+				font-size: 17px;
+				font-weight: normal;
+				margin: 0; padding: 11px 0 0 50px;
+			}
+			
+			#wplnst-only-pro-top a {
+				float: right;
+				display: block;
+				padding: 0; margin: 0;
+				width: 50px; height: 46px;
+				background: url(../images/close.png) 16px 16px no-repeat;
+				text-indent: -99999px;
+			}
+			
+			#wplnst-only-pro-top a,
+			#wplnst-only-pro-top a:link,
+			#wplnst-only-pro-top a:active, 
+			#wplnst-only-pro-top a:focus, 
+			#wplnst-only-pro-top a:visited {
+				outline: 0;
+				text-decoration: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+			}
+		
+		#wplnst-only-pro-content {
+			padding: 40px 45px 0;
+		}
+
+			#wplnst-only-pro-content h3 {
+				color: #2d2d2d;
+				font-size: 23px;
+				font-weight: normal;
+				text-align: center;
+				text-transform: capitalize;
+				letter-spacing: -1px;
+				padding: 0; margin: 0 0 35px -25px;
+			}
+
+			#wplnst-only-pro-content ul {
+				margin: 0; padding: 0 0 20px;
+			}
+			
+				#wplnst-only-pro-content ul li {
+					font-size: 16px;
+					padding: 0 0 0 25px; margin: 0 0 25px 0;
+					background: url(../images/badge.png) left top no-repeat;
+				}
+				
+			p#wplnst-only-pro-link-container {
+				margin: 0; padding: 0;
+			}
+
+				a#wplnst-only-pro-link {
+					
+					color: #fff;
+					font-size: 18px;
+					text-align: center;
+					text-transform: uppercase;
+					word-spacing: 3px;
+					letter-spacing: -1px;
+					font-weight: normal;
+					text-decoration: none;
+					
+					outline: 0;
+					margin: 0 auto; padding: 10px 0;
+					
+					width: 240px;
+					display: block;
+					background: #8fb04c;
+					text-align: center;
+					
+					-moz-border-radius: 4px;
+					-webkit-border-radius: 4px;
+					border-radius: 4px;
+					-khtml-border-radius: 4px;
+				}

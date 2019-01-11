@@ -1,0 +1,99 @@
+<!DOCTYPE html>  <html> <head>   <title>bright-template-pack.php</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               bright-template-pack.php             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>                            </td>             <td class="code">               <div class="highlight"><pre><span class="cp">&lt;?php</span></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <h3>Overview</h3>
+
+<ul>
+<li><p>This plugins serves an excellent example on how to produce bright customizations via an independent
+WordPress plugin.</p></li>
+<li><p>If you follow along with this as an example, you should be able to deliver fully customized Bright
+templates.</p></li>
+</ul>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <h3>Line by line description</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>Wordpress requires this documentation header for your plugin script, otherwise you won't find your plugin in the wordpress console.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="cm">/*</span>
+<span class="cm">    Plugin Name: Bright Template Pack</span>
+<span class="cm">    Plugin URI: http://aurabright.aura-software.com/</span>
+<span class="cm">    Description: Collection of standard templates for Bright.</span>
+<span class="cm">    Author: Aura Software</span>
+<span class="cm">    Version: 1.0</span>
+<span class="cm">    Author URI: http://www.aura-software.com/</span>
+<span class="cm">    */</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Enqueue the custom javascript functions for this plugin.
+Remember to add "array('bright')" as argument 3 to this call, this insures your template JS
+loads in the correct order.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="k">function</span> <span class="nf">bright_template_pack_load_bright_customization_scripts</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">wp_enqueue_script</span><span class="p">(</span><span class="s1">&#39;bright_template_pack_custom&#39;</span><span class="p">,</span>
+    <span class="nx">plugins_url</span><span class="p">(</span><span class="s1">&#39;bright-template-pack.js&#39;</span><span class="p">,</span> <span class="k">__FILE__</span><span class="p">),</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;bright&#39;</span><span class="p">));</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <p>you must add your javascript enqueue statement to the wordpress wp<em>enqueue</em>script hook.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;bright_template_pack_load_bright_customization_scripts&#39;</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <p>add a function to register as hook to make wordpress load your styles (.css).</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="k">function</span> <span class="nf">bright_template_pack_load_bright_customization_styles</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">wp_register_style</span><span class="p">(</span><span class="s1">&#39;bright_template_pack_custom&#39;</span><span class="p">,</span>
+    <span class="nx">plugins_url</span><span class="p">(</span><span class="s1">&#39;bright-template-pack/bright-template-pack.css&#39;</span><span class="p">));</span></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>you would add another line as above if you had multiple styles here.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">wp_enqueue_style</span><span class="p">(</span><span class="s1">&#39;bright_template_pack_custom&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;bright_template_pack_load_bright_customization_styles&#39;</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-9">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-9">&#182;</a>               </div>               <p>You <em>MUST</em> have this global call for proper functioning.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="k">global</span> <span class="nv">$bright_embedder_templates</span><span class="p">;</span></pre></div>             </td>           </tr>                               <tr id="section-10">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-10">&#182;</a>               </div>               <p>Because of the way WordPress loads plugins, there is no guarantee the bright has already been loaded.
+Thus you must initialize the global here.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$bright_embedder_templates</span><span class="p">))</span> <span class="p">{</span> 
+  <span class="nv">$bright_embedder_templates</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-11">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-11">&#182;</a>               </div>               <p>From here on in, we are just injecting strings (templates) into the $bright<em>embedder</em>templates array.
+Anything you can do in PHP, you can do here to generate these strings.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nv">$bright_embedder_templates</span><span class="p">[</span><span class="s1">&#39;bright_course_table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;EOF</span>
+<span class="s">&lt;table class=&quot;bright-courselist&quot;&gt;</span>
+<span class="s">  &lt;tr&gt;</span>
+<span class="s">    &lt;th&gt;Course&lt;/th&gt;</span>
+<span class="s">  &lt;th&gt;Description&lt;/th&gt;</span>
+<span class="s">    &lt;th&gt;Course ID&lt;/th&gt;</span>
+<span class="s">    &lt;th&gt;My Registrations&lt;/th&gt;</span>
+<span class="s">  &lt;/tr&gt;</span>
+<span class="s">{{#sort courses sortBy=&quot;title&quot;}}</span>
+<span class="s">  &lt;tr&gt;</span>
+<span class="s">    &lt;td&gt;{{title}}&lt;/td&gt;</span>
+<span class="s">    &lt;td&gt;{{metadata.description}}&lt;/td&gt;</span>
+<span class="s">    &lt;td&gt;{{course_guid}}&lt;/td&gt;</span>
+<span class="s">  &lt;td&gt;{{registrations.length}}&lt;/td&gt;</span>
+<span class="s">  &lt;/tr&gt;</span>
+<span class="s">{{/sort}}</span>
+<span class="s">&lt;/table&gt;</span>
+<span class="s">EOF;</span>
+
+
+<span class="nv">$stats_table</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;EOF</span>
+<span class="s">&lt;table class=&quot;stats&quot;&gt;</span>
+<span class="s">  &lt;tr&gt;</span>
+<span class="s">    &lt;th class=&quot;stats-score&quot;&gt;Score&lt;/th&gt;</span>
+<span class="s">    &lt;th class=&quot;stats-complete&quot;&gt;Completion&lt;/th&gt;</span>
+<span class="s">    &lt;th class=&quot;stats-success&quot;&gt;Success&lt;/th&gt;</span>
+<span class="s">    &lt;th class=&quot;stats-time&quot;&gt;Total Time&lt;/th&gt;</span>
+<span class="s">{{#if registration.attempts}}</span>
+<span class="s">    &lt;th class=&quot;stats-attempts&quot;&gt;Attempts&lt;/th&gt;</span>
+<span class="s">{{/if}}</span>
+<span class="s">  &lt;/tr&gt;</span>
+<span class="s">  &lt;tr&gt;</span>
+<span class="s">    &lt;td class=&quot;stats-score&quot;&gt;{{registration.score}}&lt;/td&gt;</span>
+<span class="s">    &lt;td class=&quot;stats-complete&quot;&gt;{{#bright_localize_scorm this.attributes.locale registration.complete}}{{/bright_localize_scorm}}&lt;/td&gt;</span>
+<span class="s">    &lt;td class=&quot;stats-success&quot;&gt;{{#bright_localize_scorm this.attributes.locale registration.success}}{{/bright_localize_scorm}}&lt;/td&gt;</span>
+<span class="s">    &lt;td class=&quot;stats-time&quot;&gt;{{#bright_localize_scorm this.attributes.locale registration.totaltime}}{{/bright_localize_scorm}}&lt;/td&gt;</span>
+<span class="s">{{#if registration.attempts}}</span>
+<span class="s">    &lt;td class=&quot;stats-attempts&quot;&gt;{{#bright_localize_scorm this.attributes.locale registration.attempts}}{{/bright_localize_scorm}}&lt;/td&gt;</span>
+<span class="s">{{/if}}</span>
+<span class="s">  &lt;/tr&gt;</span>
+<span class="s">&lt;/table&gt;</span>
+<span class="s">EOF;</span>
+
+<span class="nv">$course_description</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;course-description&quot;&gt;{{#fetch_description this}}{{/fetch_description}}&lt;/div&gt;&#39;</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="nf">create_header_text</span><span class="p">(</span><span class="nv">$course_description</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$ret</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;EOF</span>
+<span class="s">&lt;div&gt;</span>
+<span class="s">  &lt;img class=&quot;course-image&quot; src=&quot;{{#fetch_image this}}{{/fetch_image}}&quot; /&gt;</span>
+<span class="s">  &lt;div class=&quot;course-category&quot;&gt;{{#fetch_category_string this}}{{/fetch_category_string}}&lt;/div&gt;</span>
+<span class="s">  &lt;div class=&quot;course-title&quot;&gt;{{title}}&lt;/div&gt;</span>
+<span class="s">  {$course_description}</span>
+<span class="s">&lt;/div&gt;</span>
+<span class="s">EOF;</span>
+  <span class="k">return</span> <span class="nv">$ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$launchbutton</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;buttons&quot;&gt;{{{launchbutton}}}&lt;/div&gt;&#39;</span><span class="p">;</span>
+<span class="nv">$clear</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
+
+<span class="nv">$header_text</span> <span class="o">=</span> <span class="nx">create_header_text</span><span class="p">(</span><span class="nv">$course_description</span><span class="p">);</span>
+<span class="nv">$bright_embedder_templates</span><span class="p">[</span><span class="s1">&#39;classic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;EOF</span>
+<span class="s">{$header_text}</span>
+<span class="s">{$stats_table}</span>
+<span class="s">{$clear}</span>
+<span class="s">{$launchbutton}</span>
+<span class="s">EOF;</span>
+
+<span class="cp">?&gt;</span><span class="x"></span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 

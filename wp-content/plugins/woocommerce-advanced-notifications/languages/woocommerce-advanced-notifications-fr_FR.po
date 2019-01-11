@@ -1,0 +1,447 @@
+# Copyright (C) 2016 WooThemes
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Advanced Notifications 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce-advanced-"
+"notifications/issues\n"
+"POT-Creation-Date: 2016-08-24 15:23+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-08-24 16:12+0200\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"X-Generator: Poedit 1.8.8\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+#: includes/class-wc-advanced-notifications-admin.php:30
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/class-wc-advanced-notifications-admin.php:41
+msgid "Advanced Notifications"
+msgstr "Notifications avancées"
+
+#: includes/class-wc-advanced-notifications-admin.php:41
+#: includes/class-wc-advanced-notifications-admin.php:112
+#: includes/views/admin-screen-edit.php:59 includes/views/admin-screen.php:4
+msgid "Notifications"
+msgstr "Notifications"
+
+#: includes/class-wc-advanced-notifications-admin.php:84
+#: includes/class-wc-advanced-notifications-table.php:176
+msgid "Notification Types"
+msgstr "Types de notification"
+
+#: includes/class-wc-advanced-notifications-admin.php:85
+#: includes/class-wc-advanced-notifications-table.php:177
+msgid "Triggers"
+msgstr "Déclencheurs"
+
+#: includes/class-wc-advanced-notifications-admin.php:86
+#: includes/class-wc-advanced-notifications-table.php:178
+msgid "Plain text?"
+msgstr "Texte brut ?"
+
+#: includes/class-wc-advanced-notifications-admin.php:87
+#: includes/class-wc-advanced-notifications-table.php:179
+msgid "Prices?"
+msgstr "Prix ?"
+
+#: includes/class-wc-advanced-notifications-admin.php:88
+#: includes/class-wc-advanced-notifications-table.php:180
+msgid "Totals?"
+msgstr "Totaux ?"
+
+#: includes/class-wc-advanced-notifications-admin.php:89
+#: includes/class-wc-advanced-notifications-table.php:181
+msgid "Sent count"
+msgstr "Nombre envoyés"
+
+#: includes/class-wc-advanced-notifications-admin.php:113
+msgid "Choose recipients for this product&hellip;"
+msgstr "Choisir les destinataires pour ce produit&hellip;"
+
+#: includes/class-wc-advanced-notifications-admin.php:183
+#: includes/class-wc-advanced-notifications-admin.php:236
+msgid "Notification deleted successfully"
+msgstr "Notification supprimée avec succès"
+
+#: includes/class-wc-advanced-notifications-admin.php:197
+#: includes/class-wc-advanced-notifications-admin.php:221
+#: includes/class-wc-advanced-notifications-admin.php:232
+msgid "Notification saved successfully"
+msgstr "Notification enregistrée avec succès"
+
+#: includes/class-wc-advanced-notifications-admin.php:300
+#: includes/class-wc-advanced-notifications-admin.php:389
+msgid "Recipient name is a required field"
+msgstr "Le nom du destinataire est obligatoire"
+
+#: includes/class-wc-advanced-notifications-admin.php:304
+#: includes/class-wc-advanced-notifications-admin.php:393
+msgid "Recipient email is a required field"
+msgstr "L'email du destinataire est obligatoire"
+
+#: includes/class-wc-advanced-notifications-admin.php:311
+#: includes/class-wc-advanced-notifications-admin.php:400
+msgid "A recipient email is invalid:"
+msgstr "L'email du destinataire est invalide"
+
+#: includes/class-wc-advanced-notifications-table.php:45
+msgid "Edit"
+msgstr "Modifier"
+
+#: includes/class-wc-advanced-notifications-table.php:45
+#: includes/class-wc-advanced-notifications-table.php:191
+msgid "Delete"
+msgstr "Supprimer"
+
+#: includes/class-wc-advanced-notifications-table.php:62
+#: includes/views/admin-screen-edit.php:79
+msgid "Low stock"
+msgstr "Stock faible"
+
+#: includes/class-wc-advanced-notifications-table.php:65
+#: includes/views/admin-screen-edit.php:80
+msgid "Out of stock"
+msgstr "Stock épuisé"
+
+#: includes/class-wc-advanced-notifications-table.php:68
+#: includes/views/admin-screen-edit.php:81
+msgid "Backorders"
+msgstr "Réapprovisionnements"
+
+#: includes/class-wc-advanced-notifications-table.php:71
+#: includes/views/admin-screen-edit.php:78
+msgid "Purchases"
+msgstr "Achats"
+
+#: includes/class-wc-advanced-notifications-table.php:74
+#: includes/views/admin-screen-edit.php:82
+msgid "Refunds"
+msgstr "Remboursements"
+
+#: includes/class-wc-advanced-notifications-table.php:89
+msgid "1 sent"
+msgid_plural "%s sent"
+msgstr[0] "1 envoyé"
+msgstr[1] "%s envoyés"
+
+#: includes/class-wc-advanced-notifications-table.php:103
+msgid "All Purchases"
+msgstr "Tous les achats"
+
+#: includes/class-wc-advanced-notifications-table.php:132
+msgid "Categories:"
+msgstr "Catégories :"
+
+#: includes/class-wc-advanced-notifications-table.php:136
+msgid "Classes:"
+msgstr "Méthodes de livraison :"
+
+#: includes/class-wc-advanced-notifications-table.php:140
+msgid "Products:"
+msgstr "Produits :"
+
+#: includes/class-wc-advanced-notifications-table.php:175
+#: includes/views/admin-screen-edit.php:7
+msgid "Recipient"
+msgstr "Destinataire"
+
+#: includes/class-wc-advanced-notifications-table.php:223
+msgid "Notifications updated"
+msgstr "Notifications mises à jour"
+
+#: includes/class-wc-advanced-notifications.php:271
+msgid "New Customer Order"
+msgstr "Nouvelle commande client"
+
+#: includes/class-wc-advanced-notifications.php:273
+msgid "[%s] New Order (%s)"
+msgstr "[%s] Nouvelle commande (%s)"
+
+#: includes/class-wc-advanced-notifications.php:343
+msgid "Product low in stock"
+msgstr "Produit avec un faible stock"
+
+#: includes/class-wc-advanced-notifications.php:348
+#: includes/class-wc-advanced-notifications.php:395
+#: includes/class-wc-advanced-notifications.php:458
+msgid "Variation #%s of %s"
+msgstr "Variation #%s sur %s"
+
+#: includes/class-wc-advanced-notifications.php:350
+#: includes/class-wc-advanced-notifications.php:397
+#: includes/class-wc-advanced-notifications.php:460
+msgid "Product #%s - %s"
+msgstr "Produit #%s - %s"
+
+#: includes/class-wc-advanced-notifications.php:354
+#: includes/class-wc-advanced-notifications.php:401
+#: includes/class-wc-advanced-notifications.php:464
+#: templates/emails/new_order.php:17 templates/emails/new_order_plain.php:7
+#: templates/emails/refunds.php:17 templates/emails/refunds_plain.php:7
+msgid "Hi %s,"
+msgstr "Bonjour %s,"
+
+#: includes/class-wc-advanced-notifications.php:356
+msgid "is low in stock."
+msgstr "a un stock faible."
+
+#: includes/class-wc-advanced-notifications.php:390
+msgid "Product out of stock"
+msgstr "Produit épuisé"
+
+#: includes/class-wc-advanced-notifications.php:403
+msgid "is out of stock."
+msgstr "est épuisé."
+
+#: includes/class-wc-advanced-notifications.php:453
+msgid "Product Backorder"
+msgstr "Produit en cours de réapprovisionnement"
+
+#: includes/class-wc-advanced-notifications.php:466
+msgid "%s units of %s have been backordered in order #%s."
+msgstr ""
+"%s unités sur %s sont en cours de réapprovisionnement dans la commande #%s."
+
+#: includes/class-wc-advanced-notifications.php:501
+msgid "Customer Refund"
+msgstr "Remboursement de client"
+
+#: includes/class-wc-advanced-notifications.php:503
+msgid "[%s] Order Refund (%s)"
+msgstr "[%s] Remboursement de commande (%s)"
+
+#: includes/views/admin-screen-edit.php:3
+msgid "Add Notification"
+msgstr "Ajouter une notification"
+
+#: includes/views/admin-screen-edit.php:8
+msgid "These fields determine who recieves the notifications and are requried."
+msgstr ""
+"Ces champs déterminent qui reçoit les notifications, et sont obligatoires."
+
+#: includes/views/admin-screen-edit.php:12
+msgid "Recipient name"
+msgstr "Nom du destinataire"
+
+#: includes/views/admin-screen-edit.php:16
+msgid "Enter the recipient name."
+msgstr "Saisir le nom du destinataire."
+
+#: includes/views/admin-screen-edit.php:21
+msgid "Recipient email address(s)"
+msgstr "Adresse(s) email du(des) destinataire(s)"
+
+#: includes/views/admin-screen-edit.php:25
+msgid ""
+"Enter the recipient(s) email address for this notification (comma separate "
+"multiple addresses)."
+msgstr ""
+"Saisir les adresses email de destinataire pour cette notification (adresses "
+"séparées par des virgules)."
+
+#: includes/views/admin-screen-edit.php:30
+msgid "Recipient details"
+msgstr "Détails du destinataire"
+
+#: includes/views/admin-screen-edit.php:31
+msgid ""
+"You can use these fields to store additional information about the recipient."
+msgstr ""
+"Vous pouvez utiliser ces champs pour renseigner des informations "
+"supplémentaires sur le destinataire."
+
+#: includes/views/admin-screen-edit.php:35
+msgid "Address"
+msgstr "Adresse"
+
+#: includes/views/admin-screen-edit.php:43
+msgid "Phone"
+msgstr "Téléphone"
+
+#: includes/views/admin-screen-edit.php:51
+msgid "Website"
+msgstr "Site web"
+
+#: includes/views/admin-screen-edit.php:60
+msgid "You can choose which recipients are received in this section."
+msgstr "Vous pouvez choisir les destinataires dans cette section."
+
+#: includes/views/admin-screen-edit.php:64
+msgid "Email format"
+msgstr "Format de l'email"
+
+#: includes/views/admin-screen-edit.php:67
+msgid "Plain text"
+msgstr "Texte brut"
+
+#: includes/views/admin-screen-edit.php:68
+msgid ""
+"Enable to send in plain text rather than using the standard HTML email "
+"template."
+msgstr "Choisir d'envoyer en texte brut plutôt que en HTML"
+
+#: includes/views/admin-screen-edit.php:73
+msgid "Enable notifications"
+msgstr "Activer les notifications"
+
+#: includes/views/admin-screen-edit.php:77
+msgid "Choose types&hellip;"
+msgstr "Choisir les types&hellip;"
+
+#: includes/views/admin-screen-edit.php:84
+msgid "Define which notifications to enable."
+msgstr "Définir quelles notifications activer."
+
+#: includes/views/admin-screen-edit.php:89
+msgid "Notification triggers"
+msgstr "Déclencheurs de notification"
+
+#: includes/views/admin-screen-edit.php:100
+msgid "Choose triggers&hellip;"
+msgstr "Choisir les déclencheurs&hellip;"
+
+#: includes/views/admin-screen-edit.php:101
+msgid "All purchases"
+msgstr "Tous les achats"
+
+#: includes/views/admin-screen-edit.php:102
+msgid "Product category notifications"
+msgstr "Notifications de catégorie de produit"
+
+#: includes/views/admin-screen-edit.php:107
+msgid "Category:"
+msgstr "Catégorie :"
+
+#: includes/views/admin-screen-edit.php:111
+msgid "Shipping class notifications"
+msgstr "Notifications de méthode de livraison"
+
+#: includes/views/admin-screen-edit.php:116
+msgid "Class:"
+msgstr "Méthode de livraison :"
+
+#: includes/views/admin-screen-edit.php:121
+msgid ""
+"Here you can enable global or product notifications. Define recipients for "
+"categories and shipping classes here. You can define per-product "
+"notifications later by <a href=\"%s\">editing a product</a>."
+msgstr ""
+"Ici vous pouvez activer des notifications globales ou par produit. "
+"Définissez les destinataires pour les catégories et méthodes de livraison. "
+"Vous pouvez définir des notifications par produit en <a href=\"%s"
+"\">modifiant un produit</a>."
+
+#: includes/views/admin-screen-edit.php:126
+msgid "Prices"
+msgstr "Prix"
+
+#: includes/views/admin-screen-edit.php:129
+msgid "Include prices"
+msgstr "Inclure les prix"
+
+#: includes/views/admin-screen-edit.php:130
+msgid "Enable this to include product prices in the notification emails."
+msgstr "Activer si vous pouvez inclure les prix dans l'email de notification."
+
+#: includes/views/admin-screen-edit.php:135
+msgid "Totals"
+msgstr "Totaux"
+
+#: includes/views/admin-screen-edit.php:138
+msgid "Include order totals"
+msgstr "Inclure les totaux de la commande"
+
+#: includes/views/admin-screen-edit.php:139
+msgid "Enable this to include order totals in the notification emails."
+msgstr ""
+"Activer si vous voulez inclure les totaux de commande dans l'email de "
+"notification."
+
+#: includes/views/admin-screen-edit.php:144
+msgid "Save changes"
+msgstr "Enregistrer les changements"
+
+#: includes/views/admin-screen.php:6
+msgid "Add notification"
+msgstr "Ajouter une notification"
+
+#: includes/views/admin-screen.php:20
+msgid "Are you sure you want to delete this notification?"
+msgstr "Êtes-vous sûr de vouloir supprimer cette notification ?"
+
+#: templates/emails/new_order.php:19
+msgid "You have received an order from"
+msgstr "Vous avez reçu une commande de"
+
+#: templates/emails/new_order.php:21 templates/emails/refunds.php:21
+msgid "Order #%s"
+msgstr "Commande #%s"
+
+#: templates/emails/new_order.php:29 templates/emails/refunds.php:29
+msgid "Product"
+msgstr "Produit"
+
+#: templates/emails/new_order.php:30 templates/emails/refunds.php:30
+msgid "Quantity"
+msgstr "Quantité"
+
+#: templates/emails/new_order.php:32 templates/emails/refunds.php:32
+msgid "Price"
+msgstr "Prix"
+
+#: templates/emails/new_order.php:120 templates/emails/new_order_plain.php:99
+#: templates/emails/refunds.php:120 templates/emails/refunds_plain.php:95
+msgid "Total"
+msgstr "Total"
+
+#: templates/emails/new_order_plain.php:11
+msgid "You have received an order from %s %s:"
+msgstr "Vous avez reçu une commande de %s %s:"
+
+#: templates/emails/new_order_plain.php:17
+msgid "Order: %s"
+msgstr "Commande : %s"
+
+#: templates/emails/new_order_plain.php:21
+#: templates/emails/refunds_plain.php:17
+msgid "jS F Y"
+msgstr "jS F Y"
+
+#: templates/emails/refunds.php:19
+msgid "Order #%s has been refunded."
+msgstr "La commande #%s a été remboursée."
+
+#: templates/emails/refunds_plain.php:11
+msgid "Order: %s has been refunded."
+msgstr "Commande : %s a été remboursée."
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Advanced Notifications"
+msgstr "WooCommerce Advanced Notifications"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woothemes.com/woocommerce/"
+msgstr "http://www.woothemes.com/woocommerce/"
+
+#. Description of the plugin/theme
+msgid ""
+"Add additonal, advanced order and stock notifications to WordPress - ideal "
+"for improving store management or for dropshippers."
+msgstr ""
+"Créer des notifications avancées basées sur le stock, les catégories de "
+"produit ou méthodes de livraison. Idéal pour améliorer la gestion de la "
+"boutique."
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr "WooThemes"
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com"
+msgstr "http://woothemes.com"

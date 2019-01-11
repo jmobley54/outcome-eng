@@ -1,0 +1,11 @@
+/*
+Theme Name: Store Titles
+Pack Type: 
+Description: 
+Author: Dave Wise
+Author URI: 
+Template: 
+Version: 1.0
+Tags: 
+DateCreated: 2015-08-04
+*/

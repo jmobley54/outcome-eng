@@ -1,0 +1,503 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPFront Notification Bar\n"
+"POT-Creation-Date: 2014-03-12 17:05-0700\n"
+"PO-Revision-Date: 2014-06-09 11:12+0100\n"
+"Last-Translator: gidano <gidano@gmail.com>\n"
+"Language-Team: WPFront <contact@wpfront.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Language: hu_HU\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/base/class-wpfront-base-menu.php:52
+msgid "Name"
+msgstr "Név"
+
+#: ../classes/base/class-wpfront-base-menu.php:53
+msgid "Version"
+msgstr "Verzió"
+
+#: ../classes/base/class-wpfront-base-menu.php:54
+msgid "Rating"
+msgstr "Értékelés"
+
+#: ../classes/base/class-wpfront-base-menu.php:55
+msgid "Description"
+msgstr "Leírás"
+
+#: ../classes/base/class-wpfront-base-menu.php:69
+#, php-format
+msgid "based on %s rating(s)"
+msgstr "%s értékelés alapján"
+
+#: ../classes/base/class-wpfront-base-menu.php:105
+msgid "Unable to communicate with WordPress.org"
+msgstr "Nem lehet kommunikálni a WordPress.org-al"
+
+#: ../classes/base/class-wpfront-base-menu.php:123
+#: ../classes/base/class-wpfront-base-menu.php:217
+msgid "WPFront Plugins"
+msgstr "WPFront Plugins"
+
+#: ../classes/base/class-wpfront-base-menu.php:147
+#, php-format
+msgid "By %s"
+msgstr "Szerző %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:154
+#, php-format
+msgid "More information about %s"
+msgstr "További információ: %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:154
+msgid "Details"
+msgstr "Részletek"
+
+#: ../classes/base/class-wpfront-base-menu.php:163
+#, php-format
+msgid "Install %s"
+msgstr "%s telepítése"
+
+#: ../classes/base/class-wpfront-base-menu.php:163
+msgid "Install Now"
+msgstr "Telepítés most"
+
+#: ../classes/base/class-wpfront-base-menu.php:168
+#, php-format
+msgid "Update to version %s"
+msgstr "Frissítés %s verzióra"
+
+#: ../classes/base/class-wpfront-base-menu.php:168
+msgid "Update Now"
+msgstr "Frissítés most"
+
+#: ../classes/base/class-wpfront-base-menu.php:173
+msgid "This plugin is already installed and is up to date"
+msgstr "Ez a plugin már telepítve van, és naprakész"
+
+#: ../classes/base/class-wpfront-base-menu.php:173
+msgid "Installed"
+msgstr "Telepítve"
+
+#: ../classes/base/class-wpfront-base-menu.php:175
+#: ../classes/base/class-wpfront-base.php:105
+msgid "Settings"
+msgstr "Beállítások"
+
+#: ../classes/base/class-wpfront-base-menu.php:177
+msgid "Activate"
+msgstr "Aktiválás"
+
+#: ../classes/base/class-wpfront-base-menu.php:199
+msgid "Feedback"
+msgstr "Visszajelzés"
+
+#: ../classes/base/class-wpfront-base-menu.php:216
+msgid "WPFront"
+msgstr "WPFront"
+
+#: ../classes/base/class-wpfront-base-menu.php:217
+msgid "All Plugins"
+msgstr "Összes Plugin"
+
+#: ../classes/base/class-wpfront-base.php:130
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nem megfelelő a jogosultsága az oldal megtekintéséhez."
+
+#: ../classes/base/class-wpfront-base.php:150
+msgid ""
+"If you have a caching plugin, clear the cache for the new settings to take "
+"effect."
+msgstr ""
+"Ha van egy gyorsítótárazási pluginod, töröld a gyorsítótárat az új "
+"beállítások életbe léptetéséhez."
+
+#: ../classes/base/class-wpfront-base.php:168
+msgid "Settings Description"
+msgstr "Beállítások ismertetése"
+
+#: ../classes/base/class-wpfront-base.php:170
+msgid "Plugin FAQ"
+msgstr "Plugin GyIK"
+
+#: ../classes/base/class-wpfront-base.php:172
+msgid "Feature Request"
+msgstr "Szolgáltatás kérése"
+
+#: ../classes/base/class-wpfront-base.php:174
+msgid "Report Bug"
+msgstr "Hibajelentés"
+
+#: ../classes/base/class-wpfront-base.php:176
+msgid "Write Review"
+msgstr "Írja meg véleményét!"
+
+#: ../classes/base/class-wpfront-base.php:178
+msgid "Contact Me (syam@wpfront.com)"
+msgstr "Elérésem, (syam@wpfront.com)"
+
+#: ../classes/base/class-wpfront-base.php:180
+msgid "Buy me a Beer or Coffee"
+msgstr "Hívj meg egy kv-ra vagy sörre!"
+
+#: ../classes/base/class-wpfront-base.php:197
+msgid "Save Changes"
+msgstr "Változások mentése"
+
+#: ../classes/class-wpfront-notification-bar-options.php:41
+msgid "Enabled"
+msgstr "Engedélyezve"
+
+#: ../classes/class-wpfront-notification-bar-options.php:42
+msgid "Position"
+msgstr "Elhelyezkedés"
+
+#: ../classes/class-wpfront-notification-bar-options.php:43
+msgid "Bar Height"
+msgstr "Sáv magassága"
+
+#: ../classes/class-wpfront-notification-bar-options.php:44
+msgid "Message Text"
+msgstr "Üzenet szövege"
+
+#: ../classes/class-wpfront-notification-bar-options.php:45
+msgid "Display After"
+msgstr "Megjelenés"
+
+#: ../classes/class-wpfront-notification-bar-options.php:46
+msgid "Animation Duration"
+msgstr "Animáció időtartama"
+
+#: ../classes/class-wpfront-notification-bar-options.php:47
+msgid "Display Close Button"
+msgstr "Bezárés gomb jelenjen meg"
+
+#: ../classes/class-wpfront-notification-bar-options.php:48
+msgid "Auto Close After"
+msgstr "Auto bezárás"
+
+#: ../classes/class-wpfront-notification-bar-options.php:49
+msgid "Display Button"
+msgstr "Gomb megjelenítés"
+
+#: ../classes/class-wpfront-notification-bar-options.php:50
+msgid "Button Text"
+msgstr "Gomb szöveg"
+
+#: ../classes/class-wpfront-notification-bar-options.php:51
+msgid "Button Action"
+msgstr "Gomb művelet"
+
+#: ../classes/class-wpfront-notification-bar-options.php:52
+msgid "Open URL:"
+msgstr "URL megnyitás"
+
+#: ../classes/class-wpfront-notification-bar-options.php:53
+msgid "Open URL in new tab/window"
+msgstr "URL megnyitás új fülön/ablakban"
+
+#: ../classes/class-wpfront-notification-bar-options.php:54
+msgid "Execute JavaScript"
+msgstr "JavaScript végrehajtása"
+
+#: ../classes/class-wpfront-notification-bar-options.php:55
+msgid "Close Bar on Button Click"
+msgstr "Sáv bezárása gombra kattintás"
+
+#: ../classes/class-wpfront-notification-bar-options.php:56
+msgid "Display Shadow"
+msgstr "Árnyék megjelenés"
+
+#: ../classes/class-wpfront-notification-bar-options.php:57
+msgid "Fixed at Position"
+msgstr "Rögzített pozíció"
+
+#: ../classes/class-wpfront-notification-bar-options.php:58
+msgid "Message Text Color"
+msgstr "Üzenet szöveg szín"
+
+#: ../classes/class-wpfront-notification-bar-options.php:59
+#: ../classes/class-wpfront-notification-bar-options.php:61
+msgid "From Color"
+msgstr "Kezdő szín"
+
+#: ../classes/class-wpfront-notification-bar-options.php:60
+#: ../classes/class-wpfront-notification-bar-options.php:62
+msgid "To Color"
+msgstr "Befejező szín"
+
+#: ../classes/class-wpfront-notification-bar-options.php:63
+msgid "Button Text Color"
+msgstr "Gomb szöveg szín"
+
+#: ../classes/class-wpfront-notification-bar-options.php:64
+msgid "Display on Pages"
+msgstr "Hol jelenjen meg"
+
+#: ../classes/class-wpfront-notification-bar-options.php:67
+msgid "Display Reopen Button"
+msgstr "Újranyitó gomb megjelenítése"
+
+#: ../classes/class-wpfront-notification-bar-options.php:68
+msgid "Reopen Button Color"
+msgstr "Újranyitó gomb színe"
+
+#: ../classes/class-wpfront-notification-bar-options.php:69
+msgid "Keep Closed"
+msgstr "Tartsa bezárva"
+
+#: ../classes/class-wpfront-notification-bar-options.php:70
+msgid "Keep Closed For"
+msgstr "Bezárva tartás"
+
+#: ../classes/class-wpfront-notification-bar-options.php:71
+msgid "Position Offset"
+msgstr "Pozíció eltolás"
+
+#: ../classes/class-wpfront-notification-bar-options.php:72
+msgid "Custom CSS"
+msgstr "Egyedi CSS"
+
+#: ../classes/class-wpfront-notification-bar-options.php:73
+msgid "Close Button Color"
+msgstr "Bezárás gomb színe"
+
+#: ../classes/class-wpfront-notification-bar-options.php:76
+msgid "Display for User Roles"
+msgstr "Ki számára látható"
+
+#: ../classes/class-wpfront-notification-bar-options.php:78
+msgid "Display on Scroll"
+msgstr "Megjelenés görgetéskor"
+
+#: ../classes/class-wpfront-notification-bar-options.php:79
+msgid "Scroll Offset"
+msgstr "Görgetés eltolás"
+
+#: ../classes/class-wpfront-notification-bar-options.php:80
+msgid "Start Date"
+msgstr "Indítás dátuma"
+
+#: ../classes/class-wpfront-notification-bar-options.php:81
+msgid "End Date"
+msgstr "Leállás dátuma"
+
+#: ../classes/class-wpfront-notification-bar.php:62
+msgid "WPFront Notification Bar"
+msgstr "WPFront Notification Bar"
+
+#: ../classes/class-wpfront-notification-bar.php:62
+msgid "Notification Bar"
+msgstr "Értesítési sáv"
+
+#: ../classes/class-wpfront-notification-bar.php:176
+#: ../classes/class-wpfront-notification-bar.php:180
+msgid "[Page]"
+msgstr "[Oldal]"
+
+#: ../classes/class-wpfront-notification-bar.php:176
+msgid "Home"
+msgstr "Kezdőlap"
+
+#: ../classes/class-wpfront-notification-bar.php:185
+msgid "[Post]"
+msgstr "[Post]"
+
+#: ../templates/options-template.php:32
+msgid "WPFront Notification Bar Settings"
+msgstr "WPFront Notification Bar Beállítások"
+
+#: ../templates/options-template.php:34
+msgid "Display"
+msgstr "Megjelenés"
+
+#: ../templates/options-template.php:50
+msgid "Top"
+msgstr "Felül"
+
+#: ../templates/options-template.php:51
+msgid "Bottom"
+msgstr "Alul"
+
+#: ../templates/options-template.php:60
+msgid "[Sticky Bar, bar will stay at position regardless of scrolling.]"
+msgstr "[Ragadós sáv, a sáv pozícióban marad a görgetéstől függetlenül.]"
+
+#: ../templates/options-template.php:68
+msgid "[Displays the bar on window scroll.]"
+msgstr "[Megjeleníti a sávot az ablak görgetésekor.]"
+
+#: ../templates/options-template.php:76 ../templates/options-template.php:84
+#: ../templates/options-template.php:92
+msgid "px"
+msgstr "px"
+
+#: ../templates/options-template.php:76
+msgid "Number of pixels to be scrolled before the bar appears."
+msgstr "Görgetett pixelek száma, mielőtt a sáv megjelenik."
+
+#: ../templates/options-template.php:84
+msgid "Set 0px to auto fit contents."
+msgstr "0px-re állítva a tartalom auto méretezése"
+
+#: ../templates/options-template.php:92
+msgid ""
+"(Top bar only) If you find the bar overlapping, try increasing this value. "
+"(eg. WordPress 3.8 Twenty Fourteen theme, set 48px)"
+msgstr ""
+"(Top bar esetén) Ha úgy látja, a sávok egymást átfedik, próbálja meg növelni "
+"ezt az értéket. (pl. WordPress 3.8: Twenty Fourteen téma, állítsa 48px-re)"
+
+#: ../templates/options-template.php:100 ../templates/options-template.php:108
+#: ../templates/options-template.php:124
+msgid "second(s)"
+msgstr "mp"
+
+#: ../templates/options-template.php:100
+msgid ""
+"Set 0 second(s) to display immediately. Do not work in \"Display on Scroll\" "
+"mode."
+msgstr ""
+"0 mp-re állítva azonnal megjelenik. Nem működik \"Megjelenés görgetéskor\" "
+"módban."
+
+#: ../templates/options-template.php:108
+msgid "Set 0 second(s) for no animation."
+msgstr "Állítsa 0 mp-re és nincs animálás"
+
+#: ../templates/options-template.php:116
+msgid "[Displays a close button at the top right corner of the bar.]"
+msgstr "[Megjelenít egy bezárás gombot a sáv jobb felső sarkában]"
+
+#: ../templates/options-template.php:124
+msgid ""
+"Set 0 second(s) to disable auto close. Do not work in \"Display on Scroll\" "
+"mode."
+msgstr ""
+"0 mp-re állítva letiltja az automatikus bezárást. Ne működik \"Megjelenés "
+"görgetéskor\" módban."
+
+#: ../templates/options-template.php:140
+msgid "A reopen button will be displayed after the bar is closed."
+msgstr "Az újranyitás gomb megjelenítése miután a sáv bezárul."
+
+#: ../templates/options-template.php:148
+msgid "Once closed, bar will display closed on other pages."
+msgstr "Ha bezárja, a sáv más oldalakon is zártan jelenik meg."
+
+#: ../templates/options-template.php:156
+msgid "day(s)"
+msgstr "nap"
+
+#: ../templates/options-template.php:156
+msgid ""
+"Bar will be kept closed for the number of days specified from last closed "
+"date."
+msgstr ""
+"A sávot bezárva tarja meghatározott számú napig az autolsó bezárás "
+"időpontjától."
+
+#: ../templates/options-template.php:161
+msgid "Content"
+msgstr "Tartalom"
+
+#: ../templates/options-template.php:170
+msgid "[HTML tags are allowed. e.g. Add <br /> for break.]"
+msgstr "[HTML tagek használata megengedett. például  <br /> a sortöréshez.]"
+
+#: ../templates/options-template.php:178
+msgid "[Displays a button next to the message.]"
+msgstr "[Gomb megjelenés a következő szöveggel.]"
+
+#: ../templates/options-template.php:223
+msgid "Filter"
+msgstr "Szűrés"
+
+#: ../templates/options-template.php:230 ../templates/options-template.php:238
+msgid "[YYYY-MM-DD]"
+msgstr "[YYYY-MM-DD]"
+
+#: ../templates/options-template.php:248
+msgid "All pages."
+msgstr "Összes oldal."
+
+#: ../templates/options-template.php:253
+msgid "Only in landing page."
+msgstr "Csak nyitóoldal."
+
+#: ../templates/options-template.php:253
+msgid "[The first page they visit on your website.]"
+msgstr "[Csak a honlap első meglátogatott oldalán.]"
+
+#: ../templates/options-template.php:258
+msgid "Include in following pages"
+msgstr "Beleértve a következő oldalakat"
+
+#: ../templates/options-template.php:278
+msgid "Exclude in following pages"
+msgstr "Kivéve a következő oldalakon"
+
+#: ../templates/options-template.php:305
+msgid "All users."
+msgstr "Minden felhasználó."
+
+#: ../templates/options-template.php:310
+msgid "All logged in users."
+msgstr "Minden bejelentkezett felhasználó."
+
+#: ../templates/options-template.php:315
+msgid "Guest users. [Non-logged in users]"
+msgstr "Vendég [Nem bejelentkezett] felhasználók."
+
+#: ../templates/options-template.php:320
+msgid "For following user roles"
+msgstr "A következő felhasználói körök"
+
+#: ../templates/options-template.php:340
+msgid "[No Role]"
+msgstr "[Szerep nélküli]"
+
+#: ../templates/options-template.php:346
+msgid "[Guest]"
+msgstr "[Vendég]"
+
+#: ../templates/options-template.php:354
+msgid "Color"
+msgstr "Szín"
+
+#: ../templates/options-template.php:358
+msgid "Bar Color"
+msgstr "Sáv színe"
+
+#: ../templates/options-template.php:369 ../templates/options-template.php:394
+msgid "[Select two different colors to create a gradient.]"
+msgstr "[Válasszon ki két eltérő színt színátmenet létrehozásához.]"
+
+#: ../templates/options-template.php:383
+msgid "Button Color"
+msgstr "Gomb szín"
+
+#: ../templates/options-template.php:432
+msgid "[Normal, Hover, X]"
+msgstr "[Normal, Hover, X]"
+
+#: ../templates/options-template.php:437
+msgid "CSS"
+msgstr "CSS"
+
+#: ../templates/options-template.php:453
+msgid "Plugin Ideas"
+msgstr "Plugin ötletek"
+
+msgid "Animate Display"
+msgstr "Animate Display"
+
+msgid "Animate Display Delay"
+msgstr "Animate Display Delay"

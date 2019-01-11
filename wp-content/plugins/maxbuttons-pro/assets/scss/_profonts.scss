@@ -1,0 +1,147 @@
+// the button
+.manage-fonts {
+
+	i {
+		padding-top: 6px;
+		font-size: 16px;
+		width: 20px;
+		height: 20px;
+		margin-right: 7px;
+	}
+
+}
+
+.add-fonts {
+	.loading_overlay
+	{
+		background-color: #eee;
+		opacity: 0.9;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 12000;
+
+	}
+	.loading {
+		font-size: 22px;
+		color: #000;
+		z-index: 12001;
+			width: 124px;
+			height: 31px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -16px 0 0 -62px;
+		span, img { float: left; margin-right: 5px; }
+		span {
+			line-height: 32px;
+			vertical-align: middle;
+
+		}
+	}
+	.modal_content p {
+		@include bp(960) {
+			margin: 5px 0;
+		}
+	}
+
+  .controls {
+		position: absolute;
+		width: 100%;
+		padding: 10px 0;
+		background: #f3f3f3;
+		text-align: right;
+		bottom: 0;
+		left: 0;
+		border-top: 1px solid #ccc;
+
+	}
+}
+
+.font_manager {
+	height: 450px;
+	max-height: 65vh;
+	width: 100%;
+	position: relative;
+	.font_search {
+		span {
+			font-size: 15px;
+			font-weight: 700;
+
+		}
+
+	}
+	.font_wrap {
+		max-height: 80%;
+		overflow-x: auto;
+		overflow-y: none;
+		margin-top: 15px;
+	}
+
+	.font_left, .font_right {
+		display: inline-block;
+		text-align: left;
+		width: 50%;
+
+		.items {
+			margin-top:15px;
+			margin-left: 10px;
+			line-height: 20px;
+			font-size: 14px;
+			list-style: none;
+
+			li
+			{
+				label {
+					padding: 5px 0;
+					width: 100%;
+					display: inline-block;
+					span {
+						margin-left: 10px;
+					}
+				}
+				span {
+					margin-left: 5px;
+
+				}
+				input {
+					display: none;
+				}
+			}
+			input:checked + label {
+				background-color: #0073aa;
+				color: #fff;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.font_left {
+		float: left;
+	}
+
+	.font_right {
+
+	}
+
+	.font_example {
+
+		display: block;
+
+		padding: 10px 20px;
+		clear:both;
+		border: 1px solid #000000;
+		font-size: 20px;
+		@include bp(960)
+		{
+			display: none;
+		}
+		.example_text {
+			display: none;
+			span { margin-right: 10%; }
+		}
+	}
+
+}

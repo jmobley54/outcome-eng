@@ -1,0 +1,503 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPFront Notification Bar\n"
+"POT-Creation-Date: 2014-03-12 17:05-0700\n"
+"PO-Revision-Date: 2014-03-12 17:05-0700\n"
+"Last-Translator: \n"
+"Language-Team: WPFront <contact@wpfront.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/base/class-wpfront-base-menu.php:52
+msgid "Name"
+msgstr "Name"
+
+#: ../classes/base/class-wpfront-base-menu.php:53
+msgid "Version"
+msgstr "Version"
+
+#: ../classes/base/class-wpfront-base-menu.php:54
+msgid "Rating"
+msgstr "Rating"
+
+#: ../classes/base/class-wpfront-base-menu.php:55
+msgid "Description"
+msgstr "Description"
+
+#: ../classes/base/class-wpfront-base-menu.php:69
+#, php-format
+msgid "based on %s rating(s)"
+msgstr "based on %s rating(s)"
+
+#: ../classes/base/class-wpfront-base-menu.php:105
+msgid "Unable to communicate with WordPress.org"
+msgstr "Unable to communicate with WordPress.org"
+
+#: ../classes/base/class-wpfront-base-menu.php:123
+#: ../classes/base/class-wpfront-base-menu.php:217
+msgid "WPFront Plugins"
+msgstr "WPFront Plugins"
+
+#: ../classes/base/class-wpfront-base-menu.php:147
+#, php-format
+msgid "By %s"
+msgstr "By %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:154
+#, php-format
+msgid "More information about %s"
+msgstr "More information about %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:154
+msgid "Details"
+msgstr "Details"
+
+#: ../classes/base/class-wpfront-base-menu.php:163
+#, php-format
+msgid "Install %s"
+msgstr "Install %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:163
+msgid "Install Now"
+msgstr "Install Now"
+
+#: ../classes/base/class-wpfront-base-menu.php:168
+#, php-format
+msgid "Update to version %s"
+msgstr "Update to version %s"
+
+#: ../classes/base/class-wpfront-base-menu.php:168
+msgid "Update Now"
+msgstr "Update Now"
+
+#: ../classes/base/class-wpfront-base-menu.php:173
+msgid "This plugin is already installed and is up to date"
+msgstr "This plugin is already installed and is up to date"
+
+#: ../classes/base/class-wpfront-base-menu.php:173
+msgid "Installed"
+msgstr "Installed"
+
+#: ../classes/base/class-wpfront-base-menu.php:175
+#: ../classes/base/class-wpfront-base.php:105
+msgid "Settings"
+msgstr "Settings"
+
+#: ../classes/base/class-wpfront-base-menu.php:177
+msgid "Activate"
+msgstr "Activate"
+
+#: ../classes/base/class-wpfront-base-menu.php:199
+msgid "Feedback"
+msgstr "Feedback"
+
+#: ../classes/base/class-wpfront-base-menu.php:216
+msgid "WPFront"
+msgstr "WPFront"
+
+#: ../classes/base/class-wpfront-base-menu.php:217
+msgid "All Plugins"
+msgstr "All Plugins"
+
+#: ../classes/base/class-wpfront-base.php:130
+msgid "You do not have sufficient permissions to access this page."
+msgstr "You do not have sufficient permissions to access this page."
+
+#: ../classes/base/class-wpfront-base.php:150
+msgid ""
+"If you have a caching plugin, clear the cache for the new settings to take "
+"effect."
+msgstr ""
+"If you have a caching plugin, clear the cache for the new settings to take "
+"effect."
+
+#: ../classes/base/class-wpfront-base.php:168
+msgid "Settings Description"
+msgstr "Settings Description"
+
+#: ../classes/base/class-wpfront-base.php:170
+msgid "Plugin FAQ"
+msgstr "Plugin FAQ"
+
+#: ../classes/base/class-wpfront-base.php:172
+msgid "Feature Request"
+msgstr "Feature Request"
+
+#: ../classes/base/class-wpfront-base.php:174
+msgid "Report Bug"
+msgstr "Report Bug"
+
+#: ../classes/base/class-wpfront-base.php:176
+msgid "Write Review"
+msgstr "Write Review"
+
+#: ../classes/base/class-wpfront-base.php:178
+msgid "Contact Me (syam@wpfront.com)"
+msgstr "Contact Me (syam@wpfront.com)"
+
+#: ../classes/base/class-wpfront-base.php:180
+msgid "Buy me a Beer or Coffee"
+msgstr "Buy me a Beer or Coffee"
+
+#: ../classes/base/class-wpfront-base.php:197
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: ../classes/class-wpfront-notification-bar-options.php:41
+msgid "Enabled"
+msgstr "Enabled"
+
+#: ../classes/class-wpfront-notification-bar-options.php:42
+msgid "Position"
+msgstr "Position"
+
+#: ../classes/class-wpfront-notification-bar-options.php:43
+msgid "Bar Height"
+msgstr "Bar Height"
+
+#: ../classes/class-wpfront-notification-bar-options.php:44
+msgid "Message Text"
+msgstr "Message Text"
+
+#: ../classes/class-wpfront-notification-bar-options.php:45
+msgid "Display After"
+msgstr "Display After"
+
+#: ../classes/class-wpfront-notification-bar-options.php:46
+msgid "Animation Duration"
+msgstr "Animation Duration"
+
+#: ../classes/class-wpfront-notification-bar-options.php:47
+msgid "Display Close Button"
+msgstr "Display Close Button"
+
+#: ../classes/class-wpfront-notification-bar-options.php:48
+msgid "Auto Close After"
+msgstr "Auto Close After"
+
+#: ../classes/class-wpfront-notification-bar-options.php:49
+msgid "Display Button"
+msgstr "Display Button"
+
+#: ../classes/class-wpfront-notification-bar-options.php:50
+msgid "Button Text"
+msgstr "Button Text"
+
+#: ../classes/class-wpfront-notification-bar-options.php:51
+msgid "Button Action"
+msgstr "Button Action"
+
+#: ../classes/class-wpfront-notification-bar-options.php:52
+msgid "Open URL:"
+msgstr "Open URL:"
+
+#: ../classes/class-wpfront-notification-bar-options.php:53
+msgid "Open URL in new tab/window"
+msgstr "Open URL in new tab/window"
+
+#: ../classes/class-wpfront-notification-bar-options.php:54
+msgid "Execute JavaScript"
+msgstr "Execute JavaScript"
+
+#: ../classes/class-wpfront-notification-bar-options.php:55
+msgid "Close Bar on Button Click"
+msgstr "Close Bar on Button Click"
+
+#: ../classes/class-wpfront-notification-bar-options.php:56
+msgid "Display Shadow"
+msgstr "Display Shadow"
+
+#: ../classes/class-wpfront-notification-bar-options.php:57
+msgid "Fixed at Position"
+msgstr "Fixed at Position"
+
+#: ../classes/class-wpfront-notification-bar-options.php:58
+msgid "Message Text Color"
+msgstr "Message Text Color"
+
+#: ../classes/class-wpfront-notification-bar-options.php:59
+#: ../classes/class-wpfront-notification-bar-options.php:61
+msgid "From Color"
+msgstr "From Color"
+
+#: ../classes/class-wpfront-notification-bar-options.php:60
+#: ../classes/class-wpfront-notification-bar-options.php:62
+msgid "To Color"
+msgstr "To Color"
+
+#: ../classes/class-wpfront-notification-bar-options.php:63
+msgid "Button Text Color"
+msgstr "Button Text Color"
+
+#: ../classes/class-wpfront-notification-bar-options.php:64
+msgid "Display on Pages"
+msgstr "Display on Pages"
+
+#: ../classes/class-wpfront-notification-bar-options.php:67
+msgid "Display Reopen Button"
+msgstr "Display Reopen Button"
+
+#: ../classes/class-wpfront-notification-bar-options.php:68
+msgid "Reopen Button Color"
+msgstr "Reopen Button Color"
+
+#: ../classes/class-wpfront-notification-bar-options.php:69
+msgid "Keep Closed"
+msgstr "Keep Closed"
+
+#: ../classes/class-wpfront-notification-bar-options.php:70
+msgid "Keep Closed For"
+msgstr "Keep Closed For"
+
+#: ../classes/class-wpfront-notification-bar-options.php:71
+msgid "Position Offset"
+msgstr "Position Offset"
+
+#: ../classes/class-wpfront-notification-bar-options.php:72
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+#: ../classes/class-wpfront-notification-bar-options.php:73
+msgid "Close Button Color"
+msgstr "Close Button Color"
+
+#: ../classes/class-wpfront-notification-bar-options.php:76
+msgid "Display for User Roles"
+msgstr "Display for User Roles"
+
+#: ../classes/class-wpfront-notification-bar-options.php:78
+msgid "Display on Scroll"
+msgstr "Display on Scroll"
+
+#: ../classes/class-wpfront-notification-bar-options.php:79
+msgid "Scroll Offset"
+msgstr "Scroll Offset"
+
+#: ../classes/class-wpfront-notification-bar-options.php:80
+msgid "Start Date"
+msgstr "Start Date"
+
+#: ../classes/class-wpfront-notification-bar-options.php:81
+msgid "End Date"
+msgstr "End Date"
+
+#: ../classes/class-wpfront-notification-bar.php:62
+msgid "WPFront Notification Bar"
+msgstr "WPFront Notification Bar"
+
+#: ../classes/class-wpfront-notification-bar.php:62
+msgid "Notification Bar"
+msgstr "Notification Bar"
+
+#: ../classes/class-wpfront-notification-bar.php:176
+#: ../classes/class-wpfront-notification-bar.php:180
+msgid "[Page]"
+msgstr "[Page]"
+
+#: ../classes/class-wpfront-notification-bar.php:176
+msgid "Home"
+msgstr "Home"
+
+#: ../classes/class-wpfront-notification-bar.php:185
+msgid "[Post]"
+msgstr "[Post]"
+
+#: ../templates/options-template.php:32
+msgid "WPFront Notification Bar Settings"
+msgstr "WPFront Notification Bar Settings"
+
+#: ../templates/options-template.php:34
+msgid "Display"
+msgstr "Display"
+
+#: ../templates/options-template.php:50
+msgid "Top"
+msgstr "Top"
+
+#: ../templates/options-template.php:51
+msgid "Bottom"
+msgstr "Bottom"
+
+#: ../templates/options-template.php:60
+msgid "[Sticky Bar, bar will stay at position regardless of scrolling.]"
+msgstr "[Sticky Bar, bar will stay at position regardless of scrolling.]"
+
+#: ../templates/options-template.php:68
+msgid "[Displays the bar on window scroll.]"
+msgstr "[Displays the bar on window scroll.]"
+
+#: ../templates/options-template.php:76 ../templates/options-template.php:84
+#: ../templates/options-template.php:92
+msgid "px"
+msgstr "px"
+
+#: ../templates/options-template.php:76
+msgid "Number of pixels to be scrolled before the bar appears."
+msgstr "Number of pixels to be scrolled before the bar appears."
+
+#: ../templates/options-template.php:84
+msgid "Set 0px to auto fit contents."
+msgstr "Set 0px to auto fit contents."
+
+#: ../templates/options-template.php:92
+msgid ""
+"(Top bar only) If you find the bar overlapping, try increasing this value. "
+"(eg. WordPress 3.8 Twenty Fourteen theme, set 48px)"
+msgstr ""
+"(Top bar only) If you find the bar overlapping, try increasing this value. "
+"(eg. WordPress 3.8 Twenty Fourteen theme, set 48px)"
+
+#: ../templates/options-template.php:100 ../templates/options-template.php:108
+#: ../templates/options-template.php:124
+msgid "second(s)"
+msgstr "second(s)"
+
+#: ../templates/options-template.php:100
+msgid ""
+"Set 0 second(s) to display immediately. Do not work in \"Display on Scroll\" "
+"mode."
+msgstr ""
+"Set 0 second(s) to display immediately. Do not work in \"Display on Scroll\" "
+"mode."
+
+#: ../templates/options-template.php:108
+msgid "Set 0 second(s) for no animation."
+msgstr "Set 0 second(s) for no animation."
+
+#: ../templates/options-template.php:116
+msgid "[Displays a close button at the top right corner of the bar.]"
+msgstr "[Displays a close button at the top right corner of the bar.]"
+
+#: ../templates/options-template.php:124
+msgid ""
+"Set 0 second(s) to disable auto close. Do not work in \"Display on Scroll\" "
+"mode."
+msgstr ""
+"Set 0 second(s) to disable auto close. Do not work in \"Display on Scroll\" "
+"mode."
+
+#: ../templates/options-template.php:140
+msgid "A reopen button will be displayed after the bar is closed."
+msgstr "A reopen button will be displayed after the bar is closed."
+
+#: ../templates/options-template.php:148
+msgid "Once closed, bar will display closed on other pages."
+msgstr "Once closed, bar will display closed on other pages."
+
+#: ../templates/options-template.php:156
+msgid "day(s)"
+msgstr "day(s)"
+
+#: ../templates/options-template.php:156
+msgid ""
+"Bar will be kept closed for the number of days specified from last closed "
+"date."
+msgstr ""
+"Bar will be kept closed for the number of days specified from last closed "
+"date."
+
+#: ../templates/options-template.php:161
+msgid "Content"
+msgstr "Content"
+
+#: ../templates/options-template.php:170
+msgid "[HTML tags are allowed. e.g. Add <br /> for break.]"
+msgstr "[HTML tags are allowed. e.g. Add <br /> for break.]"
+
+#: ../templates/options-template.php:178
+msgid "[Displays a button next to the message.]"
+msgstr "[Displays a button next to the message.]"
+
+#: ../templates/options-template.php:223
+msgid "Filter"
+msgstr "Filter"
+
+#: ../templates/options-template.php:230 ../templates/options-template.php:238
+msgid "[YYYY-MM-DD]"
+msgstr "[YYYY-MM-DD]"
+
+#: ../templates/options-template.php:248
+msgid "All pages."
+msgstr "All pages."
+
+#: ../templates/options-template.php:253
+msgid "Only in landing page."
+msgstr "Only in landing page."
+
+#: ../templates/options-template.php:253
+msgid "[The first page they visit on your website.]"
+msgstr "[The first page they visit on your website.]"
+
+#: ../templates/options-template.php:258
+msgid "Include in following pages"
+msgstr "Include in following pages"
+
+#: ../templates/options-template.php:278
+msgid "Exclude in following pages"
+msgstr "Exclude in following pages"
+
+#: ../templates/options-template.php:305
+msgid "All users."
+msgstr "All users."
+
+#: ../templates/options-template.php:310
+msgid "All logged in users."
+msgstr "All logged in users."
+
+#: ../templates/options-template.php:315
+msgid "Guest users. [Non-logged in users]"
+msgstr "Guest users. [Non-logged in users]"
+
+#: ../templates/options-template.php:320
+msgid "For following user roles"
+msgstr "For following user roles"
+
+#: ../templates/options-template.php:340
+msgid "[No Role]"
+msgstr "[No Role]"
+
+#: ../templates/options-template.php:346
+msgid "[Guest]"
+msgstr "[Guest]"
+
+#: ../templates/options-template.php:354
+msgid "Color"
+msgstr "Color"
+
+#: ../templates/options-template.php:358
+msgid "Bar Color"
+msgstr "Bar Color"
+
+#: ../templates/options-template.php:369 ../templates/options-template.php:394
+msgid "[Select two different colors to create a gradient.]"
+msgstr "[Select two different colors to create a gradient.]"
+
+#: ../templates/options-template.php:383
+msgid "Button Color"
+msgstr "Button Color"
+
+#: ../templates/options-template.php:432
+msgid "[Normal, Hover, X]"
+msgstr "[Normal, Hover, X]"
+
+#: ../templates/options-template.php:437
+msgid "CSS"
+msgstr "CSS"
+
+#: ../templates/options-template.php:453
+msgid "Plugin Ideas"
+msgstr "Plugin Ideas"
+
+#~ msgid "Animate Display"
+#~ msgstr "Animate Display"
+
+#~ msgid "Animate Display Delay"
+#~ msgstr "Animate Display Delay"

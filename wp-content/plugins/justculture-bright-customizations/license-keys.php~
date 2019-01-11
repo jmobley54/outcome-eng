@@ -1,0 +1,23 @@
+<?php
+
+add_action( 'woocommerce_after_order_notes', 'bright_license_field' );
+
+function bright_license_field($checkout) {
+  echo '<div id="bright_license_field"><h2>' . __('License Purchase') . '</h2>';
+
+  if (empty($checkout->posted)) 
+    $license_key_setting = BrightWoocommerceIntegration::is_cart_a_probable_license_purchase();
+  else
+    $license_key_setting = $checkout->get_value( 'bright_license_check' );
+
+  woocommerce_form_field( 'bright_license_check', array(
+                                                        'type'          => 'checkbox',
+                                                        'class'         => array('bright_license_check input-checkbox'),
+                                                        'label'         => __('<span title="This creates a reusable license key from your purchase.  If it is checked for you, you are purchasing multiple registrations with this order and we recommend you not uncheck this, or you may not be able to transfer your purchased registrations.    If it unchecked, checking it will allow you to transfer your purchase to anyone you provide the license key to.">Purchase a shareable license key.</span>'),
+                                                        'required'      => false,
+                                                        ), $license_key_setting);
+
+  echo '</div>';
+}
+
+themes/scroller/woocommerce/checkout/

@@ -1,0 +1,810 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Extended Coupon Features 2.00\n"
+"POT-Creation-Date: 2018-02-03 15:25+0100\n"
+"PO-Revision-Date: 2018-02-03 15:26+0100\n"
+"Last-Translator: \n"
+"Language-Team: Jos Koenis\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/Abstract_WJECF_Plugin.php:49
+#, php-format
+msgid ""
+"WooCommerce Extended Coupon Features version %s is required. You have "
+"version %s"
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:13
+msgid ""
+"Allow coupons to be automatically applied to the cart when restrictions are "
+"met or by url."
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:66 includes/WJECF_AutoCoupon.php:200
+#: includes/WJECF_AutoCoupon.php:207
+msgid "Auto coupon"
+msgstr "کوپن خودکار"
+
+#: includes/WJECF_AutoCoupon.php:71
+msgid "Individual use"
+msgstr "استفاده شخصی"
+
+#: includes/WJECF_AutoCoupon.php:89 includes/WJECF_AutoCoupon.php:172
+msgid "Auto coupons"
+msgstr "کوپن های خودکار"
+
+#: includes/WJECF_AutoCoupon.php:96
+msgid "Allow remove 'Auto Coupons'"
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:126
+#: includes/admin/WJECF_Admin_Settings.php:226
+#: includes/admin/WJECF_Admin_Settings.php:263
+msgid "Enabled"
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:131
+msgid ""
+"Check this box to allow the customer to remove 'Auto Coupons' from the cart."
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:153 includes/WJECF_AutoCoupon.php:161
+msgid "Yes"
+msgstr "بله"
+
+#: includes/WJECF_AutoCoupon.php:153 includes/WJECF_AutoCoupon.php:161
+msgid "No"
+msgstr "نه"
+
+#: includes/WJECF_AutoCoupon.php:208
+msgid ""
+"Automatically add the coupon to the cart if the restrictions are met. Please "
+"enter a description when you check this box, the description will be shown "
+"in the customer's cart if the coupon is applied."
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:216
+msgid "Priority"
+msgstr "اولویت"
+
+#: includes/WJECF_AutoCoupon.php:217
+msgid "No priority"
+msgstr "بدون اولویت"
+
+#: includes/WJECF_AutoCoupon.php:218
+msgid ""
+"When 'individual use' is checked, auto coupons with a higher value will have "
+"priority over other auto coupons."
+msgstr ""
+
+#: includes/WJECF_AutoCoupon.php:228
+msgid "Apply silently"
+msgstr "اعمال بدون نمایش (مخفیانه)"
+
+#: includes/WJECF_AutoCoupon.php:229
+msgid "Don't display a message when this coupon is automatically applied."
+msgstr "عدم نمایش  پیام زمانی که کوپن به صورت خودکار اعمال می شود."
+
+#: includes/WJECF_AutoCoupon.php:357
+msgid "Free shipping coupon"
+msgstr "کوپن حمل و نقل رایگان"
+
+#: includes/WJECF_AutoCoupon.php:520
+#, php-format
+msgid "Discount applied: %s"
+msgstr "درصد اعمال تخفیف: %s"
+
+#: includes/WJECF_Controller.php:238
+#, fuzzy
+msgid ""
+"WooCommerce Extended Coupon Features is disabled because WooCommerce could "
+"not be detected."
+msgstr ""
+"افزونه WooCommerce Extended Coupon Features غیر فعال شده است زیرا ووکامروس "
+"نمی تواند آن را شناسایی کند."
+
+#: includes/WJECF_Controller.php:253
+#, php-format
+msgid "The minimum subtotal of the matching products for this coupon is %s."
+msgstr ""
+
+#: includes/WJECF_Controller.php:257
+#, php-format
+msgid "The maximum subtotal of the matching products for this coupon is %s."
+msgstr ""
+
+#: includes/WJECF_Controller.php:261
+#, php-format
+msgid "The minimum quantity of matching products for this coupon is %s."
+msgstr ""
+
+#: includes/WJECF_Controller.php:265
+#, php-format
+msgid "The maximum quantity of matching products for this coupon is %s."
+msgstr ""
+
+#: includes/WJECF_Controller.php:268
+msgid "The coupon is not valid for the currently selected shipping method."
+msgstr ""
+
+#: includes/WJECF_Controller.php:271
+msgid "The coupon is not valid for the currently selected payment method."
+msgstr ""
+
+#: includes/WJECF_Controller.php:274
+#, php-format
+msgid "Sorry, it seems the coupon \"%s\" is not yours."
+msgstr ""
+
+#: includes/WJECF_Controller.php:277
+#, php-format
+msgid "Sorry, coupon \"%s\" is only valid on your first purchase."
+msgstr ""
+
+#: includes/WJECF_Debug.php:16
+msgid "Debugging methods for WooCommerce Extended Coupon Features."
+msgstr ""
+
+#: includes/WJECF_Debug.php:34
+msgid "Debug mode is enabled. Please disable it when you're done debugging."
+msgstr ""
+
+#: includes/WJECF_Debug.php:37
+msgid "Go to settings page"
+msgstr ""
+
+#: includes/WJECF_Debug.php:50
+msgid "Debug"
+msgstr ""
+
+#: includes/WJECF_Debug.php:54
+msgid "Coupon data as json"
+msgstr ""
+
+#: includes/WJECF_WC.php:219
+msgid "Choose an option"
+msgstr ""
+
+#: includes/WJECF_WPML.php:12
+msgid "Compatiblity with WPML."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:11
+msgid "Admin interface of WooCommerce Extended Coupon Features."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:22
+msgid ""
+"<strong>WooCommerce Extended Coupon Features:</strong> You are using an old "
+"version of WooCommerce. Updating of WooCommerce is recommended as using an "
+"outdated version might cause unexpected behaviour in combination with modern "
+"plugins."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:91
+msgid "(AND)"
+msgstr "(AND)"
+
+#: includes/admin/WJECF_Admin.php:92
+msgid "(OR)"
+msgstr "(OR)"
+
+#: includes/admin/WJECF_Admin.php:101 includes/admin/WJECF_Admin.php:244
+msgid "Checkout"
+msgstr "تسویه حساب"
+
+#: includes/admin/WJECF_Admin.php:107
+msgid "Miscellaneous"
+msgstr "متفرقه"
+
+#: includes/admin/WJECF_Admin.php:143
+msgid "Do you find WooCommerce Extended Coupon Features useful?"
+msgstr "آیا این افزونه برای شما مفید بوده است؟"
+
+#: includes/admin/WJECF_Admin.php:145
+msgid "Express your gratitude"
+msgstr "قدردانی خود را بیان کنید."
+
+#: includes/admin/WJECF_Admin.php:149
+msgid "Donate to the developer"
+msgstr "کمک به توسعه دهنده"
+
+#: includes/admin/WJECF_Admin.php:156
+msgid "Documentation"
+msgstr "مستندات"
+
+#: includes/admin/WJECF_Admin.php:158
+msgid "WooCommerce Extended Coupon Features Documentation"
+msgstr "مستندات افزونه"
+
+#: includes/admin/WJECF_Admin.php:172
+msgid "Matching products"
+msgstr "تطبیق محصولات"
+
+#: includes/admin/WJECF_Admin.php:177
+msgid "Products Operator"
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:178 includes/admin/WJECF_Admin.php:191
+#: includes/pro/WJECF_Pro_Product_Filter.php:233
+msgid "OR"
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:178 includes/admin/WJECF_Admin.php:191
+#: includes/pro/WJECF_Pro_Product_Filter.php:233
+msgid "AND"
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:182
+msgid ""
+"Use AND if ALL of the products must be in the cart to use this coupon "
+"(instead of only one of the products)."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:190
+msgid "Categories Operator"
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:195
+msgid ""
+"Use AND if products from ALL of the categories must be in the cart to use "
+"this coupon (instead of only one from one of the categories)."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:204
+msgid "Minimum quantity of matching products"
+msgstr "حداقل میزان تطبیق محصولات"
+
+#: includes/admin/WJECF_Admin.php:205 includes/admin/WJECF_Admin.php:225
+msgid "No minimum"
+msgstr "بدون حداقل"
+
+#: includes/admin/WJECF_Admin.php:206
+msgid ""
+"Minimum quantity of the products that match the given product or category "
+"restrictions (see tab 'usage restriction'). If no product or category "
+"restrictions are specified, the total number of products is used."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:214
+msgid "Maximum quantity of matching products"
+msgstr "حداکثر میزان تطبیق محصولات"
+
+#: includes/admin/WJECF_Admin.php:215 includes/admin/WJECF_Admin.php:235
+msgid "No maximum"
+msgstr "بدون حداکثر"
+
+#: includes/admin/WJECF_Admin.php:216
+msgid ""
+"Maximum quantity of the products that match the given product or category "
+"restrictions (see tab 'usage restriction'). If no product or category "
+"restrictions are specified, the total number of products is used."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:224
+msgid "Minimum subtotal of matching products"
+msgstr "حداقل میزان تطبیق محصولات"
+
+#: includes/admin/WJECF_Admin.php:226
+msgid ""
+"Minimum price subtotal of the products that match the given product or "
+"category restrictions (see tab 'usage restriction')."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:234
+msgid "Maximum subtotal of matching products"
+msgstr "حداکثر میزان تطبیق محصولات"
+
+#: includes/admin/WJECF_Admin.php:236
+msgid ""
+"Maximum price subtotal of the products that match the given product or "
+"category restrictions (see tab 'usage restriction')."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:249
+msgid "Shipping methods"
+msgstr "روش های ارسال"
+
+#: includes/admin/WJECF_Admin.php:250
+msgid "Any shipping method"
+msgstr "همه روش های حمل و نقل"
+
+#: includes/admin/WJECF_Admin.php:259
+msgid ""
+"One of these shipping methods must be selected in order for this coupon to "
+"be valid."
+msgstr ""
+"یکی از این روش های ارسال باید انتخاب شود تا سفارش با این کوپن معتبر باشد."
+
+#: includes/admin/WJECF_Admin.php:266
+msgid "Payment methods"
+msgstr "روش های پرداخت"
+
+#: includes/admin/WJECF_Admin.php:267
+msgid "Any payment method"
+msgstr "همه روش های پرداخت"
+
+#: includes/admin/WJECF_Admin.php:278
+msgid ""
+"One of these payment methods must be selected in order for this coupon to be "
+"valid."
+msgstr ""
+"یکی از این روش های پرداخت باید انتخاب شود تا سفارش با این کوپن معتبر باشد."
+
+#: includes/admin/WJECF_Admin.php:287
+msgid "Customer restrictions"
+msgstr "محدودیت های مشتری"
+
+#: includes/admin/WJECF_Admin.php:288
+msgid ""
+"If both a customer and a role restriction are supplied, matching either one "
+"of them will suffice."
+msgstr ""
+
+#: includes/admin/WJECF_Admin.php:293
+msgid "Allowed Customers"
+msgstr "مشتری های مجاز"
+
+#: includes/admin/WJECF_Admin.php:297
+msgid "Only these customers may use this coupon."
+msgstr "فقط مشتریانی که از این کوپن استفاده کرده اند"
+
+#: includes/admin/WJECF_Admin.php:305
+msgid "Allowed User Roles"
+msgstr "نقش کاربران مجاز"
+
+#: includes/admin/WJECF_Admin.php:306 includes/admin/WJECF_Admin.php:328
+msgid "Any role"
+msgstr "تمام نقش ها"
+
+#: includes/admin/WJECF_Admin.php:320
+msgid "Only these User Roles may use this coupon."
+msgstr "فقط نقش کاربرانی که از این کوپن استفاده می کنند"
+
+#: includes/admin/WJECF_Admin.php:327
+msgid "Disallowed User Roles"
+msgstr "نقش کاربران غیر مجاز"
+
+#: includes/admin/WJECF_Admin.php:341
+msgid "These User Roles will be specifically excluded from using this coupon."
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Data_Update.php:7
+msgid ""
+"Automatically update data when a new version of this plugin is installed."
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Data_Update.php:49
+msgid ""
+"Please note, you're using an older version of this plugin, while the data "
+"was upgraded to a newer version."
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Data_Update.php:58
+msgid "Data succesfully upgraded to the newest version."
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Html.php:28
+#, php-format
+msgid "%s (Default)"
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Html.php:42
+#: includes/admin/WJECF_Admin_Html.php:90
+msgid "Search for a product…"
+msgstr "یافتن یک محصول...."
+
+#: includes/admin/WJECF_Admin_Html.php:184
+msgid "Any customer"
+msgstr "همه مشتری ها"
+
+#: includes/admin/WJECF_Admin_Settings.php:16
+msgid "Settings page of WooCommerce Extended Coupon Features."
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Settings.php:30
+#: includes/admin/WJECF_Admin_Settings.php:35
+msgid "WooCommerce Extended Coupon Features"
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Settings.php:56
+msgid "Advanced settings"
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Settings.php:63
+msgid "Debug mode"
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Settings.php:93
+msgid "Disabled plugins"
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Settings.php:116
+#: includes/admin/WJECF_Admin_Settings.php:117
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/WJECF_Admin_Settings.php:179
+#, php-format
+msgid ""
+"When debug mode is enabled, extensive logging will be active and WJECF "
+"Plugins can be enabled/disabled. If there are compatibility issues with "
+"WooCommerce plugins, you can try disabling WJECF Plugins. Please don't keep "
+"debug mode enabled on a production environment when it is not necessary. Log "
+"can be found <a href=\"%s\">here</a>."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Controller.php:156
+msgid "Discount on cart with excluded products"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Controller.php:162
+msgid "Allow discount on cart with excluded items"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Controller.php:163
+msgid ""
+"Check this box to allow a 'Cart Discount' coupon to be applied even when "
+"excluded items are in the cart (see tab 'usage restriction')."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Controller.php:173
+msgid "First purchase only"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Controller.php:174
+msgid ""
+"Check this box to limit this coupon to the first purchase of a customer "
+"only. (Verified by billing email address or user id)"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:9
+msgid ""
+"Allow coupons that are invalid upon application to be applied to the cart "
+"once they become valid."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:31
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:39
+msgid "Allow applying when invalid"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:40
+msgid ""
+"When the customer attempts to apply the coupon while its conditions are not "
+"met, a message will be displayed. Once the conditions are met it will be "
+"applied automatically."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:46
+msgid "Message"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:47
+msgid ""
+"This message will be displayed when the customer applies a coupon while it "
+"is not yet valid."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:48
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:125
+#, php-format
+msgid "Coupon '%s' will be applied when its conditions are met."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Coupon_Queueing.php:188
+#, php-format
+msgid "Coupon '%s' applied."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products.php:12
+msgid "Allow free products to be added to the cart."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:19
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:36
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:81
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:87
+#: templates/cart/select-free-product.php:41
+msgid "Free products"
+msgstr "محصولات رایگان"
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:89
+msgid ""
+"Free products that will be added to the cart when this coupon is applied."
+msgstr "زمانی که این کوپن اعمال شود، محصولات رایگان به سبد خرید اضافه می شوند."
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:96
+msgid "Select one"
+msgstr "یکی را انتخاب کنید"
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:97
+msgid "Check this box if the customer must choose from the free products."
+msgstr ""
+"این گزینه را تیک بزنید، اگر میخواهید مشتریان حتمن محصولات رایگان را انتخاب "
+"کنند."
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:105
+msgid "'Select your gift'-message"
+msgstr "'هدیه خود را انتخاب کنید'-message"
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:106
+msgid "Please choose your free gift:"
+msgstr "لطفا هریه رایگان خود را انتخاب کنید:"
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:107
+msgid "This message is displayed when the customer must choose a free product."
+msgstr "این پیغام زمانی نمایش داده می شود که مشتری یک محصول رایگان انتخاب کند."
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:116
+msgid "Allow multiplication of the free products"
+msgstr "اجازه افزایش محصولات رایگان"
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:117
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:125
+msgid "EXPERIMENTAL: "
+msgstr "تجربی:"
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:117
+msgid ""
+"The amount of free products is multiplied every time the minimum spend, "
+"subtotal or quantity is reached."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:124
+msgid "BOGO matching products"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Admin.php:126
+msgid ""
+"Buy one or more of any of the matching products (see 'Usage Restriction'-"
+"tab) and get one free. Check 'Allow multiplication' to get one free item for "
+"every matching item in the cart."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Template.php:158
+#, php-format
+msgid ""
+"Sorry, we do not have enough \"%1$s\" in stock (%2$s in stock). Please "
+"review your selection."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Template.php:164
+#, php-format
+msgid "Please choose a variation of \"%s\"."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Template.php:174
+#: includes/pro/WJECF_Pro_Free_Products/WJECF_Pro_Free_Products_Template.php:184
+msgid "Free!"
+msgstr "رایگان!"
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:30
+msgid "Limit discount to only certain products in the cart or order."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:280
+msgid "(default)"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:284
+msgid "One item per order line"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:288
+msgid "Lowest priced product (single item)"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:292
+msgid "Lowest priced order line (all items)"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:296
+msgid "Every nth item. n = min qty of matching products (or 2 if not supplied)"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:507
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:520
+msgid "Limit discount to"
+msgstr "تخفیف محدود به"
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:508
+msgid ""
+"Here you can exclude certain products from being discounted (Only applies to "
+"Cart % Discount, Product Discount, Product % Discount)"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Limit_Discount_Quantities.php:522
+msgid ""
+"Please note that when the discount type is 'Product discount' (see 'General'-"
+"tab), the discount will only be applied to <em>matching</em> products."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:12
+msgid "Advanced matching queries for products."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:232
+msgid "Custom Fields Operator"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:236
+msgid ""
+"Use AND if all of the custom fields must be in the cart to use this coupon "
+"(instead of only one of the custom fields)."
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:242
+msgid "Custom Fields"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:248
+msgid "Name"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:249
+msgid "Value"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:252
+msgid ""
+"If multiple lines are entered, only one of them needs to match. A whole word "
+"case insensitive match is executed by default and % can be used as wildcard. "
+"If a line starts with a forward slash (/) it is treated as a regular "
+"expression. NOTE: Regular expression matches are case sensitive by default; "
+"append flag i to the regular expression for a case insensitive match. \n"
+"Examples:\n"
+"'roc%' matches 'Rock' and also 'Rock the house', but not 'Bedrock'\n"
+"'/^rock$/i' matches 'Rock' but not 'Rock the house'"
+msgstr ""
+
+#: includes/pro/WJECF_Pro_Product_Filter.php:275
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:23
+msgid "Automatically upgrade this plugin when a new version is available."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:49
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:64
+msgid "Licence key"
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:56
+msgid "Domain"
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:75
+msgid ""
+"A valid licence key will allow you to update the plugin from the WordPress "
+"admin area."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:76
+#, php-format
+msgid "You can manage your licences at your account page at %s."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:77
+msgid "This option is not available if you purchased from Envato market."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:120
+msgid "The domain of your store. e.g. www.mystore.com."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:228
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:324
+msgid "Licence key is not valid."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:230
+#, php-format
+msgid ""
+"You will not receive automatic updates. Please enter a valid licence key <a "
+"href=\"%s\">here</a>."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:254
+#, php-format
+msgid "Licence for domain %s succesfully deactivated."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:259
+msgid "Failed deactivating licence. "
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:263
+#, php-format
+msgid "Failed deactivating licence. Invalid response from server: %s"
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:282
+msgid "No licence key entered."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:285
+msgid "No valid domain entered."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:292
+#, php-format
+msgid "Could not validate the licence. Invalid response from server: %s"
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:305
+#, php-format
+msgid "Could not activate the licence. Invalid response from server: %s"
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:318
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:368
+msgid "Licence key is valid."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:351
+msgid "Invalid licence key."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:354
+msgid "Licence Key does not match this product."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:357
+msgid "Licence is not active."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:360
+msgid "Licence key is unassigned."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:364
+msgid "Licence key not active for current domain."
+msgstr ""
+
+#: includes/pro/admin/WJECF_Pro_Admin_Auto_Update.php:439
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr ""
+
+#: templates/coupon-select-free-product.php:45
+msgid "You can select one free product."
+msgstr ""
+
+#~ msgid "Products"
+#~ msgstr "محصولات"
+
+#~ msgid "AND Products (not OR)"
+#~ msgstr "و محصولات (نه یا)"
+
+#~ msgid ""
+#~ "Check this box if ALL of the products (see tab 'usage restriction') must "
+#~ "be in the cart to use this coupon (instead of only one of the products)."
+#~ msgstr ""
+#~ "این گزینه را تیک بزنید، اگر همه محصولات ( با توجه به قسمت  محدودیت "
+#~ "استفاده ) باید در سبد خرید باشند برای استفاده از این کوپن. ( به جای تنها "
+#~ "یکی از محصولات)"
+
+#~ msgid "AND Categories (not OR)"
+#~ msgstr "و دسته بندی ها (نه یا)"
+
+#~ msgid ""
+#~ "Check this box if products from ALL of the categories (see tab 'usage "
+#~ "restriction') must be in the cart to use this coupon (instead of only one "
+#~ "from one of the categories)."
+#~ msgstr ""
+#~ "این گزینه را تیک بزنید اگر محصولات از همه دسته ها ( با توجه به قسمت  "
+#~ "محدودیت استفاده ) باید در سبد خرید باشند برای استفاده از این کوپن. ( به "
+#~ "جای تنها یکی از دسته ها)"
+
+#~ msgid "Please select your free gift."
+#~ msgstr "لطفا هدیه خود را انتخاب کنید."

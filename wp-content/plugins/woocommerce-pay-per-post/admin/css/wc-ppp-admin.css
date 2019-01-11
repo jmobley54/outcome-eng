@@ -1,0 +1,131 @@
+.wc-ppp-settings-wrap h2.hndle {
+    background-color: #23282d;
+    color: #ccc;
+    text-align:left;
+    font-weight:bold;
+}
+
+.wc-ppp-settings-wrap .description {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.current-post-types ul {
+    list-style:disc;
+    padding-left:40px;
+}
+
+#post-body ul.wcppp-tab-bar {
+    float: left;
+    width: 120px;
+    text-align: right;
+    /* Negative margin for the sake of those without JS: all tabs display */
+    margin: 0 -120px 0 5px;
+    padding: 0;
+}
+
+#post-body ul.wcppp-tab-bar li {
+    padding: 8px;
+}
+
+#post-body ul.wcppp-tab-bar li.wcppp-tab-active {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 0;
+}
+
+div.wcppp-tab-panel-active {
+    display:block;
+}
+
+div.wcppp-tab-panel-inactive {
+    display:none;
+}
+
+#post-body div.wcppp-tab-panel {
+    margin: 0 5px 0 225px;
+}
+
+.has-right-sidebar #side-sortables .wcppp-tab-bar li {
+    display: inline;
+    line-height: 1.35em;
+}
+
+.no-js #side-sortables .wcppp-tab-bar li.hide-if-no-js {
+    display: none;
+}
+
+#side-sortables .wcppp-tab-bar a {
+    text-decoration: none;
+}
+
+#side-sortables .wcppp-tab-bar {
+    margin: 8px 0 3px;
+}
+
+#side-sortables .wcppp-tab-bar {
+    margin-bottom: 3px;
+}
+
+#post-body .wcppp-tab-bar li.wcppp-tab-active {
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    margin-right: -1px;
+    border-color: #ccc;
+    background-color: #efefef;
+}
+
+
+
+#post-body ul.wcppp-tab-bar {
+    float: left;
+    width: 190px;
+    text-align: right;
+    margin: 0 -120px 0 5px;
+    padding: 0;
+}
+
+#post-body ul.wcppp-tab-bar li {
+    padding: 8px;
+    display: block;
+}
+
+#post-body ul.wcppp-tab-bar li a {
+    text-decoration: underline;
+}
+
+#post-body div.wcppp-tab-panel {
+    margin: 0 5px 0 195px;
+    min-height: 200px;
+    padding-left: 30px;
+    max-height: none;
+}
+
+#post-body ul.wcppp-tab-bar li.wcppp-tab-active a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.wc-ppp-upgrade {
+    background: #fff;
+    border-left: 4px solid #dc3232;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    margin: 15px 0;
+    padding: 12px;
+    width:67%;
+}
+
+.wc-ppp-upgrade.success {
+    border-left: 4px solid green!important;
+}
+
+.wc-ppp-whats-new-wrap {
+    width:700px;
+    margin:0 auto;
+    text-align:center;
+}
+.wc-ppp-changelog li {
+    list-style: disc;
+}

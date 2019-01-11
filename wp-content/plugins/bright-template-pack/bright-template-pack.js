@@ -1,0 +1,536 @@
+if (typeof(Bright.template_pack) === "undefined")
+  Bright.template_pack = {};
+
+Bright.template_pack.table_tools_swf_path = "/wp-content/plugins/bright-template-pack/swf/TableTools-2.2.4/swf/copy_csv_xls_pdf.swf";
+
+Bright.helper('fetch_category_string', function(context,options) {
+  var ret = '';
+  var categories = _.collect(context.page.categories,function (c) {return c.name;});
+
+  for(var i=0, j=categories.length; i<j; i++) {
+	if (i > 0) {
+	  ret = ret + ', ';
+	}
+	ret = ret + categories[i];
+  }
+  return ret;
+});
+
+Bright.helper('fetch_title', function(context,options) {
+  if (context.attributes && context.attributes.title) {
+    return context.attributes.title;
+  } else if (context.custom && context.custom.title) {
+    return context.custom.title;
+  } else {
+    return context.title;
+  }
+});
+
+
+Bright.helper('bright_localize_scorm', function(locale,text) {
+  try {
+    if (locale == 'de-DE') {
+      if (text) {
+        switch(text.toLowerCase()) {
+        case 'complete':
+          return 'abgeschlossen';
+          break;
+        case 'completed':
+          return 'abgeschlossen';
+          break;
+        case 'unknown':
+          return 'offen';
+          break;
+        case 'incomplete':
+          return 'in bearbeitung';
+          break;
+        case 'failed':
+          return 'nicht bestanden';
+          break;
+        case 'passed':
+          return 'bestanden';
+          break;
+        default:
+          return text;
+          break;
+        }
+      } else {
+        return text;
+      }
+    } else {
+      return text;
+    }
+  } catch (Err) {
+    return text;
+  }
+});
+
+Bright.helper('random_course', function(courses,options) {
+  return options.fn(courses[_.random(0,courses.length-1)]);
+});
+
+// bSortCourses is the workhorse behind the bright-course-table template.
+//
+// For more information see:
+//
+// http://help.aura-software.com/template-bright-course-table
+//
+Bright.helper('bSortCourses', function(context, courses, options) {
+  var ret = "";
+  var sorted_context;
+  var sort_function = options.hash.sort_function;
+  var sort_namespace = options.hash.sort_namespace;
+  var sort_field = options.hash.sort_field || 'title';
+  
+  // filter processing
+  var filter_function = options.hash.filter_function;
+  var filter_namespace = options.hash.filter_namespace;
+  var filter_field = options.hash.filter_field;
+  var filter_value = options.hash.filter_value;
+
+  if (sort_function) {
+    var effectiveNamespace = sort_namespace || 'window';
+    if (effectiveNamespace && effectiveNamespace[sort_function]) {
+      sorted_context = effectiveNamespace[sort_function](courses);
+    } else {
+      alert('bSortCourses: misconfiguration (function not found) in sort_namespace['+effectiveNamespace+'], sort_function['+sort_function+'] data.   Sort request ignored.   Please check that the function ' + effectiveNamespace + '.' + sort_function + '() exists or remove the sort_function directive');
+    }
+  } else
+    sorted_context = _.sortBy(courses, function(course) {
+      if (sort_namespace)
+        if (course[sort_namespace]) {
+          var r = course[sort_namespace][sort_field];
+          return r;
+        } else {
+          return '';
+        }
+      else {
+        var r = course[sort_field];
+        return r;
+      }
+    });
+
+  if (options.hash.reverse) 
+    sorted_context = sorted_context.reverse();
+
+  if (filter_value && filter_field) {
+    sorted_context = _.filter(sorted_context,function(course) {
+      if (filter_namespace)
+        if (course[filter_namespace]) {
+          return course[filter_namespace][filter_field] == filter_value;
+        } else
+          return false;
+      else
+        return course[filter_field] == filter_value;
+    });
+  } else
+    if (filter_function) {
+      var effectiveNamespace = filter_namespace || 'window';
+      if (window[effectiveNamespace] && window[effectiveNamespace][filter_function]) {
+        sorted_context = window[effectiveNamespace][filter_function](sorted_context);
+      }
+      else
+        alert('bSortCourses: misconfiguration (function not found).  Please check that the function ' + effectiveNamespace + '.' + filter_function + '() exists or remove the filter_function directive');
+    }
+  
+  for(var i=0, j=sorted_context.length; i<j; i++) {
+	sorted_context[i].context = context; // you have to tunnel it through so its available on the "other side"
+	sorted_context[i].containerId = context.containerId; // you have to tunnel it through so its available on the "other side"
+	sorted_context[i].attributes = context.attributes; // you have to tunnel it through so its available on the "other side"
+	sorted_context[i].page = context.page; // you have to tunnel it through so its available on the "other side"
+	sorted_context[i].user = context.user; // you have to tunnel it through so its available on the "other side"
+
+    ret = ret + options.fn(sorted_context[i]); // this courses; but the full context as well
+  }
+
+  return ret;
+});
+
+Bright.helper('fetch_image', function(context, options) {
+  if (context.attributes && context.attributes.course_image) {
+    return context.attributes.course_image;
+  } else if (context.custom && context.custom.course_image) {
+    return context.custom.course_image;
+  } else if (context.page && context.page.featured_image) {
+    return context.page.featured_image;
+  } else {
+    return "https://www.aura-software.com/wp-content/uploads/2012/04/just-bulb-01.png";
+  }
+});
+
+Bright.helper('fetch_description', function(context, options) {
+  if (context.attributes && context.attributes.description) {
+    return context.attributes.description;
+  } else if (context.metadata && context.metadata.description) {
+    return context.metadata.description;
+  } else {
+    return "No description set.";
+  }
+});
+
+Bright.helper('formatsecs', function(seconds) {
+  return Math.round(seconds/60) + ' minutes';
+});
+
+Bright.helper('courselist-launchbutton', function(context,launch_button_text) {
+  if (typeof launch_button_text === "string") {
+  } else
+    launch_button_text = 'Launch Course';
+
+  var templateType = "courselist";
+  var launchButtonClass = 'launchbutton-' + context.course_guid;
+
+  return '<input type="button" value="' + Bright.t(launch_button_text) + '" class="' + Bright.getLaunchButtonClass(launchButtonClass,false,templateType) + '" onclick="Bright.launchCourseFromCourselister(\'' + context.course_guid +
+	'\',\'' + context.containerId + '\')"/>';
+});
+
+Bright.helper('courselist-reviewbutton', function(context,review_button_text) {
+  if (review_button_text) {
+  } else
+    review_button_text = 'Review Course';
+  
+  var templateType = "courselist";
+  var launchButtonClass = 'reviewbutton-' + context.course_guid;
+  return '<input type="button" value="' + Bright.t(review_button_text) + '" class="' + Bright.getLaunchButtonClass(launchButtonClass,true,templateType) +'" onclick="Bright.launchCourseFromCourselister(\'' + context.course_guid +
+	'\',\'' + context.containerId + '\', true)"/>';
+});
+
+Bright.helper('each-course-with-context', function(context, courses, options) {
+  ret = '';
+  for (var i = 0 ; i < courses.length ; i+= 1) {
+    var course = courses[i];
+    ret += options.fn(course);
+  }
+  return ret;
+});
+
+
+Bright.addHook('after_load',function() {
+  setTimeout(function () {
+    jQuery("table.bright-generic-datatable").each(function () {
+      var pagesize = jQuery(this).attr('data-pagesize') || 25;
+      var fields_string = jQuery(this).attr('data-fields') || '';
+      var fields = fields_string.split(',');
+      var filters_string = jQuery(this).attr('data-filters') || '';
+      var filters = filters_string.split(',');
+
+      var csvButtonLabel = "Save As CSV File (Excel)";
+      
+      pagesize = parseInt(pagesize);
+      if (typeof(jQuery(this).dataTable) == "undefined") {
+        // this can happen if someone dequeues the jquery data table code for instance [Trac #780].
+	// it also can happen if you are say, disconnected from the interwebs.
+        return;
+      }
+      var dt = jQuery(this).dataTable({
+        "iDisplayLength": pagesize,
+	"dom": 'T<"clear">lrtip',
+	"tableTools": {
+	  "sSwfPath": "/wp-content/plugins/bright-template-pack/swf/copy_csv_xls_pdf.swf",
+          "sRowSelect": "multi",
+          "aButtons": [{
+            "sButtonText": csvButtonLabel,
+            "sExtends": "csv",
+	    "oSelectorOpts": {"filter": 'applied', "order": 'current'},
+	    "bFooter": false,
+	    "sNewLine": "auto"
+          }]
+        },
+	"fnDrawCallback": function( oSettings ) {
+	  console.log( 'DataTables has redrawn the table' );
+	}
+      });
+
+      var column_specs = []
+
+      for (var i = 0; i < fields ; i+= 1) {
+	var t = filters[i] || "select";
+	column_specs.push({type: t})
+      }
+      
+      dt.columnFilter(
+        {
+          sPlaceHolder: "head:before",
+          aoColumns: column_specs
+        }
+      );
+      jQuery.datepicker.regional[""].dateFormat = 'yy-mm-dd';
+      jQuery.datepicker.setDefaults(jQuery.datepicker.regional['']);
+
+    });
+    jQuery('table.bright-generic-datatable thead th').css('vertical-align','middle');
+    jQuery('table.bright-generic-datatable input').css('width','80px');
+  }, 1);
+});
+                                               
+
+Bright.addHook('after_load',function() {
+  setTimeout(function () {
+    jQuery("table.bright-results-matrix").each(function () {
+	  var pagesize = jQuery(this).attr('data-pagesize') || 25;
+	  pagesize = parseInt(pagesize);
+	  if (typeof(jQuery(this).dataTable) == "undefined") {
+        // this can happen if someone dequeues the jquery data table code for instance [Trac #780].
+		// it also can happen if you are say, disconnected from the interwebs.
+        return;
+      }
+      var dt = jQuery(this).dataTable({
+        "iDisplayLength": pagesize,
+		"dom": 'T<"clear">lrtip',
+		"tableTools": {
+		  "sSwfPath": "/wp-content/plugins/bright-template-pack/swf/copy_csv_xls_pdf.swf",
+          "sRowSelect": "multi",
+          "aButtons": [{
+            "sButtonText": "Save Filtered Data Set",
+            "sExtends": "csv",
+			"oSelectorOpts": {"filter": 'applied', "order": 'current'},
+			"bFooter": false,
+			"sNewLine": "auto"
+          }]
+        },
+		"fnDrawCallback": function( oSettings ) {
+		  console.log( 'DataTables has redrawn the table' );
+		}
+      });
+      dt.columnFilter(
+        {
+          sPlaceHolder: "head:before",
+          aoColumns: [
+            {type: "select"},
+            {type: "select"},
+            {type: "select", values: ['complete','incomplete','unknown'], bRegex: false, bSmart: false}, //         <th>Status</th>
+            {type: "select"},
+	  		{type: "number-range"}, //         <th>Score</th>
+	  		{type: "date-range"} //         <th>Completed At</th>
+          ]
+        }
+      );
+	  jQuery.datepicker.regional[""].dateFormat = 'yy-mm-dd';
+      jQuery.datepicker.setDefaults(jQuery.datepicker.regional['']);
+
+	});
+	jQuery('table.bright-results-matrix thead th').css('vertical-align','middle');
+	jQuery('table.bright-results-matrix input').css('width','80px');
+  }, 1);
+});
+
+
+Bright.addHook('after_load',function() {
+  setTimeout(function () {
+    jQuery("table.bright-courselist.do-datatables").each(function () {
+      var pagesize = jQuery(this).attr('data-pagesize') || 10;
+      pagesize = parseInt(pagesize);
+      if (typeof(jQuery(this).dataTable) == "undefined") {
+        // this can happen if someone dequeues the jquery data table code for instance [Trac #780].
+	// it also can happen if you are say, disconnected from the interwebs.
+        return;
+      }
+      var dt = jQuery(this).dataTable({
+        "iDisplayLength": pagesize,
+	"dom": 'T<"clear">lrtip',
+	"fnDrawCallback": function( oSettings ) {
+	  console.log( 'DataTables has redrawn the table' );
+	},
+	"tableTools": {
+          "aButtons": []
+        },
+        "language": {
+          "lengthMenu": "Display _MENU_ courses per page",
+          "zeroRecords": "Nothing found - sorry",
+          "info": "Showing page _PAGE_ of _PAGES_",
+          "infoEmpty": "No courses available",
+          "infoFiltered": "(filtered from _MAX_ total courses)"
+        }
+      });
+      dt.columnFilter(
+        {
+          sPlaceHolder: "head:before",
+          aoColumns: [
+            {type: "text"},
+            {type: "select"},
+
+          ]
+        }
+      );
+
+      jQuery(this).removeAttr('style');
+    });
+  }, 1);
+});
+
+
+
+// bHumanizeDate
+//
+// Converts a date that comes from the Bright API into something human readable.
+//
+// It defaults to the US model, but can write out a European style by setting model="EU"
+//
+//     {{bHumanizeDate registration.provider_completed_at model="EU"}}
+
+Bright.helper('bHumanizeDate',function(messy_date,model) {
+  var d = new Date(messy_date);
+
+  var curr_date = d.getDate();
+  var curr_month = d.getMonth() + 1; //Months are zero based
+  var curr_year = d.getFullYear();
+  if (model && model === "EU")
+	return curr_date +  "/" + curr_month + "/" + curr_year;
+  return curr_month + "/" + curr_date + "/" + curr_year;
+});
+
+// Humanize a date [like from provider_completed_at]
+// To get a euro date:
+// {{{bright_humanize_date [date] model=EU}}}
+Bright.helper('bright_humanize_date',function(d,m) {
+  Bright.deprecateHelperFor('bright_humanize_date','bHumanizeDate');
+  return Handlebars.helper['bHumanizeDate'].call(this,d,m);
+});
+
+Bright.helper('momentize_date',function(messy_date,format) {
+  var d = new Date(messy_date);
+
+  return moment(d).format(format);
+});
+
+// useful when using datatables to sort by "score".
+// For example:
+//
+// jQuery.fn.dataTableExt.oSort['numeric-blank-asc']  = function(a,b) {
+//   var x, y = Bright.score_to_float(a), Bright.score_to_float(b);
+//   return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+// };
+
+// jQuery.fn.dataTableExt.oSort['numeric-blank-desc'] = function(a,b) {
+//   var x, y = Bright.score_to_float(a), Bright.score_to_float(b);
+//   return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+// };
+//
+// aoColumns: [
+//     {"sType": "string" }, // ,"sWidth": "8%"},
+//     {"sType": "string" }, // ,"sWidth": "8%"},
+//     {"sType": "string" }, // ,"sWidth": "8%"},
+// 	{"sType": "numeric-blank" }, // ,"sWidth": "8%"},
+
+
+Bright.score_to_float = function(a) {
+  var r = /\d*([.]\d*)?/;
+  var matches = r.exec(a);
+  if (matches && matches[0] && matches[0] == a)
+	// TODO: name of helper is score_to_float but the JS func called is parseInt?
+	return parseInt(a);
+  return -1;
+};
+
+
+Bright.helper('compare', function(lvalue, rvalue, options) {
+  Bright.deprecateHelperFor('compare','bCompare');
+  return Handlebars.helpers['bCompare'].call(this,lvalue,rvalue,options);
+});
+
+
+Bright.helper('bOkToLaunch',function(options){
+  var course = this,
+      attributes = this.attributes,
+      page = this.page,
+      user = this.user;
+
+  if (!this instanceof BrightCourse) 
+    return 'function bOkToLaunch was not called in the context of a BrightCourse object';
+
+  if (attributes.require_registration || attributes.requires_registration)
+    if (!course.registration) {
+      if (options.reverse)
+        return options.reverse(this);
+      return options.hash.not_registered_message || attributes.not_registered_message || 'You must be pre-registered to take this course.';
+    }
+
+  var start_date = course.getInvitationDate('start_date'),
+      end_date = course.getInvitationDate('end_date'),
+      now = new Date();
+  
+  if (start_date && (start_date > now)) {
+    if (options.reverse)
+      return options.reverse(this);
+    return options.hash.illegal_invitation_date_message || attributes.illegal_invitation_date_message ||  ('Your course invitation will become available at ' + start_date.toString()) + '.';
+  }
+
+  if (end_date && (end_date < now)) {
+    if (options.reverse)
+      return options.reverse(this);
+    return options.hash.illegal_invitation_date_message || attributes.illegal_invitation_date_message || ('Your course invitation ended ' + end_date.toString()) + '.';
+  }
+    
+  return options.fn(this);
+});
+
+/*
+ * http://doginthehat.com.au/2012/02/comparison-block-helper-for-handlebars-templates/
+ *
+ */
+
+Bright.helper('bCompare',function(lvalue, rvalue, options) {
+  // console.log("bCompare("+lvalue+","+rvalue+","+options.hash+")");
+  if (arguments.length < 3)
+    throw new Error("Bright Helper '{{#bCompare}}' needs 2 parameters");
+
+  if (!options.hash) 
+	throw new Error("Third argument to {{#bCompare}} must be in format operator='===' ; for instance");
+
+  var operator = options.hash.operator || "==";
+
+  var operators = {
+    '||':       function(l,r) { return l || r; },
+    '==':       function(l,r) { return l == r; },
+    '===':      function(l,r) { return l === r; },
+    '!=':       function(l,r) { return l != r; },
+    '!==':       function(l,r) { return l !== r; },
+    '<':        function(l,r) { return parseFloat(l) < parseFloat(r); },
+    '>':        function(l,r) { return parseFloat(l) > parseFloat(r); },
+    '<=':       function(l,r) { return parseFloat(l) <= parseFloat(r); },
+    '>=':       function(l,r) { return parseFloat(l) >= parseFloat(r); },
+    'typeof':   function(l,r) { return typeof(l) == r; }
+  }
+
+  if (!operators[operator])
+    throw new Error("Bright/Handlerbars Helper 'bCompare' doesn't know the operator "+operator);
+
+  return (operators[operator](lvalue,rvalue)) ? options.fn(this) : options.inverse(this);
+});
+
+// in a template, you can do this:
+// {{#bStore 'tag' 'value'}}{{/bStore}}
+//
+// and then retrieve the value:
+//
+// {{#bFetch 'tag}}{{/bFetch}}
+Bright.helper('bStore',function(tag,value) {
+  Bright.templateStore[tag] = value;
+});
+
+Bright.helper('bFetch',function(tag) {
+  return Bright.templateStore[tag];
+});
+
+// Return a maybe internationalized version of a message.
+Bright.helper('bI18n',function(msg) {
+  return Bright.t(msg)
+});
+
+// old Deprecated method getQueryParameter
+Bright.helper('bGetQueryParameter', function(param) {
+  var uriparse = Bright.parseURL(window.location.href);
+  return (uriparse && uriparse.params) ? uriparse.params[param] : '';
+});
+
+Bright.helper('bLog', function() {
+  for (var i = 0; i < arguments.length; i++) {
+    Bright.log(arguments[i]);
+  }
+});
+
+Bright.helper('bConcatenate', function(arg1,arg2) {
+  return arg1 + arg2;
+});
+
+              

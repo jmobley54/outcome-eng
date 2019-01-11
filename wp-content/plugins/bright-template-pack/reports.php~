@@ -1,0 +1,109 @@
+<?php
+global $bright_embedder_templates;
+
+$results_fields = <<<EOF
+      <thead>
+      <tr>
+        <th>Learner</th>
+        <th>Course</th>
+        <th>Complete</th>
+        <th>Success</th>
+        <th>Score</th>
+        <th>Completed At</th>
+      </tr>
+      <tr>
+        <th>Learner</th>
+        <th>Course</th>
+        <th>Complete</th>
+        <th>Success</th>
+        <th>Score</th>
+        <th>Completed At</th>
+      </tr>
+      </thead>
+      {{#each this.custom}}
+         <tr>
+           <td>{{this.[0]}}</td>
+           <td>{{this.[1]}}</td>
+           <td>{{this.[2]}}</td>
+           <td>{{this.[3]}}</td>
+           <td>{{this.[4]}}</td>
+           <td>{{this.[5]}}</td>
+         </tr>
+      {{/each}}
+EOF;
+
+$results_matrix = <<<EOF
+  <div class="bright-results-matrix">
+    <table class="bright-results-matrix" data-pagesize="10">
+  $results_fields
+    </table>
+  </div>
+EOF;
+
+$bright_embedder_templates['bright-course-usage-bubbles'] = <<<EOF
+<div class="bright-course-usage-bubbles" data-diameter="{{attributes.diameter}}"/>
+EOF;
+
+$bright_embedder_templates['bright_results_matrix'] = $results_matrix;
+$bright_embedder_templates['invitation_results_matrix'] = <<<EOF
+<h3>{{#if attributes.invitation_name}}
+{{attributes.invitation_name}}
+{{else}}
+{{#getQueryParameter 'invitation_name'}}{{/getQueryParameter}}
+{{/if}}
+</h3>
+$results_matrix
+EOF;
+
+/* TODO: remove/deprecate bright_results_matrix use of courselist in favor of generic */
+add_filter('bright_extend_on_courselist','BrightTemplatePack::resultsMatrix',1,2);
+
+add_filter('bright_extend_on_generic','BrightTemplatePack::resultsMatrix',1,2);
+
+class BrightTemplatePack {
+
+  static function noBrightPlugin() {
+
+    if (!class_exists('\Bright\Wordpress')) {
+      $class = 'error';
+      $message = __( '<strong>Bright Template Pack</strong> will not function correctly unless your <strong>Bright</strong> plugin is installed and active.' );
+      printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
+    }
+  }
+
+  static function extractFromArray (array $args,$field,$default=null) {return isset($args[$field]) ? $args[$field] : $default; }
+
+  /**
+   * callback for bright_extend_on_{template-type} for custom data.
+   */
+  static function resultsMatrix($coursedata,$attr) {
+	$bright = Bright\Wordpress::getInstance();
+	$bright->log($attr,false,'attr');
+	$host_url=get_site_url();
+	if ($attr['template'] == "bright_results_matrix") {
+	  $params = array('name' => 'bright_completion_matrix' . ($attr['model'] === "full" ? "_full" : ''),
+					  'host_url' => $host_url,
+					  'query_scope' => 'bright');
+
+	  if (isset($attr['guid_prefix']))
+		$params['guid_prefix'] = urlencode($attr['guid_prefix']);
+      if (isset($attr['provider_tags'])) {
+        $params['name'] = 'bright_completion_by_tag';
+        $params['provider_tags'] = $attr['provider_tags'];
+      }
+          
+	  return $bright->callApi('stored_query/run',array('params' => $params,
+													   'raw' => true));
+	} elseif ($attr['template'] == "invitation_results_matrix") {
+	  $keyName = "invitation_name";
+	  $encoded_name = urlencode(BrightTemplatePack::extractFromArray($_GET,$keyName,BrightTemplatePack::extractFromArray($attr,$keyName)));
+	  return $bright->callApi('stored_query/run',array('params' => array('name'            => 'invitation_completion_matrix',
+																		 'invitation_name' => $encoded_name,
+																		 'host_url'        => $host_url,
+																		 'query_scope'     => 'bright'),
+													   'raw'    => true)); /* return raw JSON to the page */
+	}
+	return $coursedata;
+  }
+}
+

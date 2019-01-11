@@ -1,0 +1,13 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PhpCSValidationInspection" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="true">
+        <option name="IGNORE_WARNINGS" value="true" />
+        <option name="CODING_STANDARD" value="WordPress" />
+      </scope>
+      <option name="IGNORE_WARNINGS" value="true" />
+      <option name="CODING_STANDARD" value="WordPress" />
+    </inspection_tool>
+  </profile>
+</component>

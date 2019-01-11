@@ -1,0 +1,16 @@
+/*** Microthemer Styles ***/
+
+/* =Store
+-------------------------------------------------------------- */
+/* Resize Product Title */
+ div.entry-summary h1.product_title {
+	font-size: 40px !important;
+	margin-top: 60px !important;
+	display: table-header-group !important;
+}
+/* Resize Product Title Copy 1 */
+ div.entry-summary h1.product_title {
+	font-size: 40px !important;
+	margin-top: 60px !important;
+	margin-bottom: 35px !important;
+}

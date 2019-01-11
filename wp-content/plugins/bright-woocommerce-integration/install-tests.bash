@@ -1,0 +1,79 @@
+#!/bin/bash
+set +x
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TESTLIB_DIR="/tmp/bright-woocommerce-testlibs"
+
+mkdir -p "${TESTLIB_DIR}"
+
+if [ ! -f "${TESTLIB_DIR}/composer.phar" ]; then
+    cat <<EOF
+Installing composer
+
+EOF
+    cd "$TESTLIB_DIR"
+    wget https://getcomposer.org/installer
+    mv installer composer-setup.php
+    # php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === '7228c001f88bee97506740ef0888240bd8a760b046ee16db8f4095c0d8d525f2367663f22a46b48d072c816e7fe19959') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    php composer-setup.php
+    cd "$SCRIPT_DIR"
+fi
+
+
+cat <<EOF
+Installing composer packages
+
+EOF
+cp tests/composer.json "$TESTLIB_DIR"
+cd "$TESTLIB_DIR"
+sudo php composer.phar install
+cd "$SCRIPT_DIR"
+
+
+cat <<EOF
+To get this far, you should have ALREADY installed and run the phpunit tests from the Bright plugin.
+
+EOF
+if [ ! -d /tmp/wordpress/wp-content/plugins/woocommerce ]; then
+    cat <<EOF
+Fetching WooCommerce; using the 2.6 stable branchversion from here:
+
+    git clone --depth 100 --branch release/2.6 https://github.com/woothemes/woocommerce.git
+EOF
+    cd /tmp/wordpress/wp-content/plugins
+    cat <<EOF
+
+NOTE!!!!!
+
+This test version 2.6 of WooCommerce ONLY
+
+
+I HOPE THAT IS WHAT YOU WANT
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+EOF
+    git clone --depth 100 --branch release/2.6 https://github.com/woothemes/woocommerce.git
+#    git clone --depth=1 https://github.com/woothemes/woocommerce.git
+    cd "$SCRIPT_DIR"
+fi
+
+
+if [ ! -d /tmp/wordpress/wp-content/plugins/bright ]; then
+    cat <<EOF
+
+Bright not installed in /tmp/wordpress/wp-content/plugins/bright
+
+Linking adjacent bright plugin...
+
+EOF
+    cd /tmp/wordpress/wp-content/plugins
+    ln -sf "$SCRIPT_DIR/../bright"
+    cd "$SCRIPT_DIR"
+else
+   cat <<EOF
+All good.  Have fun.
+EOF
+
+   exit 0
+fi

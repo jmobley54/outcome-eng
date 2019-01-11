@@ -1,0 +1,511 @@
+# Copyright (C) 2018 WooCommerce
+# This file is distributed under the same license as the WooCommerce USPS Shipping plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce USPS Shipping 4.4.18\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-shipping-usps\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-09-27T13:57:41-06:00\n"
+"PO-Revision-Date: 2018-09-27T13:57:41-06:00\n"
+"X-Generator: WP-CLI 2.0.1\n"
+"X-Domain: woocommerce-shipping-usps\n"
+
+#. Plugin Name of the plugin
+msgid "WooCommerce USPS Shipping"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://woocommerce.com/products/usps-shipping-method/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Obtain shipping rates dynamically via the USPS Shipping API for your orders."
+msgstr ""
+
+#. Author of the plugin
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://woocommerce.com"
+msgstr ""
+
+#: woocommerce-shipping-usps.php:151
+#: includes/class-wc-shipping-usps-deprecated.php:117
+msgid "USPS requires that the <a href=\"%s\">currency</a> is set to US Dollars."
+msgstr ""
+
+#: woocommerce-shipping-usps.php:155
+#: includes/class-wc-shipping-usps-deprecated.php:123
+msgid "USPS requires that the <a href=\"%s\">base country/region</a> is the United States."
+msgstr ""
+
+#: woocommerce-shipping-usps.php:172
+msgid "Settings"
+msgstr ""
+
+#: woocommerce-shipping-usps.php:173
+msgid "Support"
+msgstr ""
+
+#: woocommerce-shipping-usps.php:174
+msgid "Docs"
+msgstr ""
+
+#: woocommerce-shipping-usps.php:292
+msgid "USPS now supports shipping zones. The zone settings were added to a new USPS method on the \"Rest of the World\" Zone. See the zones %1$shere%2$s "
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:194
+#: includes/class-wc-shipping-usps.php:426
+#: includes/class-wc-shipping-usps-deprecated.php:37
+#: includes/class-wc-shipping-usps-deprecated.php:286
+#: includes/class-wc-usps-privacy.php:12
+msgid "USPS"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:195
+msgid "The USPS extension obtains rates dynamically from the USPS API during cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:423
+#: includes/class-wc-shipping-usps-deprecated.php:283
+msgid "Method Title"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:425
+#: includes/class-wc-shipping-usps-deprecated.php:285
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:430
+#: includes/class-wc-shipping-usps-deprecated.php:353
+msgid "Offer Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:435
+#: includes/class-wc-shipping-usps-deprecated.php:358
+msgid "Offer the customer all returned rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:436
+#: includes/class-wc-shipping-usps-deprecated.php:359
+msgid "Offer the customer the cheapest rate only"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:440
+#: includes/class-wc-shipping-usps-deprecated.php:363
+msgid "Fallback"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:443
+#: includes/class-wc-shipping-usps-deprecated.php:366
+msgid "If USPS returns no matching rates, offer this amount for shipping so that the user can still checkout. Leave blank to disable."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:445
+#: includes/class-wc-shipping-usps-deprecated.php:368
+msgid "Disabled"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:448
+#: includes/class-wc-shipping-usps-deprecated.php:371
+msgid "Flat Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:450
+msgid "These are USPS flat rate boxes services. They are not calculated using the USPS API."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:453
+#: includes/class-wc-shipping-usps-deprecated.php:375
+msgid "Flat Rate Boxes &amp; envelopes"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:457
+#: includes/class-wc-shipping-usps-deprecated.php:379
+msgid "Yes - Enable flat rate services"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:458
+#: includes/class-wc-shipping-usps-deprecated.php:380
+msgid "No - Disable flat rate services"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:459
+#: includes/class-wc-shipping-usps-deprecated.php:381
+msgid "Enable Priority flat rate services only"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:460
+#: includes/class-wc-shipping-usps-deprecated.php:382
+msgid "Enable Express flat rate services only"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:462
+#: includes/class-wc-shipping-usps-deprecated.php:384
+msgid "Enable this option to offer shipping using USPS Flat Rate services. Items will be packed into the boxes/envelopes and the customer will be offered a single rate from these."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:466
+msgid "Express Flat Rate Title"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:473
+msgid "Priority Flat Rate Title"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:487
+#: includes/class-wc-shipping-usps-deprecated.php:409
+msgid "API Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:489
+msgid "These are standard service rates pulled from the USPS API."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:492
+msgid "Enable API Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:493
+msgid "Retrieve Standard Service rates from the USPS API"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:497
+#: includes/class-wc-shipping-usps-deprecated.php:418
+msgid "Enable non-flat rate services."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:500
+msgid "Origin Postcode (required)"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:502
+#: includes/class-wc-shipping-usps-deprecated.php:292
+msgid "Enter the postcode for the <strong>sender</strong>."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:507
+#: includes/class-wc-shipping-usps-deprecated.php:342
+msgid "Shipping Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:511
+#: includes/class-wc-shipping-usps-deprecated.php:346
+msgid "Use Commercial Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:512
+#: includes/class-wc-shipping-usps-deprecated.php:347
+msgid "Use Retail Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:515
+#: includes/class-wc-shipping-usps-deprecated.php:350
+msgid "Choose which rates to show your customers: Standard retail or discounted commercial rates."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:518
+#: includes/class-wc-shipping-usps-deprecated.php:421
+msgid "Parcel Packing Method"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:523
+#: includes/class-wc-shipping-usps-deprecated.php:426
+msgid "Default: Pack items individually"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:524
+#: includes/class-wc-shipping-usps-deprecated.php:427
+msgid "Recommended: Pack into boxes with weights and dimensions"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:525
+#: includes/class-wc-shipping-usps-deprecated.php:428
+msgid "Weight based: Regular sized items (< 12 inches) are grouped and quoted for weights only. Large items are quoted individually."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:532
+#: includes/class-wc-shipping-usps-deprecated.php:435
+msgid "Unpacked item handling"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:537
+#: includes/class-wc-shipping-usps-deprecated.php:440
+msgid "Get a quote for the unpacked item by itself"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:538
+#: includes/class-wc-shipping-usps-deprecated.php:441
+msgid "Ignore the item - do not quote"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:539
+#: includes/class-wc-shipping-usps-deprecated.php:442
+msgid "Use the fallback price (above)"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:540
+#: includes/class-wc-shipping-usps-deprecated.php:443
+msgid "Abort - do not return any quotes for the standard services"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:547
+#: includes/class-wc-shipping-usps-deprecated.php:450
+msgid "Restrict Media Mail to..."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:554
+#: includes/class-wc-shipping-usps-deprecated.php:457
+msgid "No restrictions"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:561
+#: includes/class-wc-shipping-usps-deprecated.php:321
+msgid "USPS User ID"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:563
+#: includes/class-wc-shipping-usps-deprecated.php:318
+msgid "You can obtain a USPS user ID by %s, or just use ours by leaving the field blank. This is optional."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:563
+#: includes/class-wc-shipping-usps-deprecated.php:318
+msgid "signing up on the USPS website"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:569
+#: includes/class-wc-shipping-usps-deprecated.php:329
+msgid "Debug Mode"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:570
+#: includes/class-wc-shipping-usps-deprecated.php:330
+msgid "Enable debug mode"
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:574
+#: includes/class-wc-shipping-usps-deprecated.php:334
+msgid "Enable debug mode to show debugging information on your cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:622
+#: includes/class-wc-shipping-usps-deprecated.php:501
+msgid "The USPS User ID you entered is invalid. Please make sure you entered a valid ID (<a href=\"https://www.usps.com/business/web-tools-apis/welcome.htm\">which can be obtained here</a>). Our User ID will be used instead."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:675
+#: includes/class-wc-shipping-usps-deprecated.php:551
+msgid "USPS debug mode is on - to hide these messages, turn debug mode off in the settings."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:924
+#: includes/class-wc-shipping-usps-deprecated.php:1078
+msgid "Product # is virtual. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:929
+#: includes/class-wc-shipping-usps-deprecated.php:1083
+msgid "Product # is missing weight. Using 1lb."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:1035
+#: includes/class-wc-shipping-usps-deprecated.php:1175
+msgid "Product #%d is virtual. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:1040
+#: includes/class-wc-shipping-usps-deprecated.php:1180
+msgid "Product #%d is missing weight. Using 1lb."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:1254
+#: includes/class-wc-shipping-usps.php:1701
+#: includes/class-wc-shipping-usps-deprecated.php:1358
+#: includes/class-wc-shipping-usps-deprecated.php:1790
+msgid "Product #%d is missing dimensions! Using 1x1x1."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:1261
+#: includes/class-wc-shipping-usps.php:1708
+#: includes/class-wc-shipping-usps-deprecated.php:1365
+#: includes/class-wc-shipping-usps-deprecated.php:1797
+msgid "Product #%d is missing weight! Using 1lb."
+msgstr ""
+
+#: includes/class-wc-shipping-usps.php:1846
+#: includes/class-wc-shipping-usps-deprecated.php:880
+msgid "Adding unpacked item costs to rate %s"
+msgstr ""
+
+#: includes/views/html-box-packing.php:3
+msgid "Box Sizes"
+msgstr ""
+
+#: includes/views/html-box-packing.php:5
+msgid "Items will be packed into these boxes based on item dimensions and volume. Outer dimensions will be passed to USPS, whereas inner dimensions will be used for packing. Items not fitting into boxes will be packed individually."
+msgstr ""
+
+#: includes/views/html-box-packing.php:35
+#: includes/views/html-services.php:7
+msgid "Name"
+msgstr ""
+
+#: includes/views/html-box-packing.php:36
+msgid "L"
+msgstr ""
+
+#: includes/views/html-box-packing.php:37
+msgid "W"
+msgstr ""
+
+#: includes/views/html-box-packing.php:38
+msgid "H"
+msgstr ""
+
+#: includes/views/html-box-packing.php:39
+msgid "Inner L"
+msgstr ""
+
+#: includes/views/html-box-packing.php:40
+msgid "Inner W"
+msgstr ""
+
+#: includes/views/html-box-packing.php:41
+msgid "Inner H"
+msgstr ""
+
+#: includes/views/html-box-packing.php:42
+msgid "Weight of Box"
+msgstr ""
+
+#: includes/views/html-box-packing.php:43
+msgid "Max Weight"
+msgstr ""
+
+#: includes/views/html-box-packing.php:44
+msgid "Letter"
+msgstr ""
+
+#: includes/views/html-box-packing.php:50
+msgid "Add Box"
+msgstr ""
+
+#: includes/views/html-box-packing.php:51
+msgid "Remove selected box(es)"
+msgstr ""
+
+#: includes/views/html-box-packing.php:54
+msgid "Note: If you are using regional rates, A1, A2, B1, and B2 sizes will be defined for you."
+msgstr ""
+
+#: includes/views/html-services.php:2
+msgid "Services"
+msgstr ""
+
+#: includes/views/html-services.php:8
+msgid "Service(s)"
+msgstr ""
+
+#: includes/views/html-services.php:9
+msgid "Price Adjustment (%s)"
+msgstr ""
+
+#: includes/views/html-services.php:10
+msgid "Price Adjustment (%)"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:38
+msgid "The <strong>USPS</strong> extension obtains rates dynamically from the USPS API during cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:129
+msgid "USPS is enabled, but the origin postcode has not been set."
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:277
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:279
+msgid "Enable this shipping method"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:290
+msgid "Origin Postcode"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:297
+msgid "Method Availability"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:302
+msgid "All Countries"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:303
+#: includes/class-wc-shipping-usps-deprecated.php:308
+msgid "Specific Countries"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:304
+msgid "Exclude Specific Countries"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:316
+msgid "API Settings"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:323
+msgid "Obtained from USPS after getting an account."
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:337
+msgid "Rate Options"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:388
+msgid "Express Flat Rate Service Name"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:395
+msgid "Priority Flat Rate Service Name"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:413
+msgid "Standard Services"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-deprecated.php:414
+msgid "Enable Standard Services from the API"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-admin.php:29
+msgid "Envelope"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-admin.php:30
+msgid "Use Envelope rates to ship package"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-admin.php:39
+msgid "Declared Value"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-admin.php:40
+msgid "Use Product's Price"
+msgstr ""
+
+#: includes/class-wc-shipping-usps-admin.php:41
+msgid "Items value sent with rate request for international shipping."
+msgstr ""
+
+#: includes/class-wc-usps-privacy.php:20
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr ""

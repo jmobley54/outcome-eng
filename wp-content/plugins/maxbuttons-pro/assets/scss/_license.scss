@@ -1,0 +1,130 @@
+#license_not_active { display: none }
+
+
+.license_warning {
+	padding: 0;
+	border: 1px solid #000;
+	margin: 25px 0;
+	display: inline-block;
+	background: #fefefe;
+	width: 60%;
+
+	h3 {
+		margin-top: 0;
+		background-color: #000000;
+		padding: 10px;
+		color: #fff;
+		font-size: 16px;
+	  text-align: center;
+
+	}
+	p {
+		padding: 5px 5px;
+		margin: 5px 0;
+		font-size: 15px;
+		text-align: center;
+		line-height: 22px;
+	}
+
+	.enter_license {
+			font-size: 18px;
+			text-align: center;
+		a{
+			text-decoration:none;
+
+	  }
+	}
+}
+
+
+/** License Page **/
+&.maxbuttons-license
+{
+
+	.title {
+			.active {
+				color: #1f9b46;
+			}
+			.not-active
+			{
+				color: #ff0000;
+			}
+	}
+
+	h3.license-data {
+		margin-bottom: 0px;
+		margin-left: 20px;
+	}
+
+
+	.license-field  {
+		font-size: 14px;
+		span {
+			width: 200px;
+			display: inline-block;
+			font-weight: bold;
+		}
+		&.expired {
+			color: #ff0000;
+			font-weight: bold;
+			.renew-license {
+					margin-left: 45px;
+			}
+		}
+
+	}
+
+	.license-field input[type='text'] {
+		width: 400px;
+		margin: 0;
+		font-size: 16px;
+
+	}
+
+	.license-field input[type='submit']
+  {
+			 margin-top: 10px;
+		width: 250px;
+
+	}
+
+	p.license-note {
+		font-style: italic;
+		color: #808080;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+
+	#activation_progress {
+		border: 1px solid #ccc;
+		padding: 15px;
+		text-align: center;
+		display: block;
+		.content {
+			display: inline-block;
+		}
+		img {
+			margin-top: 20px;
+			float: left;
+			margin-right: 15px;
+		}
+	}
+
+	#ajax_error, #activation_success {
+		border: 1px solid #ff0000;
+		padding: 15px;
+		text-align: center;
+		display:block;
+		width: 50%;
+		h4 {
+			font-size: 16px;
+			line-height: 20px;
+		}
+		p { font-size: 14px; }
+
+	}
+
+	#activation_success {
+		border-color: #ccc;
+	}
+}  // maxbuttons-license

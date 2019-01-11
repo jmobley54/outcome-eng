@@ -1,0 +1,19 @@
+<?php
+
+class BWC_Helper {
+  public static function orderComments($order_id) {
+    $args = array(
+      'post_id' => $order_id,
+      'approve' => 'approve',
+      'type' => ''
+   );
+
+    remove_filter('comments_clauses', array('WC_Comments', 'exclude_order_comments'));
+
+    $comments = get_comments($args);
+
+    add_filter('comments_clauses', array('WC_Comments', 'exclude_order_comments'));
+
+    return (array) $comments;
+  }
+}

@@ -1,0 +1,25 @@
+&.maxbuttons-settings {
+
+	input {
+		vertical-align: middle;
+	}
+
+	.customcss {
+		width: 90%;
+		height: 200px;
+		white-space: pre-wrap;
+	}
+
+	.input.mbcolor {
+		 label {
+			 	width: auto !important;
+		}
+
+		.wp-picker-holder {
+				position: absolute;
+				top: 40px;
+		}
+
+	}
+
+} // maxbuttons settings

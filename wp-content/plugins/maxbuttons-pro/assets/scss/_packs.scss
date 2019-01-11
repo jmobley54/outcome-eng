@@ -1,0 +1,163 @@
+.pack {
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	a {
+		text-decoration: none;	
+	}
+	h3 {
+		margin: 10px 0px 5px 0px;
+		min-height: 45px;
+	}	
+	h4 {
+		margin: 0px;
+	}
+	p {
+		min-height: 70px;
+	}
+	.image {
+		width: 240px;
+		height: 180px;
+		img:hover {
+ 			@include box-shadow(0px,0px,4px, #111111);
+		}
+	}
+	
+} // pack
+
+.pack-meta {
+	margin-top: 20px;
+	a {
+		text-decoration: none;
+	}
+	img {
+		float: left;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 190px; 
+		height: auto;
+	}
+}	
+	
+
+.pack-list-header { 
+	background-color: #fff; 
+	width: 70%; 
+	border: 0px solid #ccc; 
+	margin: 10px auto; 
+	//display: inline-block;
+	padding: 15px;
+	clear: both;
+	position: relative;
+	@include box-shadow(2px, 2px, 2px, #ccc);
+	
+	h3 {
+		font-size: 26px;
+		line-height: 1;
+		margin: 10px 0;
+	}
+	p { margin: 2px 0; }
+	.import_button { 
+		position: absolute; 
+		right: 15px; 
+		top: 10px; 
+		button {
+			width: 100px; 
+			height: 75px;
+			font-weight: 700;
+		}
+	}
+}
+
+
+// Free packs list
+.pack-list {
+	width: 100%;
+	position:relative;
+
+	display: table;
+	clear: left;
+	border-spacing: 10px;
+	table-layout: fixed;
+
+	.row { display: table-row; } 
+	.pack-button {
+		display:table-cell;
+		width: 32%; 
+		background-color: #fff;
+		@include box-shadow(2px, 2px,2px, #ccc); 
+		position: relative; 
+		padding: 15px 15px 25px 15px;
+		overflow: hidden;
+
+		.shortcode-container { margin: 0 auto; } 
+		.name {
+				display: inline-block;
+				margin-top: 20px;
+
+				clear: left;
+				position: absolute;
+				bottom: 2px; 
+				left: 5px;
+				width: 100%; 
+			}
+		
+
+	}
+
+	input[type="checkbox"] {
+			display: none;
+			+ label {
+				border: 3px solid transparent;
+			}
+	}		
+	input[type="checkbox"]:checked + label {
+		border: 3px solid #0073aa;
+		@include box-shadow(2px, 2px,2px, #0073aa); 
+	//	background: #eee;
+	}	
+}
+
+.free_preview .results {
+	margin-top: 10px;
+
+}
+
+/** Crumbs in single pack view */ 
+.pack-crumbs 
+{
+	display: inline-block;
+	margin: 0 0 0 8px;
+	
+	
+	li {
+		float:left;
+		margin-right: 10px;
+		font-size: 14px;
+		&:before {
+			content: "\00BB";
+			font-size: 20px;
+			margin-right: 5px;
+		}
+	}
+}
+
+// Import dialog 
+
+.import {
+	margin: 5px 0 15px 0;
+	padding: 15px;
+	border: 1px solid #b4b9be; 
+	h3, p, form {
+		text-align: center;
+	}
+	.mb-message { 
+		font-size: 14px;
+		text-align: center;
+	}
+	p { font-size: 22px; color: #a0a5aa; } 
+	h3 { font-size: 30px; color: #a0a5aa; margin: 10px 0; } 
+}
+

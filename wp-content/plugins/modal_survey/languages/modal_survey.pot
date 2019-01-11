@@ -1,0 +1,3427 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Modal Survey\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-12 15:52+0100\n"
+"POT-Revision-Date: Mon Jun 08 2015 10:23:05 GMT+0200 (Central Europe "
+"Daylight Time)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: modal_survey.php:220
+msgid ""
+"Modal Survey needs to be reactivated to initialize the new updates and keep "
+"your existing settings. Please "
+msgstr ""
+
+#: modal_survey.php:220
+msgid "click here to go to the Plugins page "
+msgstr ""
+
+#: modal_survey.php:220
+msgid ", deactivate the plugin, then click on the Activate."
+msgstr ""
+
+#: modal_survey.php:577
+msgid "Conditional Shortcode must contain the survey ID!"
+msgstr ""
+
+#: modal_survey.php:580
+msgid ""
+"Conditional Shortcode must contain the simple or the advanced conditions!"
+msgstr ""
+
+#: modal_survey.php:598
+msgid ""
+"Using AND OR in the same condition is currently not supported, you can use "
+"one of them."
+msgstr ""
+
+#: modal_survey.php:636
+msgid "Conditional relation sign is required to create a condition."
+msgstr ""
+
+#: modal_survey.php:867
+msgid "Data doesn't exists"
+msgstr ""
+
+#: modal_survey.php:1117 modal_survey.php:1178 modal_survey.php:1374
+#: modal_survey.php:1634 modal_survey.php:1780 modal_survey.php:1900
+#: modules/export_pdf.php:339
+msgid "Other"
+msgstr ""
+
+#: modal_survey.php:1130 modal_survey.php:1195 modules/export_csv.php:11
+#: modules/export_pdf.php:292 modules/export_txt.php:30
+#: modules/export_xls.php:47 modules/export_xml.php:13 settings.php:842
+#: settings.php:846 templates/settings_participants.php:79
+#: templates/settings_participants.php:80
+#: templates/settings_participants.php:84
+#: templates/settings_participants.php:99
+msgid "Not Specified"
+msgstr ""
+
+#: modal_survey.php:1149 modules/export_pdf.php:282
+msgid "Time Required"
+msgstr ""
+
+#: modal_survey.php:1149 modal_survey.php:1199 modules/export_csv.php:21
+#: modules/export_pdf.php:282 modules/export_pdf.php:314
+#: modules/export_txt.php:43 modules/export_xls.php:68
+#: modules/export_xml.php:22
+msgid "sec"
+msgstr ""
+
+#: modal_survey.php:1193 settings.php:279
+msgid "Answer Score"
+msgstr ""
+
+#: modal_survey.php:1195
+msgid "Global Votes"
+msgstr ""
+
+#: modal_survey.php:1195
+msgid "Global Percentage"
+msgstr ""
+
+#: modal_survey.php:1199
+msgid "Final Time"
+msgstr ""
+
+#: modal_survey.php:1202 modules/export_csv.php:20 modules/export_pdf.php:286
+#: modules/export_xls.php:66
+msgid "Total Score"
+msgstr ""
+
+#: modal_survey.php:1625 modules/export_pdf.php:325
+msgid "votes"
+msgstr ""
+
+#: modal_survey.php:2080
+msgid "Personal: "
+msgstr ""
+
+#: modal_survey.php:2080
+msgid "Average: "
+msgstr ""
+
+#: modal_survey.php:2571
+msgid "Settings"
+msgstr ""
+
+#: modal_survey.php:2581
+msgid "Please enter your details below to continue."
+msgstr ""
+
+#: modal_survey.php:2582
+msgid "Enter your name"
+msgstr ""
+
+#: modal_survey.php:2583
+msgid "Enter your email address"
+msgstr ""
+
+#: modal_survey.php:2584
+msgid "SEND"
+msgstr ""
+
+#: modal_survey.php:2585
+msgid "SUCCESS"
+msgstr ""
+
+#: modal_survey.php:2586
+msgid "Name too short"
+msgstr ""
+
+#: modal_survey.php:2587
+msgid "Invalid Email Address"
+msgstr ""
+
+#: modal_survey.php:2588 settings.php:440
+msgid "You already filled out this survey!"
+msgstr ""
+
+#: modal_survey.php:2589
+msgid "Connection Error"
+msgstr ""
+
+#: modal_survey.php:2590
+msgid "Time is up!"
+msgstr ""
+
+#: modal_survey.php:2591
+msgid "Subscribe to our mailing list"
+msgstr ""
+
+#: modal_survey.php:2592 settings.php:463
+msgid "Yes"
+msgstr ""
+
+#: modal_survey.php:2593 settings.php:300 settings.php:462
+msgid "No"
+msgstr ""
+
+#: modules/export_csv.php:5 modules/export_xls.php:35
+msgid "Survey ID"
+msgstr ""
+
+#: modules/export_csv.php:6 modules/export_xls.php:37
+msgid "Survey Name"
+msgstr ""
+
+#: modules/export_csv.php:7 modules/export_xls.php:39
+msgid "Generated"
+msgstr ""
+
+#: modules/export_csv.php:10 modules/export_pdf.php:284
+#: modules/export_xls.php:45
+msgid "User ID"
+msgstr ""
+
+#: modules/export_csv.php:11 modules/export_pdf.php:292
+#: modules/export_xls.php:47 templates/settings_participants.php:79
+msgid "Username"
+msgstr ""
+
+#: modules/export_csv.php:12 modules/export_xls.php:49
+#: templates/settings_savedforms.php:2041
+msgid "Created"
+msgstr ""
+
+#: modules/export_csv.php:13 modules/export_pdf.php:293
+#: modules/export_xls.php:53
+msgid "Email"
+msgstr ""
+
+#: modules/export_csv.php:14 modules/export_pdf.php:291
+#: modules/export_xls.php:55 settings.php:359
+#: templates/settings_participants.php:78
+#: templates/settings_participants.php:254
+#: templates/settings_savedforms.php:1498
+#: templates/settings_savedforms.php:2039
+msgid "Name"
+msgstr ""
+
+#: modules/export_csv.php:21 modules/export_xls.php:68
+msgid "Required Time"
+msgstr ""
+
+#: modules/export_csv.php:22 modules/export_pdf.php:300
+#: modules/export_txt.php:46 modules/export_xls.php:72
+msgid "Participant answers marked with stars: *"
+msgstr ""
+
+#: modules/export_csv.php:27 modules/export_csv.php:30
+#: modules/export_xls.php:78 modules/export_xls.php:81
+msgid "Question / Answer"
+msgstr ""
+
+#: modules/export_csv.php:27 modules/export_csv.php:30
+#: modules/export_xls.php:78 modules/export_xls.php:81
+#: templates/settings_participants.php:257
+msgid "Votes"
+msgstr ""
+
+#: modules/export_csv.php:27 modules/export_csv.php:30
+#: modules/export_xls.php:78 modules/export_xls.php:81
+msgid "Percentage"
+msgstr ""
+
+#: modules/export_csv.php:27 modules/export_pdf.php:345
+#: modules/export_xls.php:78 settings.php:246
+#: templates/settings_savedforms.php:1313
+#: templates/settings_savedforms.php:1334
+#: templates/settings_savedforms.php:1372
+#: templates/settings_savedforms.php:1376
+#: templates/settings_savedforms.php:1453
+msgid "Score"
+msgstr ""
+
+#: modules/export_csv.php:58 modules/export_csv.php:61
+msgid "Total"
+msgstr ""
+
+#: modules/export_csv.php:73
+msgid "fputcsv function doesn't exists"
+msgstr ""
+
+#: modules/export_json.php:7 modules/export_pdf.php:398
+#: modules/export_txt.php:16 modules/export_txt.php:77
+#: modules/export_xls.php:134 modules/export_xml.php:58
+msgid "Write error"
+msgstr ""
+
+#: modules/export_pdf.php:196
+msgid "Generated by "
+msgstr ""
+
+#: modules/export_pdf.php:248
+msgid "Generated: "
+msgstr ""
+
+#: modules/export_pdf.php:254 modules/export_pdf.php:291
+#: modules/export_txt.php:29 modules/export_xml.php:12 settings.php:841
+#: templates/settings_participants.php:78
+msgid "Anonymous"
+msgstr ""
+
+#: modules/export_pdf.php:279
+msgid "Participants Details"
+msgstr ""
+
+#: modules/export_pdf.php:294 templates/settings_participants.php:179
+#: templates/settings_participants.php:259
+msgid "Date"
+msgstr ""
+
+#: modules/export_pdf.php:302
+msgid "Personal Chart"
+msgstr ""
+
+#: modules/export_pdf.php:302
+msgid "Global Chart"
+msgstr ""
+
+#: modules/export_pdf.php:314
+msgid "Time"
+msgstr ""
+
+#: modules/export_pdf.php:316
+msgid "Total votes:"
+msgstr ""
+
+#: modules/export_pdf.php:328
+msgid "vote"
+msgstr ""
+
+#: modules/export_pdf.php:352
+msgid "of total votes"
+msgstr ""
+
+#: modules/export_txt.php:22
+msgid "Survey ID:"
+msgstr ""
+
+#: modules/export_txt.php:23 settings.php:840
+msgid "Survey Name:"
+msgstr ""
+
+#: modules/export_txt.php:24
+msgid "Export Time:"
+msgstr ""
+
+#: modules/export_txt.php:28
+msgid "User ID:"
+msgstr ""
+
+#: modules/export_txt.php:29
+msgid "Name:"
+msgstr ""
+
+#: modules/export_txt.php:30
+msgid "Username:"
+msgstr ""
+
+#: modules/export_txt.php:31
+msgid "Email:"
+msgstr ""
+
+#: modules/export_txt.php:39
+msgid "Date:"
+msgstr ""
+
+#: modules/export_txt.php:40
+msgid "Total Score:"
+msgstr ""
+
+#: modules/export_txt.php:43
+msgid "Required Time:"
+msgstr ""
+
+#: modules/export_txt.php:64
+msgid "Answer:"
+msgstr ""
+
+#: modules/export_txt.php:65
+msgid "Count:"
+msgstr ""
+
+#: modules/export_txt.php:66
+msgid "Percentage:"
+msgstr ""
+
+#: modules/export_txt.php:71
+msgid "Total Votes:"
+msgstr ""
+
+#: modules/export_xls.php:16
+msgid "generated by"
+msgstr ""
+
+#: modules/export_xls.php:121 modules/export_xls.php:124
+msgid "Total:"
+msgstr ""
+
+#: modules/manual.update.php:42 modules/manual.update.php:45
+#: modules/manual.update.php:48
+msgid "Security check failed, Update process terminated."
+msgstr ""
+
+#: modules/manual.update.php:57
+msgid "File doesn't exists or damaged."
+msgstr ""
+
+#: modules/manual.update.php:63
+msgid "ZIP Uploaded..."
+msgstr ""
+
+#: modules/manual.update.php:90
+msgid "Failed to create folders..."
+msgstr ""
+
+#: modules/manual.update.php:96
+msgid "ZIP unpacked, collecting datas..."
+msgstr ""
+
+#: modules/manual.update.php:102
+msgid ""
+"ZIP file is not compatible with this plugin or it is not a valid WordPress "
+"Plugin"
+msgstr ""
+
+#: modules/manual.update.php:106
+msgid "Plugin name doesn't match. Is this the same plugin?"
+msgstr ""
+
+#: modules/manual.update.php:112
+msgid "Current Version: "
+msgstr ""
+
+#: modules/manual.update.php:113
+msgid "Uploaded Version: "
+msgstr ""
+
+#: modules/manual.update.php:115
+msgid "START UPDATE"
+msgstr ""
+
+#: modules/manual.update.php:115
+msgid "DO NOT UPDATE (Delete uploaded temp files)"
+msgstr ""
+
+#: modules/manual.update.php:119
+msgid "Changelog"
+msgstr ""
+
+#: modules/manual.update.php:123
+msgid "There was an error unzipping the file. Is it a valid ZIP file?"
+msgstr ""
+
+#: modules/manual.update.php:144
+msgid "Update Files has been successfully removed."
+msgstr ""
+
+#: modules/manual.update.php:149
+msgid "Copying files..."
+msgstr ""
+
+#: modules/manual.update.php:153
+msgid "Removing temp folder..."
+msgstr ""
+
+#: modules/manual.update.php:157
+msgid "Plugin files has been successfully updated..."
+msgstr ""
+
+#: modules/manual.update.php:167
+msgid "Plugin Activation Initialized Successfully..."
+msgstr ""
+
+#: modules/manual.update.php:172
+msgid ""
+"After uploaded the ZIP file you can decide to continue the update process or "
+"discard the changes."
+msgstr ""
+
+#: modules/manual.update.php:176
+msgid "Browse the new version ZIP file:"
+msgstr ""
+
+#: modules/manual.update.php:177 templates/settings_import.php:101
+msgid "UPLOAD"
+msgstr ""
+
+#: settings.php:119
+msgid "Modal Survey - Votes by Surveys"
+msgstr ""
+
+#: settings.php:127
+msgid "Modal Survey - Votes by Days"
+msgstr ""
+
+#: settings.php:165 settings.php:187
+msgid "Not enough votes to display summarized chart"
+msgstr ""
+
+#: settings.php:240
+msgid "Another chart has been already added!"
+msgstr ""
+
+#: settings.php:241
+msgid "You must set all condition parameters!"
+msgstr ""
+
+#: settings.php:242 templates/settings_savedforms.php:1307
+#: templates/settings_savedforms.php:1367
+msgid "Time is Up"
+msgstr ""
+
+#: settings.php:243
+msgid ""
+"If you set the End Delay to 0sec, then the redirection will be automatically "
+"disabled!"
+msgstr ""
+
+#: settings.php:244 templates/settings_savedforms.php:1308
+#: templates/settings_savedforms.php:1368
+msgid "Final Score"
+msgstr ""
+
+#: settings.php:245 templates/settings_savedforms.php:1309
+#: templates/settings_savedforms.php:1369
+msgid "Correct Answers"
+msgstr ""
+
+#: settings.php:247
+msgid "Failed to Export"
+msgstr ""
+
+#: settings.php:248 settings.php:453 templates/settings_savedforms.php:1313
+#: templates/settings_savedforms.php:1372
+#: templates/settings_savedforms.php:1911
+msgid "Question"
+msgstr ""
+
+#: settings.php:249 settings.php:339 settings.php:348
+#: templates/settings_savedforms.php:1334
+#: templates/settings_savedforms.php:1376
+#: templates/settings_savedforms.php:1902
+#: templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Category"
+msgstr ""
+
+#: settings.php:250 templates/settings_savedforms.php:1339
+#: templates/settings_savedforms.php:1379
+msgid "higher than"
+msgstr ""
+
+#: settings.php:251 templates/settings_savedforms.php:1340
+#: templates/settings_savedforms.php:1380
+msgid "equal with"
+msgstr ""
+
+#: settings.php:252 templates/settings_savedforms.php:1341
+#: templates/settings_savedforms.php:1381
+msgid "lower than"
+msgstr ""
+
+#: settings.php:253
+msgid "Invalid URL has been specified!"
+msgstr ""
+
+#: settings.php:254 templates/settings_savedforms.php:1384
+msgid "then"
+msgstr ""
+
+#: settings.php:255 templates/settings_savedforms.php:1346
+#: templates/settings_savedforms.php:1386
+msgid "redirect to"
+msgstr ""
+
+#: settings.php:256 templates/settings_savedforms.php:1347
+#: templates/settings_savedforms.php:1389
+msgid "display message at the end"
+msgstr ""
+
+#: settings.php:257 templates/settings_savedforms.php:1348
+#: templates/settings_savedforms.php:1392
+msgid "set social sharing title to"
+msgstr ""
+
+#: settings.php:258 templates/settings_savedforms.php:1349
+#: templates/settings_savedforms.php:1395
+msgid "set social sharing description to"
+msgstr ""
+
+#: settings.php:259 templates/settings_savedforms.php:1350
+#: templates/settings_savedforms.php:1398
+msgid "set social sharing image URL to"
+msgstr ""
+
+#: settings.php:260 templates/settings_savedforms.php:1351
+#: templates/settings_savedforms.php:1401
+msgid "display individual rating chart at the end"
+msgstr ""
+
+#: settings.php:261 templates/settings_savedforms.php:1352
+#: templates/settings_savedforms.php:1404
+msgid "display individual score chart at the end"
+msgstr ""
+
+#: settings.php:262 templates/settings_savedforms.php:1353
+#: templates/settings_savedforms.php:1407
+msgid "display individual correct answers chart at the end"
+msgstr ""
+
+#: settings.php:263 templates/settings_savedforms.php:1890
+#: templates/settings_savedforms.php:1934
+msgid "Remove"
+msgstr ""
+
+#: settings.php:264 templates/settings_savedforms.php:1898
+#: templates/settings_savedforms.php:1942
+msgid "Add Image"
+msgstr ""
+
+#: settings.php:265 templates/settings_newform.php:9
+msgid "New Survey"
+msgstr ""
+
+#: settings.php:266
+msgid "Error during the save process"
+msgstr ""
+
+#: settings.php:267
+msgid "ERROR"
+msgstr ""
+
+#: settings.php:268
+msgid "Successful! Redirecting to the survey form."
+msgstr ""
+
+#: settings.php:269 templates/settings_savedforms.php:1987
+#: templates/settings_savedforms.php:1997
+#: templates/settings_savedforms.php:2000
+msgid "Answer Options"
+msgstr ""
+
+#: settings.php:270 settings.php:454
+msgid "Answer"
+msgstr ""
+
+#: settings.php:271 templates/settings_savedforms.php:2000
+msgid "Remove Answer"
+msgstr ""
+
+#: settings.php:272 settings.php:273 settings.php:341
+#: templates/settings_savedforms.php:1903
+#: templates/settings_savedforms.php:1927
+msgid "Set the width of the image in pixel or percentage. Eg.: 150px or 50%"
+msgstr ""
+
+#: settings.php:274 settings.php:342
+msgid "Image Width"
+msgstr ""
+
+#: settings.php:275 settings.php:345
+msgid "Image Height"
+msgstr ""
+
+#: settings.php:276 settings.php:277 settings.php:343 settings.php:346
+#: templates/settings_savedforms.php:1903
+#: templates/settings_savedforms.php:1927
+msgid "120px"
+msgstr ""
+
+#: settings.php:278 templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Enter the score number for this answer"
+msgstr ""
+
+#: settings.php:280 templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Number"
+msgstr ""
+
+#: settings.php:281 templates/settings_savedforms.php:1926
+msgid "Set this answer as correct answer"
+msgstr ""
+
+#: settings.php:282 templates/settings_savedforms.php:1926
+msgid "Set as Correct"
+msgstr ""
+
+#: settings.php:283
+msgid "You already added an open answer to this question."
+msgstr ""
+
+#: settings.php:284 settings.php:353
+msgid "Open Text Answer"
+msgstr ""
+
+#: settings.php:285
+msgid "Type your answer here"
+msgstr ""
+
+#: settings.php:286
+msgid "Autocomplete"
+msgstr ""
+
+#: settings.php:287 templates/settings_savedforms.php:1902
+#: templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Custom Tooltip"
+msgstr ""
+
+#: settings.php:288 templates/settings_savedforms.php:1926
+msgid "Enter the answer tooltip here or leave it empty."
+msgstr ""
+
+#: settings.php:289
+msgid "Enter the question tooltip here or leave it empty."
+msgstr ""
+
+#: settings.php:290 templates/settings_savedforms.php:1966
+msgid "Multiline"
+msgstr ""
+
+#: settings.php:291 templates/settings_savedforms.php:1904
+#: templates/settings_savedforms.php:1911
+msgid "Question Options"
+msgstr ""
+
+#: settings.php:292 templates/settings_savedforms.php:1902
+msgid "Specify how many answers can be selectable by the users"
+msgstr ""
+
+#: settings.php:293
+msgid "Optional Answers"
+msgstr ""
+
+#: settings.php:294 templates/settings_savedforms.php:1902
+msgid "Define how many answers needs to be selected by the user"
+msgstr ""
+
+#: settings.php:295
+msgid "Required Answers"
+msgstr ""
+
+#: settings.php:296 templates/settings_savedforms.php:1902
+msgid ""
+"Set this question as a Rating Question, it will convert answers to stars"
+msgstr ""
+
+#: settings.php:297 templates/settings_savedforms.php:1902
+msgid "Set as Rating Question"
+msgstr ""
+
+#: settings.php:298 templates/settings_savedforms.php:1860
+msgid "Remove Question"
+msgstr ""
+
+#: settings.php:299 templates/settings_savedforms.php:1860
+#: templates/settings_savedforms.php:1863
+msgid "Duplicate Question"
+msgstr ""
+
+#: settings.php:301
+msgid "Add New Open Answer"
+msgstr ""
+
+#: settings.php:302 templates/settings_savedforms.php:1997
+#: templates/settings_savedforms.php:2116
+msgid "Add New Answer"
+msgstr ""
+
+#: settings.php:303
+msgid "Was this information helpful?"
+msgstr ""
+
+#: settings.php:304 settings.php:1942
+msgid "Do you like this website?"
+msgstr ""
+
+#: settings.php:305
+msgid "Did you find this website easily?"
+msgstr ""
+
+#: settings.php:306
+msgid "Did you find this website through Search Engine?"
+msgstr ""
+
+#: settings.php:307
+msgid "Did you already bookmark this website?"
+msgstr ""
+
+#: settings.php:308
+msgid "Do you like this survey?"
+msgstr ""
+
+#: settings.php:309
+msgid "Do you visit this website first time?"
+msgstr ""
+
+#: settings.php:310
+msgid "Are you employed?"
+msgstr ""
+
+#: settings.php:311
+msgid "SAVE"
+msgstr ""
+
+#: settings.php:312 templates/settings_savedforms.php:2017
+msgid "UPDATE"
+msgstr ""
+
+#: settings.php:313
+msgid "SAVED"
+msgstr ""
+
+#: settings.php:314
+msgid "UPDATED"
+msgstr ""
+
+#: settings.php:315
+msgid "TRY AGAIN"
+msgstr ""
+
+#: settings.php:316 templates/settings_savedforms.php:2071
+msgid "Delete Survey"
+msgstr ""
+
+#: settings.php:317
+msgid "Cancel"
+msgstr ""
+
+#: settings.php:318
+msgid "Reset Survey"
+msgstr ""
+
+#: settings.php:319 templates/settings_participants.php:295
+#: templates/settings_savedforms.php:2077
+msgid "Export Charts"
+msgstr ""
+
+#: settings.php:320
+msgid "Export without Charts"
+msgstr ""
+
+#: settings.php:321 templates/settings_savedforms.php:2063
+msgid "Duplicate"
+msgstr ""
+
+#: settings.php:322 templates/settings_savedforms.php:2066
+msgid "Delete"
+msgstr ""
+
+#: settings.php:323
+msgid "Export to CSV"
+msgstr ""
+
+#: settings.php:324
+msgid "Export to JSON"
+msgstr ""
+
+#: settings.php:325
+msgid "Export to PDF"
+msgstr ""
+
+#: settings.php:326
+msgid "Export to XML"
+msgstr ""
+
+#: settings.php:327
+msgid "Export to XLS"
+msgstr ""
+
+#: settings.php:328
+msgid "Export to TXT"
+msgstr ""
+
+#: settings.php:329
+msgid "Survey name already exists, import failed!"
+msgstr ""
+
+#: settings.php:330
+msgid "Survey name is required, import failed!"
+msgstr ""
+
+#: settings.php:331
+msgid "is ready"
+msgstr ""
+
+#: settings.php:332
+msgid "download from here."
+msgstr ""
+
+#: settings.php:333 templates/settings_savedforms.php:1994
+msgid "Active Answer - click to change"
+msgstr ""
+
+#: settings.php:334 templates/settings_savedforms.php:1991
+msgid "Inactive Answer - click to change"
+msgstr ""
+
+#: settings.php:335 templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid ""
+"Specify the question number to redirect the survey in case the user choose "
+"this answer."
+msgstr ""
+
+#: settings.php:336 templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Redirection"
+msgstr ""
+
+#: settings.php:337 templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Enter the question number or leave it empty."
+msgstr ""
+
+#: settings.php:338 settings.php:347 templates/settings_savedforms.php:1902
+#: templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Specify the category name to cumulate the score into categories."
+msgstr ""
+
+#: settings.php:340 settings.php:349 templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Enter the category name or leave it empty."
+msgstr ""
+
+#: settings.php:344 templates/settings_savedforms.php:1903
+#: templates/settings_savedforms.php:1927
+msgid "Set the height of the image in pixel or percentage. Eg.: 150px or 50%"
+msgstr ""
+
+#: settings.php:350 templates/settings_savedforms.php:2025
+msgid "SAVE SURVEY"
+msgstr ""
+
+#: settings.php:351
+msgid "Nothing has been selected"
+msgstr ""
+
+#: settings.php:352
+msgid "Normal Answer"
+msgstr ""
+
+#: settings.php:354
+msgid "Failed to create the ZIP file"
+msgstr ""
+
+#: settings.php:355 templates/settings_savedforms.php:1927
+msgid "Hide Label"
+msgstr ""
+
+#: settings.php:356 templates/settings_savedforms.php:1927
+msgid "Hide the answer text when you using image instead"
+msgstr ""
+
+#: settings.php:357 templates/settings_savedforms.php:1498
+msgid "ID of input field, eg.: FNAME"
+msgstr ""
+
+#: settings.php:358 templates/settings_savedforms.php:1498
+msgid "Name of custom field, eg.: First Name"
+msgstr ""
+
+#: settings.php:360 templates/settings_savedforms.php:1498
+msgid ""
+"Warning text for the field if it is required, eg.: Firstname field is "
+"mandatory"
+msgstr ""
+
+#: settings.php:361 settings.php:374 templates/settings_savedforms.php:1498
+#: templates/settings_savedforms.php:1501
+msgid "Warning"
+msgstr ""
+
+#: settings.php:362 settings.php:375 templates/settings_savedforms.php:1498
+#: templates/settings_savedforms.php:1501
+msgid "Minimum character length for required field"
+msgstr ""
+
+#: settings.php:363 settings.php:368 settings.php:376 settings.php:381
+#: settings.php:390 templates/settings_savedforms.php:1498
+#: templates/settings_savedforms.php:1501
+#: templates/settings_savedforms.php:1504
+#: templates/settings_savedforms.php:1507
+#: templates/settings_savedforms.php:1513
+msgid "Check this if the field is mandatory"
+msgstr ""
+
+#: settings.php:364 templates/settings_savedforms.php:1498
+msgid "Remove Text Field"
+msgstr ""
+
+#: settings.php:365 templates/settings_savedforms.php:1504
+msgid "ID of radio field, eg.: GENDER"
+msgstr ""
+
+#: settings.php:366 templates/settings_savedforms.php:1504
+msgid "Name and value pair for custom field, eg.: Female:female,Male:male"
+msgstr ""
+
+#: settings.php:367 templates/settings_savedforms.php:1504
+msgid "Female:female,Male:male"
+msgstr ""
+
+#: settings.php:369 templates/settings_savedforms.php:1504
+msgid "Remove Radio Field"
+msgstr ""
+
+#: settings.php:370 templates/settings_savedforms.php:1501
+msgid "ID of textarea field, eg.: Description"
+msgstr ""
+
+#: settings.php:371 templates/settings_savedforms.php:1501
+msgid "Placeholder for custom field, eg.: Description"
+msgstr ""
+
+#: settings.php:372 templates/settings_savedforms.php:1501
+msgid "Description"
+msgstr ""
+
+#: settings.php:373 templates/settings_savedforms.php:1501
+msgid ""
+"Warning text for the field if it is required, eg.: Description field is "
+"mandatory"
+msgstr ""
+
+#: settings.php:377
+msgid "Remove Textarea Field"
+msgstr ""
+
+#: settings.php:378 templates/settings_savedforms.php:1507
+msgid "ID of select field, eg.: FRUITS"
+msgstr ""
+
+#: settings.php:379 templates/settings_savedforms.php:1507
+msgid ""
+"Name and value pair for custom field, eg.: Select from the list,Apple:apple,"
+"Orange:orange,Lemon:lemon"
+msgstr ""
+
+#: settings.php:380 templates/settings_savedforms.php:1507
+msgid ""
+"Select from the list,Apple:applevalue,Orange:orangevalue,Lemon:lemonvalue"
+msgstr ""
+
+#: settings.php:382 templates/settings_savedforms.php:1507
+msgid "Remove Select Field"
+msgstr ""
+
+#: settings.php:383 templates/settings_savedforms.php:1510
+msgid "ID of hidden field, eg.: SIGNUP"
+msgstr ""
+
+#: settings.php:384 templates/settings_savedforms.php:1510
+msgid "Value of the field, eg.: blog name"
+msgstr ""
+
+#: settings.php:385
+msgid "blog name"
+msgstr ""
+
+#: settings.php:386 templates/settings_savedforms.php:1510
+msgid "Remove Hidden Field"
+msgstr ""
+
+#: settings.php:387 templates/settings_savedforms.php:1513
+msgid "ID of checkbox field, eg.: CONFIRMATION"
+msgstr ""
+
+#: settings.php:388 templates/settings_savedforms.php:1513
+msgid "Text for checkbox field, eg.: Confirm to subscribe to our Mail List"
+msgstr ""
+
+#: settings.php:389 templates/settings_savedforms.php:1513
+msgid "Please confirm your subscription"
+msgstr ""
+
+#: settings.php:391 templates/settings_savedforms.php:1513
+msgid "Remove Checkbox Field"
+msgstr ""
+
+#: settings.php:392 templates/settings_savedforms.php:1538
+msgid "Remove HTML Field"
+msgstr ""
+
+#: settings.php:393 templates/settings_savedforms.php:1538
+msgid "At the top of the form"
+msgstr ""
+
+#: settings.php:394 templates/settings_savedforms.php:1538
+msgid "Above the Send button"
+msgstr ""
+
+#: settings.php:395 templates/settings_savedforms.php:1538
+msgid "Below the Send button"
+msgstr ""
+
+#: settings.php:396
+msgid ""
+"Tip: Save the HTML Box with any content then refresh the page to see the "
+"WYSIWYG / HTML editor instead of this textarea"
+msgstr ""
+
+#: settings.php:426
+msgid "Insert Modal Survey"
+msgstr ""
+
+#: settings.php:427
+msgid "Mode"
+msgstr ""
+
+#: settings.php:428
+msgid "Modal"
+msgstr ""
+
+#: settings.php:429
+msgid "Embed"
+msgstr ""
+
+#: settings.php:430
+msgid "Scroll Display in Embed Mode"
+msgstr ""
+
+#: settings.php:431
+msgid "Enable"
+msgstr ""
+
+#: settings.php:432
+msgid "Disable"
+msgstr ""
+
+#: settings.php:433
+msgid "Width"
+msgstr ""
+
+#: settings.php:434
+msgid "Alignment"
+msgstr ""
+
+#: settings.php:435 templates/settings_savedforms.php:449
+#: templates/settings_savedforms.php:529
+msgid "Center"
+msgstr ""
+
+#: settings.php:436 templates/settings_savedforms.php:528
+msgid "Left"
+msgstr ""
+
+#: settings.php:437 templates/settings_savedforms.php:530
+msgid "Right"
+msgstr ""
+
+#: settings.php:438
+msgid "Text Alignment"
+msgstr ""
+
+#: settings.php:439
+msgid "Message"
+msgstr ""
+
+#: settings.php:441
+msgid "Insert Modal Survey Results"
+msgstr ""
+
+#: settings.php:442 templates/settings_savedforms.php:1440
+msgid "Progress Bar"
+msgstr ""
+
+#: settings.php:443 templates/settings_savedforms.php:1441
+msgid "Line Bar"
+msgstr ""
+
+#: settings.php:444 templates/settings_savedforms.php:1442
+msgid "Pie Chart"
+msgstr ""
+
+#: settings.php:445 templates/settings_savedforms.php:1443
+msgid "Bar Chart"
+msgstr ""
+
+#: settings.php:446 templates/settings_savedforms.php:1444
+msgid "Doughnut Chart"
+msgstr ""
+
+#: settings.php:447 templates/settings_savedforms.php:1445
+msgid "Line Chart"
+msgstr ""
+
+#: settings.php:448 templates/settings_savedforms.php:1446
+msgid "Polar Chart"
+msgstr ""
+
+#: settings.php:449 templates/settings_savedforms.php:1447
+msgid "Radar Chart"
+msgstr ""
+
+#: settings.php:450
+msgid "Text"
+msgstr ""
+
+#: settings.php:451 templates/settings_savedforms.php:1459
+msgid "Data Type"
+msgstr ""
+
+#: settings.php:452
+msgid "Full"
+msgstr ""
+
+#: settings.php:455
+msgid "Answer Count (only in Text Mode)"
+msgstr ""
+
+#: settings.php:456
+msgid "Answer Percentage (only in Text Mode)"
+msgstr ""
+
+#: settings.php:457
+msgid "Question Number (Question & Answer Data Types)"
+msgstr ""
+
+#: settings.php:458
+msgid "Answer Number (for Answer Data Types)"
+msgstr ""
+
+#: settings.php:459
+msgid "Background Color Code (HEX - for Progress Bar)"
+msgstr ""
+
+#: settings.php:460
+msgid "Font Color Code (HEX - for Progress Bar)"
+msgstr ""
+
+#: settings.php:461
+msgid "Hide Counter"
+msgstr ""
+
+#: settings.php:464
+msgid "Hide Question Text"
+msgstr ""
+
+#: settings.php:465 templates/settings_participants.php:256
+msgid "Survey"
+msgstr ""
+
+#: settings.php:466 templates/settings_savedforms.php:1852
+msgid "Results"
+msgstr ""
+
+#: settings.php:514
+msgid "Set Global Survey"
+msgstr ""
+
+#: settings.php:514 settings.php:515 settings.php:516 settings.php:517
+#: settings.php:518 settings.php:519 settings.php:520 settings.php:535
+#: settings.php:536
+msgid "On"
+msgstr ""
+
+#: settings.php:514 settings.php:515 settings.php:516 settings.php:517
+#: settings.php:518 settings.php:519 settings.php:520 settings.php:535
+#: settings.php:536
+msgid "Off"
+msgstr ""
+
+#: settings.php:514
+msgid "Automatically set the Global Survey checkbox in a new survey"
+msgstr ""
+
+#: settings.php:515
+msgid "Display Once per User"
+msgstr ""
+
+#: settings.php:515
+msgid "Display the same survey for the same users twice."
+msgstr ""
+
+#: settings.php:516
+msgid "Display Once per Filled Out"
+msgstr ""
+
+#: settings.php:516
+msgid "Display the same survey for the same users who already filled out."
+msgstr ""
+
+#: settings.php:517
+msgid "Keep Settings after Uninstall"
+msgstr ""
+
+#: settings.php:517
+msgid ""
+"Keeps your settings during uninstall. Helps to protect your saved datas when "
+"updating to a new version."
+msgstr ""
+
+#: settings.php:518
+msgid "Minify Scripts"
+msgstr ""
+
+#: settings.php:518
+msgid "Use minified and obfuscated JavaScript files on frontend."
+msgstr ""
+
+#: settings.php:519
+msgid "Save Participants Votes"
+msgstr ""
+
+#: settings.php:519
+msgid ""
+"Save the participants votes to display them in the Participants page on the "
+"admin"
+msgstr ""
+
+#: settings.php:520
+msgid "Remember Users"
+msgstr ""
+
+#: settings.php:520
+msgid "Using cookies to remember for the users from the same computer"
+msgstr ""
+
+#: settings.php:521
+msgid "PDF Export Header Text"
+msgstr ""
+
+#: settings.php:522
+msgid "PDF Export Font Family"
+msgstr ""
+
+#: settings.php:522
+msgid "Set the Font Family to display special characters correctly."
+msgstr ""
+
+#: settings.php:523
+msgid "PDF Individual Export"
+msgstr ""
+
+#: settings.php:523 templates/settings_savedforms.php:2043
+msgid "Total Votes"
+msgstr ""
+
+#: settings.php:523
+msgid "Other Answers"
+msgstr ""
+
+#: settings.php:523
+msgid "Customize the content of the Individual Export file."
+msgstr ""
+
+#: settings.php:524
+msgid "Initialize plugin"
+msgstr ""
+
+#: settings.php:524
+msgid ""
+"Change the initialization hook if you have troubles with the signup form "
+"display."
+msgstr ""
+
+#: settings.php:535
+msgid "Social Sharing"
+msgstr ""
+
+#: settings.php:535
+msgid "Enable Social Sharing at the end of the Surveys."
+msgstr ""
+
+#: settings.php:536
+msgid "Embed Social Metas"
+msgstr ""
+
+#: settings.php:536
+msgid ""
+"Automatically embed og:description, og:url, og:image, og:type and og:"
+"site_name based on the current page ."
+msgstr ""
+
+#: settings.php:537
+msgid "Social Sites"
+msgstr ""
+
+#: settings.php:537
+msgid "Set the available social sites for sharing."
+msgstr ""
+
+#: settings.php:538
+msgid "Social Buttons Style"
+msgstr ""
+
+#: settings.php:538
+msgid "Set the style of the Social Buttons"
+msgstr ""
+
+#: settings.php:539
+msgid "Social Buttons Position"
+msgstr ""
+
+#: settings.php:539
+msgid "Position of Social Buttons"
+msgstr ""
+
+#: settings.php:540
+msgid "Facebook APP ID"
+msgstr ""
+
+#: settings.php:540
+msgid "Specify your FB App ID to set custom title and description for sharing."
+msgstr ""
+
+#: settings.php:545
+msgid "Enter you custom CSS code"
+msgstr ""
+
+#: settings.php:584
+msgid "when calling get_footer() hook"
+msgstr ""
+
+#: settings.php:585
+msgid "when calling wp_footer() hook"
+msgstr ""
+
+#: settings.php:586
+msgid "when print the content"
+msgstr ""
+
+#: settings.php:591 templates/settings_savedforms.php:454
+#: templates/settings_savedforms.php:534 templates/settings_savedforms.php:1206
+#: templates/settings_savedforms.php:1258
+#: templates/settings_savedforms.php:1452
+msgid "Default"
+msgstr ""
+
+#: settings.php:592
+msgid "Default Large"
+msgstr ""
+
+#: settings.php:593
+msgid "Clean"
+msgstr ""
+
+#: settings.php:594
+msgid "Clean Large"
+msgstr ""
+
+#: settings.php:599
+msgid "Always visible"
+msgstr ""
+
+#: settings.php:600
+msgid "Display at the end only"
+msgstr ""
+
+#: settings.php:601
+msgid "Display at the end in the content"
+msgstr ""
+
+#: settings.php:723
+msgid "Create Survey"
+msgstr ""
+
+#: settings.php:724 templates/settings_savedforms.php:13
+msgid "Saved Surveys"
+msgstr ""
+
+#: settings.php:725 templates/settings_participants.php:5
+msgid "Participants"
+msgstr ""
+
+#: settings.php:726 templates/settings_general.php:5
+msgid "General Settings"
+msgstr ""
+
+#: settings.php:727 templates/settings_social.php:5
+msgid "Social Settings"
+msgstr ""
+
+#: settings.php:728 templates/settings_import.php:77
+msgid "Import"
+msgstr ""
+
+#: settings.php:729 templates/settings_customcss.php:5
+msgid "Custom CSS"
+msgstr ""
+
+#: settings.php:730 templates/settings_update.php:5
+msgid "Update"
+msgstr ""
+
+#: settings.php:731 templates/settings_help.php:5
+msgid "Help"
+msgstr ""
+
+#: settings.php:738 settings.php:745 settings.php:753 settings.php:762
+#: settings.php:769 settings.php:776 settings.php:783 settings.php:790
+#: settings.php:797
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: settings.php:841
+msgid "Participant Name:"
+msgstr ""
+
+#: settings.php:842
+msgid "Participant Email Address:"
+msgstr ""
+
+#: settings.php:871
+msgid "Participant votes marked with grey rows."
+msgstr ""
+
+#: settings.php:871
+msgid "Click here to see the full details."
+msgstr ""
+
+#: settings.php:876
+msgid "Survey Completed"
+msgstr ""
+
+#: settings.php:954
+msgid "Survey Result"
+msgstr ""
+
+#: templates/settings_customcss.php:1 templates/settings_general.php:1
+#: templates/settings_help.php:1 templates/settings_import.php:1
+#: templates/settings_newform.php:1 templates/settings_participants.php:1
+#: templates/settings_savedforms.php:1 templates/settings_social.php:1
+#: templates/settings_update.php:1
+msgid "LOADING"
+msgstr ""
+
+#: templates/settings_customcss.php:1 templates/settings_general.php:1
+#: templates/settings_help.php:1 templates/settings_import.php:1
+#: templates/settings_newform.php:1 templates/settings_participants.php:1
+#: templates/settings_savedforms.php:1 templates/settings_social.php:1
+#: templates/settings_update.php:1
+msgid "Please wait..."
+msgstr ""
+
+#: templates/settings_customcss.php:6 templates/settings_general.php:6
+#: templates/settings_help.php:9 templates/settings_import.php:78
+#: templates/settings_newform.php:6 templates/settings_participants.php:6
+#: templates/settings_savedforms.php:21 templates/settings_social.php:6
+#: templates/settings_update.php:6
+msgid "Documentation"
+msgstr ""
+
+#: templates/settings_general.php:14 templates/settings_social.php:14
+msgid "Settings saved."
+msgstr ""
+
+#: templates/settings_help.php:9
+msgid "To see the full documentation, please click on the following link:"
+msgstr ""
+
+#: templates/settings_import.php:15
+msgid "Security check failed."
+msgstr ""
+
+#: templates/settings_import.php:20
+msgid "Survey name is required. Import failed."
+msgstr ""
+
+#: templates/settings_import.php:23
+msgid ""
+"Survey ID generation failed. Symbols and special characters are not allowed."
+msgstr ""
+
+#: templates/settings_import.php:27
+msgid "Survey name is already exists. Import failed."
+msgstr ""
+
+#: templates/settings_import.php:31
+msgid "File empty or not valid JSON file. Import failed."
+msgstr ""
+
+#: templates/settings_import.php:85
+msgid "File successfully imported!"
+msgstr ""
+
+#: templates/settings_import.php:85 templates/settings_savedforms.php:2064
+msgid "Edit"
+msgstr ""
+
+#: templates/settings_import.php:92
+msgid "Imported Survey Name:"
+msgstr ""
+
+#: templates/settings_import.php:99
+msgid "Browse the import JSON file:"
+msgstr ""
+
+#: templates/settings_newform.php:5
+msgid "Create New Survey"
+msgstr ""
+
+#: templates/settings_newform.php:9
+msgid "Type the survey name here"
+msgstr ""
+
+#: templates/settings_participants.php:13
+msgid "Data Successfully Deleted!"
+msgstr ""
+
+#: templates/settings_participants.php:16
+#: templates/settings_participants.php:67
+msgid "Error Occurred During the Deletion!"
+msgstr ""
+
+#: templates/settings_participants.php:43
+msgid "entries successfully deleted!"
+msgstr ""
+
+#: templates/settings_participants.php:46
+msgid "There is no incomplete results!"
+msgstr ""
+
+#: templates/settings_participants.php:64
+msgid "Selected Rows Successfully Deleted!"
+msgstr ""
+
+#: templates/settings_participants.php:80
+msgid "Email Address"
+msgstr ""
+
+#: templates/settings_participants.php:89
+msgid "Survey URL"
+msgstr ""
+
+#: templates/settings_participants.php:102
+#: templates/settings_participants.php:258
+msgid "IP Address"
+msgstr ""
+
+#: templates/settings_participants.php:107
+msgid "Surveys"
+msgstr ""
+
+#: templates/settings_participants.php:117
+msgid "No data available for the current selection"
+msgstr ""
+
+#: templates/settings_participants.php:132
+msgid "SET"
+msgstr ""
+
+#: templates/settings_participants.php:147
+msgid "Personal Rating Chart"
+msgstr ""
+
+#: templates/settings_participants.php:148
+msgid "Global Rating Chart"
+msgstr ""
+
+#: templates/settings_participants.php:151
+msgid "Personal Score Chart"
+msgstr ""
+
+#: templates/settings_participants.php:152
+msgid "Global Score Chart"
+msgstr ""
+
+#: templates/settings_participants.php:170
+msgid "Personal Answers"
+msgstr ""
+
+#: templates/settings_participants.php:176
+msgid "Summary"
+msgstr ""
+
+#: templates/settings_participants.php:185
+#: templates/settings_savedforms.php:2017
+msgid "DELETE"
+msgstr ""
+
+#: templates/settings_participants.php:188
+#: templates/settings_participants.php:208
+#: templates/settings_savedforms.php:1840
+msgid "Export Survey"
+msgstr ""
+
+#: templates/settings_participants.php:244
+msgid "The list is limited to "
+msgstr ""
+
+#: templates/settings_participants.php:244
+msgid "entries"
+msgstr ""
+
+#: templates/settings_participants.php:244
+msgid "If you would like to see the full list, "
+msgstr ""
+
+#: templates/settings_participants.php:244
+msgid "please click here"
+msgstr ""
+
+#: templates/settings_participants.php:253
+#: templates/settings_savedforms.php:2038
+msgid "ID"
+msgstr ""
+
+#: templates/settings_participants.php:255
+msgid "E-mail"
+msgstr ""
+
+#: templates/settings_participants.php:278
+msgid "not specified"
+msgstr ""
+
+#: templates/settings_participants.php:287
+msgid "DELETE SELECTED"
+msgstr ""
+
+#: templates/settings_participants.php:287
+msgid "BULK EXPORT SELECTED"
+msgstr ""
+
+#: templates/settings_participants.php:287
+msgid "DELETE INCOMPLETE RESULTS"
+msgstr ""
+
+#: templates/settings_participants.php:292
+msgid "Delete Participants Datas?"
+msgstr ""
+
+#: templates/settings_participants.php:293
+msgid ""
+"The selected participants datas will be permanently deleted! Are you sure?"
+msgstr ""
+
+#: templates/settings_participants.php:296
+#: templates/settings_savedforms.php:2078
+msgid "Would you like to export charts to the PDF?"
+msgstr ""
+
+#: templates/settings_participants.php:298
+msgid "Delete the current result?"
+msgstr ""
+
+#: templates/settings_participants.php:299
+msgid "Would you like to delete this participation of the current user?"
+msgstr ""
+
+#: templates/settings_participants.php:301
+msgid "Export Detailed Participant Results?"
+msgstr ""
+
+#: templates/settings_participants.php:302
+msgid ""
+"The selected participants results will be exported, then you can download it "
+"as a ZIP package! This process needs more disk space than the usual, that "
+"depends on the amount of export files. Please make sure, you have enough "
+"space. Please select the export format below to start the process!"
+msgstr ""
+
+#: templates/settings_participants.php:304
+msgid "Delete Incomplete Results?"
+msgstr ""
+
+#: templates/settings_participants.php:305
+msgid ""
+"All results that has not contains email address with enabled participants "
+"form in the current survey or the last question has not been answered count "
+"as incomplete result. The incompleted results will be permanently deleted! "
+"Are you sure?"
+msgstr ""
+
+#: templates/settings_savedforms.php:18
+msgid "Tutorial"
+msgstr ""
+
+#: templates/settings_savedforms.php:30
+msgid "Survey name already exists"
+msgstr ""
+
+#: templates/settings_savedforms.php:33
+msgid "Survey successfully deleted!"
+msgstr ""
+
+#: templates/settings_savedforms.php:34
+msgid "Survey successfully duplicated!"
+msgstr ""
+
+#: templates/settings_savedforms.php:35
+msgid "Survey successfully reseted!"
+msgstr ""
+
+#: templates/settings_savedforms.php:36
+msgid "Action failed due to error! "
+msgstr ""
+
+#: templates/settings_savedforms.php:443
+msgid "General Behavior"
+msgstr ""
+
+#: templates/settings_savedforms.php:445
+msgid "Display style:"
+msgstr ""
+
+#: templates/settings_savedforms.php:447
+msgid "Bottom"
+msgstr ""
+
+#: templates/settings_savedforms.php:448
+msgid "Top"
+msgstr ""
+
+#: templates/settings_savedforms.php:452
+msgid "Mode:"
+msgstr ""
+
+#: templates/settings_savedforms.php:455
+msgid "Embed to Posts End"
+msgstr ""
+
+#: templates/settings_savedforms.php:456
+msgid "Embed to Posts Start"
+msgstr ""
+
+#: templates/settings_savedforms.php:457
+msgid "Embed to Pages Start"
+msgstr ""
+
+#: templates/settings_savedforms.php:458
+msgid "Embed to Pages End"
+msgstr ""
+
+#: templates/settings_savedforms.php:459
+msgid "Embed to bbPress Topics"
+msgstr ""
+
+#: templates/settings_savedforms.php:462
+msgid "Animation Type:"
+msgstr ""
+
+#: templates/settings_savedforms.php:468
+msgid "Animation Easing:"
+msgstr ""
+
+#: templates/settings_savedforms.php:504
+msgid "Animation Speed:"
+msgstr ""
+
+#: templates/settings_savedforms.php:505
+msgid "End Delay:"
+msgstr ""
+
+#: templates/settings_savedforms.php:505
+msgid ""
+"Delay time to hide the survey after the completion. Set it to 0 to disable "
+"automatic hiding."
+msgstr ""
+
+#: templates/settings_savedforms.php:506
+msgid "Display Timer:"
+msgstr ""
+
+#: templates/settings_savedforms.php:506
+msgid "Delay time to display the survey."
+msgstr ""
+
+#: templates/settings_savedforms.php:507
+msgid "Quiz Timer:"
+msgstr ""
+
+#: templates/settings_savedforms.php:507
+msgid "Increase it above 0sec to enable Quiz Timer."
+msgstr ""
+
+#: templates/settings_savedforms.php:508
+msgid "Enable if you want to display the survey on the entire website"
+msgstr ""
+
+#: templates/settings_savedforms.php:508
+msgid "Global Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:510
+msgid "Lock the screen with a transparent background"
+msgstr ""
+
+#: templates/settings_savedforms.php:510
+msgid "Lock Screen"
+msgstr ""
+
+#: templates/settings_savedforms.php:511
+msgid "Users can close the survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:511
+msgid "Closeable"
+msgstr ""
+
+#: templates/settings_savedforms.php:512
+msgid ""
+"The survey will appear when the user scrolled down at the bottom of the page"
+msgstr ""
+
+#: templates/settings_savedforms.php:512
+msgid "Display at bottom"
+msgstr ""
+
+#: templates/settings_savedforms.php:513
+msgid "Show survey for logged in users only"
+msgstr ""
+
+#: templates/settings_savedforms.php:513
+msgid "Logged In Only"
+msgstr ""
+
+#: templates/settings_savedforms.php:514
+msgid ""
+"If the user interrupt the survey, then it can be continued on the next visit."
+msgstr ""
+
+#: templates/settings_savedforms.php:514
+msgid "Allow Continue"
+msgstr ""
+
+#: templates/settings_savedforms.php:515
+msgid "Use the Quiz Timer as Question Timer."
+msgstr ""
+
+#: templates/settings_savedforms.php:515
+msgid "Question Timer"
+msgstr ""
+
+#: templates/settings_savedforms.php:518
+msgid "Style and Appearance"
+msgstr ""
+
+#: templates/settings_savedforms.php:520
+msgid "Colors:"
+msgstr ""
+
+#: templates/settings_savedforms.php:521
+msgid "Background Color"
+msgstr ""
+
+#: templates/settings_savedforms.php:522
+msgid "Font Color"
+msgstr ""
+
+#: templates/settings_savedforms.php:523
+msgid "Border Color"
+msgstr ""
+
+#: templates/settings_savedforms.php:524
+msgid "Shadow Color"
+msgstr ""
+
+#: templates/settings_savedforms.php:526
+msgid "Text Align:"
+msgstr ""
+
+#: templates/settings_savedforms.php:533
+msgid "Font Family:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1189
+msgid "Number of Answers in One Row:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1204
+msgid "Next / Back Button Position:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1207
+msgid "At the Bottom"
+msgstr ""
+
+#: templates/settings_savedforms.php:1211
+msgid "Rating Question Style:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1213
+msgid "Default - Stars"
+msgstr ""
+
+#: templates/settings_savedforms.php:1214
+msgid "Numbers 1"
+msgstr ""
+
+#: templates/settings_savedforms.php:1215
+msgid "Numbers 2"
+msgstr ""
+
+#: templates/settings_savedforms.php:1216
+msgid "Trophy"
+msgstr ""
+
+#: templates/settings_savedforms.php:1217
+msgid "Smiley"
+msgstr ""
+
+#: templates/settings_savedforms.php:1218
+msgid "Soccer"
+msgstr ""
+
+#: templates/settings_savedforms.php:1219
+msgid "Coffee"
+msgstr ""
+
+#: templates/settings_savedforms.php:1223
+msgid "Shadow Horizontal:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1224
+msgid "Shadow Vertical:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1225
+msgid "Shadow Blur:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1226
+msgid "Shadow Spread:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1227
+msgid "Border Width:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1228
+msgid "Border Radius:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1230
+msgid "Font Size:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1231
+msgid "Padding:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1232
+msgid "Line Height:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1234
+msgid "Display Progress of the Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1234
+msgid "Show Progress Bar"
+msgstr ""
+
+#: templates/settings_savedforms.php:1235
+msgid "Display Answers as List Layout"
+msgstr ""
+
+#: templates/settings_savedforms.php:1235
+msgid "List Layout"
+msgstr ""
+
+#: templates/settings_savedforms.php:1236
+msgid "Always Show the Next Button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1236
+msgid "Always Show Next Button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1237
+msgid "Allows to Go Back ONE STEP only in the Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1237
+msgid "Enable Back Button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1240
+msgid "Miscellaneous"
+msgstr ""
+
+#: templates/settings_savedforms.php:1242
+msgid "Preloader:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1244
+msgid "Preloader 1"
+msgstr ""
+
+#: templates/settings_savedforms.php:1245
+msgid "Preloader 2"
+msgstr ""
+
+#: templates/settings_savedforms.php:1246
+msgid "Preloader 3"
+msgstr ""
+
+#: templates/settings_savedforms.php:1247
+msgid "Preloader 4"
+msgstr ""
+
+#: templates/settings_savedforms.php:1248
+msgid "Preloader 5"
+msgstr ""
+
+#: templates/settings_savedforms.php:1249
+msgid "Preloader 6"
+msgstr ""
+
+#: templates/settings_savedforms.php:1250
+msgid "Preloader 7"
+msgstr ""
+
+#: templates/settings_savedforms.php:1251
+msgid "Preloader 8"
+msgstr ""
+
+#: templates/settings_savedforms.php:1252
+msgid "Preloader 9"
+msgstr ""
+
+#: templates/settings_savedforms.php:1253
+msgid "Preloader 10"
+msgstr ""
+
+#: templates/settings_savedforms.php:1256
+msgid "Hover Effect:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1259
+#: templates/settings_savedforms.php:1271
+msgid "Style 1"
+msgstr ""
+
+#: templates/settings_savedforms.php:1260
+#: templates/settings_savedforms.php:1272
+msgid "Style 2"
+msgstr ""
+
+#: templates/settings_savedforms.php:1261
+#: templates/settings_savedforms.php:1273
+msgid "Style 3"
+msgstr ""
+
+#: templates/settings_savedforms.php:1262
+#: templates/settings_savedforms.php:1274
+msgid "Style 4"
+msgstr ""
+
+#: templates/settings_savedforms.php:1263
+#: templates/settings_savedforms.php:1275
+msgid "Style 5"
+msgstr ""
+
+#: templates/settings_savedforms.php:1264
+#: templates/settings_savedforms.php:1276
+msgid "Style 6"
+msgstr ""
+
+#: templates/settings_savedforms.php:1265
+#: templates/settings_savedforms.php:1277
+msgid "Style 7"
+msgstr ""
+
+#: templates/settings_savedforms.php:1266
+#: templates/settings_savedforms.php:1278
+msgid "Style 8"
+msgstr ""
+
+#: templates/settings_savedforms.php:1269
+msgid "Close Icon Style:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1279
+msgid "Style 9"
+msgstr ""
+
+#: templates/settings_savedforms.php:1280
+msgid "Style 10"
+msgstr ""
+
+#: templates/settings_savedforms.php:1283
+msgid "Close Icon Size:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1285
+msgid "Small"
+msgstr ""
+
+#: templates/settings_savedforms.php:1286
+msgid "Medium"
+msgstr ""
+
+#: templates/settings_savedforms.php:1287
+msgid "Large"
+msgstr ""
+
+#: templates/settings_savedforms.php:1290
+msgid "Start time:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1290
+msgid "Leave it blank to activate the survey immediately"
+msgstr ""
+
+#: templates/settings_savedforms.php:1291
+msgid "Expiry time:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1291
+msgid "Never expire the survey when you leave this blank"
+msgstr ""
+
+#: templates/settings_savedforms.php:1293
+msgid "Cookie Expiration Time:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1296
+msgid ""
+"Redirect the browser to the specified URL after the user complete the survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1296
+msgid "Redirect URL:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1297
+msgid "Display message at the end of the survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1297
+msgid "Thank you message:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1298
+msgid ""
+"Send the individual results of the completed surveys to the specified email "
+"address. Keep empty to disable."
+msgstr ""
+
+#: templates/settings_savedforms.php:1298
+msgid "Send Results to:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1299
+msgid "Play Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1303
+msgid "Conditions"
+msgstr ""
+
+#: templates/settings_savedforms.php:1303
+msgid "Set Actions based on the Votes"
+msgstr ""
+
+#: templates/settings_savedforms.php:1356
+msgid "Add New Condition"
+msgstr ""
+
+#: templates/settings_savedforms.php:1363
+msgid "If"
+msgstr ""
+
+#: templates/settings_savedforms.php:1432
+msgid "End Content"
+msgstr ""
+
+#: templates/settings_savedforms.php:1432
+msgid "Display Chart at the end of the Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1435
+msgid "Enable Chart at the completion of survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1435
+msgid "Enable Chart"
+msgstr ""
+
+#: templates/settings_savedforms.php:1439
+msgid "Chart Style"
+msgstr ""
+
+#: templates/settings_savedforms.php:1451
+msgid "Chart Type"
+msgstr ""
+
+#: templates/settings_savedforms.php:1454
+msgid "Average Score"
+msgstr ""
+
+#: templates/settings_savedforms.php:1455
+msgid "Rating"
+msgstr ""
+
+#: templates/settings_savedforms.php:1460
+msgid "Cumulated"
+msgstr ""
+
+#: templates/settings_savedforms.php:1461
+msgid "Individual"
+msgstr ""
+
+#: templates/settings_savedforms.php:1465
+msgid "Advanced Chart"
+msgstr ""
+
+#: templates/settings_savedforms.php:1469
+msgid "Participants Form"
+msgstr ""
+
+#: templates/settings_savedforms.php:1469
+msgid "Display Form at the Completion of Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1472
+msgid "Enable Form at the end of the Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:1472
+msgid "Enable Form"
+msgstr ""
+
+#: templates/settings_savedforms.php:1475
+msgid "Enable Name Field in the Form"
+msgstr ""
+
+#: templates/settings_savedforms.php:1475
+msgid "Request Name"
+msgstr ""
+
+#: templates/settings_savedforms.php:1476
+msgid "Enable Email Field in the Form"
+msgstr ""
+
+#: templates/settings_savedforms.php:1476
+msgid "Request Email Address"
+msgstr ""
+
+#: templates/settings_savedforms.php:1477
+msgid "Validate Email Address"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add Text Field"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add Textarea"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add Radio Buttons field"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add Checkbox"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add Select Box"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add Hidden Field"
+msgstr ""
+
+#: templates/settings_savedforms.php:1482
+msgid "Add HTML Block"
+msgstr ""
+
+#: templates/settings_savedforms.php:1501
+msgid "Remove Custom Textarea Field"
+msgstr ""
+
+#: templates/settings_savedforms.php:1544
+msgid "Auto Response"
+msgstr ""
+
+#: templates/settings_savedforms.php:1545
+msgid "Sender Name"
+msgstr ""
+
+#: templates/settings_savedforms.php:1545
+msgid "Sender Email Address"
+msgstr ""
+
+#: templates/settings_savedforms.php:1545
+msgid "Subject"
+msgstr ""
+
+#: templates/settings_savedforms.php:1551
+msgid "Campaigns"
+msgstr ""
+
+#: templates/settings_savedforms.php:1551
+msgid "Save the survey's form datas automatically to Newsletter Campaigns"
+msgstr ""
+
+#: templates/settings_savedforms.php:1555
+msgid "Display confirmation checkbox to subscribe the user to the mail list"
+msgstr ""
+
+#: templates/settings_savedforms.php:1555
+msgid "Enable Subscription Confirmation"
+msgstr ""
+
+#: templates/settings_savedforms.php:1558
+msgid ""
+"Allows sending the form without signing up (works with the Subscription "
+"Confirmation only)"
+msgstr ""
+
+#: templates/settings_savedforms.php:1558
+msgid "Submit Form without Confirm Signup"
+msgstr ""
+
+#: templates/settings_savedforms.php:1563
+msgid "Enable Active Campaign"
+msgstr ""
+
+#: templates/settings_savedforms.php:1566
+msgid ""
+"Find your Active Campaign API URL in your Active Campaign Account->My "
+"Settings->API menu after you logged in"
+msgstr ""
+
+#: templates/settings_savedforms.php:1566
+msgid "Active Campaign API URL"
+msgstr ""
+
+#: templates/settings_savedforms.php:1567
+msgid ""
+"Find your Active Campaign API Key in your Active Campaign Account->My "
+"Settings->API menu after you logged in"
+msgstr ""
+
+#: templates/settings_savedforms.php:1567
+msgid "Active Campaign API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1568
+msgid ""
+"Select your list in your Active Campaign account, then see the List ID in "
+"the URL. Eg.: List ID=1 from username.activehosted.com/contact/?"
+"listid=1&status=1"
+msgstr ""
+
+#: templates/settings_savedforms.php:1568
+msgid "Active Campaign List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1573
+msgid "Enable AWeber"
+msgstr ""
+
+#: templates/settings_savedforms.php:1578
+msgid "Successfully Connected to AWeber"
+msgstr ""
+
+#: templates/settings_savedforms.php:1578
+msgid "If you would like to reconnect, please click here."
+msgstr ""
+
+#: templates/settings_savedforms.php:1581
+msgid "Enter your AWeber Authorization Code"
+msgstr ""
+
+#: templates/settings_savedforms.php:1581
+msgid "Authorization Code"
+msgstr ""
+
+#: templates/settings_savedforms.php:1583
+msgid "Get Authorization Code"
+msgstr ""
+
+#: templates/settings_savedforms.php:1584
+msgid "Connect to AWeber"
+msgstr ""
+
+#: templates/settings_savedforms.php:1586
+msgid "Enter your AWeber List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1586
+msgid "Click here to get your AWeber Lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1586
+msgid ""
+"Authorization Code and Connected state are required for getting the lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1586
+msgid "List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1587
+msgid ""
+"AWeber Consumer Key will be filled out automatically once you enter the "
+"Authorization Code and click on the Connect button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1587
+msgid "Consumer Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1588
+msgid ""
+"AWeber Consumer Secret will be filled out automatically once you enter the "
+"Authorization Code and click on the Connect button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1588
+msgid "Consumer Secret"
+msgstr ""
+
+#: templates/settings_savedforms.php:1589
+msgid ""
+"AWeber Access Key will be filled out automatically once you enter the "
+"Authorization Code and click on the Connect button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1589
+msgid "Access Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1590
+msgid ""
+"AWeber Access Secret will be filled out automatically once you enter the "
+"Authorization Code and click on the Connect button"
+msgstr ""
+
+#: templates/settings_savedforms.php:1590
+msgid "Access Secret"
+msgstr ""
+
+#: templates/settings_savedforms.php:1596
+msgid "Enable Benchmark"
+msgstr ""
+
+#: templates/settings_savedforms.php:1599
+msgid "Click here to get your API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1599
+msgid "Registration required"
+msgstr ""
+
+#: templates/settings_savedforms.php:1599
+msgid "Benchmark API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1599
+msgid "Enter your Benchmark API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1600
+msgid "Enter your Benchmark List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1600
+msgid "Click here to get your Benchmark Lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1600
+#: templates/settings_savedforms.php:1653
+msgid "Valid API Key is required for getting the lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1600
+msgid "Benchmark List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1601
+#: templates/settings_savedforms.php:1723
+msgid "Enable Double-Optin"
+msgstr ""
+
+#: templates/settings_savedforms.php:1601
+msgid "Enable Double Optin"
+msgstr ""
+
+#: templates/settings_savedforms.php:1607
+msgid "Enable Campaign Monitor"
+msgstr ""
+
+#: templates/settings_savedforms.php:1610
+msgid "Campaign Monitor API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1610
+msgid "Log in to your Campaign Monitor account and find the API Key in "
+msgstr ""
+
+#: templates/settings_savedforms.php:1610
+msgid "Account Settings"
+msgstr ""
+
+#: templates/settings_savedforms.php:1611
+msgid "Campaign Monitor List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1611
+msgid ""
+"Find your Campaign Monitor List ID in the bottom of the Edit screen of your "
+"chosen List"
+msgstr ""
+
+#: templates/settings_savedforms.php:1616
+msgid "Enable Campayn"
+msgstr ""
+
+#: templates/settings_savedforms.php:1619
+msgid "You can see in the URL after you logged in to Campayn"
+msgstr ""
+
+#: templates/settings_savedforms.php:1619
+msgid "Campayn Domain"
+msgstr ""
+
+#: templates/settings_savedforms.php:1620
+msgid "Find it here"
+msgstr ""
+
+#: templates/settings_savedforms.php:1620
+msgid "replace xxx to your Campayn Domain"
+msgstr ""
+
+#: templates/settings_savedforms.php:1620
+msgid "Campayn API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1621
+msgid "Enter your Campayn List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1621
+msgid "Click here to get your Campayn Lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1621
+msgid "Valid API Key and Domain are required for getting the lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1621
+msgid "Campayn List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1627
+msgid "Enable Constant Contact"
+msgstr ""
+
+#: templates/settings_savedforms.php:1630
+msgid "Enter your Constant Contact API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1630
+msgid "Constant Contact API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1631
+msgid "Enter your Constant Contact Access Token"
+msgstr ""
+
+#: templates/settings_savedforms.php:1631
+msgid "Constant Contact Access Token"
+msgstr ""
+
+#: templates/settings_savedforms.php:1632
+msgid "Enter your Constant Contact List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1632
+msgid "Click here to get your Constant Contact Lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1632
+msgid "Valid API Key and Access Token are required for getting the lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1632
+msgid "Constant Contact List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1635
+msgid "To get API Key,"
+msgstr ""
+
+#: templates/settings_savedforms.php:1635
+msgid "register here"
+msgstr ""
+
+#: templates/settings_savedforms.php:1635
+msgid "and"
+msgstr ""
+
+#: templates/settings_savedforms.php:1635
+msgid "create you APP here"
+msgstr ""
+
+#: templates/settings_savedforms.php:1635
+msgid "Select your app and get the Access Token here."
+msgstr ""
+
+#: templates/settings_savedforms.php:1639
+msgid "Enable Freshmail"
+msgstr ""
+
+#: templates/settings_savedforms.php:1642
+msgid "Click here to get your Freshmail API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1642
+msgid "Freshmail API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1643
+msgid "Click here to get your Freshmail API Secret"
+msgstr ""
+
+#: templates/settings_savedforms.php:1643
+msgid "Freshmail API Secret"
+msgstr ""
+
+#: templates/settings_savedforms.php:1644
+msgid ""
+"Click here to get your Lists, then select one and see the Freshmail List "
+"Hash in the URL. Eg.:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1644
+msgid "from"
+msgstr ""
+
+#: templates/settings_savedforms.php:1644
+msgid "Freshmail List Hash"
+msgstr ""
+
+#: templates/settings_savedforms.php:1649
+msgid "Enable GetResponse"
+msgstr ""
+
+#: templates/settings_savedforms.php:1652
+msgid "Click here to get your GetResponse API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1652
+msgid "GetResponse API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1653
+msgid "Enter your GetResponse Campaign ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1653
+msgid "Click here to get your GetResponse Campaigns."
+msgstr ""
+
+#: templates/settings_savedforms.php:1653
+msgid "GetResponse Campaign ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1659
+msgid "Enable iContact"
+msgstr ""
+
+#: templates/settings_savedforms.php:1662
+msgid "Enter your iContact appId"
+msgstr ""
+
+#: templates/settings_savedforms.php:1662
+msgid "iContact appId"
+msgstr ""
+
+#: templates/settings_savedforms.php:1663
+msgid "Enter your iContact API Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1663
+msgid "iContact API Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1664
+msgid "Enter your iContact API Password"
+msgstr ""
+
+#: templates/settings_savedforms.php:1664
+msgid "iContact API Password"
+msgstr ""
+
+#: templates/settings_savedforms.php:1665
+msgid "Enter your iContact List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1665
+msgid "iContact List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1670
+msgid "Enable Infusionsoft"
+msgstr ""
+
+#: templates/settings_savedforms.php:1673
+msgid "Enter your Infusionsoft API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1673
+msgid "Infusionsoft API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1674
+msgid "Enter your Infusionsoft Campaign ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1674
+msgid "Infusionsoft Campaign ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1675
+msgid "Enter your Infusionsoft Group ID (optional)"
+msgstr ""
+
+#: templates/settings_savedforms.php:1675
+msgid "Infusionsoft Group ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1680
+msgid "Enable Interspire"
+msgstr ""
+
+#: templates/settings_savedforms.php:1683
+msgid "Enter your Interspire Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1683
+msgid "Interspire Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1684
+msgid "Enter your Interspire User Token"
+msgstr ""
+
+#: templates/settings_savedforms.php:1684
+msgid "Interspire User Token"
+msgstr ""
+
+#: templates/settings_savedforms.php:1685
+msgid "Enter your Interspire List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1685
+msgid "Interspire List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1690
+msgid "Enable Mad Mimi"
+msgstr ""
+
+#: templates/settings_savedforms.php:1693
+msgid "Enter your Mad Mimi Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1693
+msgid "Mad Mimi Username(or email)"
+msgstr ""
+
+#: templates/settings_savedforms.php:1694
+msgid "Enter your Mad Mimi API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1694
+msgid "Mad Mimi API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1695
+msgid "Enter your Mad Mimi List Name"
+msgstr ""
+
+#: templates/settings_savedforms.php:1695
+msgid "Mad Mimi List Name"
+msgstr ""
+
+#: templates/settings_savedforms.php:1700
+msgid "Enable MailChimp"
+msgstr ""
+
+#: templates/settings_savedforms.php:1703
+msgid "Enter your MailChimp API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1703
+msgid "MailChimp API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1704
+msgid "Enter your MailChimp List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1704
+msgid "MailChimp List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1709
+msgid "Enable MailerLite"
+msgstr ""
+
+#: templates/settings_savedforms.php:1712
+msgid "Enter your MailerLite API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1712
+msgid "MailerLite API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1713
+msgid "Enter your MailerLite List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1713
+msgid "MailerLite List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1718
+msgid "Enable Mailigen"
+msgstr ""
+
+#: templates/settings_savedforms.php:1721
+msgid "Enter your Mailigen API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1721
+msgid "Mailigen API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1722
+msgid "Enter your Mailigen List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1722
+msgid "Mailigen List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1728
+msgid "Enable Mailjet"
+msgstr ""
+
+#: templates/settings_savedforms.php:1731
+msgid "Enter your Mailjet API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1731
+msgid "Mailjet API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1732
+msgid "Enter your Mailjet Secret Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1732
+msgid "Mailjet Secret Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1733
+msgid "Enter your Mailjet List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1733
+msgid "Mailjet List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1738
+msgid "Enable MailPoet"
+msgstr ""
+
+#: templates/settings_savedforms.php:1741
+msgid "Enter your MailPoet List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1741
+msgid "Click here to get your MailPoet Lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1741
+msgid "MailPoet List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1747
+msgid "Enable Emma"
+msgstr ""
+
+#: templates/settings_savedforms.php:1750
+msgid "Enter your Emma Account ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1750
+msgid "Emma Account ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1751
+msgid "Enter your Emma Public Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1751
+msgid "Emma Public Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1752
+msgid "Enter your Emma Private Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1752
+msgid "Emma Private Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1757
+msgid "Enable MyMail"
+msgstr ""
+
+#: templates/settings_savedforms.php:1760
+msgid "Enter your MyMail List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1760
+msgid "Click here to get your MyMail Lists."
+msgstr ""
+
+#: templates/settings_savedforms.php:1760
+msgid "MyMail List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1766
+msgid "Enable ONTRAPORT"
+msgstr ""
+
+#: templates/settings_savedforms.php:1769
+msgid "Enter your ONTRAPORT APP ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1769
+msgid "ONTRAPORT APP ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1770
+msgid "Enter your ONTRAPORT Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1770
+msgid "ONTRAPORT Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1771
+msgid "Enter your ONTRAPORT Tag ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1771
+msgid "ONTRAPORT Tag ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1772
+msgid "Enter your ONTRAPORT Sequence ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1772
+msgid "ONTRAPORT Sequence ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1777
+msgid "Enable Pinpointe"
+msgstr ""
+
+#: templates/settings_savedforms.php:1780
+msgid "Enter your Pinpointe Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1780
+msgid "Pinpointe Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1781
+msgid "Enter your Pinpointe User Token"
+msgstr ""
+
+#: templates/settings_savedforms.php:1781
+msgid "Pinpointe User Token"
+msgstr ""
+
+#: templates/settings_savedforms.php:1782
+msgid "Enter your Pinpointe List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1782
+msgid "Pinpointe List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1787
+msgid "Enable SendinBlue"
+msgstr ""
+
+#: templates/settings_savedforms.php:1790
+msgid "Enter your SendinBlue Access Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1790
+msgid "SendinBlue Access Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1791
+msgid "Enter your SendinBlue List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1791
+msgid "SendinBlue List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1796
+msgid "Enable SendReach"
+msgstr ""
+
+#: templates/settings_savedforms.php:1799
+msgid "Enter your SendReach Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1799
+msgid "SendReach Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1800
+msgid "Enter your SendReach Secret"
+msgstr ""
+
+#: templates/settings_savedforms.php:1800
+msgid "SendReach Secret"
+msgstr ""
+
+#: templates/settings_savedforms.php:1801
+msgid "Enter your SendReach User ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1801
+msgid "SendReach User ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1802
+msgid "Enter your SendReach List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1802
+msgid "SendReach List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1807
+msgid "Enable Sendy"
+msgstr ""
+
+#: templates/settings_savedforms.php:1810
+msgid "Enter your Sendy Installation URL"
+msgstr ""
+
+#: templates/settings_savedforms.php:1810
+msgid "Sendy Installation URL"
+msgstr ""
+
+#: templates/settings_savedforms.php:1811
+msgid "Enter your Sendy API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1811
+msgid "Sendy API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1812
+msgid "Enter your Sendy List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1812
+msgid "Sendy List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1817
+msgid "Enable SimplyCast"
+msgstr ""
+
+#: templates/settings_savedforms.php:1820
+msgid "Click here to get your SimplyCast Public Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1820
+msgid "SimplyCast Public Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1821
+msgid "Click here to get your SimplyCast Secret Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1821
+msgid "SimplyCast Secret Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1822
+msgid "Click here to get your SimplyCast List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1822
+msgid "SimplyCast List ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1827
+msgid "Enable YMLP"
+msgstr ""
+
+#: templates/settings_savedforms.php:1830
+msgid "Enter your YMLP Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1830
+msgid "YMLP Username"
+msgstr ""
+
+#: templates/settings_savedforms.php:1831
+msgid "Enter your YMLP API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1831
+msgid "YMLP API Key"
+msgstr ""
+
+#: templates/settings_savedforms.php:1832
+msgid "Enter your YMLP Group ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1832
+msgid "Click here to get your YMLP Groups."
+msgstr ""
+
+#: templates/settings_savedforms.php:1832
+msgid "YMLP Group ID"
+msgstr ""
+
+#: templates/settings_savedforms.php:1852
+#: templates/settings_savedforms.php:2093
+msgid "Embed Mode"
+msgstr ""
+
+#: templates/settings_savedforms.php:1852
+#: templates/settings_savedforms.php:2100
+msgid "Modal Mode"
+msgstr ""
+
+#: templates/settings_savedforms.php:1854
+#: templates/settings_savedforms.php:2014
+msgid "New Question"
+msgstr ""
+
+#: templates/settings_savedforms.php:1902
+msgid "Optional Answers:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1902
+msgid "Required Answers:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1903
+#: templates/settings_savedforms.php:1927
+msgid "Image Width:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1903
+#: templates/settings_savedforms.php:1927
+msgid "Image Height:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1907
+msgid "question"
+msgstr ""
+
+#: templates/settings_savedforms.php:1911
+msgid "Type your question here"
+msgstr ""
+
+#: templates/settings_savedforms.php:1926
+#: templates/settings_savedforms.php:1966
+msgid "Answer Score:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1966
+msgid "AutoComplete"
+msgstr ""
+
+#: templates/settings_savedforms.php:1970
+msgid "View Answers"
+msgstr ""
+
+#: templates/settings_savedforms.php:1973
+msgid "Remove Open Answer"
+msgstr ""
+
+#: templates/settings_savedforms.php:1978
+msgid "Export Answers"
+msgstr ""
+
+#: templates/settings_savedforms.php:1997
+#: templates/settings_savedforms.php:2000
+msgid "answer:"
+msgstr ""
+
+#: templates/settings_savedforms.php:1997
+#: templates/settings_savedforms.php:2000
+msgid "no"
+msgstr ""
+
+#: templates/settings_savedforms.php:2017
+msgid "Resetting the survey means all users can vote again."
+msgstr ""
+
+#: templates/settings_savedforms.php:2017
+msgid "RESET"
+msgstr ""
+
+#: templates/settings_savedforms.php:2026
+msgid "NEW QUESTION"
+msgstr ""
+
+#: templates/settings_savedforms.php:2027
+msgid "PLAY SURVEY"
+msgstr ""
+
+#: templates/settings_savedforms.php:2028
+msgid "RESET SURVEY"
+msgstr ""
+
+#: templates/settings_savedforms.php:2029
+msgid "DELETE SURVEY"
+msgstr ""
+
+#: templates/settings_savedforms.php:2040
+msgid "Owner"
+msgstr ""
+
+#: templates/settings_savedforms.php:2042
+msgid "Updated"
+msgstr ""
+
+#: templates/settings_savedforms.php:2044
+msgid "Global"
+msgstr ""
+
+#: templates/settings_savedforms.php:2045
+msgid "Expired"
+msgstr ""
+
+#: templates/settings_savedforms.php:2046
+msgid "Actions"
+msgstr ""
+
+#: templates/settings_savedforms.php:2065
+msgid "Reset"
+msgstr ""
+
+#: templates/settings_savedforms.php:2072
+msgid ""
+"These items will be permanently deleted and cannot be recovered. Are you "
+"sure?"
+msgstr ""
+
+#: templates/settings_savedforms.php:2074
+msgid "Reset Survey Answers"
+msgstr ""
+
+#: templates/settings_savedforms.php:2075
+msgid ""
+"The answer counts will be permanently deleted and cannot be recovered. Are "
+"you sure to reset?"
+msgstr ""
+
+#: templates/settings_savedforms.php:2081
+msgid "Duplicate Survey"
+msgstr ""
+
+#: templates/settings_savedforms.php:2082
+msgid "Enter the name of the new survey."
+msgstr ""
+
+#: templates/settings_savedforms.php:2086
+msgid "Copy Votes"
+msgstr ""
+
+#: templates/settings_savedforms.php:2091
+msgid "This survey name is already exist!"
+msgstr ""
+
+#: templates/settings_savedforms.php:2094
+msgid ""
+"If you would like to Embed the Survey on any page / post, please use the "
+"following shortcode: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2096
+#: templates/settings_savedforms.php:2103
+msgid "Initialize the Survey in Safe Mode in case it does not displayed: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2098
+#: templates/settings_savedforms.php:2105
+msgid ""
+"Please do not forget to disable the Global Survey checkbox in the General "
+"Behavior to avoid duplicated display. "
+msgstr ""
+
+#: templates/settings_savedforms.php:2101
+msgid ""
+"If you would like to display the Survey on a specific page / post, please "
+"include the following shortcode: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2107
+msgid "Display the Results"
+msgstr ""
+
+#: templates/settings_savedforms.php:2108
+msgid ""
+"Please add the following shortcode to display the results with Progress Bar "
+"on a specified page or post: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2110
+msgid "Display the results with Bar Chart in safe mode: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2112
+msgid "Display the results with Bar Chart based on the scores: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2114
+msgid "For the full list of available chart and bars, please click here: "
+msgstr ""
+
+#: templates/settings_savedforms.php:2117
+msgid "Select the type of the answer below: "
+msgstr ""
+
+#: templates/settings_update.php:11
+msgid "Database updated successfully"
+msgstr ""
+
+#: templates/settings_update.php:14
+msgid "Database already updated"
+msgstr ""

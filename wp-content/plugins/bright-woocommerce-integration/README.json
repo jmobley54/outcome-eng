@@ -1,0 +1,170 @@
+0. JSON schema:
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "bright-courses": {
+      "id": "http://jsonschema.net/bright-courses",
+      "type": "array",
+      "items": [
+        {
+          "id": "http://jsonschema.net/bright-courses/0",
+          "type": "object",
+          "properties": {
+            "course-id": {
+              "id": "http://jsonschema.net/bright-courses/0/course-id",
+              "type": "string"
+            },
+            "quantity-multiplier": {
+              "id": "http://jsonschema.net/bright-courses/0/quantity-multiplier",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "course-id",
+            "quantity-multiplier"
+          ]
+        },
+        {
+          "id": "http://jsonschema.net/bright-courses/1",
+          "type": "object",
+          "properties": {
+            "course-id": {
+              "id": "http://jsonschema.net/bright-courses/1/course-id",
+              "type": "string"
+            },
+            "quantity-multiplier": {
+              "id": "http://jsonschema.net/bright-courses/1/quantity-multiplier",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/bright-courses/2",
+          "type": "object",
+          "properties": {
+            "course-id": {
+              "id": "http://jsonschema.net/bright-courses/2/course-id",
+              "type": "string"
+            },
+            "quantity-multiplier": {
+              "id": "http://jsonschema.net/bright-courses/2/quantity-multiplier",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "id": "http://jsonschema.net/bright-courses/3",
+          "type": "object",
+          "properties": {
+            "course-id": {
+              "id": "http://jsonschema.net/bright-courses/3/course-id",
+              "type": "string"
+            },
+            "quantity-multiplier": {
+              "id": "http://jsonschema.net/bright-courses/3/quantity-multiplier",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "required": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "required": [
+    "bright-courses"
+  ]
+}
+
+1. From JSON Schema generator:
+
+http://jsonschema.net/#/
+
+{
+  "bright-courses": [
+    {
+      "course-id": "SQF-L2-PKG-Gap55e88f15-58ba-49a4-94a8-4368e3226b5a",
+      "quantity-multiplier": 4
+    },
+    {
+      "course-id": "SQF-L2-PKG-Documenta2b7b5de-64cc-4ef1-aade-c3c44e352c13",
+      "quantity-multiplier": 5
+    },
+    {
+      "course-id": "SQF-L2-PKG-Auditora795c188-4350-42f2-ac62-c1621eebb5fa",
+      "quantity-multiplier": 4
+    },
+    {
+      "course-id": "SQF-L2-PKG-Auditor129807ae-82f5-4d1a-8e65-42c51819508f",
+      "quantity-multiplier": 2
+    }
+  ]
+}
+
+2. Generated Schema [from above]:
+
+{"$schema":"http://json-schema.org/draft-04/schema#","id":"http://jsonschema.net","type":"object","properties":{"bright-courses":{"id":"http://jsonschema.net/bright-courses","type":"array","items":[{"id":"http://jsonschema.net/bright-courses/0","type":"object","properties":{"course-id":{"id":"http://jsonschema.net/bright-courses/0/course-id","type":"string"},"quantity-multiplier":{"id":"http://jsonschema.net/bright-courses/0/quantity-multiplier","type":"integer"}},"required":["course-id","quantity-multiplier"]},{"id":"http://jsonschema.net/bright-courses/1","type":"object","properties":{"course-id":{"id":"http://jsonschema.net/bright-courses/1/course-id","type":"string"},"quantity-multiplier":{"id":"http://jsonschema.net/bright-courses/1/quantity-multiplier","type":"integer"}}},{"id":"http://jsonschema.net/bright-courses/2","type":"object","properties":{"course-id":{"id":"http://jsonschema.net/bright-courses/2/course-id","type":"string"},"quantity-multiplier":{"id":"http://jsonschema.net/bright-courses/2/quantity-multiplier","type":"integer"}}},{"id":"http://jsonschema.net/bright-courses/3","type":"object","properties":{"course-id":{"id":"http://jsonschema.net/bright-courses/3/course-id","type":"string"},"quantity-multiplier":{"id":"http://jsonschema.net/bright-courses/3/quantity-multiplier","type":"integer"}}}],"required":["0","1","2","3"]}},"required":["bright-courses"]}
+
+3.  JSON Editor For Document:
+
+http://jeremydorn.com/json-editor/?schema=N4IgJAzgxgFgpgWwIYgFwhgF0wB1QenwCsIB7AOwFpp5kA6UgJwHN8ATRpAM00oAYALPhqIkAYhAAaEAEs2aDNjyESFEfXJxMUkJgCeOOAtIAjInCjbpORqUONMMuBDSgTjGcyyUopAK6MEM6usvLoWLgExGTk6kh0mpj47p7evgFBLtL6hgpIjJx6OjKYiC6oANqgcgoRytFqsKIJWskeXrzpgc74fDo5Ruim5pY6NnZwDk7loF1BlDWo1WGKkSoxcS1JKR0+/t0QvfhzcAvy2QaDIBCYHuTMIAC+0gCOfkjkjvoA+gh+ADaOHD/JyMEKLVb1VSxJoaVo7NL7TJHN4fL56X4AoEgyb9S4KGSfODMXGPZ4gRhwN4ySlhCogE5nHSoz4lDF/QEyYGgkAAXWey1qSii0M2iTaqU6SJ6AEY8bkhmYLFYQON7I5gksGdKmVqIXURRtYfFxQipRlZccdTULgrrrdCQ9ySz0ZjOdzcXqVgb1o1aCb4e1ERbDjL8C62W7sTzbVdCaUSWCyQLQkK1g0Yf6thLdidDgAmeVXYbKsa2dXTEKMxaC8LC32Z5qmoPmg74fNWi1M2MKG53J2vd6sn4c6Oe2uQw1+puByV7EPt8ND12jrk4sE99Dx4mksmSCc+jNi2e56WHADMReMStG1nLkw1M21XZrqbr6dFxuzZvnbfPne6btdHxdA+0dJ5BzRSNVw9MEvTTKEjSzZs5zzfB/wjEcsTXGNgLtbdEyeMleWkSlqVpNB6T6aQ5WkQtpEvflyTIvwaTgOkQB/PM+UeIAAA&value=N4IgRgTglg5gFgFwLQGMD2BXCBnAptkALgG1R0s8koATIkEAGhAEcMBDAOwSgQE8B9ALYYANtwAOIqLghEADAF8AugqAAA==&theme=bootstrap2&iconlib=fontawesome4&object_layout=normal&show_errors=interaction&no_additional_properties&disable_edit_json&disable_properties
+
+
+
+old:
+
+{
+  "bright-courses": [
+    {
+      "course-id": "SQF-L2-PKG-Gap55e88f15-58ba-49a4-94a8-4368e3226b5a",
+      "quantity-multiplier": 4
+    },
+    {
+      "course-id": "SQF-L2-PKG-Documenta2b7b5de-64cc-4ef1-aade-c3c44e352c13",
+      "quantity-multiplier": 5
+    }
+  ]
+}
+
+
+
+4.  Next schema
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "bright-courses": {
+      "title": "Bright Courses",
+      "type": "array",
+	  "uniqueItems": "true",
+      "items": {
+        "title": "Bright Course",
+        "type": "object",
+		"uniqueItems": true,
+        "properties": {
+          "course-id": {
+            "type": "string"
+          },
+          "quantity-multiplier": {
+            "type": "integer",
+            "minimum": 1
+          }
+		},
+		"required": ["course-id"]
+	  }
+	}
+  }
+}
+
+New Link:
+	  
+http://jeremydorn.com/json-editor/?schema=N4IgJAzgxgFgpgWwIYgFwhgF0wB1QenwCsIB7AOwFpp5kA6UgJwHN8ATRpAM00oAYALPhqIkAYhAAaEAEs2aDNjyESFEfXJxMUkJgCeOOAtIAjInCjbpORqUONMMuBDSgTjGcyyUopAK6MEM6usvLoWLgExGTk6kh0mpj47p7evgFBLtL6hgpIjJx6OjKYiC6oANqgcgoRytFqsKIJWskeXrzpgc74fDo5Ruim5pY6NnZwDk7loF1BlDWo1WGKkSoxcS1JKR0+/t0QvfhzcAvy2QaDIBCYHuTMIAC+0gCOfkjkjvoA+gh+ADaOHD/JyMEKLVb1VSxJoaVo7NL7TJHN4fL56X4AoEgyb9S4KGSfODMXGPZ4gRhwN4ySlhCogE5nHSoz4lDF/QEyYGgkAAXWey1qSii0M2iTaqU6SJ6AEY8bkhmYLFYQON7I5gksGdKmVqIXURRtYfFxQipRlZccdTULgrrrdCQ9ySz0ZjOdzcXqVgb1o1aCb4e1ERbDjL8C62W7sTzbVdCaUSWCyQLQkK1g0Yf6thLdidDgAmeVXYbKsa2dXTEKMxaC8LC32Z5qmoPmg74fNWi1M2MKG53J2vd6sn4c6Oe2uQw1+puByV7EPt8ND12jrk4sE99Dx4mksmSCc+jNi2e56WHADMReMStG1nLkw1M21XZrqbr6dFxuzZvnbfPne6btdHxdA+0dJ5BzRSNVw9MEvTTKEjSzZs5zzfB/wjEcsTXGNgLtbdEyeMleWkSlqVpNB6T6aQ5WkQtpEvflyTIvwaTgOkQB/PM+UeIAAA&value=N4IgRgTglg5gFgFwLQGMD2BXCBnAptkALgG0BdAXyAA=&theme=bootstrap2&iconlib=fontawesome4&object_layout=normal&show_errors=interaction&no_additional_properties&disable_edit_json&disable_properties
+

@@ -1,0 +1,66 @@
+.export-list
+{
+	width: 100%;
+	display: table;
+	table-layout: fixed; 
+	border-spacing: 0 10px;
+	position: relative;
+	
+	.heading { 
+		display:table-row;
+		span {
+			display: table-cell;
+			background-color: #ccc;
+			font-weight: 700;
+			padding: 5px;
+			text-align: left;
+			margin-left: 5px;
+		}
+		
+	}
+
+	label.export-button {
+		display: table-row;
+		margin: 15px 0;
+		
+		div {
+			background-color: #fff;
+			padding: 20px;
+			display: table-cell;
+			text-align: left;
+			position: relative;
+		}
+		span.selected {
+			position: absolute; 
+			right: 0;
+			top: 0;
+			width: 40px; 
+			height: 40px;
+			line-height: 40px;
+			color: white; 
+			background: #0073aa; 
+			font-size: 35px; display: none;
+		}
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+	}
+
+	input[type="checkbox"] + label div {
+		border-top: 2px solid transparent;
+		
+		&:first-child {
+			border-left: 2px solid transparent;
+		}
+	}
+	
+	input[type="checkbox"]:checked + label div {
+		border-top: 2px solid #0073aa;
+		&:first-child {
+			border-left: 2px solid #0073aa;
+		}
+		span.selected { display: block; } 
+	}
+}

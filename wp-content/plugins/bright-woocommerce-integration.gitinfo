@@ -1,0 +1,9 @@
+git@bitbucket.org:aura_software/wp-bright-woocommerce-integration.git 9d2ca84
+----
+commit 9d2ca84b444916f46ac8fa66301e8e528a861bd5
+Author: Bret Weinraub <bret@aura-software.com>
+Date:   Tue Jun 23 11:42:24 2015 -0600
+
+    3.4 - much better error logging, plus adding of order notes.
+(installable): bright-woocommerce-integration
+(repo): git@bitbucket.org:aura_software/wp-bright-woocommerce-integration.git

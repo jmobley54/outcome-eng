@@ -1,0 +1,22 @@
+{"vendor":{"plugins/maxbuttons-pro":"7.2 "},
+"admin-config": {
+"maxbuttonspro-admin": {
+	"pages": {
+			"admin.php" : "action=button|action=edit"
+			    },
+	"forms":{
+		"main":{
+			"fields":{
+				"url":{"jquery":"input[id^='url']"},
+				"text":{
+						"jquery":"input[id='text'], input[id='text2'], input[id='link_title'], input[id='shortcode_text']"}
+			}
+		}
+	},
+	"js-exec": {
+		"mbproqtranslate" : { "src": "plugins/maxbuttons-pro/assets/integrations/qtranslate/qtranslate.js" }
+
+	}
+}
+}
+}

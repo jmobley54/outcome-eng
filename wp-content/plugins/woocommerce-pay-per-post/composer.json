@@ -1,0 +1,11 @@
+{
+    "require": {
+        "Freemius/wordpress-sdk": "dev-master",
+        "nesbot/carbon": "^1.22"
+    },
+    "config": {
+        "platform": {
+            "php": "5.6"
+        }
+    }
+}

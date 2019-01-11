@@ -1,0 +1,91 @@
+    #
+#  function test_determineQuantityWithMetadata() {
+#    $product = WC_Helper_Product::create_simple_product();
+#    $guid = BrightTestFactory::aValidCourseGuid();
+#
+#    $bm = '{
+#  "bright-courses": [
+#    {
+#      "course-id": "'.$guid.'",
+#      "quantity-multiplier": 6
+#    }
+#  ]
+#}';
+#
+#    update_post_meta($product->id, BrightWoocommerceConstants::BRIGHT_METADATA, $bm);
+#    $bright_metadata = BrightWoocommerceIntegration::getBrightProductMetadata($product);
+#
+#    $this->assertEquals($bright_metadata->{'bright-courses'}[0]->{'course-id'},$guid);
+#    $this->assertEquals($bright_metadata->{'bright-courses'}[0]->{'quantity-multiplier'},6);
+#
+#    $quantity = BrightWoocommerceIntegration::determineQuantity(2,
+#                                                                 $guid,
+#                                                                 $bright_metadata);
+#
+#    $this->assertEquals($quantity,12);
+#  }
+# TODO Fix
+# TODO Fix  function test_determineQuantitySimple() {
+# TODO Fix    $guid = BrightTestFactory::aValidCourseGuid();
+# TODO Fix    $product = WC_Helper_Product::create_simple_product();
+# TODO Fix    update_post_meta( $product->id, BrightWoocommerceConstants::BRIGHT_METADATA, '{}' );
+# TODO Fix
+# TODO Fix    $bright_metadata = BrightWoocommerceIntegration::getBrightProductMetadata($product);
+# TODO Fix
+# TODO Fix    $quantity = BrightWoocommerceIntegration::determineQuantity(2,
+# TODO Fix                                                                 $guid,
+# TODO Fix                                                                 $bright_metadata);
+# TODO Fix
+# TODO Fix    $this->assertEquals($quantity,2);
+# TODO Fix  }
+# TODO Fix
+# TODO Fix  function test_addLicenseForUser() {
+# TODO Fix    $user = $this->bright->getCurrentUser();
+# TODO Fix    $this->assertNotEmpty($user);
+# TODO Fix
+# TODO Fix    $guid = BrightTestFactory::aValidCourseGuid();
+# TODO Fix
+# TODO Fix    $bright_license = BrightV1Api::create_invitation(array(
+# TODO Fix                                                           'license' => true,
+# TODO Fix                                                           'course_guids' => [$guid],
+# TODO Fix                                                           'license_data' => $license_data,
+# TODO Fix                                                           'custom' =>  json_encode($custom) // "{\"license\": 1, \"order_id\": {$order_id}}",
+# TODO Fix                                                           ));
+# TODO Fix    $this->assertNotEmpty($bright_license);
+# TODO Fix    $this->assertGreaterThan(0,$bright_license->id);
+# TODO Fix    $this->assertTrue($bright_license->license);
+# TODO Fix    $this->assertEquals($bright_license->course_guids[0],$guid);
+# TODO Fix
+# TODO Fix    $ret_data = BrightWoocommerceIntegration::addLicenseForUser($user->ID,$bright_license->name);
+# TODO Fix
+# TODO Fix    $i = $ret_data[0];
+# TODO Fix
+# TODO Fix    $this->assertNotEmpty($i);
+# TODO Fix    $this->assertEquals($i->learners[0],$user->user_email);
+# TODO Fix  }
+# TODO Fix
+# TODO Fix  function test_doProfileChange() {
+# TODO Fix    $user = $this->bright->getCurrentUser();
+# TODO Fix    $this->assertNotEmpty($user);
+# TODO Fix
+# TODO Fix    $guid = BrightTestFactory::aValidCourseGuid();
+# TODO Fix
+# TODO Fix    $bright_license = BrightV1Api::create_invitation(array(
+# TODO Fix                                                           'license' => true,
+# TODO Fix                                                           'course_guids' => [$guid],
+# TODO Fix                                                           'license_data' => $license_data,
+# TODO Fix                                                           'custom' =>  json_encode($custom) // "{\"license\": 1, \"order_id\": {$order_id}}",
+# TODO Fix                                                           ));
+# TODO Fix
+# TODO Fix
+# TODO Fix    update_user_meta($user->ID,
+# TODO Fix                     BrightWoocommerceConstants::LICENSE_META,
+# TODO Fix                     $bright_license->name);
+# TODO Fix
+# TODO Fix    $is = $this->bright->callApi('invitation', array('params' => array('name' => $bright_license->name)));
+# TODO Fix    $i = $is[0];
+# TODO Fix
+# TODO Fix    $this->assertNotEmpty($i);
+# TODO Fix    $this->assertEquals($i->learners[0],$user->user_email);
+# TODO Fix
+# TODO Fix  }

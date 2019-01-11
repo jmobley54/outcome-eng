@@ -1,0 +1,633 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: fsf\n"
+"POT-Creation-Date: 2018-03-22 19:55-0500\n"
+"PO-Revision-Date: 2018-03-23 10:54-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: inc\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: inc/Categories.php:31 inc/Tags.php:31
+msgid "Term ID"
+msgstr "ID de término"
+
+#: inc/Categories.php:37
+msgid "Category Name"
+msgstr "Nombre de la categoría"
+
+#: inc/Categories.php:44
+msgid "Category Description"
+msgstr "Descripción de la categoría"
+
+#: inc/Categories.php:50
+msgid "Category Slug"
+msgstr "Slug de categoría"
+
+#: inc/Categories.php:56 inc/Product.php:43
+msgid "Parent ID"
+msgstr "ID principal"
+
+#: inc/Categories.php:62
+msgid "Display Type"
+msgstr "Tipo de pantalla"
+
+#: inc/Categories.php:68
+msgid "Thumbnail Image"
+msgstr "Imagen en miniatura"
+
+#: inc/Categories.php:105 inc/Coupon.php:169 inc/Customer.php:216
+#: inc/Shipping.php:93 inc/Tags.php:90
+msgid "No Filters"
+msgstr "Sin filtros"
+
+#: inc/Categories.php:106
+msgid "There are no filters for Categories."
+msgstr "No hay filtros para las categorías."
+
+#: inc/Coupon.php:31 inc/Order.php:167
+msgid "Coupon Code"
+msgstr "Código del cupón"
+
+#: inc/Coupon.php:37
+msgid "Coupon Description"
+msgstr "Descripción del cupón"
+
+#: inc/Coupon.php:44
+msgid "Discount Type"
+msgstr "Tipo de descuento"
+
+#: inc/Coupon.php:50
+msgid "Coupon Amount"
+msgstr "Importe del cupón"
+
+#: inc/Coupon.php:56
+msgid "Allow Free Shipping"
+msgstr "Permitir envío gratis"
+
+#: inc/Coupon.php:62
+msgid "Coupon Expiry Date"
+msgstr "Fecha de caducidad del cupón"
+
+#: inc/Coupon.php:68
+msgid "Minimum Spend"
+msgstr "Gasto mínimo"
+
+#: inc/Coupon.php:74
+msgid "Maximum Spend"
+msgstr "Gasto máximo"
+
+#: inc/Coupon.php:80
+msgid "Individual Use Only"
+msgstr "Solo para uso individual"
+
+#: inc/Coupon.php:86
+msgid "Exclude Sale Items"
+msgstr "Excluir artículos en oferta"
+
+#: inc/Coupon.php:92
+msgid "Products"
+msgstr "Productos"
+
+#: inc/Coupon.php:98
+msgid "Exclude Products"
+msgstr "Excluir productos"
+
+#: inc/Coupon.php:105
+msgid "Product categories"
+msgstr "Categorías de producto"
+
+#: inc/Coupon.php:111
+msgid "Exclude Product categories"
+msgstr "Excluir categorías de producto"
+
+#: inc/Coupon.php:117
+msgid "Email Restrictions"
+msgstr "Restricciones de email"
+
+#: inc/Coupon.php:123
+msgid "Usage Limit per Coupon"
+msgstr "Límite de uso por cupón"
+
+#: inc/Coupon.php:129
+msgid "Usage Limit per User"
+msgstr "Límite de uso por usuario"
+
+#: inc/Coupon.php:170 inc/Shipping.php:94
+msgid "There ar eno filters for Customers."
+msgstr "No hay filtros para los clientes."
+
+#: inc/Customer.php:31
+msgid "User ID"
+msgstr "ID de usuario"
+
+#: inc/Customer.php:37
+msgid "User Name"
+msgstr "Nombre de usuario"
+
+#: inc/Customer.php:43
+msgid "Billing First Name"
+msgstr "Nombre de facturación"
+
+#: inc/Customer.php:49
+msgid "Billing Last Name"
+msgstr "Apellidos de facturación"
+
+#: inc/Customer.php:55
+msgid "Billing Company"
+msgstr "Empresa de facturación"
+
+#: inc/Customer.php:63
+msgid "Billing Address 1"
+msgstr "Dirección de facturación 1"
+
+#: inc/Customer.php:69
+msgid "Billing Address 2"
+msgstr "Dirección de facturación 2"
+
+#: inc/Customer.php:75 inc/Order.php:215
+msgid "Billing City"
+msgstr "Ciudad de facturación"
+
+#: inc/Customer.php:81 inc/Order.php:222
+msgid "Billing State"
+msgstr "Estado de facturación"
+
+#: inc/Customer.php:87
+msgid "Billing Zipcode/Postcode"
+msgstr "Código zip/código postal de facturación"
+
+#: inc/Customer.php:93 inc/Order.php:236
+msgid "Billing Country"
+msgstr "País de facturación"
+
+#: inc/Customer.php:99 inc/Order.php:243
+msgid "Billing Phone Number"
+msgstr "Número de teléfono de facturación"
+
+#: inc/Customer.php:105
+msgid "Billing Email Address"
+msgstr "Dirección de email de facturación"
+
+#: inc/Customer.php:112
+msgid "Shipping First Name"
+msgstr "Nombre de envío"
+
+#: inc/Customer.php:118
+msgid "Shipping Last Name"
+msgstr "Apellidos de envío"
+
+#: inc/Customer.php:124
+msgid "Shipping Company"
+msgstr "Empresa de envío"
+
+#: inc/Customer.php:131
+msgid "Shipping Address 1"
+msgstr "Dirección de envío 1"
+
+#: inc/Customer.php:137
+msgid "Shipping Address 2"
+msgstr "Dirección de envío 2"
+
+#: inc/Customer.php:143 inc/Order.php:90
+msgid "Shipping City"
+msgstr "Ciudad de envío"
+
+#: inc/Customer.php:149 inc/Order.php:96
+msgid "Shipping State"
+msgstr "Estado de envío"
+
+#: inc/Customer.php:155
+msgid "Shipping Zipcode/Postcode"
+msgstr "Código zip/código postal de envío"
+
+#: inc/Customer.php:161 inc/Order.php:108
+msgid "Shipping Country"
+msgstr "País de envío"
+
+#: inc/Customer.php:170
+msgid "# Orders Placed"
+msgstr "N.º de pedidos realizados"
+
+#: inc/Customer.php:176
+msgid "Total Spent"
+msgstr "Gasto total"
+
+#: inc/Customer.php:217
+msgid "There are no filters for Customers."
+msgstr "No hay filtros para los clientes."
+
+#: inc/jem-exporter.php:108
+msgid "WooCommerce Order Export and More"
+msgstr "Exportación de pedidos en WooCommerce y mucho más"
+
+#: inc/jem-exporter.php:109
+msgid "Order Export +"
+msgstr "Exportación de pedidos +"
+
+#: inc/jem-exporter.php:278
+msgid "Export Data"
+msgstr "Exportar nombre de archivo"
+
+#: inc/jem-exporter.php:279
+msgid "Settings"
+msgstr "Ajustes"
+
+#: inc/jem-exporter.php:280
+msgid "Meta"
+msgstr ""
+
+#: inc/jem-exporter.php:454
+msgid "No meta data found for this item"
+msgstr "No se han encontrado metadatos para este artículo"
+
+#: inc/jem-exporter.php:565
+msgid ""
+"Select the fields you would like to export and drag rows to reorder exported "
+"fields."
+msgstr ""
+"Selecciona los campos que quieres exportar y arrastra las filas para "
+"reordenar los campos exportados."
+
+#: inc/jem-exporter.php:711 inc/Order.php:279
+msgid "From Date"
+msgstr "Desde fecha"
+
+#: inc/jem-exporter.php:798
+msgid "Select the data type you would like to export."
+msgstr "Selecciona el tipo de datos que quieres exportar."
+
+#: inc/jem-exporter.php:889
+msgid "Settings Saved."
+msgstr "Se han guardado los ajustes."
+
+#: inc/jem-exporter.php:952
+msgid "You have not selected any fields to export"
+msgstr "No has seleccionado ningún campo para exportar"
+
+#: inc/jem-exporter.php:985
+msgid "No records were found - please modify the filters and try again"
+msgstr ""
+"No se ha encontrado ningún registro. Por favor, cambia los filtros e "
+"inténtalo de nuevo"
+
+#: inc/Order.php:30
+msgid "Order ID"
+msgstr "ID del pedido"
+
+#: inc/Order.php:36
+msgid "Order Date"
+msgstr "Fecha del pedido"
+
+#: inc/Order.php:42 inc/Order.php:288
+msgid "Order Status"
+msgstr "Estado del pedido"
+
+#: inc/Order.php:48
+msgid "Customer Name"
+msgstr "Nombre del cliente"
+
+#: inc/Order.php:54
+msgid "Customer Email"
+msgstr "Dirección de email del cliente"
+
+#: inc/Order.php:60
+msgid "Order Total"
+msgstr "Total del pedido"
+
+#: inc/Order.php:66
+msgid "Order Shipping"
+msgstr "Envío del pedido"
+
+#: inc/Order.php:72
+msgid "Order Shipping Tax"
+msgstr "Impuesto de envío del pedido"
+
+#: inc/Order.php:78
+msgid "Shipping Address Line 1"
+msgstr "Línea de dirección de envío 1"
+
+#: inc/Order.php:84
+msgid "Shipping Address Line 2"
+msgstr "Línea de dirección de envío 2"
+
+#: inc/Order.php:102
+msgid "Shipping Zip/Postcode"
+msgstr "Código zip/código postal de envío"
+
+#: inc/Order.php:114 inc/Product.php:56
+msgid "Product Name"
+msgstr "Nombre del producto"
+
+#: inc/Order.php:120
+msgid "Quantity of items purchased"
+msgstr "Cantidad de artículos comprados"
+
+#: inc/Order.php:126
+msgid "Item price EXCL. tax"
+msgstr "Precio del artículo SIN impuestos"
+
+#: inc/Order.php:132
+msgid "Item tax"
+msgstr "Impuestos del artículo"
+
+#: inc/Order.php:138
+msgid "Item price INCL. tax"
+msgstr "Precio del artículo CON impuestos"
+
+#: inc/Order.php:145
+msgid "Product Variations"
+msgstr "Variaciones del producto"
+
+#: inc/Order.php:154
+msgid "Order Currency"
+msgstr "Divisa del pedido"
+
+#: inc/Order.php:161
+msgid "Order Discount"
+msgstr "Descuento del pedido"
+
+#: inc/Order.php:174
+msgid "Payment Gateway"
+msgstr "Pasarela de pago"
+
+#: inc/Order.php:181
+msgid "Shipping Method"
+msgstr "Forma de envío"
+
+#: inc/Order.php:188
+msgid "Shipping Weight"
+msgstr "Peso de envío"
+
+#: inc/Order.php:194
+msgid "Customer Message"
+msgstr "Mensaje del cliente"
+
+#: inc/Order.php:201
+msgid "Billing Address Line 1"
+msgstr "Línea de dirección de facturación 1"
+
+#: inc/Order.php:208
+msgid "Billing Address Line 2"
+msgstr "Línea de dirección de facturación 2"
+
+#: inc/Order.php:229
+msgid "Billing Zip/Postcode"
+msgstr "Código zip/código postal de facturación"
+
+#: inc/Order.php:274
+msgid "Date Filters"
+msgstr "Filtros de fecha"
+
+#: inc/Order.php:275
+msgid "Leave BLANK to export ALL orders."
+msgstr "Dejar en BLANCO para exportar TODOS los pedidos."
+
+#: inc/Order.php:283
+msgid "To Date"
+msgstr "Hasta fecha"
+
+#: inc/Order.php:289
+msgid "Select the order types you would like to export."
+msgstr "Selecciona los tipos de pedido que quieres exportar."
+
+#: inc/Order.php:643
+msgid ""
+"There are no order statuses selected. Please select at least one order status"
+msgstr ""
+"No se ha seleccionado ningún estado de pedido. Debes seleccionar un estado "
+"como mínimo"
+
+#: inc/Product.php:31
+msgid "Product ID"
+msgstr "ID del producto"
+
+#: inc/Product.php:37
+msgid "Product SKU"
+msgstr "SKU del producto"
+
+#: inc/Product.php:49
+msgid "Parent SKU"
+msgstr "SKU principal"
+
+#: inc/Product.php:62
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#: inc/Product.php:68
+msgid "Shipping Class"
+msgstr "Clase de envío"
+
+#: inc/Product.php:73
+msgid "Width"
+msgstr "Anchura"
+
+#: inc/Product.php:79
+msgid "Length"
+msgstr "Longitud"
+
+#: inc/Product.php:85
+msgid "Height"
+msgstr "Altura"
+
+#: inc/Product.php:91
+msgid "Managing Stock"
+msgstr "Administración de stock"
+
+#: inc/Product.php:97
+msgid "In Stock"
+msgstr "En stock"
+
+#: inc/Product.php:103
+msgid "Qty In Stock"
+msgstr "Cantidad en stock"
+
+#: inc/Product.php:109
+msgid "Downloadable"
+msgstr "Descargable"
+
+#: inc/Product.php:115
+msgid "Tax Status"
+msgstr "Estado del impuesto"
+
+#: inc/Product.php:121
+msgid "Tax Class"
+msgstr "Clase de impuesto"
+
+#: inc/Product.php:127
+msgid "Featured Product"
+msgstr "Producto destacado"
+
+#: inc/Product.php:133
+msgid "Price"
+msgstr "Precio"
+
+#: inc/Product.php:139
+msgid "Sale Price"
+msgstr "Precio de venta"
+
+#: inc/Product.php:145
+msgid "Sale Start Date"
+msgstr "Fecha de puesta en venta"
+
+#: inc/Product.php:151
+msgid "Sale End Date"
+msgstr "Fecha de fin de venta"
+
+#: inc/Shipping.php:31
+msgid "Shipping Class ID"
+msgstr "ID de clase de envío"
+
+#: inc/Shipping.php:37
+msgid "Shipping Class Name"
+msgstr "Nombre de clase de envío"
+
+#: inc/Shipping.php:44
+msgid "Shipping Class Description"
+msgstr "Descripción de la clase de envío"
+
+#: inc/Shipping.php:50
+msgid "Shipping Class Slug"
+msgstr "Slug de clase de envío"
+
+#: inc/Shipping.php:56
+msgid "# Times Used"
+msgstr "N.º de veces usado"
+
+#: inc/Tags.php:37
+msgid "Tag Name"
+msgstr "Nombre de la etiqueta"
+
+#: inc/Tags.php:44
+msgid "Tag Description"
+msgstr "Descripción de la etiqueta"
+
+#: inc/Tags.php:50
+msgid "Tag Slug"
+msgstr "Slug de etiqueta"
+
+#: inc/Tags.php:91
+msgid "There are no filters for Tags."
+msgstr "No hay filtros para las etiquetas."
+
+#: inc/templates/tab-settings.php:9
+msgid "General Settings"
+msgstr "Ajustes generales"
+
+#: inc/templates/tab-settings.php:10
+msgid "Manage export options across Store Exporter from this screen."
+msgstr ""
+"Puedes administrar las opciones de exportación en Store Exporter desde esta "
+"pantalla."
+
+#: inc/templates/tab-settings.php:15
+msgid "Export filename"
+msgstr "Exportar nombre de archivo"
+
+#: inc/templates/tab-settings.php:18
+msgid "The filename of the exported data. "
+msgstr "El nombre de archivo de los datos importados."
+
+#: inc/templates/tab-settings.php:23
+msgid "Character Encoding"
+msgstr "Codificación de caracteres"
+
+#: inc/templates/tab-settings.php:26
+msgid "UTF-8"
+msgstr ""
+
+#: inc/templates/tab-settings.php:27
+msgid "UTF-16"
+msgstr ""
+
+#: inc/templates/tab-settings.php:33
+msgid "Date Format"
+msgstr "Formato de fecha"
+
+#: inc/templates/tab-settings.php:41
+msgid "This will determine the format of all dates in the file."
+msgstr "Esta acción establece el formato de todas las fechas del archivo."
+
+#: inc/templates/tab-settings.php:46
+msgid "Field Delimiter"
+msgstr "Delimitador de campo"
+
+#: inc/templates/tab-settings.php:49
+msgid ""
+"The character used to seperate fields in your file. Typically this is a "
+"comma \",\""
+msgstr ""
+"El carácter usado para separar los campos de tu archivo. Normalmente, se "
+"utiliza una coma \",\""
+
+msgid "Product"
+msgstr "Producto"
+
+msgid "Order"
+msgstr "Pedido"
+
+msgid "Customer"
+msgstr "Cliente"
+
+msgid "Shipping"
+msgstr "Envío"
+
+msgid "Coupons"
+msgstr "Cupones"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "Tags"
+msgstr "Etiquetas"
+
+msgid "This data is available in the PRO version"
+msgstr "Esta información está disponible en la versión PRO"
+
+msgid "Save changes"
+msgstr "Guardar los cambios"
+
+msgid "Select all"
+msgstr "Seleccionar todos"
+
+msgid "Select none"
+msgstr "Borrar selección"
+
+msgid "Export Type"
+msgstr "Tipo de exportación"
+
+msgid "Available in the PRO version"
+msgstr "Disponible en la versión PRO"
+
+msgid "Fields"
+msgstr "Campos"
+
+msgid "Labels"
+msgstr "Etiqueta"
+
+msgid "Filters"
+msgstr "Filtros"
+
+msgid "Scheduled"
+msgstr "Programado"
+
+msgid "Coming soon"
+msgstr "Próximamente"
+
+msgid "You can view meta data that is associated with a Product or Order"
+msgstr "Puede ver metadatos asociados a un Producto u Orden"
+
+msgid "See the documentation here "
+msgstr "Vea la documentación aquí"
+
+msgid "Click here for more details"
+msgstr "Haga clic aquí para obtener más detalles"
+
+msgid "To export this data you will need the Pro version"
+msgstr "Para exportar estos datos, necesitará la versión Pro"

@@ -1,0 +1,9 @@
+.wp-admin .ui-dialog {
+  z-index: 9999;
+}
+
+#bright_license_check_field input[type="radio"] {
+  width: 50px;
+}
+
+.health-failed-button-disabled {opacity:.2;}

@@ -1,0 +1,220 @@
+// bright-course is the default class for bright launchbox elements.
+// It can be overridden by using class= in the bright embed code
+
+.bright-course {
+  -moz-box-shadow: 3px 3px 4px #444;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  -webkit-box-shadow: 3px 3px 4px #444;
+  box-shadow: 3px 3px 4px #444;
+  background-color: #f6f6f6;
+  width: 70%;	
+  padding: 20px 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// bright-courselist ....
+.bright-courselist {
+  -moz-box-shadow: 3px 3px 4px #444;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  -webkit-box-shadow: 3px 3px 4px #444;
+  box-shadow: 3px 3px 4px #444;
+  background-color: #f6f6f6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bright-courselist {
+	/* stupid WPS has to be overriden */
+  width: 100%!important;
+}
+
+.bright-courselist
+.bright-courselist tr,
+.bright-courselist td, 
+.bright-courselist th,
+.bright-courselist {
+  border-color: #000;
+  font-size: 0.95em;
+   text-align: left;
+   padding-left: 0;
+}
+
+.bright-courselist th {
+  background-color: #e6e6e6;
+}
+
+
+.bright-course .course-image {
+  border-width: 0;
+  float: left;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100px;
+}
+
+.bright-course .course-title {
+  font-size: 1.35em;
+}
+
+.bright-course .course-category {
+  color: #888;
+  font-size: 0.75em;
+}
+
+.bright-course .course-description {
+  font-size: 0.85em;
+}
+
+.bright-course .bright-launch-buttons {
+  text-align: center;
+}
+
+/* we have to define !important because of a conflict of wp-symposium ..... */
+
+.bright-course .stats,
+.bright-course .stats table {	
+	 width: 100%;
+ }
+
+.bright-course .stats tr,
+.bright-course .stats td, 
+.bright-course .stats th,
+.bright-course .stats {
+  border-color: #000;
+  font-size: 0.95em;
+  text-align: left;
+}
+
+.bright-course .stats th {
+  text-align: left;
+ }
+
+.bright-course .stats td {
+  text-align: left;
+   padding: 0;
+ }
+
+
+.bright-course .stats th {
+  background-color: #e6e6e6;
+}
+
+@media only screen and (max-width: 1260px) {
+    .stats-attempts     { display:none; visibility:hidden; }
+}
+
+@media only screen and (max-width: 800px) {
+    .stats-time     { display:none; visibility:hidden; }
+}
+
+@media only screen and (max-width: 625px) {
+    .stats-complete     { display:none; visibility:hidden; }
+}
+
+@media only screen and (max-width: 525px) {
+    .stats-score        { display:none; visibility:hidden; }
+}
+
+@media only screen and (max-width: 425px) {
+    .stats-success      { display:none; visibility:hidden; }
+}
+
+
+}
+
+// Certificate CSS
+
+div.certificate-intro {font-family:"Helvetica",serif;font-size:30px;color:rgb(0,122,193);font-weight:normal;font-style:normal;text-decoration: none;}
+span.certificate-intro  {font-family:"Helvetica",serif;font-size:30px;color:rgb(0,122,193);font-weight:normal;font-style:normal;text-decoration: none;}
+div.certificate-course-title   {font-family:"Helvetica",serif;font-size:30px;color:rgb(0,122,193);font-weight:normal;font-style:normal;text-decoration: none;}
+span.certificate-course-title  {font-family:"Helvetica",serif;font-size:30px;color:rgb(0,122,193);font-weight:normal;font-style:normal;text-decoration: none;}
+
+span.certificate-forcourse {font-family:"Helvetica",serif;font-size:22.4px;color:rgb(126,126,125);font-weight:normal;font-style:normal;text-decoration: none}
+div.certificate-forcourse {font-family:"Helvetica",serif;font-size:22.4px;color:rgb(126,126,125);font-weight:normal;font-style:normal;text-decoration: none}
+span.certificate-nameblock {font-family:Helvetica,serif;font-size:28.4px;color:rgb(130,187,52);font-weight:normal;font-style:normal;text-decoration: none}
+div.certificate-nameblock {font-family:Helvetica,serif;font-size:28.4px;color:rgb(130,187,52);font-weight:normal;font-style:normal;text-decoration: none}
+
+
+.content-over-cert-image {
+	z-index: 4;
+	position: relative;
+}
+
+.printer-cert-image {
+   z-index: 2;
+   position: absolute;
+}
+   
+#course-complete-img {
+  width: 55px;
+}
+
+.cert-intro {
+	text-align:center;
+	line-height: 1.5;
+}
+
+
+.wrapping-cert-line {
+	max-width: 500px;
+	margin: 0 auto 0 auto;
+}
+
+/* Print Styles */
+@media print {
+body { background:white; color:black; margin:0 }
+}
+
+@media print{@page {
+				 size: landscape
+			 }}
+
+@media screen {
+  div.certificate {
+    position:absolute;
+    left:50%;
+    margin-left:-396px;
+    top:210px;
+    width:792px;
+    height:612px;
+    line-height: 1.6;
+    border-style:outset;
+    overflow:hidden
+      }
+}
+
+@media print {
+	a.post-edit-link,
+	.site-title,
+    .entry-title,
+	footer.site-footer,
+	.widget-area,
+	header.site-header,
+	div.site-tagline,
+	div.print-me
+    {
+		display: none;
+	}
+
+
+	div.certificate {
+		position:absolute;
+		/* right:30px; */
+		width:792px;
+		height:612px; 
+		top:0px;
+		border-style:outset;
+		overflow:hidden;
+    }
+
+	div.clear {
+		clear:both;
+<	}
+	div.print-me {
+		overflow: auto;
+	}
+
+}
+

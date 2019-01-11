@@ -1,0 +1,393 @@
+<?php
+// ### Overview
+//
+// * This plugins serves an excellent example on how to produce bright customizations via an independent
+// WordPress plugin.
+//
+// * If you follow along with this as an example, you should be able to deliver fully customized Bright
+// templates.
+//
+
+// ### Line by line description
+
+// Wordpress requires this documentation header for your plugin script, otherwise you won't find your plugin in the wordpress console.
+    /*
+    Plugin Name: Bright Template Pack
+    Plugin URI: http://aurabright.aura-software.com/
+    Description: Collection of standard templates for Bright.
+    Author: Aura Software
+	Version: 4.0.3
+    Author URI: http://www.aura-software.com/
+    */
+
+$plugin_root = dirname (__FILE__);
+
+if (! class_exists('\Bright\Wordpress')) {
+  $brightfile = WP_PLUGIN_DIR . '/bright/bright.php';
+  if (file_exists($brightfile))
+    require_once($brightfile);  
+}
+
+require_once($plugin_root.'/reports.php');
+require_once($plugin_root.'/certificate.php');
+
+// Enqueue the custom javascript functions for this plugin.
+// Remember to add "array('bright')" as argument 3 to this call, this insures your template JS
+// loads in the correct order.
+function bright_template_pack_load_bright_customization_scripts() {
+  wp_enqueue_script('jquery-ui-datepicker');
+  wp_enqueue_style('jquery-style', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
+
+  wp_enqueue_script('jquery-data-tables',
+					/* plugins_url('jquery.dataTables.min.js', __FILE__), */
+					'//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js',
+					array('jquery'));
+
+  wp_enqueue_script('jquery-data-tables-column-filter',
+    plugins_url('jquery.dataTables.columnFilter-1.5.6.js', __FILE__),
+    array('jquery-data-tables'));
+
+  wp_enqueue_script('dataTables-tableTools',
+					'//cdn.datatables.net/tabletools/2.2.4/js/dataTables.tableTools.min.js',
+					array('jquery-data-tables'));
+
+  wp_enqueue_script('d3',
+					'//d3js.org/d3.v3.min.js');
+
+  wp_enqueue_script('bright_template_pack_custom',
+    plugins_url('bright-template-pack.js', __FILE__),
+    array('bright'));
+  wp_enqueue_script('bright_template_pack_reports',
+    plugins_url('bright-reporter.js', __FILE__),
+    array('bright'));
+
+  wp_enqueue_script('moment',
+    plugins_url('moment.min.js', __FILE__),
+    array('bright'));
+}
+// you must add your javascript enqueue statement to the wordpress wp_enqueue_script hook.
+add_action('wp_enqueue_scripts', 'bright_template_pack_load_bright_customization_scripts');
+
+add_action('admin_notices','BrightTemplatePack::noBrightPlugin');
+
+// add a function to register as hook to make wordpress load your styles (.css).
+//
+function bright_template_pack_load_bright_customization_styles() {
+  wp_register_style('bright_template_pack_custom',
+  plugins_url('bright-template-pack/bright-template-pack.css'));
+  wp_enqueue_style('bright_template_pack_custom');
+
+  wp_register_style('jquery.dataTables.css',
+					'//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css');
+    /* plugins_url('bright-template-pack/jquery.dataTables.css')); */
+    // you would add another line as above if you had multiple styles here.
+  wp_enqueue_style('jquery.dataTables.css');
+
+  wp_register_style('dataTables.tableTools.css',
+					'//cdn.datatables.net/tabletools/2.2.4/css/dataTables.tableTools.min.css');
+    // you would add another line as above if you had multiple styles here.
+  wp_enqueue_style('dataTables.tableTools.css');
+}
+add_action('wp_enqueue_scripts', 'bright_template_pack_load_bright_customization_styles');
+
+// You *MUST* have this global call for proper functioning.
+global $bright_embedder_templates;
+
+// Because of the way WordPress loads plugins, there is no guarantee the bright has already been loaded.
+// Thus you must initialize the global here.
+if (empty($bright_embedder_templates))
+  $bright_embedder_templates = array();
+
+$certificate_logic = BrightTemplatePackCertificate::getCertificateCriteriaLogic();
+$certificateMessageLogic = BrightTemplatePackCertificate::getCertificateDeniedMessageLogic();
+
+
+class BrightTemplatePack {
+
+  static function noBrightPlugin() {
+    if (!class_exists('\Bright\Wordpress')) {
+      $class = 'error';
+      $message = __( '<strong>Bright Template Pack</strong> will not function correctly unless your <strong>Bright</strong> plugin is installed and active.' );
+      printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
+    }
+  }
+
+  static function extractFromArray (array $args,$field,$default=null) {return isset($args[$field]) ? $args[$field] : $default; }
+
+
+  public static function getLaunchButtonLogic(array $args = array()) {
+    $launchButtonText = Bright\extractFromArray($args,'launchButtonText','<div class="bright-launch-buttons">{{{launchbutton}}}</div>');
+    
+    $launchButtonLogic="
+{{#bOkToLaunch}}
+${launchButtonText}
+{{/bOkToLaunch}}
+";
+
+    
+    return $launchButtonLogic;
+  }
+}
+
+$bright_embedder_templates['bright_template_debugger'] = <<<EOF
+<h1>Welcome to the bright template debugger.</h1>
+<h2>{<span/>{attributes}}</h2>
+
+<pre>
+As passed to the templates the {<span/>{attributes}} variable are:
+
+{{#dump attributes}}{{/dump}}
+
+So some examples you can use in your template:
+
+{<span/>{attributes.template}} will be transformed to "{{attributes.template}}"
+</pre>
+
+<h2>{<span/>{containerId}}</h2>
+
+<pre>
+
+So some examples you can use in your template:
+
+{<span/>{containerId}} : {{containerId}}
+
+</pre>
+
+{{#if courses}}
+<h2>{<span/>{courses}}</h2>
+
+<pre>
+As passed to the templates the {<span/>{courses}} variable are:
+
+{{#dump2 'courses' courses}}{{/dump2}}
+
+TODO:
+{<span/>{#dump2 'courses.0' courses[0]}}{<span/>{/dump2}}
+
+doesn't render.  how do I get the first course?
+
+So some examples you can use in your template:
+
+
+</pre>
+
+{{/if}}
+
+<h2>{<span/>{custom}}</h2>
+
+<pre>
+As passed to the templates the {<span/>{custom}} variable are:
+
+{{#dump custom}}{{/dump}}
+
+So some examples you can use in your template:
+
+
+</pre>
+
+
+<h2>{<span/>{page}}</h2>
+
+<pre>
+As passed to the templates the {<span/>{page}} variable are:
+
+{{#dump2 'page' page}}{{/dump2}}
+
+{{#dump2 'page.categories' page.categories}}{{/dump2}}
+
+{{#dump2 'page.categories.uncategorized' page.categories.uncategorized}}{{/dump2}}
+
+So some examples you can use in your template:
+
+
+</pre>
+
+
+<h2>{<span/>{this}}</h2>
+
+Note, the this variables contains all the other data available, but without the toplevel syntactic sugar of direct access.
+But it is useful for writting nested helped functions that requires the entire template context.
+
+<br/>
+<strong>These are always equivalent:</strong><br/>
+{<span/>{this.title}}<br/>
+{<span/>{title}}<br/>
+<strong>So generally speaking, in your template, you can ommit the 'this.' part.</strong><br/>
+
+As passed to the templates the {<span/>{this}} variable are:
+
+{{#dump2 'this' this}}{{/dump2}}
+
+{{#if metadata}}
+{{#dump2 'metadata' metadata}}{{/dump2}}
+{{/if}}
+
+So some examples you can use in your template:<br/>
+
+{{#if title}}
+{<span/>{title}} : {{title}}
+{{/if}}
+
+</pre>
+
+<h2>{<span/>{user}}</h2>
+
+<pre>
+As passed to the templates the {<span/>{user}} variable are:
+
+{{#dump2 'user' user}}{{/dump2}}
+{{#dump2 'user.meta' user.meta}}{{/dump2}}
+{{#dump2 'user.site_roles' user.site_roles}}{{/dump2}}
+
+So some examples you can use in your template:
+
+{<span/>{user.email}} : {{user.email}}
+{<span/>{user.avatar}} : {{user.avatar}}
+{<span/>{user.meta.first_name}} : {{user.meta.first_name}}
+{<span/>{user.meta.last_name}} : {{user.meta.last_name}}
+{<span/>{user.site_roles.administrator}} : {{user.site_roles.administrator}}
+
+
+</pre>
+EOF;
+
+
+// From here on in, we are just injecting strings (templates) into the $bright_embedder_templates array.
+// Anything you can do in PHP, you can do here to generate these strings.
+$bright_embedder_templates['bright-course-table'] = <<<EOF
+{{#bStore 'launch_button_text' attributes.launch_button_text}}{{/bStore}}
+<table class="bright-courselist{{#unless attributes.no_datatables}} do-datatables{{/unless}}" {{#unless attributes.no_datatables}} style="display: none;"{{/unless}}>
+  <thead>
+  <tr>
+    <th>Course</th>
+    <th>Status</th>
+    <th>Score</th>
+{{#unless attributes.no_certificate}}
+    <th>Certificate</th>
+{{/unless}}
+	<th>Take Course</th>
+  </tr>
+  </thead>
+  <tbody>
+    <!-- { { #dump2 'this.courses.0' this.courses.[0] } }{ { /dump2 } } -->
+	{{#bSortCourses this courses reverse=attributes.reverse sort_field=attributes.sort_field sort_function=attributes.sort_function sort_namespace=attributes.sort_namespace filter_field=attributes.filter_field filter_function=attributes.filter_function filter_namespace=attributes.filter_namespace filter_value=attributes.filter_value}}
+  <tr>
+    <td>{{title}}</td>
+  <td>
+{{#if registration}}
+{{registration.complete}}, {{registration.success}}
+{{else}}
+{{#bGetDefaultValue attributes.not_started_message (bI18n 'not started')}}{{/bGetDefaultValue}}
+{{/if}}
+</td>
+    <td>{{registration.score}}</td>
+{{#unless attributes.no_certificate}}
+    <td>
+{$certificate_logic}
+<a href="{{#bGetDefaultValue attributes.certificate_link '/certificate'}}{{/bGetDefaultValue}}?bright_course_id={{registration.course_guid}}" target="certificate-{{registration.course_guid}}">Certificate</a>
+{{else}}
+<span title="{$certificateMessageLogic}" style="text-decoration: underline;">N/A</span>
+{{/bCompare}}
+</td>
+{{/unless}}
+
+<td>
+{{#if registration}}
+{{#courselist-launchbutton this (bFetch 'launch_button_text')}}{{/courselist-launchbutton}}
+{{else}}
+{{#if this.attributes.self_register}}
+{{#courselist-launchbutton this (bFetch 'launch_button_text')}}{{/courselist-launchbutton}}
+{{/if}}
+{{/if}}
+  </td>
+  </tr>
+{{/bSortCourses}}
+  <tbody>
+</table>
+EOF;
+
+
+$stats_table = <<<EOF
+<table class="stats">
+  <tr>
+    <th class="stats-score">Score</th>
+    <th class="stats-complete">Completion</th>
+    <th class="stats-success">Success</th>
+    <th class="stats-time">Total Time</th>
+{{#if registration.attempts}}
+    <th class="stats-attempts">Attempts</th>
+{{/if}}
+{{#if attributes.certificate_link}}
+    <th class="stats-certificate">Certificate</th>
+{{/if}}
+  </tr>
+  <tr>
+{{#bLog registration}}{{/bLog}}
+    <td class="stats-score">{{registration.score}}</td>
+    <td class="stats-complete">{{#bright_localize_scorm this.attributes.locale registration.complete}}{{/bright_localize_scorm}}</td>
+    <td class="stats-success">{{#bright_localize_scorm this.attributes.locale registration.success}}{{/bright_localize_scorm}}</td>
+    <td class="stats-time">{{#bright_localize_scorm this.attributes.locale registration.totaltime}}{{/bright_localize_scorm}}</td>
+{{#if registration.attempts}}
+    <td class="stats-attempts">{{#bright_localize_scorm this.attributes.locale registration.attempts}}{{/bright_localize_scorm}}</td>
+{{/if}}
+{{#if attributes.certificate_link}}
+    <td class="stats-certificate">
+{$certificate_logic}
+<a href="{{attributes.certificate_link}}?bright_course_id={{registration.course_guid}}" target="certificate-{{registration.course_guid}}">Certificate</a>
+{{else}}
+<span title="{$certificateMessageLogic}" style="text-decoration: underline;">N/A</span>
+{{/bCompare}}
+</td>
+{{/if}}
+  </tr>
+</table>
+EOF;
+
+$course_description = '<div class="course-description">{{#fetch_description this}}{{/fetch_description}}</div>';
+
+function btp_create_header_text($course_description) {
+  $ret = <<<EOF
+<div>
+  <img class="course-image" src="{{#fetch_image this}}{{/fetch_image}}" />
+  <div class="course-category">{{#fetch_category_string this}}{{/fetch_category_string}}</div>
+  <div class="course-title">{{#fetch_title this}}{{/fetch_title}}</div>
+  {$course_description}
+</div>
+EOF;
+  return $ret;
+}
+
+$launchButtonLogic = BrightTemplatePack::getLaunchButtonLogic();
+                             
+$clear = '<div class="clear"></div>';
+
+$header_text = btp_create_header_text($course_description);
+
+$bright_embedder_templates['classic'] = <<<EOF
+{$header_text}
+{$stats_table}
+{$clear}
+{$launchButtonLogic}
+EOF;
+
+$bright_embedder_templates["random_course"] = <<<EOF
+{{#random_course courses}}
+<table>
+<tr>
+<td>Title:</td>
+<td>{{title}}</td>
+</tr>
+<tr>
+<td>Description:</td>
+<td>{{metadata.description}}</td>
+</tr>
+<tr>
+<td>Launch</td>
+<td>{{#courselist-launchbutton}}{{/courselist-launchbutton}}
+</td>
+</tr>
+</table>
+{{/random_course}}
+</br>
+Last updated: {{#rightnow}}{{/rightnow}}
+EOF;

@@ -1,0 +1,15 @@
+<?php
+    /*
+    Plugin Name: Just Culture Bright Customizations
+    Plugin URI: http://www.aura-softare.com/
+    Description: justculture-bright-customizations
+    Author: Aura Software
+    Version: 1.0
+    Author URI: http://www.aura-software.com/
+
+    Source code created by Aura Software, LLC is licensed under a
+    Attribution-NoDerivs 3.0 Unported United States License
+    http://creativecommons.org/licenses/by-nd/3.0/
+    */
+
+$plugin_root = dirname (__FILE__);

@@ -1,0 +1,82 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/redirect-list\n"
+"POT-Creation-Date: 2014-11-26 03:24:48+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-11-26 10:42+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: redirectlist.php:45
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nemate dovoljno ovlašćenja da pristupite ovoj stranici"
+
+#: redirectlist.php:54
+msgid "301 Moved Permanently"
+msgstr "301  Trajno Pomeren"
+
+#: redirectlist.php:54
+msgid "302 Moved Temporarily"
+msgstr "302 Privremeno Pomeren"
+
+#: redirectlist.php:54
+msgid "307 Temporary Redirect"
+msgstr "307 Privremeno Preusmeren"
+
+#: redirectlist.php:55 redirectlist.php:58
+msgid "url-to-match"
+msgstr "url-da-odgovara"
+
+#: redirectlist.php:57
+msgid "Save Changes"
+msgstr "Sacuvaj Promene"
+
+#: redirectlist.php:58
+msgid "Redirect when there are no GET query specified"
+msgstr "Preusmeri kada nema GET naznaceno pitanje"
+
+#: redirectlist.php:58
+msgid "Ignore any GET parameters"
+msgstr "Ignorisi bilo koje GET parametre"
+
+#: redirectlist.php:58
+msgid "GET parameter should exist but value does not matter"
+msgstr "GET  parametri moraju da postoje ali vrednost nije bitna"
+
+#: redirectlist.php:58
+msgid "get-parameter"
+msgstr "get-parametri"
+
+#: redirectlist.php:58
+msgid "GET parameter should exist and value must match"
+msgstr "GET  parametri moraju da postoje i odgovaraju"
+
+#: redirectlist.php:58
+msgid "value-to-match"
+msgstr "vrednost-da-odgovara"
+
+#: redirectlist.php:58
+msgid "Empty url to delete"
+msgstr "Prazan url za brisanje"
+
+#: redirectlist.php:59
+msgid "Export CSV"
+msgstr "Izvoz CSV"
+
+#: redirectlist.php:59
+msgid "Import CSV"
+msgstr "Uvoz CSV"
+
+#: redirectlist.php:60
+msgid ""
+"Copy and paste your CSV here and click Import CSV again to populate list. "
+"Then click Save Changes"
+msgstr ""
+"Kopirajte i ovde  nalepite CSV   kliknite Uvoz CSV  da ponovo uvedemo "
+"listu . Zatim kliknite Save Changes"

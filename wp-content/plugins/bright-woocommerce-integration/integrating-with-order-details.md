@@ -1,0 +1,24 @@
+
+# Adding License Key fields 
+
+It is important to communicate with the purchasing user that they've purchased a license key, and thus, we recommending 
+adding informational message to the order details page.
+
+The easiest way is to latch onto the woocommerce_order_items_table hook:
+
+    add_action('woocommerce_order_items_table','MyBrightCustomizationClass::addOrderDetails');
+
+And thusly:
+
+    class MyBrightCustomizationClass {
+
+      static function addOrderDetails($order) {
+    	return BrightWoocommerceIntegration::generateOrderDetails($order,array('report-page' => 'invitation-report'));
+      }
+    }
+
+# The Report Page
+
+For Above, create a page called 'Invitation Report', with url '/invitation-report' with the following page/post text:
+
+    [bright class="none" type="generic" template="invitation_results_matrix"/]

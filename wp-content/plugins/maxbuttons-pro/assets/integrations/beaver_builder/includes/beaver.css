@@ -1,0 +1,68 @@
+#mb-beaver-field {
+	display: inline-block;
+
+}
+
+#mb-beaver-field button {
+	margin-top: 0; 
+
+	
+}
+
+#beaver_maxbutton_preview { 
+	width: 100%;
+	margin-left: 5px;
+ 	display: block;
+	clear: both;
+	overflow: hidden; 
+
+}
+
+
+.max-modal, .max-modal h3, .frontend-warning, .input-paging {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+}
+
+#beaver_maxbutton_preview .mb-container { margin: 0; } 
+
+.mbbeaver_button {
+	display: inline-block;
+	clear: both; 
+	margin-top: 30px; 
+	z-index: 10;
+}
+
+.mbbeaver_button .button-primary, .max-modal .controls .button-primary {
+ 	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	height: 28px;
+	line-height: 26px;
+	margin: 0;
+	padding: 0 10px 1px;
+ 
+	white-space: nowrap;
+	
+  background: #0085ba none repeat scroll 0 0;
+  border-color: #0073aa #006799 #006799;
+  box-shadow: 0 1px 0 #006799;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+.max-modal .controls .disabled {
+    background: #008ec2 none repeat scroll 0 0 !important;
+    border-color: #007cb2 !important;
+    box-shadow: none !important;
+    color: #66c6e4 !important;
+    cursor: default;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+

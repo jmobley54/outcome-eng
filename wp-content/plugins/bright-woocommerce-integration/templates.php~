@@ -1,0 +1,206 @@
+<?php
+
+class BrightWooCommerceData {
+  /**
+   * @var Singleton The reference to *Singleton* instance of this class
+   */
+  protected static $instance;
+  /**
+   * @var 
+   */
+    
+  public $addLearnerError;
+  public $addLearnerSuccess;
+  public $addLearnerMessages;
+  /**
+   * @var $addLearnerCalledInThisRequest set to true if we processed an addLearnerMessages 
+   */
+  public $addLearnerCalledInThisRequest;
+
+  /**
+   * Returns the *Singleton* instance of this class.
+   *
+   * @return Singleton The *Singleton* instance.
+   */
+  public static function getInstance()
+  {
+	if (null === static::$instance) {
+	  static::$instance = new static();
+      static::$instance->addLearnerCalledInThisRequest = false;
+	}
+	
+	return static::$instance;
+  }
+}
+
+class BrightWooCommerceTemplates {
+
+  static function addTemplates() {
+    $bright = \Bright\Wordpress::getInstance();
+    $bwct = BrightWooCommerceData::getInstance();
+
+    $msg = "";
+
+    if ($bwct->addLearnerCalledInThisRequest) {
+      $msg = "<div class='bright-add-license-widget-msg'><div style='border-style: solid; border-width: 2px; border-color: ";
+      $msg .= (!empty($bwct->addLearnerError)) ? "red" : "green";
+      $msg .= ";'>";
+
+      if (!empty($bwct->addLearnerMessages)) {
+        $dohr = true;
+        foreach ($bwct->addLearnerMessages as $_msg)
+          $msg .= $_msg . '<br/>';
+      }
+
+      if (!empty($dohr))
+        $msg .= '<hr/>';
+      if (!empty($bwct->addLearnerError))
+        $msg .= $bwct->addLearnerError;
+      else
+        $msg .= $bwct->addLearnerSuccess;
+
+      $msg .= "<br/><br/><a style='font-size: 9px;' href='#' onclick=\"jQuery('div.bright-add-license-widget-msg').remove();\">Clear Message</a></div><br/></div>";
+    }
+    
+    $bright->addTemplate('license-key-widget',"
+<div class=\"license-key-widget-wrapper\" >
+<div class=\"{{bGetDefaultValue attributes.tooltip_class 'bright-float-right-tip'}}\"><p>{{{bGetDefaultValue attributes.tooltip 'Shown here are license keys for online courses that you have <strong>redeemed</strong> for your account.<br/><br/>Also shown are the courses you have been <strong>registered</strong> to as a result of redeeming this license key.<br/><br/>You can also redeem a new license key by submitting it via the <strong>Enter a new license key</strong> form and clicking <strong>SUBMIT</strong>.'}}}</p></div>
+<h2>{{bGetDefaultValue attributes.title 'My License Keys'}}</h2>
+<table class='{{attributes.table_class}}'>
+<thead>
+<tr>
+<th>License Key</th>
+<th>Associated Course(s)</th>
+</tr>
+</thead>
+<tbody>
+{{#each this.custom}}
+<tr>
+<td>{{this.[0]}}</td>
+<td>{{this.[3]}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+<form class='bright-license-key-widget' method='POST'>
+{$msg}
+<div class='bright-license-key-widget'>
+<span class='bright-license-key-span'>Enter a new license key:</span>
+<input name='bright-license-key' class='bright-license-key-input' type='text'/>
+</div>
+<div style='clear: both;'/>
+<INPUT type='submit' value='Submit'>
+</form>
+</div>
+<div style='clear: both;'/>
+");
+  }
+  static function buildCustomForLicenseKeyWidget($coursedata,$attr) {
+    if (isset($attr['template']) && $attr['template'] === 'license-key-widget') {
+      $bright = \Bright\Wordpress::getInstance();
+      $host_url=get_site_url();
+      return $bright->callApi('stored_query/run',array('params' => array('name' => 'getLicenseKeysForUser',
+                                                                         'host_url' => $host_url,
+                                                                         'query_scope' => 'bright'),
+                                                       'raw'    => true)); /* return raw JSON to the page */
+    }
+    return $coursedata;
+  }
+  
+  public static function processNewLicenseKeys() {
+    $bwct = BrightWooCommerceData::getInstance();
+    if ((!empty($_GET) && isset($_GET["bright-license-key"])) ||
+        (!empty($_POST) && isset($_POST["bright-license-key"]))) {
+      $bwct->addLearnerCalledInThisRequest = true;
+
+      $license = (!empty($_GET) && isset($_GET["bright-license-key"])) ? $_GET["bright-license-key"] : $_POST["bright-license-key"];
+      $user = wp_get_current_user();
+      $bright = Bright\Wordpress::getInstance();
+      $ret = $bright->addLearnerToInvitation($user->user_email,
+                                             $license,
+                                             array('errorMsgs' => array(),
+                                                   'params' => array('nodelay' => true,
+                                                                     'api_template' => 'extended')));
+
+      $bwct->addLearnerMessages = $ret->messages;
+
+      if ($bright->curlHttpCode == 404)
+        $bwct->addLearnerError = "No such license key '{$license}'.   Please check your spelling and try again.";
+      else
+        $bwct->addLearnerSuccess = "<span style='font-weight: bolder;'>Added license key '{$license}' to your account.</span>";
+      return $ret;
+    }
+  }
+
+  public static function addScripts() {
+    $s = "bright-woocommerce-integration";
+    wp_register_style($s, plugins_url("{$s}.css", __FILE__));
+    wp_enqueue_style($s);
+    wp_enqueue_script('bright-woocommerce-integration',
+                      plugins_url("{$s}.js", __FILE__),
+                      array('bright'));
+    
+  }
+    
+}
+
+add_action('wp_head', 'BrightWooCommerceTemplates::addTemplates',10);
+add_action('wp_head', 'BrightWooCommerceTemplates::processNewLicenseKeys',0);
+add_action('wp_enqueue_scripts', 'BrightWooCommerceTemplates::addScripts');
+add_action('bright_extend_on_generic','BrightWooCommerceTemplates::buildCustomForLicenseKeyWidget',5,2);
+
+
+
+global $bright_embedder_templates;
+
+$bright_embedder_templates['bright-woocommerce-courselist'] = <<<EOF
+<h2>{{#if attributes.title}}
+{{attributes.title}}
+{{else}}
+My Course Registrations
+{{/if}}</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Course</th>
+    <th>Status</th>
+    <th>Score</th>
+    <th>Take Course</th>
+{{#if attributes.certificate}}
+    <th>Certificate</th>
+{{/if}}
+  </tr>
+  </thead>
+  <tbody>
+    {{#sort this courses sortBy="title"}}
+{{#if registration}}
+  <tr>
+    <td>{{title}}</td>
+    <td>
+{{#if registration.complete}}
+{{registration.complete}}, {{registration.success}}
+{{/if}}
+</td>
+    <td>{{registration.score}}</td>
+    <td>{{#courselist-launchbutton this}}{{/courselist-launchbutton}}</td>
+{{#if attributes.certificate}}
+    <td>
+{{#compare attributes.certificate 'complete' operator="=="}}
+{{#compare registration.complete attributes.certificate_value operator="=="}}
+<a href="/certificate?bright_course_id={{course_guid}}">Certificate</a>
+{{/compare}}
+{{/compare}}
+{{#compare attributes.certificate 'success' operator="=="}}
+{{#compare registration.success attributes.certificate_value operator="=="}}
+<a href="/certificate?bright_course_id={{course_guid}}">Certificate</a>
+{{/compare}}
+{{/compare}}
+    </td>
+{{/if}}
+  </tr>
+{{else}}
+{{/if}}
+{{/sort}}
+  </tbody>
+</table>
+EOF;

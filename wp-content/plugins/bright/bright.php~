@@ -1,0 +1,89 @@
+<?php
+    /*
+    Plugin Name: Bright Plugin For WordPress
+    Plugin URI: http://www.aura-software.com/bright
+    Description: Bright ... a state of the art integration framework for cloud based learning services.
+    Author: Aura Software
+    Version: 9.2.6
+    Author URI: http://www.aura-software.com/
+
+    Source code created by Aura Software, LLC is licensed under a
+    Attribution-NoDerivs 3.0 Unported United States License
+    http://creativecommons.org/licenses/by-nd/3.0/
+    */
+
+$pluginRoot = dirname(__FILE__);
+
+require_once($pluginRoot.'/php-connect/base.php');
+require_once($pluginRoot.'/php-connect/wordpress.php');
+require_once($pluginRoot.'/embedder_templates.php');
+
+/**
+ * Add bright auth token to meta tag for Javascript access.
+ *
+ * Has the side-effect of setting $bright_token global.
+ */
+
+class BrightWPPlugin {
+  static public function doHeader() {
+	if (Bright\Wordpress::isUserLoggedIn())
+	  return Bright\Wordpress::getInstance()->doHeader(Bright\Wordpress::getCurrentUserFromWebstack());
+  }
+
+  static public function setupAdminPage() {
+	if (Bright\Wordpress::isUserLoggedIn())
+	  return Bright\Wordpress::getInstance()->setupAdminPage();
+  }
+
+  static public function doFooter() {
+    if (Bright\Wordpress::isUserLoggedIn())
+      return Bright\Wordpress::getInstance()->doFooter();
+  }
+
+  static public function doAdminFooter() {
+	if (Bright\Wordpress::isUserLoggedIn())
+	  return Bright\Wordpress::getInstance()->doAdminFooter();
+  }
+
+  static public function displayInitializationErrors() {
+	if (Bright\Wordpress::isUserLoggedIn()) {
+      $bright = Bright\Wordpress::getInstance();
+      if (! $bright->successfullyInitialized) {
+    ?>
+    <div class="notice notice-error is-dismissible">
+        <p><?php _e( 'The Bright Plugin For WordPress could not be initialized: ' . $bright->initializationError ); ?></p>
+    </div>
+    <?php
+      }
+    }
+  }
+}
+
+/* things are quite different when running from phpunit and from inside of WP.
+   In phpunit, we aren't ready to load bright because of how the phpunit WP scripts
+   are structured.
+
+   In WP, we HAVE to initialize the object now to generate the right script headers.   Oy vey!
+*/
+
+if (!empty($_SERVER['REQUEST_URI']))
+  Bright\Wordpress::getInstance();
+
+$headerHook = "BrightWPPlugin::doHeader";
+
+add_action('admin_head', $headerHook);
+add_action('admin_notices', 'BrightWPPlugin::displayInitializationErrors');
+add_action('admin_enqueue_scripts', 'BrightWPPlugin::setupAdminPage');
+add_action('admin_print_footer_scripts', 'BrightWPPlugin::doAdminFooter');
+add_action('wp_head', $headerHook);
+add_action('wp_footer', 'BrightWPPlugin::doFooter');
+add_action('admin_menu', 'Bright\Wordpress::setupMenus');
+add_action('profile_update', 'Bright\Wordpress::updateRealmUserMeta', PHP_INT_MAX, 2); /* run last!!!!! */
+
+add_filter('widget_text', 'do_shortcode');
+
+add_shortcode('bright', function ($attr,$content) {return Bright\Wordpress::getInstance()->expandShortcode($attr,$content);});
+
+
+
+

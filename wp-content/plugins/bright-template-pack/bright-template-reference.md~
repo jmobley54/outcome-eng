@@ -1,0 +1,55 @@
+http://replica1.www.justculture.dev/invitation-report/?invitation_name=land50234base
+
+# {{#dump}}
+
+Dump provides a mechanism to "view" the data in the template context.
+
+For example, to see the values of the attributes in the initial shortcode, use:
+
+    {{#dump attributes}}{{/dump}}
+    
+
+In your template.
+
+So for an embedder code like:
+
+    [bright type="courselist" template="results_matrix" query="all_registrations" suppress_header="true"/]
+    
+
+You will get the following output in the page:
+
+    {
+     "type": "courselist",
+     "template": "results_matrix",
+     "query": "all_registrations",
+     "suppress header": "true",
+    }
+    
+
+# {{#dump2}}
+
+The descendant of {{dump}}, gives some useful pointers on how to view nested data:
+
+{{#dump2 'user' user}}{{/dump2}}
+
+    As passed to the templates the {{user}} variable are:
+    
+    rendering {{#dump2 'user' user}}{{/dump2}}   ..... 
+    Top Level Names Are: meta, site_roles, email, avatar
+    Data Currently In Variable:
+    {
+     "meta": "nested, use {{#dump2 'user.meta' user.meta}}{{/dump2}} to view.",
+     "site_roles": "nested, use {{#dump2 'user.site_roles' user.site_roles}}{{/dump2}} to view.",
+     "email": "admin@aura-software.com",
+     "avatar": "http://0.gravatar.com/avatar/f1715eb1efc1cb4ec494c95a7b5fa584?s=96&d=mm&r=g
+    }
+
+# {{#getQueryParameter 'query parameter name'}}
+
+You extract query parameter arguments with this function:
+
+     http://[my-url]/invitation-report/?invitation_name=land50234base
+
+In the template, try
+
+    {{

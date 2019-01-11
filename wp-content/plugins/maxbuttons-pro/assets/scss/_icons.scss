@@ -1,0 +1,227 @@
+
+
+.max-modal.view-icons  .modal_content
+{
+	height: inherit;
+	.controls {
+
+		margin-bottom: 25px;
+	}
+}
+
+.icon-list
+{
+   list-style-type: none;
+   clear: both;
+   display: inline-block;
+
+   li {
+		float: left;
+		margin-right: 5px;
+		background: #fff;
+		transition: all 0.5s ease;
+		padding: 10px;
+		border: 1px solid #eeeeee;
+		cursor: pointer;
+		font-size: 25px;
+		width: 20px;
+		height: 20px;
+
+		&:hover {
+			background: #eee;
+		}
+
+
+	}
+
+
+}
+
+ .font-awesome-preview
+ {
+	.mode {
+		display: block;
+		font-size: 13px;
+		font-weight: 700;
+		text-align: center;
+	}
+	 .the-icon {
+		 border: 1px solid #ccc;
+		 background-color: #eee;
+		 padding: 8px;
+		 min-width: 50px;
+		 min-height: 50px;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+
+	 }
+
+ 	.remove_fa_icon {
+ 		display: block;
+ 		display: none;
+ 		font-size: 12px;
+ 		color: #ff0000;
+		cursor: pointer;
+		text-align: center;
+ 	}
+	&.hidden { display: none !important; } //force hidden over conditionals
+
+}
+
+.select_icon {
+		button {
+			font-size: 13px;
+		}
+}
+// switch, always on look
+.use_fa_icon
+{
+	.the_switch{
+		background: #6fbeb5;
+
+		&:after {
+			background: #179588;
+		}
+	}
+}
+// icon search
+.icon-search {
+	position: relative;
+
+	input {
+		height: 30px;
+		width: 400px;
+		font-size: 14px;
+	}
+	.spinner {
+		position: absolute;
+		right: 0;
+		top: 8px;
+	}
+	.label {
+		font-weight: 700;
+		display: inline-block;
+		margin-right: 15px;
+		vertical-align: middle;
+	}
+// filters
+	.category-filter
+	{
+			clear: both;
+			margin: 10px 0;
+			display: inline-block;
+
+			.categories, .active, .styles {
+				list-style-type: none;
+				cursor: pointer;
+
+				margin: 5px 0;
+				li {
+					float:left;
+					margin-right: 5px;
+					background: #000;
+					color: #fff;
+					padding: 5px;
+					position: relative;
+					&.selected {
+						background-color: #179588;
+					}
+					&.unselected {
+						background-color: #ccc;
+					}
+				}
+
+		}
+	}
+	/*
+	.active-filters {
+		text-align: left;
+		.label { margin: 5px 0; }
+		.active
+		{
+				display: inline-block;
+				vertical-align: middle;
+				li {
+				color: #fff;
+				background-color: #179588;
+				border: 1px solid #ccc;
+
+				&:after {
+					content: "\f158";
+					font-family: 'Dashicons';
+					//border-radius: 50%;
+					//border: 1px solid #000;
+					position: absolute;
+					top: -8px;
+					right: 5px;
+					font-size: 16px;
+					color: #000;
+
+				  }
+				}
+		}
+ } */
+
+	.styles {
+		clear: both;
+	}
+}
+
+/// enforce this over conditionals
+.icon_hover_option_preview.hidden, .icon_hover_image_button.hidden { display: none !important; }
+
+// image preview
+.the_icon_preview {
+	max-width: 350px;
+	min-width: 250px;
+	min-height: 150px;
+	max-height: 250px;
+
+	display: block;
+	float:left;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	position: relative;
+	margin-bottom: 8px;
+
+	img {
+		max-width: inherit;
+		max-height: inherit;
+
+	}
+	.remove_icon {
+		font-size: 25px;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		cursor: pointer;
+	}
+}
+
+.option .the_icon_data {
+	float: left;
+	display: inline-block;
+	margin-left: 25px;
+	height: auto;
+	label {
+		float: left;
+		width: 150px !important;
+		line-height: 18px;
+		clear: left;
+		margin: 5px 10px 5px 0 !important;
+	}
+	span {
+		float: left;
+
+	}
+	&:after { clear: both; }
+}
+
+#icon_url_button
+{
+	clear: left;
+	display: block;
+}
