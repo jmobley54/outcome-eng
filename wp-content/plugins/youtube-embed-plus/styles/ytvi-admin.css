@@ -14,7 +14,7 @@ sup.orange {text-transform: lowercase; font-weight: bold; color: #f85d00;}
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: rgba(241, 241, 241, .93);
+    background-color: rgba(241, 241, 241, .88);
     text-align: center;
 }
 
@@ -50,6 +50,7 @@ sup.orange {text-transform: lowercase; font-weight: bold; color: #f85d00;}
 .vi-cover-prompt h1 {
     text-align: center;
     margin-top: 50px;
+    text-shadow: 0px 0px 14px #ffffff;
 }
 
 .ytvi-wrap * {
@@ -136,6 +137,7 @@ sup.orange {text-transform: lowercase; font-weight: bold; color: #f85d00;}
     background-color: #d8ebf3;
     border: 1px solid #d0d0d0;
     margin: 0 26px;
+    padding: 10px;
 }
 
 .ytvi-login-success, .ytvi-login-complete {
@@ -351,15 +353,42 @@ p.submit em {display: inline-block; padding-left: 20px; vertical-align: middle; 
     color: #de1515;
 }
 
-a.button-primary.ytvi-btn-inactive, a.button-primary.ytvi-btn-inactive:hover {
-    background: #de1515;
-    border-color: #a22222;
-    box-shadow: 0 1px 0 #a22222;
-    text-shadow: 0 -1px 1px #a22222, 1px 0 1px #a22222, 0 1px 1px #a22222, -1px 0 1px #a22222;   
+button.button-primary.ytvi-btn-toggle {
+    float: right;
+    position: relative;
 }
 
-a.button-primary.ytvi-btn-inactive:hover {
-    background: #e51f1f;    
+button.button-primary.ytvi-btn-inactive, button.button-primary.ytvi-btn-inactive:hover,
+.wp-core-ui button.button-primary.ytvi-btn-inactive[disabled], .wp-core-ui button.button-primary.ytvi-btn-inactive:disabled,
+a.button-primary.ytvi-btn-inactive, a.button-primary.ytvi-btn-inactive:hover {
+    background: #e51f1f !important;
+    border-color: #a22222 !important;
+    box-shadow: 0 1px 0 #a22222 !important;
+    text-shadow: 0 -1px 1px #a22222, 1px 0 1px #a22222, 0 1px 1px #a22222, -1px 0 1px #a22222  !important;
+    color: #ffffff !important;
+}
+
+.wp-core-ui button.button-primary.ytvi-btn-inactive[disabled]:hover {
+    background: rgba(229, 31,31, .5) !important;
+}
+
+button.button-primary.ytvi-btn-toggle .ytvi-notyet {
+    display: none; position: absolute; background: white; width: 540px; height: auto; top: 25px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,.2);
+    right: 0;
+    text-align: left;
+    color: #333333 !important;
+    box-sizing: border-box;
+    text-shadow: none !important;
+    white-space: normal;
+    border-top-right-radius: 0;
+    z-index: 100;
+}
+
+button.button-primary.ytvi-btn-toggle:hover .ytvi-notyet {
+    display: block;
 }
 
 
@@ -472,13 +501,26 @@ h2 .vi-num {
 
 .vi-story-demo--screen span {
     color: #cccccc;
-    position: absolute;
     width: 100%;
     text-align: center;
     font-size: 20px;
+    position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     font-style: italic;
 }
+.vi-story-demo--screen span small {
+    background: #dddddd;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: #333333;
+    max-width: 90%;
+}
+
 
 .vi-story-demo--info {
     padding: 8px;
@@ -527,15 +569,33 @@ h2 .vi-num {
     color: #00a000;
     font-weight: bold;
 }
+
+.adstxt-help {
+    float: right;
+    background-color: rgba(0,0,0,0.07);
+    width: 390px;
+    margin: 0 0 20px 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px 35px;
+}
+
+.adstxt-help img {
+    width: 50px;
+    height: auto;
+    display: block;
+    float: left;
+}
+
 .nav-tab-valid:after {
     content: url('../images/adstxt-valid.png');
 }
 
 .nav-tab-invalid, .nav-tab-invalid:focus {
-    color: #cc0000;
+
 }
 .nav-tab-invalid:after {
-    content: url('../images/adstxt-invalid.png');
+    content: url('../images/adstxt-warning.png');
 }
 
 

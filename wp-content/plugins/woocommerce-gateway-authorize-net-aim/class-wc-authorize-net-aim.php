@@ -18,7 +18,7 @@
  *
  * @package   WC-Gateway-Authorize-Net-AIM/Plugin
  * @author    SkyVerge
- * @copyright Copyright (c) 2011-2018, SkyVerge, Inc.
+ * @copyright Copyright (c) 2011-2019, SkyVerge, Inc.
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
@@ -43,7 +43,7 @@ class WC_Authorize_Net_AIM extends Framework\SV_WC_Payment_Gateway_Plugin {
 
 
 	/** string version number */
-	const VERSION = '3.14.4';
+	const VERSION = '3.14.5';
 
 	/** string the plugin id */
 	const PLUGIN_ID = 'authorize_net_aim';
@@ -115,9 +115,12 @@ class WC_Authorize_Net_AIM extends Framework\SV_WC_Payment_Gateway_Plugin {
 		require_once( $plugin_path . '/includes/class-wc-gateway-authorize-net-aim-credit-card.php' );
 		require_once( $plugin_path . '/includes/class-wc-gateway-authorize-net-aim-echeck.php' );
 
+		// get the store's base location
+		$store_location = wc_get_base_location();
+
 		// require checkout billing fields for non-US stores, as all European card processors require the billing fields
 		// in order to successfully process transactions
-		if ( ! is_admin() && ! strncmp( get_option( 'woocommerce_default_country' ), 'US:', 3 ) ) {
+		if ( ! is_admin() && 'US' !== $store_location['country'] ) {
 
 			// remove blank arrays from the state fields, otherwise it's hidden
 			add_action( 'woocommerce_states', array( $this, 'tweak_states' ), 1 );

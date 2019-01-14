@@ -235,7 +235,7 @@ $nonce = wp_create_nonce( 'cfte_update_actions_plist' );
     
     <td>
                              <input style="margin-bottom:3px" class="button" type="button" name="calupdate_<?php echo $item->id; ?>" value="Rename" onclick="cp_updateItem(<?php echo $item->id; ?>);" /> 
-                             <input style="margin-bottom:3px" class="button-primary button" type="button" name="calmanage_<?php echo $item->id; ?>" value="Settings" onclick="cp_manageSettings(<?php echo $item->id; ?>);" /> 
+                             <input style="margin-bottom:3px" class="button-primary button" type="button" name="calmanage_<?php echo $item->id; ?>" value="Edit &amp; Settings" onclick="cp_manageSettings(<?php echo $item->id; ?>);" /> 
                              <input style="margin-bottom:3px" class="button-primary button" type="button" name="calpublish_<?php echo $item->id; ?>" value="<?php _e('Publish','cpappb'); ?>" onclick="cp_publish(<?php echo $item->id; ?>);" />                              
                              <input style="margin-bottom:3px" class="button" type="button" name="calmessages_<?php echo $item->id; ?>" value="Messages" onclick="cp_viewMessages(<?php echo $item->id; ?>);" />                              
                              <input style="margin-bottom:3px" class="button" type="button" name="calreport_<?php echo $item->id; ?>" value="Stats" onclick="cp_viewReport(<?php echo $item->id; ?>);" />                            
@@ -264,98 +264,6 @@ $nonce = wp_create_nonce( 'cfte_update_actions_plist' );
 	</div>
 </div>
 
-
- <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Automatic email reports for ALL forms: Send submissions in CSV format via email</span></h3>
-  <div class="inside">
-     <form name="updatereportsettings" action="" method="post">
-     <table class="form-table">    
-        <tr valign="top">
-        <td scope="row" colspan="2">Enable Reports?
-          <?php $option = get_option('cp_cfte_rep_enable', 'no'); ?>
-          <select name="cp_cfte_rep_enable">
-           <option value="no"<?php if ($option == 'no' || $option == '') echo ' selected'; ?>>No</option>
-           <option value="yes"<?php if ($option == 'yes') echo ' selected'; ?>>Yes</option>
-          </select>     
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-          Send report every: <input type="text" name="cp_cfte_rep_days" size="1" value="<?php echo esc_attr(get_option('cp_cfte_rep_days', '7')); ?>" /> days
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-          Send after this hour (server time):
-          <select name="cp_cfte_rep_hour">
-           <?php
-             $hour = get_option('cp_cfte_rep_hour', '0');
-             for ($k=0;$k<24;$k++)
-                 echo '<option value="'.$k.'"'.($hour==$k?' selected':'').'>'.($k<10?'0':'').$k.'</option>';
-           ?>
-          </select>
-        </td>
-        <tr valign="top">
-        <th scope="row">Send email from</th>
-        <td><input type="text" name="cp_cfte_fp_from_email" size="70" value="<?php echo esc_attr(get_option('cp_cfte_fp_from_email', get_the_author_meta('user_email', get_current_user_id()) )); ?>" /></td>
-        </tr>       
-        <tr valign="top">
-        <th scope="row">Send to email(s)</th>
-        <td><input type="text" name="cp_cfte_rep_emails" size="70" value="<?php echo esc_attr(get_option('cp_cfte_rep_emails', '')); ?>" /></td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">Email subject</th>
-        <td><input type="text" name="cp_cfte_rep_subject" size="70" value="<?php echo esc_attr(get_option('cp_cfte_rep_subject', 'Submissions report...')); ?>" /></td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">Email format?</th>
-        <td>
-          <?php $option = get_option('cp_cfte_rep_emailformat', 'text'); ?>
-          <select name="cp_cfte_rep_emailformat">
-           <option value="text"<?php if ($option != 'html') echo ' selected'; ?>>Plain Text (default)</option>
-           <option value="html"<?php if ($option == 'html') echo ' selected'; ?>>HTML (use html in the textarea below)</option>
-          </select>
-        </td>
-        </tr>  
-        <tr valign="top">
-        <th scope="row">Email Text (CSV file will be attached)</th>
-        <td><textarea type="text" name="cp_cfte_rep_message" rows="3" cols="80"><?php echo htmlspecialchars(get_option('cp_cfte_rep_message', 'Attached you will find the data from the form submissions.')); ?></textarea></td>
-        </tr>        
-        <tr valign="top">
-        <th scope="row"></th>
-        <td><input class="button-primary button" type="submit" name="cftesubbtn" value="Update Report Settings" /></td>
-        </tr>        
-     </table>       
-     <p>Note: For setting up a report only for a specific form use the setting area available for that when editing each form settings.</p>
-     </form>
-  </div>    
- </div>
-
-
- <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Troubleshoot Area</span></h3>
-  <div class="inside"> 
-    <p><strong>Important!</strong>: Use this area <strong>only</strong> if you are experiencing conflicts with third party plugins, with the theme scripts or with the character encoding.</p>
-    <form name="updatesettings">
-      Script load method:<br />
-       <select id="ccscriptload" name="ccscriptload">
-        <option value="0" <?php if (get_option('CP_CFTE_LOAD_SCRIPTS',"1") == "1") echo 'selected'; ?>>Classic (Recommended)</option>
-        <option value="1" <?php if (get_option('CP_CFTE_LOAD_SCRIPTS',"1") != "1") echo 'selected'; ?>>Direct</option>
-       </select><br />
-       <em>* Change the script load method if the form doesn't appear in the public website.</em>
-      
-      <br /><br />
-      Character encoding:<br />
-       <select id="cccharsets" name="cccharsets">
-        <option value="">Keep current charset (Recommended)</option>
-        <option value="utf8_general_ci">UTF-8 (try this first)</option>
-        <option value="latin1_swedish_ci">latin1_swedish_ci</option>
-        <option value="hebrew_general_ci">hebrew_general_ci</option>
-        <option value="gb2312_chinese_ci">gb2312_chinese_ci</option>        
-       </select><br />
-       <em>* Update the charset if you are getting problems displaying special/non-latin characters. After updated you need to edit the special characters again.</em>
-       <br />
-       <input class="button-primary button" type="button" onclick="cp_updateConfig();" name="gobtn" value="UPDATE" />
-      <br /><br />      
-    </form>
-
-  </div>    
- </div>
- 
 <div id="addonsarea" >
 <a name="addons-section"></a> 
 <div id="metabox_basic_settings" class="postbox" >
@@ -417,7 +325,102 @@ $nonce = wp_create_nonce( 'cfte_update_actions_plist' );
 	</div>
 </div>
 </div>
+
+
+ <div id="metabox_basic_settings" class="postbox" >
+  <h3 class='hndle' style="padding:5px;"><span>Troubleshoot Area</span></h3>
+  <div class="inside"> 
+    <p><strong>Important!</strong>: Use this area <strong>only</strong> if you are experiencing conflicts with third party plugins, with the theme scripts or with the character encoding.</p>
+    <form name="updatesettings">
+      Script load method:<br />
+       <select id="ccscriptload" name="ccscriptload">
+        <option value="0" <?php if (get_option('CP_CFTE_LOAD_SCRIPTS',"1") == "1") echo 'selected'; ?>>Classic (Recommended)</option>
+        <option value="1" <?php if (get_option('CP_CFTE_LOAD_SCRIPTS',"1") != "1") echo 'selected'; ?>>Direct</option>
+       </select><br />
+       <em>* Change the script load method if the form doesn't appear in the public website.</em>
+      
+      <br /><br />
+      Character encoding:<br />
+       <select id="cccharsets" name="cccharsets">
+        <option value="">Keep current charset (Recommended)</option>
+        <option value="utf8_general_ci">UTF-8 (try this first)</option>
+        <option value="latin1_swedish_ci">latin1_swedish_ci</option>
+        <option value="hebrew_general_ci">hebrew_general_ci</option>
+        <option value="gb2312_chinese_ci">gb2312_chinese_ci</option>        
+       </select><br />
+       <em>* Update the charset if you are getting problems displaying special/non-latin characters. After updated you need to edit the special characters again.</em>
+       <br />
+       <input class="button-primary button" type="button" onclick="cp_updateConfig();" name="gobtn" value="UPDATE" />
+      <br /><br />      
+    </form>
+
+  </div>    
+ </div>
  
+
+ <div id="metabox_basic_settings" class="postbox" >
+  <h3 class='hndle' style="padding:5px;"><span>Automatic email reports for ALL forms: Send submissions in CSV format via email</span></h3>
+  <div class="inside">
+     
+     <p><strong>Note: </strong> This section is for <strong>daily reports</strong> for all forms. If you are looking for the <strong>immediate email notifications</strong>
+     then check into the form <strong>Edit &amp; Settings</strong> button in the list at the at the top of this page.</p>
+     
+     <form name="updatereportsettings" action="" method="post">
+     <table class="form-table">    
+        <tr valign="top">
+        <td scope="row" colspan="2">Enable Reports?
+          <?php $option = get_option('cp_cfte_rep_enable', 'no'); ?>
+          <select name="cp_cfte_rep_enable">
+           <option value="no"<?php if ($option == 'no' || $option == '') echo ' selected'; ?>>No</option>
+           <option value="yes"<?php if ($option == 'yes') echo ' selected'; ?>>Yes</option>
+          </select>     
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          Send report every: <input type="text" name="cp_cfte_rep_days" size="1" value="<?php echo esc_attr(get_option('cp_cfte_rep_days', '7')); ?>" /> days
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          Send after this hour (server time):
+          <select name="cp_cfte_rep_hour">
+           <?php
+             $hour = get_option('cp_cfte_rep_hour', '0');
+             for ($k=0;$k<24;$k++)
+                 echo '<option value="'.$k.'"'.($hour==$k?' selected':'').'>'.($k<10?'0':'').$k.'</option>';
+           ?>
+          </select>
+        </td>
+        <tr valign="top">
+        <th scope="row">Send email from</th>
+        <td><input type="text" name="cp_cfte_fp_from_email" size="70" value="<?php echo esc_attr(get_option('cp_cfte_fp_from_email', get_the_author_meta('user_email', get_current_user_id()) )); ?>" /></td>
+        </tr>       
+        <tr valign="top">
+        <th scope="row">Send to email(s)</th>
+        <td><input type="text" name="cp_cfte_rep_emails" size="70" value="<?php echo esc_attr(get_option('cp_cfte_rep_emails', '')); ?>" /></td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">Email subject</th>
+        <td><input type="text" name="cp_cfte_rep_subject" size="70" value="<?php echo esc_attr(get_option('cp_cfte_rep_subject', 'Submissions report...')); ?>" /></td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">Email format?</th>
+        <td>
+          <?php $option = get_option('cp_cfte_rep_emailformat', 'text'); ?>
+          <select name="cp_cfte_rep_emailformat">
+           <option value="text"<?php if ($option != 'html') echo ' selected'; ?>>Plain Text (default)</option>
+           <option value="html"<?php if ($option == 'html') echo ' selected'; ?>>HTML (use html in the textarea below)</option>
+          </select>
+        </td>
+        </tr>  
+        <tr valign="top">
+        <th scope="row">Email Text (CSV file will be attached)</th>
+        <td><textarea type="text" name="cp_cfte_rep_message" rows="3" cols="80"><?php echo htmlspecialchars(get_option('cp_cfte_rep_message', 'Attached you will find the data from the form submissions.')); ?></textarea></td>
+        </tr>        
+        <tr valign="top">
+        <th scope="row"></th>
+        <td><input class="button-primary button" type="submit" name="cftesubbtn" value="Update Report Settings" /></td>
+        </tr>        
+     </table>       
+     <p>Note: For setting up a report only for a specific form use the setting area available for that when editing each form settings.</p>
+     </form>
+  </div>    
+ </div>
 
  
    <script type="text/javascript">

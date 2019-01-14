@@ -35,7 +35,7 @@
         {
             ?>
             <div class="login-expire">
-                For your security, your session expires every 30 days. Please login to vi again to view your settings.
+                For your security, your session expires every 30 days. Please login to vi again below to view your settings.
             </div>
             <?php
         }
@@ -74,7 +74,6 @@
                     </p>
                     <p>
                         <input disabled class="button-primary ytvi-step-1--submit-register ytprefs-ajax-form--submit" type="button" value="Next &raquo;"/>
-                        <a class="vi-forgot-pw" href="https://www.vi.ai/legals/?aid=WP_embedplus&utm_source=Wordpress&utm_medium=WP_embedplus" target="_blank">vi.ai Terms & Privacy &raquo;</a>
                     </p>
                 </div>
                 <div class="side-login ytprefs-ajax-form">
@@ -94,11 +93,19 @@
                 </div>
                 <div class="vi-contact-support">
                     <p class="center"><em>Need help signing up or signing in? Contact support at <strong><a href="mailto:ext@embedplus.com">ext@embedplus.com</a></strong></em></p>
+                    <p class="center"><a href="https://www.vi.ai/legals/?aid=WP_embedplus&utm_source=Wordpress&utm_medium=WP_embedplus" target="_blank">vi.ai Terms & Privacy</a></p>
                 </div>
             </div>
-            <p class="box-vi-not-interested">
-                Not interested? You can hide this by <button class="button button-small vi-cover-prompt-no" type="button">clicking here</button> or checking <a class="vi-not-interested" target="_top" href="<?php echo admin_url('admin.php?page=youtube-my-preferences#vi_hide_monetize_tab') ?>"><em>Hide "Monetize" Feature</em></a> found in the YouTube Settings "Defaults" tab.
-            </p>
+           <?php
+            if (!self::vi_script_setup_done())
+            {
+                ?>
+                <p class="box-vi-not-interested">
+                    Not interested? You can hide this by checking <a class="vi-not-interested" target="_top" href="<?php echo admin_url('admin.php?page=youtube-my-preferences#vi_hide_monetize_tab') ?>"><em>Hide "Monetize" Feature</em></a> found in the YouTube Settings "Defaults" tab.
+                </p>            
+                <?php
+            }
+            ?>
         </div>
         <div class="ytvi-step ytvi-step-2-loading">
             <p class="ytvi-loading--message">
@@ -110,13 +117,16 @@
             <div class="ytvi-registration">
                 <div class="ytvi-step-2-msg">
                     <ol>
-                        <li><strong>Fill out</strong> the below</li>
+                        <li><strong>Register</strong> below</li>
                         <li><strong>Check your email</strong> for a confirmation link</li>
-                        <li><strong>Come right back here</strong> after creating your password and
+                        <li><strong>Come right back here</strong> after creating your password
                             <?php
                             $curr_screen = get_current_screen();
-                            echo strpos($curr_screen->id, 'youtube-ep-vi') !== false || strpos($curr_screen->id, 'youtube-my-preferences') !== false ? 'refresh this page' : '<a target="_blank" href="' . admin_url('admin.php?page=youtube-ep-vi') . '">click here</a>'
-                            ?> to login below
+                            echo strpos($curr_screen->id, 'youtube-ep-vi') !== false || strpos($curr_screen->id, 'youtube-my-preferences') !== false ? 'and refresh this page' : 'and <a target="_blank" href="' . admin_url('admin.php?page=youtube-ep-vi') . '">click here</a>'
+                                    ?> (Note: <u><strong>Skip</strong> the "integration tags" step</u> that you might see after confirmation, because this plugin will automatically do that step for you.)
+                        </li>
+                        <li>
+                            <strong>Login below</strong> to complete the setup. 
                         </li>
                     </ol>
                 </div>

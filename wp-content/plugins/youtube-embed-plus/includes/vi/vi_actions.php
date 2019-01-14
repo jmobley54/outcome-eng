@@ -5,6 +5,7 @@ add_action("wp_ajax_my_embedplus_vi_toggle_ajax", array(get_class(), 'vi_toggle_
 add_action("wp_ajax_my_embedplus_vi_hide_feature_ajax", array(get_class(), 'vi_hide_feature_ajax'));
 
 add_action('admin_init', array(get_class(), 'vi_adstxt_download'));
+add_action('admin_notices', array(get_class(), 'vi_notice_login_reminder'));
 
 if (function_exists('tenup_display_ads_txt'))
 {

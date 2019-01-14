@@ -18,7 +18,7 @@
  *
  * @package   WC-Gateway-Authorize-Net-AIM/Gateway/eCheck
  * @author    SkyVerge
- * @copyright Copyright (c) 2011-2018, SkyVerge, Inc.
+ * @copyright Copyright (c) 2011-2019, SkyVerge, Inc.
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 

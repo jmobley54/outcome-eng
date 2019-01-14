@@ -1,75 +1,75 @@
-# Copyright (C) 2018 SkyVerge
+# Copyright (C) 2019 SkyVerge
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Authorize.Net AIM Gateway 3.14.4\n"
+"Project-Id-Version: WooCommerce Authorize.Net AIM Gateway 3.14.5\n"
 "Report-Msgid-Bugs-To: "
 "https://woocommerce.com/my-account/marketplace-ticket-form/\n"
-"POT-Creation-Date: 2018-10-16 20:55:04+00:00\n"
+"POT-Creation-Date: 2019-01-09 20:11:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: class-wc-authorize-net-aim.php:229
+#: class-wc-authorize-net-aim.php:232
 msgid "Province"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:234
+#: class-wc-authorize-net-aim.php:237
 msgid "Island"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:238
+#: class-wc-authorize-net-aim.php:241
 msgid "State"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:243
+#: class-wc-authorize-net-aim.php:246
 msgid "County"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:249
+#: class-wc-authorize-net-aim.php:252
 msgid "District"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:253
+#: class-wc-authorize-net-aim.php:256
 msgid "Region"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:284
+#: class-wc-authorize-net-aim.php:287
 msgid "Disable Emulation Gateway"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:285
+#: class-wc-authorize-net-aim.php:288
 msgid "Enable Emulation Gateway"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:307
+#: class-wc-authorize-net-aim.php:310
 msgid "Configure Emulator"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:311
+#: class-wc-authorize-net-aim.php:314
 msgid "Configure eChecks"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:315
+#: class-wc-authorize-net-aim.php:318
 msgid "Configure Credit Cards"
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:373
+#: class-wc-authorize-net-aim.php:376
 msgid "%s: A valid Client Key is required to use Accept.js at checkout."
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:375
+#: class-wc-authorize-net-aim.php:378
 msgid "%s: SSL is required to use Accept.js at checkout."
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:390
+#: class-wc-authorize-net-aim.php:393
 msgid "Authorize.Net AIM Emulation Gateway is now enabled."
 msgstr ""
 
-#: class-wc-authorize-net-aim.php:391
+#: class-wc-authorize-net-aim.php:394
 msgid "Authorize.Net AIM Emulation Gateway is now disabled."
 msgstr ""
 

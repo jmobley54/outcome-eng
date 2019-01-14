@@ -456,6 +456,9 @@ When you click a field already added into the contact form builder area, you can
 
 == Changelog ==
 
+= 1.2.78 =
+* Major interface update and improvements
+
 = 1.2.77 =
 * Removed use of CURL
 
@@ -991,5 +994,5 @@ When you click a field already added into the contact form builder area, you can
 
 == Upgrade Notice ==
 
-= 1.2.77 =
-* Removed use of CURL
+= 1.2.78 =
+* Major interface update and improvements

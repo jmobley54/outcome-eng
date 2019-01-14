@@ -5,11 +5,11 @@
  * Description: Accept Credit Cards and eChecks via Authorize.Net AIM in your WooCommerce store
  * Author: SkyVerge
  * Author URI: http://www.woocommerce.com
- * Version: 3.14.4
+ * Version: 3.14.5
  * Text Domain: woocommerce-gateway-authorize-net-aim
  * Domain Path: /i18n/languages/
  *
- * Copyright: (c) 2011-2018, SkyVerge, Inc. (info@skyverge.com)
+ * Copyright: (c) 2011-2019, SkyVerge, Inc. (info@skyverge.com)
  *
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -17,12 +17,12 @@
  * @package   WC-Gateway-Authorize-Net-AIM
  * @author    SkyVerge
  * @category  Gateway
- * @copyright Copyright (c) 2011-2018, SkyVerge, Inc.
+ * @copyright Copyright (c) 2011-2019, SkyVerge, Inc.
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  *
  * Woo: 18598:1a345d194a0d01e903f7a1363b6c86d2
  * WC requires at least: 2.6.14
- * WC tested up to: 3.5.0
+ * WC tested up to: 3.5.3
  */
 
 defined( 'ABSPATH' ) or exit;

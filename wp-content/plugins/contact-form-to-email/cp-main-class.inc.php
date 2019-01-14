@@ -967,6 +967,14 @@ class CP_ContactFormToEmail extends CP_CFTEMAIL_BaseClass {
                               'cv_text_enter_valid_captcha' => $_POST['cv_text_enter_valid_captcha']
     	                     )
                         , array( 'id' => $this->item ));
+                        
+        if (isset($_POST["savepublish"]))
+        {
+            echo '<script type="text/javascript">document.location="?page='.$this->menu_parameter.'&pwizard=1&cal='.$this->item.'";</script>';
+        } else if (isset($_POST["savereturn"]))
+        {
+            echo '<script type="text/javascript">document.location="?page='.$this->menu_parameter.'&confirm=1";</script>';
+        }                        
     }
 
 

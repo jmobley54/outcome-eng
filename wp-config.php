@@ -7,6 +7,19 @@
  *
  * https://pantheon.io/docs
  */
+ 
+define('OE_ADMIN_EMAILS', 'cory@crux.mn,jmobley@outcome-eng.com');
+define('OE_API_KEY', 'e6f9e92ebc078d16a9ff2f987e1728ca22ad5d8b755b3bcc888b95562ad00ae9');
+define('OE_API_SECRET', '096886b60b6bdc3ccacf08b6cb1c9f270bdcc3b1b2dd61da0afbd1ca9f309198');
+define('OE_API_URL','https://jcat.oeserver.com/');
+define('OE_API_USER', 'jmobley+api@outcome-eng.com');
+define('OE_API_PASSWORD', '$Neu8k0RtI6tR%z$');
+
+define('OE_ASSESSMENT_PRODUCT_ID', 16100);
+define('OE_FREE_ASSESSMENT_PRODUCT_ID', 17073);
+define('OE_ASSESSMENT_PRODUCT_IDS', [16100, 17280]);
+define('OE_FREE_ASSESSMENT_PRODUCT_IDS', [17073]);
+define('OE_SKILLJAR_ASSESSMENT_IDS', [17280, 17282, 17792]);
 
 /**
  * Local configuration information.

@@ -112,7 +112,7 @@ registerBlockType("epyt/vi", {
 	keywords: [__("video"), __("story"), __("ad")],
 	description: __("Video ad powered by vi intelligence."),
 	supports: {
-		multiple: false,
+		multiple: false
 	},
 	attributes: {
 		shortcode: {
@@ -140,7 +140,19 @@ registerBlockType("epyt/vi", {
 				return (
 					<div className="vi-story-demo--box">
 						<div className="vi-story-demo--screen">
-							<span>AD + CONTENT</span>
+							<span>
+								VIDEO AD + CONTENT
+								{window._EPYT_.vi_active == "1" ? null : (
+									<small>
+										Note: Ads are currently turned off. <br />
+										When you are ready to make ads appear on your website, visit the{" "}
+										<a target="_blank" href={window._EPYTA_.admin_url_vi}>
+											Monetize
+										</a>{" "}
+										page to turn ads on.
+									</small>
+								)}
+							</span>
 						</div>
 						<div
 							className="vi-story-demo--info"

@@ -238,3 +238,14 @@ iframe#gdpr_consent_message_ifr {
         text-align: center;
         margin: 0 auto;*/
 }
+
+.wiztab-screenshots {
+    float: right;
+    max-width: 50%;
+    height: auto;
+    clear: right;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    display: block;
+    border: 5px solid #dddddd;
+}

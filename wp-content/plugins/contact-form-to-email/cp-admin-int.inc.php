@@ -18,15 +18,27 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
     echo "<div id='setting-error-settings_updated' class='updated settings-error'> <p><strong>Settings saved.</strong></p></div>";
 
 ?>
+<script type="text/javascript">
+
+	jQuery(function(){
+		var $ = jQuery;
+		$(document).on('click', '.ahb-step', function(){
+			var s = $(this).data('step');
+			ahbGoToStep(s);
+		});
+
+		window['ahbGoToStep'] = function(s){
+			$('.ahb-step.ahb-step-active').removeClass('ahb-step-active');
+			$('.ahb-step[data-step="'+s+'"]').addClass('ahb-step-active');
+			$('.ahb-adintsection.ahb-adintsection-active').removeClass('ahb-adintsection-active');
+			$('.ahb-adintsection[data-step="'+s+'"]').addClass('ahb-adintsection-active');
+            $(window).scrollTop( $("#topadminsection").offset().top );
+		};
+	});
+
+</script>
 <div class="wrap">
-<h1><?php echo $this->plugin_name; ?></h1>
-
-<input type="button" name="backbtn" value="Back to items list..." onclick="document.location='admin.php?page=<?php echo $this->menu_parameter; ?>';">
-
-<div id="normal-sortables" class="meta-box-sortables">
- <hr />
- <h3>These settings are for: <?php echo strip_tags($this->get_option('form_name', "fixed")); ?></h3>
-</div>
+<h1><?php _e('Edit','cpappb'); ?> - <?php echo $this->get_option('form_name','Contact Form'); ?> - <?php echo $this->plugin_name; ?></h1>
 
 
 <form method="post" action="" name="cpformconf"> 
@@ -34,11 +46,44 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
 <input name="rsave" type="hidden" value="<?php echo $nonce; ?>" />
 <input name="<?php echo $this->prefix; ?>_id" type="hidden" value="<?php echo $this->item; ?>" />
 
-   
-<div id="normal-sortables" class="meta-box-sortables">
 
- <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Form Processing / Email Settings</span></h3>
+<div id="topadminsection"  class="ahb-buttons-container">
+	<input type="submit" class="button button-primary ahb-save-btn" name="savereturn" value="<?php _e('Save Changes and Return','cpappb'); ?>"  />
+	<a href="<?php print esc_attr(admin_url('admin.php?page='.$this->menu_parameter));?>" class="ahb-return-link">&larr;<?php _e('Return to the contact forms list','cpappb'); ?></a>
+	<div class="clear"></div>
+</div>
+
+   
+<div class="ahb-adintsection-container">
+	<div class="ahb-breadcrumb">
+		<div class="ahb-step ahb-step-active" data-step="1">
+			<i>1</i>
+			<label><?php _e('Email Settings','cpappb'); ?></label>
+		</div>
+		<div class="ahb-step" data-step="2">
+			<i>2</i>
+			<label><?php _e('Form Builder','cpappb'); ?></label>
+		</div>
+		<div class="ahb-step" data-step="3">
+			<i>3</i>
+			<label><?php _e('Autoreply to Customer','cpappb'); ?></label>
+		</div>
+        <div class="ahb-step" data-step="4">
+			<i>4</i>
+			<label><?php _e('Texts','cpappb'); ?></label>
+		</div>        
+		<div class="ahb-step" data-step="5">
+			<i>5</i>
+			<label><?php _e('Antispam','cpappb'); ?></label>
+		</div>
+		<div class="ahb-step" data-step="6">
+			<i>6</i>
+			<label><?php _e('Reports','cpappb'); ?></label>
+		</div>
+	</div>
+
+
+<div class="ahb-adintsection ahb-adintsection-active" data-step="1">
   <div class="inside">
      <table class="form-table">    
      
@@ -59,13 +104,36 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
         </td>
         </tr>       
         <tr valign="top">
-        <th scope="row">"From" email (for fixed "from" addresses)</th>
-        <td><input required type="text" name="fp_from_email" size="40" value="<?php echo esc_attr($this->get_option('fp_from_email', CP_CFEMAIL_DEFAULT_fp_from_email)); ?>" /></td>
+        <th scope="row">"From" email</th>
+        <td><input required type="email" name="fp_from_email" size="40" value="<?php echo esc_attr($this->get_option('fp_from_email', CP_CFEMAIL_DEFAULT_fp_from_email)); ?>" /><br />
+        <span style="font-size:10px;color:#666666">
+            * Email used as "from". Example: admin@<?php echo str_replace('www.','',$_SERVER["HTTP_HOST"]); ?> 
+         </span>
+        </td>
         </tr>             
         <tr valign="top">
-        <th scope="row">Destination emails (comma separated)</th>
-        <td><input required type="text" name="fp_destination_emails" size="40" value="<?php echo esc_attr($this->get_option('fp_destination_emails', CP_CFEMAIL_DEFAULT_fp_destination_emails)); ?>" /></td>
+        <th scope="row">Destination/administrator email</th>
+        <td><input required type="text" name="fp_destination_emails" size="40" value="<?php echo esc_attr($this->get_option('fp_destination_emails', CP_CFEMAIL_DEFAULT_fp_destination_emails)); ?>" /><br />
+         <span style="font-size:10px;color:#666666">
+            * Email that will receive the notification. Comma separated for multiple emails.
+         </span>
+         </td>
         </tr>
+        
+        <tr>
+         <td colspan="2">
+            <div style="border:1px dotted black;padding:5px 15px 5px 15px;font-size:75%;background-color:#ffffcc">
+               <p><strong><u>Important note:</u></strong> 
+               It is <strong>strongly recommended to use a "from" email address that belongs to the website domain name</strong>, for example if your website is
+               <em>http://<?php echo $_SERVER["HTTP_HOST"]; ?></em> then use an email address like <em>admin@<?php echo str_replace('www.','',$_SERVER["HTTP_HOST"]); ?></em>, this will help to skip a lot of anti-spam restrictions.
+               Avoid using emails like "<em>...@gmail.com</em>", "<em>...@hotmail.com</em>", "<em>...@aol.com</em>" as "from" addresses since these are identified as originated
+               at external servers and reach to the spam folder or are completely blocked. This isn't a mandatory requirement but it is strongly recommended.</p>       
+            </div>
+         </td>
+        </tr>     
+        
+        <tr><td colspan="2"><hr /></td></tr>
+        
         <tr valign="top">
         <th scope="row">On submit action</th>
         <td>
@@ -86,8 +154,11 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
         <th scope="row">Message to display after submission</th>
         <td><textarea name="fp_return_message" cols="80" rows="3"><?php echo esc_attr($this->get_option('fp_return_message', 'Thank you.')); ?></textarea></td>
         </tr> 
-         <tr valign="top">
-        <th scope="row">Enable notification email?</th>
+        
+        <tr><td colspan="2"><hr /></td></tr>
+        
+        <tr valign="top">
+        <th scope="row">Enable notification email to administrator?</th>
         <td>
           <?php $option = $this->get_option('fp_enableemail', 'true'); ?>
           <select name="fp_enableemail"  onchange="javascript:fte_enable_display();">
@@ -126,19 +197,17 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
         </tr>                                                               
      </table>  
      
-     <div style="border:1px dotted black;padding:5px 15px 5px 15px;font-size:75%;background-color:#ffffcc">
-        <p><strong><u>Important note:</u></strong> The plugin uses the settings specified into the WordPress website to deliver the emails. 
-        It is <strong>strongly recommended to use a "from" email addresses that belongs to the website domain name</strong>, for example if your website is
-        <em>http://www.sample-website.com</em> then use an email address like <em>info@sample-website.com</em>, this will help to skip a lot of anti-spam restrictions.
-        Avoid using emails like "<em>...@gmail.com</em>", "<em>...@hotmail.com</em>", "<em>...@aol.com</em>" as "from" addresses since these are identified as originated
-        at external servers and reach to the spam folder or are completely blocked. This isn't a mandaroty requirement but it is strongly recommended.</p>       
-     </div>
-  </div>    
+  </div>   
+  		<div class="ahb-buttons-container">
+			<input type="button" value="<?php _e('Next Step - Editor >','cfte'); ?>" class="button" style="float:right;margin-right:10px" onclick="ahbGoToStep(2);" />
+			<input type="submit" name="savepublish" value="<?php _e('Save and Publish','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<input type="submit" name="savereturn" value="<?php _e('Save and Return','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<div class="clear"></div>
+		</div>
  </div>   
  
 
- <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Form Builder</span></h3>
+<div class="ahb-adintsection" data-step="2">
   <div class="inside">   
 
      <input type="hidden" name="form_structure" id="form_structure" size="180" value="<?php echo str_replace('"','&quot;',str_replace("\r","",str_replace("\n","",esc_attr($this->cleanJSON($this->get_option('form_structure', CP_CFEMAIL_DEFAULT_form_structure)))))); ?>" />             
@@ -277,27 +346,32 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
          
      </div>        
    
-  <div style="border:1px dotted black;background-color:#ffffaa;padding-left:15px;padding-right:15px;padding-top:5px;width:740px;font-size:12px;color:#000000;"> 
-   <p>This version supports the most frequently used field types: "Single Line Text", "Email", "Text-area" and "Acceptance Checkbox".</p>
+  <div style="padding:10px;background-color:#ffffdd;border:1px dotted black;">
+   <p><STRONG>In this version</STRONG> the form builder supports <STRONG>"Single Line Text", "Email", "Text-area" and "Acceptance Checkbox"</STRONG>.</p>
    <p><button type="button" onclick="window.open('https://form2email.dwbooster.com/download?src=activatebtn');" style="cursor:pointer;height:35px;color:#20A020;font-weight:bold;">Activate the FULL form builder</button>
-   <p>The full set of fields also supports:
+   <p style="font-weight:bold">The full set of fields also supports:</p>
    <ul>
-    <li> - Conditional Logic: Hide/show fields based in previous selections.</li>
-    <li> - File uploads</li>
-    <li> - Multi-page forms</li>
-    <li> - Publish it as a widget in the sidebar</li>
-    <li> - Convert the form in a payment / booking form with integration with PayPal Standard, PayPal Pro, Stripe, Authorize.net, Skrill, Mollie / iDeal, TargetPay / iDeal, SagePay, RedSys TPV and Sage Payments.</li>
-    <li> - ...and more fields and validations</li>
+    <li> - <strong>Conditional Logic</strong>: Hide/show fields based in previous selections.</li>
+    <li> - File <strong>uploads</strong>, <strong>Multi-page</strong> forms, sidebar widget</li>
+    <li> - <strong>Convert the form in a payment / booking form</strong> with integration with PayPal Standard, PayPal Pro, Stripe, Authorize.net, Skrill, Mollie / iDeal, TargetPay / iDeal, SagePay, RedSys TPV and Sage Payments.</li>
+    <li> - <strong><a href="?page=cp_apphourbooking_addons">Full set of addons</a></strong> (iCal, SMS, Signature fields, Payment Calculations, reCaptcha, MailChimp, ...), <strong>fields</strong> and <strong>validations</strong></li>
    </ul>
    <p>For an appointment booking option check the <a href="https://wordpress.org/plugins/appointment-hour-booking/">Appointment/Service Booking Calendar</a>.</p>
    </p>
    
   </div>
    
-  </div>    
+  </div>  
+    	<div class="ahb-buttons-container">
+			<input type="button" value="<?php _e('Next Step - Autoreply to Customer >','cfte'); ?>" class="button" style="float:right;margin-right:10px" onclick="ahbGoToStep(3);" />
+			<input type="submit" name="savepublish" value="<?php _e('Save and Publish','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<input type="submit" name="savereturn" value="<?php _e('Save and Return','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<div class="clear"></div>
+		</div>
  </div> 
  
 
+ <div class="ahb-adintsection" data-step="4">
  <div id="metabox_basic_settings" class="postbox" >
   <h3 class='hndle' style="padding:5px;"><span>Submit Button</span></h3>
   <div class="inside">   
@@ -368,11 +442,16 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
      </table>  
   </div>    
  </div>   
+  		<div class="ahb-buttons-container">
+			<input type="button" value="<?php _e('Next Step - Antispam >','cfte'); ?>" class="button" style="float:right;margin-right:10px" onclick="ahbGoToStep(5);" />
+			<input type="submit" name="savepublish" value="<?php _e('Save and Publish','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<input type="submit" name="savereturn" value="<?php _e('Save and Return','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<div class="clear"></div>
+		</div> 
+ </div>
  
  
- 
- <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Email Copy to User</span></h3>
+ <div class="ahb-adintsection" data-step="3">
   <div class="inside">
      <table class="form-table">    
         <tr valign="top">
@@ -408,16 +487,21 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
         <td><textarea type="text" name="cu_message" rows="6" cols="80"><?php echo $this->get_option('cu_message', CP_CFEMAIL_DEFAULT_cu_message); ?></textarea></td>
         </tr>        
      </table>  
-  </div>    
+  </div> 
+  		<div class="ahb-buttons-container">
+			<input type="button" value="<?php _e('Next Step - Texts >','cfte'); ?>" class="button" style="float:right;margin-right:10px" onclick="ahbGoToStep(4);" />
+			<input type="submit" name="savepublish" value="<?php _e('Save and Publish','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<input type="submit" name="savereturn" value="<?php _e('Save and Return','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<div class="clear"></div>
+		</div>  
  </div>  
  
 
- <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Captcha Verification</span></h3>
+ <div class="ahb-adintsection" data-step="5">
   <div class="inside">
      <table class="form-table">    
         <tr valign="top">
-        <th scope="row">Use Captcha Verification?</th>
+        <th scope="row">Use Antispam Captcha Verification?</th>
         <td colspan="5">
           <?php $option = $this->get_option('cv_enable_captcha', CP_CFEMAIL_DEFAULT_cv_enable_captcha); ?>
           <select name="cv_enable_captcha">
@@ -478,12 +562,22 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
            
         
      </table>  
-  </div>    
+  </div>   
+  		<div class="ahb-buttons-container">
+			<input type="button" value="<?php _e('Next Step - Reports >','cfte'); ?>" class="button" style="float:right;margin-right:10px" onclick="ahbGoToStep(6);" />
+			<input type="submit" name="savepublish" value="<?php _e('Save and Publish','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<input type="submit" name="savereturn" value="<?php _e('Save and Return','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<div class="clear"></div>
+		</div>  
  </div>    
  
- <div id="metabox_basic_settings" class="postbox" >
+ <div class="ahb-adintsection" data-step="6">
   <h3 class='hndle' style="padding:5px;"><span>Automatic Reports: Send submissions in CSV format via email</span></h3>
   <div class="inside">
+
+     <p><strong>Note: </strong> This section is for <strong>daily reports</strong> for this form. If you are looking for the <strong>immediate email notifications</strong>
+     then go to the <a href="javascript:ahbGoToStep(1);">STEP 1</a> of the settings on this page.</p>
+     
      <table class="form-table">    
         <tr valign="top">
         <th scope="row">Enable Reports?</th>
@@ -534,26 +628,24 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
         <td><textarea type="text" name="rep_message" rows="3" cols="80"><?php echo $this->get_option('rep_message', 'Attached you will find the data from the form submissions.'); ?></textarea></td>
         </tr>        
      </table>  
-  </div>    
+  </div>   
+		<div class="ahb-buttons-container">
+			<input type="submit" name="savepublish" value="<?php _e('Save and Publish','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<input type="submit" name="savereturn" value="<?php _e('Save and Return','cfte'); ?>" class="button button-primary" style="float:right;margin-right:10px" />
+			<div class="clear"></div>
+		</div>  
  </div>   
- 
- 
-<div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Note</span></h3>
-  <div class="inside">
-   To insert this form in a post/page, use the dedicated icon <?php echo '<img hspace="5" src="'.plugins_url('/images/cp_form.gif', __FILE__).'" alt="'.__('Insert '.$this->plugin_name,'contact-form-to-email').'" /></a>';     ?>
-   which has been added to your Upload/Insert Menu, just below the title of your Post/Page edition.
-   <br /><br />
-  </div>
-</div>
-  
+
 </div> 
 
 
-<p class="submit"><input type="submit" name="submit" id="submit" class="button-primary" value="Save Changes"  /></p>
+ <div class="ahb-buttons-container">
+	<a href="<?php print esc_attr(admin_url('admin.php?page='.$this->menu_parameter));?>" class="ahb-return-link">&larr;<?php _e('Return to the contact forms list','cpappb'); ?></a>
+ </div>
 
 
-[<a href="https://wordpress.org/support/plugin/contact-form-to-email#new-post" target="_blank">Support</a>] | [<a href="<?php echo $this->plugin_URL; ?>" target="_blank">Help</a>]
 </form>
 </div>
+
+[<a href="https://wordpress.org/support/plugin/contact-form-to-email#new-post" target="_blank">Support</a>] | [<a href="<?php echo $this->plugin_URL; ?>" target="_blank">Help</a>]
 <script type="text/javascript">generateCaptcha();</script>

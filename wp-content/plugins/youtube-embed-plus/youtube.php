@@ -3,7 +3,7 @@
   Plugin Name: YouTube
   Plugin URI: https://www.embedplus.com/dashboard/pro-easy-video-analytics.aspx?ref=plugin
   Description: YouTube Embed and YouTube Gallery WordPress Plugin. Embed a responsive video, YouTube channel, playlist gallery, or live stream
-  Version: 13.0
+  Version: 13.0.1
   Author: EmbedPlus Team
   Author URI: https://www.embedplus.com
  */
@@ -34,7 +34,7 @@ class YouTubePrefs
 
     public static $folder_name = 'youtube-embed-plus';
     public static $curltimeout = 30;
-    public static $version = '13.0';
+    public static $version = '13.0.1';
     public static $opt_version = 'version';
     public static $optembedwidth = null;
     public static $optembedheight = null;
@@ -225,7 +225,7 @@ class YouTubePrefs
         self::do_ytprefs();
         add_action('admin_menu', array(get_class(), 'ytprefs_plugin_menu'));
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array(get_class(), 'my_plugin_action_links'));
-
+            
         if (!is_admin())
         {
             if (self::$alloptions[self::$opt_old_script_method] == 1)
@@ -2860,16 +2860,15 @@ class YouTubePrefs
         $new_pointer_content = '<h3>' . __('New Update') . '</h3>'; // ooopointer
 
         $new_pointer_content .= '<p>'; // ooopointer
-        if (!(self::$alloptions[self::$opt_pro] && strlen(trim(self::$alloptions[self::$opt_pro])) > 0))
+        
+        $new_pointer_content .= "This version provides clearer instructions for many options across the plugin&apos;s settings and wizard pages in both Free and <a target=_blank href=" . self::$epbase . '/dashboard/pro-easy-video-analytics.aspx?ref=frompointer' . ">Pro versions &raquo;</a>";
+        //$new_pointer_content .= "This version fixes a couple gallery bugs and improves ads.txt management for the monetization feature. <a rel=\"#jumpmonetize\" class=\"epyt-jumptab\" href=\"" . admin_url('admin.php?page=youtube-my-preferences#jumpmonetize') . "\">Login here to see &raquo;</a></li></ul>";
+        
+        if (!empty(self::$alloptions[self::$opt_pro]) && strlen(trim(self::$alloptions[self::$opt_pro])) > 0)
         {
-            $new_pointer_content .= "This update is compatible with the WordPress 5.0 Gutenberg block editor, for embedding YouTube videos, galleries, and livestreams in both Free and <a target=_blank href=" . self::$epbase . '/dashboard/pro-easy-video-analytics.aspx?ref=frompointer' . ">Pro versions &raquo;</a> This update also stays backwards-compatible with the classic editor.";
-            //$new_pointer_content .= "This version fixes a couple gallery bugs and improves ads.txt management for the monetization feature. <a rel=\"#jumpmonetize\" class=\"epyt-jumptab\" href=\"" . admin_url('admin.php?page=youtube-my-preferences#jumpmonetize') . "\">Login here to see &raquo;</a></li></ul>";
-        }
-        else
-        {
-            $new_pointer_content .= "This update is compatible with the WordPress 5.0 Gutenberg block editor, for embedding YouTube videos, galleries, and livestreams in both Free and <a target=_blank href=" . self::$epbase . '/dashboard/pro-easy-video-analytics.aspx?ref=frompointer' . ">Pro versions &raquo;</a> This update also stays backwards-compatible with the classic editor.";
             $new_pointer_content .= ' <strong>Important message to YouTube Pro users</strong>: From version 11.7 onward, you must <a href="https://www.embedplus.com/youtube-pro/download/?prokey=' . esc_attr(self::$alloptions[self::$opt_pro]) . '" target="_blank">download the separate plugin here</a> to regain your Pro features. All your settings will automatically migrate after installing the separate Pro download. Thank you for your support and patience during this transition.';
         }
+        
         $new_pointer_content .= '</p>';
 
         return array(
@@ -3378,7 +3377,9 @@ class YouTubePrefs
                 border: 5px solid #dddddd;
             }
 
-
+            .epyt-deprecated {
+                color: #aaaaaa;
+            }
         </style>
         <div class="wrap wrap-ytprefs">
             <h1><img alt="YouTube Plugin Icon" src="<?php echo plugins_url('images/youtubeicon16.png', __FILE__) ?>" /> <?php echo __('YouTube Settings') ?></h1>
@@ -3391,16 +3392,17 @@ class YouTubePrefs
                     <input type="hidden" name="<?php echo $ytprefs_submitted; ?>" value="Y">
                     <?php wp_nonce_field('_epyt_save', '_epyt_nonce', true); ?>
                     <section class="pattern" id="jumpapikey">
+                        <img class="wiztab-screenshots" src="<?php echo plugins_url('images/apikey-server.png', __FILE__) ?>">
                         <h2>
                             YouTube API Key
                         </h2>
                         <p>
-                            Some features (such as galleries, and some wizard features) now require you to create a free YouTube API key from Google. 
+                            Some features (such as galleries, and some wizard features) now require you to create a free YouTube API <strong>Server</strong> key from Google.
+                            Make sure it's a YouTube Data API v3 "Web Server" key as shown in the screenshot (i.e. not web browser or anything else). <a href="https://www.youtube.com/watch?v=6gD0X76-v_g" target="_blank">Click this link &raquo;</a> and follow the video to get your API key. Don't worry, it's an easy process.
                         </p>
                         <p>
                             <b class="chktitle">YouTube API Key:</b> 
                             <input type="text" name="<?php echo self::$opt_apikey; ?>" id="<?php echo self::$opt_apikey; ?>" value="<?php echo esc_attr(trim($all[self::$opt_apikey])); ?>" class="textinput" style="width: 250px;">
-                            <a href="https://www.youtube.com/watch?v=6gD0X76-v_g" target="_blank">Click this link &raquo;</a> and follow the video to get your API key. Don't worry, it's an easy process.
                         </p>
                     </section>
 
@@ -3468,16 +3470,16 @@ class YouTubePrefs
                                 <input name="<?php echo self::$opt_rel; ?>" id="<?php echo self::$opt_rel; ?>" <?php checked($all[self::$opt_rel], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_rel; ?>">
                                     <b class="chktitle">Related Videos:</b>
-                                    <strong>Turning off this feature is now <a target="_blank" href="https://developers.google.com/youtube/player_parameters#Revision_History">deprecated by YouTube</a>. Related videos will always appear.</strong>
-                                    Show related and recommended videos during pause and at the end of playback.
+                                    <strong>Google/YouTube no longer allows tools to control this feature. Learn more about the <a target="_blank" href="https://developers.google.com/youtube/player_parameters#Revision_History">deprecation of this feature here</a>.</strong>
+                                    <span class="epyt-deprecated">Show related and recommended videos during pause and at the end of playback.</span>
                                 </label>
                             </p>
                             <p>
                                 <input name="<?php echo self::$opt_showinfo; ?>" id="<?php echo self::$opt_showinfo; ?>" <?php checked($all[self::$opt_showinfo], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_showinfo; ?>">
                                     <b class="chktitle">Show Title:</b>
-                                    <strong>Turning off this feature is now <a target="_blank" href="https://developers.google.com/youtube/player_parameters#Revision_History">deprecated by YouTube</a>. Title and info will always appear.</strong>
-                                    Show the video title and other info.
+                                    <strong>Google/YouTube no longer allows tools to control this feature. Learn more about the <a target="_blank" href="https://developers.google.com/youtube/player_parameters#Revision_History">deprecation of this feature here</a>.</strong>
+                                    <span class="epyt-deprecated">Show the video title and other info.</span>
                                 </label>
                             </p>
                             <p>
@@ -3564,13 +3566,13 @@ class YouTubePrefs
                             <p>
                                 <input name="<?php echo self::$opt_onboarded; ?>" id="<?php echo self::$opt_onboarded; ?>" <?php checked($all[self::$opt_onboarded], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_onboarded; ?>">
-                                    <b class="chktitle">Hide Quick Setup Guide:</b> <sup class="orange">new</sup>
+                                    <b class="chktitle">Hide Quick Setup Guide:</b>
                                     Check this to hide the installation setup wizard when this page loads.
                                 </label>
                             </p>
-                            <p>
+                            <p class="<?php echo self::vi_logged_in() || !empty($all[self::$opt_vi_active]) ? 'hidden' : '' ?>">
                                 <input name="<?php echo self::$opt_vi_hide_monetize_tab; ?>" id="<?php echo self::$opt_vi_hide_monetize_tab; ?>" <?php checked($all[self::$opt_vi_hide_monetize_tab], 1); ?> type="checkbox" class="checkbox">
-                                <label for="<?php echo self::$opt_vi_hide_monetize_tab; ?>"><b class="chktitle">Hide "Monetize" Feature:</b> <sup class="orange">new</sup> Hide the tab(s) that allow you to sign up with vi.ai (after saving this option, please refresh this page again).</label>
+                                <label for="<?php echo self::$opt_vi_hide_monetize_tab; ?>"><b class="chktitle">Hide "Monetize" Feature:</b> Hide the tab(s) that allow you to sign up with vi.ai (after saving this option, please refresh this page again).</label>
                             </p>
                             <p>
                                 <label for="<?php echo self::$opt_not_live_content; ?>">
@@ -3599,7 +3601,7 @@ class YouTubePrefs
                         <p>These options may help with privacy restrictions such as GDPR and the EU Cookie Law.</p>
                         <div class="ytindent chx">
                             <p>
-                                <b class="chktitle">YouTube API Loading:</b> <sup class="orange">NEW</sup> Choose when to load the YouTube API. The "Restricted" or "Never" options will help with GDPR compliance:
+                                <b class="chktitle">YouTube API Loading:</b> Choose when to load the YouTube API. The "Restricted" or "Never" options will help with GDPR compliance:
                             <ul class="indent-option">
                                 <li><label><input type="radio" name="<?php echo self::$opt_ytapi_load ?>" value="light" <?php checked($all[self::$opt_ytapi_load], 'light'); ?> /> <em>Restricted</em> - (Recommended) Only load the API on pages that have a YouTube video.</label></li>
                                 <li><label><input type="radio" name="<?php echo self::$opt_ytapi_load ?>" value="never" <?php checked($all[self::$opt_ytapi_load], 'never'); ?> /> <em>Never</em> - Do not load the YouTube API. Note: The "Never" choice may break a few features such as Volume Initialization and Gallery Continuous/Auto Play.</label></li>
@@ -3611,7 +3613,7 @@ class YouTubePrefs
                             <p>
                                 <input name="<?php echo self::$opt_gdpr_consent; ?>" id="<?php echo self::$opt_gdpr_consent; ?>" <?php checked($all[self::$opt_gdpr_consent], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_gdpr_consent; ?>">
-                                    <b class="chktitle">Privacy/GDPR - Show Consent Message:</b> <sup class="orange">NEW</sup> Ask for consent before loading YouTube content. A message will be displayed in place of the YouTube video, as shown in the screenshot below. Once the visitor approves consent, the YouTube content will load. You can customize the message text and the button text in the next 2 options.
+                                    <b class="chktitle">Privacy/GDPR - Show Consent Message:</b> Ask for consent before loading YouTube content. A message will be displayed in place of the YouTube video, as shown in the screenshot below. Once the visitor approves consent, the YouTube content will load. You can customize the message text and the button text in the next 2 options.
                                     See this feature demonstrated in <a href="https://www.youtube.com/watch?v=lm_HIic6obw" target="_blank">this video</a>.
                                 </label>
                                 <span id="box_gdpr_consent">
@@ -3621,7 +3623,7 @@ class YouTubePrefs
 
                             <p>
                                 <label for="<?php echo self::$opt_gdpr_consent_message; ?>">
-                                    <b class="chktitle">Privacy/GDPR - Consent Message Text:</b> <sup class="orange">NEW</sup>
+                                    <b class="chktitle">Privacy/GDPR - Consent Message Text:</b>
                                     Below you can customize the message that will appear to visitors before they accept YouTube content:
                                 </label>
                             <div class="clearboth"></div>
@@ -3644,7 +3646,7 @@ class YouTubePrefs
                             <div class="clearboth"></div>
                             <p>
                                 <label for="<?php echo self::$opt_gdpr_consent_button; ?>">
-                                    <b class="chktitle">Privacy/GDPR - Consent Button Text:</b> <sup class="orange">NEW</sup>
+                                    <b class="chktitle">Privacy/GDPR - Consent Button Text:</b>
                                     This is the text for the red "Accept" button that appears with the above privacy/GDPR message:
                                 </label>
                                 <br>
@@ -3717,7 +3719,7 @@ class YouTubePrefs
                         <p>
                             <a target="_blank" href="<?php echo self::$epbase ?>/responsive-youtube-playlist-channel-gallery-for-wordpress.aspx">You can now make playlist embeds (and channel-playlist embeds) have a gallery layout &raquo;</a>. <strong>First, you must obtain your YouTube API key</strong>. 
                             Don't worry, it's an easy process. Just <a href="https://www.youtube.com/watch?v=6gD0X76-v_g" target="_blank">click this link &raquo;</a> and follow the video on that page to get your server API key. Since Google updates their API Key generation directions frequently, follow the general steps shown in the video.
-                            Then paste your API key in the "YouTube API Key" box at the top of this screen, and click the "Save Changes" button.
+                            Then paste your API key in the "API Key" tab, and click the "Save Changes" button.
                         </p>
 
                         <p>
@@ -4457,8 +4459,6 @@ class YouTubePrefs
         try
         {
             $input[self::$opt_modestbranding] = intval($input[self::$opt_modestbranding]);
-            $input[self::$opt_rel] = intval($input[self::$opt_rel]);
-            $input[self::$opt_showinfo] = intval($input[self::$opt_showinfo]);
             $input[self::$opt_responsive] = intval($input[self::$opt_responsive]);
             $input[self::$opt_responsive_all] = intval($input[self::$opt_responsive_all]);
 
@@ -4492,8 +4492,6 @@ class YouTubePrefs
         $result = array();
         $default = array(
             self::$opt_modestbranding => 0,
-            self::$opt_rel => 0,
-            self::$opt_showinfo => 0,
             self::$opt_responsive => 0,
             self::$opt_responsive_all => 0,
             self::$opt_gallery_pagesize => 15,
@@ -4671,14 +4669,6 @@ class YouTubePrefs
                                 <input value="1" name="<?php echo self::$opt_modestbranding; ?>" id="<?php echo self::$opt_modestbranding; ?>" <?php checked($all[self::$opt_modestbranding], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_modestbranding; ?>"><?php _e('<b class="chktitle">Modest Branding:</b> No YouTube logo will be shown on the control bar.  Instead, as required by YouTube, the logo will only show as a watermark when the video is paused/stopped.') ?></label>
                             </div>
-                            <div class="ytprefs-ob-setting yob-single yob-gallery">
-                                <input value="1" name="<?php echo self::$opt_rel; ?>" id="<?php echo self::$opt_rel; ?>" <?php checked($all[self::$opt_rel], 1); ?> type="checkbox" class="checkbox">
-                                <label for="<?php echo self::$opt_rel; ?>"><?php _e('<b class="chktitle">Related Videos:</b> Show related and recommended videos during pause and at the end of playback.') ?></label>
-                            </div>
-                            <div class="ytprefs-ob-setting yob-single yob-gallery yob-standalone yob-live">
-                                <input value="1" name="<?php echo self::$opt_showinfo; ?>" id="<?php echo self::$opt_showinfo; ?>" <?php checked($all[self::$opt_showinfo], 1); ?> type="checkbox" class="checkbox">
-                                <label for="<?php echo self::$opt_showinfo; ?>"><?php _e('<b class="chktitle">Show Title:</b> Show the video title and other info.') ?></label>
-                            </div>                            
                             <div class="ytprefs-ob-setting yob-single yob-gallery yob-standalone yob-live">
                                 <input value="1" name="<?php echo self::$opt_responsive; ?>" id="<?php echo self::$opt_responsive; ?>" <?php checked($all[self::$opt_responsive], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_responsive; ?>"><?php _e('<b class="chktitle">Responsive Video Sizing:</b> Make your videos responsive so that they dynamically fit in all screen sizes (smart phone, PC and tablet). NOTE: While this is checked, any custom hardcoded widths and heights you may have set will dynamically change too. <b>Do not check this if your theme already handles responsive video sizing.</b>') ?></label>
@@ -4731,7 +4721,7 @@ class YouTubePrefs
                             </div>
 
                             <div class="ytprefs-ob-setting yob-privacy">
-                                <b class="chktitle">YouTube API Loading:</b> <sup class="orange">NEW</sup> Choose when to load the YouTube API. The "Restricted" or "Never" options will help with GDPR compliance:
+                                <b class="chktitle">YouTube API Loading:</b> Choose when to load the YouTube API. The "Restricted" or "Never" options will help with GDPR compliance:
                                 <ul class="indent-option">
                                     <li><label><input type="radio" name="<?php echo self::$opt_ytapi_load ?>" value="light" <?php checked($all[self::$opt_ytapi_load], 'light'); ?> /> <em>Restricted</em> - (Recommended) Only load the API on pages that have a YouTube video.</label></li>
                                     <li><label><input type="radio" name="<?php echo self::$opt_ytapi_load ?>" value="never" <?php checked($all[self::$opt_ytapi_load], 'never'); ?> /> <em>Never</em> - Do not load the YouTube API. Note: The "Never" choice may break a few features such as Volume Initialization and Gallery Continuous/Auto Play.</label></li>
@@ -4743,14 +4733,14 @@ class YouTubePrefs
                             <div class="ytprefs-ob-setting yob-privacy">
                                 <input value="1" name="<?php echo self::$opt_gdpr_consent; ?>" id="<?php echo self::$opt_gdpr_consent; ?>" <?php checked($all[self::$opt_gdpr_consent], 1); ?> type="checkbox" class="checkbox">
                                 <label for="<?php echo self::$opt_gdpr_consent; ?>">
-                                    <b class="chktitle">Privacy/GDPR - Show Consent Message:</b> <sup class="orange">NEW</sup> Ask for consent before loading YouTube content. A message will be displayed in place of the YouTube video, as shown in the screenshot below. Once the visitor approves consent, the YouTube content will load. You can customize the message text and the button text in the next 2 options.
+                                    <b class="chktitle">Privacy/GDPR - Show Consent Message:</b> Ask for consent before loading YouTube content. A message will be displayed in place of the YouTube video, as shown in the screenshot below. Once the visitor approves consent, the YouTube content will load. You can customize the message text and the button text in the next 2 options.
                                 </label>
                             </div>
 
 
                             <div class="ytprefs-ob-setting yob-privacy">                                
                                 <label for="<?php echo self::$opt_gdpr_consent_message; ?>">
-                                    <b class="chktitle">Privacy/GDPR - Consent Message Text:</b> <sup class="orange">NEW</sup>
+                                    <b class="chktitle">Privacy/GDPR - Consent Message Text:</b>
                                     Below you can customize the message that will appear to visitors before they accept YouTube content:
                                 </label>
                                 <div class="clearboth"></div>
@@ -4774,7 +4764,7 @@ class YouTubePrefs
                             <div class="clearboth"></div>
                             <div class="ytprefs-ob-setting yob-privacy">
                                 <label for="<?php echo self::$opt_gdpr_consent_button; ?>">
-                                    <b class="chktitle">Privacy/GDPR - Consent Button Text:</b> <sup class="orange">NEW</sup>
+                                    <b class="chktitle">Privacy/GDPR - Consent Button Text:</b>
                                     This is the text for the red "Accept" button that appears with the above privacy/GDPR message:
                                 </label>
                                 <br>
@@ -4800,19 +4790,21 @@ class YouTubePrefs
                 </div>
                 <div class="ytprefs-ob-step ytprefs-ob-step3">
                     <div class="ytprefs-ob-content">
+                        <img class="wiztab-screenshots" src="<?php echo plugins_url('images/apikey-server.png', __FILE__) ?>">
                         <h2>
                             YouTube API Key
                         </h2>
                         <form id="form-onboarding-apikey">
                             <input type="hidden" name="action" value="my_embedplus_onboarding_save_apikey_ajax"/>
                             <p>
-                                Some features (such as galleries, and some wizard features) now require you to create a free YouTube API key from Google.
+                                Some features (such as galleries, and some wizard features) now require you to create a free YouTube API <strong>Server</strong> key from Google.
+                                Make sure it's a YouTube Data API v3 "Web Server" key as shown in the screenshot (i.e. not web browser or anything else).
                             </p>
                             <p>
                                 <a href="https://www.youtube.com/watch?v=6gD0X76-v_g" target="_blank">Click this link &raquo;</a> and follow the video to get your API key. Don't worry, it's an easy process.
                             </p>
-                            <p class="center">
-                                <input type="text" placeholder="Paste your YouTube API key here" name="<?php echo self::$opt_apikey; ?>" id="<?php echo self::$opt_apikey; ?>" value="<?php echo esc_attr(trim($all[self::$opt_apikey])); ?>" class="regular-text">
+                            <p>
+                                <input type="text" placeholder="Paste your YouTube API key here" name="<?php echo self::$opt_apikey; ?>" id="<?php echo self::$opt_apikey; ?>" value="<?php echo esc_attr(trim($all[self::$opt_apikey])); ?>" class="regular-text" style='max-width: 40%;'>
                             </p>                                
 
                             <div class="ytprefs-ob-nav">
@@ -5022,7 +5014,8 @@ class YouTubePrefs
             'epbase' => self::$epbase,
             'admin_url' => admin_url(),
             'vi_js_settings' => self::$alloptions[self::$opt_vi_js_settings],
-            'admin_url_ytprefs' => admin_url('admin.php?page=youtube-my-preferences')
+            'admin_url_ytprefs' => admin_url('admin.php?page=youtube-my-preferences'),
+            'admin_url_vi' => admin_url('admin.php?page=youtube-ep-vi')
                 //'epblogwidth' => self::get_blogwidth(),
                 //'epprokey' => self::$alloptions[self::$opt_pro],
                 //'epbasesite' => self::$epbase,
@@ -5230,6 +5223,43 @@ class YouTubePrefs
         $result['message'] = wp_kses_post($result['message']);
         echo json_encode($result);
         die();
+    }
+
+    public static function vi_notice_login_reminder()
+    {
+        if (filter_has_var(INPUT_COOKIE, 'vi_signup_attempt'))
+        {
+            $screen = get_current_screen();
+            $date_string = filter_input(INPUT_COOKIE, 'vi_signup_attempt', FILTER_SANITIZE_STRING);
+            $date_attempt = strtotime($date_string);
+            $date_wait = strtotime($date_string . ' + 7 days');
+
+            if (time() > $date_wait &&
+                    !self::vi_logged_in() &&
+                    in_array($screen->id, array('toplevel_page_youtube-my-preferences'))
+            )
+            {
+                ?>
+                <div class="notice notice-warning is-dismissible vi_notice_login_reminder">
+                    <p>
+                        It looks like you may have signed up for the vi monetization feature, but haven't completed the settings to receive revenue. Click the "Monetize" tab below to login and continue.
+                    </p>
+                </div>
+                <script>
+                    (function ($)
+                    {
+                        $(document).ready(function ()
+                        {
+                            $('.vi_notice_login_reminder').on('click', '.notice-dismiss', function ()
+                            {
+                                document.cookie = 'vi_signup_attempt=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                            });
+                        });
+                    })(jQuery);
+                </script>
+                <?php
+            }
+        }
     }
 
     private static function vi_login_valid(&$input)
@@ -5669,6 +5699,11 @@ class YouTubePrefs
             );
             $input = shortcode_atts($default, stripslashes_deep($_POST));
             $result = self::vi_adstxt_status_soft($input['current_adstxt']);
+
+            if (isset($result['code']) && intval($result['code']) < 0)
+            {
+                $result['token'] = self::$alloptions[self::$opt_vi_token];
+            }
         }
         else
         {
@@ -5691,7 +5726,7 @@ class YouTubePrefs
         {
             return array(
                 'code' => -1,
-                'message' => 'Sorry, your vi ads.txt info could not be retrieved. Please wait a few minutes and try again. Your ads.txt verification file will enable you to make money through vi. <a href="https://www.vi.ai/publisherfaq/?aid=WP_embedplus&utm_source=Wordpress&utm_medium=WP_embedplus" target="_blank">FAQ &raquo;</a>'
+                'message' => 'A quick reauthentication is needed to begin setting up your ads.txt file. First, log out of this Ads Settings page with the "Logout" button right above and then log back in with your vi login and password. Then come back to this tab for next steps. Your ads.txt verification file will enable you to make money through vi. <a href="https://www.vi.ai/publisherfaq/?aid=WP_embedplus&utm_source=Wordpress&utm_medium=WP_embedplus" target="_blank">FAQ &raquo;</a>'
             );
         }
         else
@@ -5711,8 +5746,9 @@ class YouTubePrefs
                     return array(
                         'code' => 0,
                         'message' => '<h3>Almost There!</h3> Looks like video intelligence has just updated its ad delivery partners. To get the most revenue out of your ads, open up your '
-                        . ' <a href="' . self::base_url() . '/ads.txt" target="_blank">ads.txt</a> file and replace the vi lines (ending in # 41b5eef6) with the new lines you see below. Then, refresh this page.'
-                        . '<code>' . $user_adstxt . '</code>'
+                        . ' <a href="' . self::base_url() . '/ads.txt" target="_blank">ads.txt</a> file and replace the vi lines (ending in # 41b5eef6) with the new lines you see below. Then, refresh this page. '
+                        . ' <strong>If we helped you with your ads.txt in the past, feel free to contact us to help out again with this update.</strong> '
+                        . '<code># video intelligence (vi.ai) ads.txt lines begin here:' . PHP_EOL . $user_adstxt . PHP_EOL . '# video intelligence (vi.ai) ads.txt lines end</code>'
                     );
                 }
                 else // add
@@ -5721,7 +5757,7 @@ class YouTubePrefs
                         'code' => 0,
                         'message' => '<h3>Almost There!</h3>'
                         . 'In your current <a href="' . self::base_url() . '/ads.txt" target="_blank">ads.txt</a> file, just add in the additional lines you see below. Then, refresh this page.'
-                        . '<code>' . $user_adstxt . '</code>'
+                        . '<code># video intelligence (vi.ai) ads.txt lines begin here:' . PHP_EOL . $user_adstxt . PHP_EOL . '# video intelligence (vi.ai) ads.txt lines end</code>'
                     );
                 }
             }
@@ -5740,7 +5776,7 @@ class YouTubePrefs
                 'code' => 0,
                 'message' => '<h3>Almost There!</h3>'
                 . 'You can <a class="button button-small" href="' . admin_url('admin.php') . '?ytvi_adstxt_download=1&key=' . urlencode(self::$alloptions[self::$opt_vi_token]) . '">download this ads.txt</a> file and upload it to your site root (or copy the same text below). Then, refresh this page to verify.'
-                . '<code>' . $user_adstxt . '</code>'
+                . '<code># video intelligence (vi.ai) ads.txt lines begin here:' . PHP_EOL . $user_adstxt . PHP_EOL . '# video intelligence (vi.ai) ads.txt lines end</code>'
             );
         }
     }
@@ -5807,6 +5843,8 @@ class YouTubePrefs
 
             $new_adstxt = $former_adstxt . (strlen($former_adstxt) > 0 ? PHP_EOL : '') . ($user_adstxt === false ? '' : $user_adstxt);
 
+            $new_adstxt = '# video intelligence (vi.ai) ads.txt lines begin here:' . PHP_EOL . $new_adstxt . PHP_EOL . '# video intelligence (vi.ai) ads.txt lines end';
+            
             header("Expires: 0");
             header("Cache-Control: no-cache, no-store, must-revalidate");
             header('Cache-Control: pre-check=0, post-check=0, max-age=0', false);
@@ -5830,7 +5868,7 @@ class YouTubePrefs
         ?>
         <h3 class="nav-tab-wrapper">
             <a class="nav-tab nav-tab-active" href="#jumphowitworks">How It Works</a>
-            <a class="nav-tab" href="#jumpdescription">Site Description</a>
+            <a class="nav-tab" href="#jumpdescription">Video Categories</a>
             <a class="nav-tab" href="#jumpappearance">Appearance</a>
             <a class="nav-tab" href="#jumpplacement">Placement</a>
             <a class="nav-tab nav-tab-adstxt" href="#jumpadstxt">Ads.txt Verification &nbsp;</a>
@@ -5941,7 +5979,7 @@ class YouTubePrefs
         $item[self::$opt_vi_js_settings]['iabCategory'] = sanitize_text_field($item[self::$opt_vi_js_settings]['iabCategory']);
         if (empty($item[self::$opt_vi_js_settings]['iabCategory']))
         {
-            $messages[] = 'Please choose a valid category.';
+            $messages[] = 'Please choose a valid IAB category under Video Categories.';
         }
         $item[self::$opt_vi_js_settings]['language'] = sanitize_text_field($item[self::$opt_vi_js_settings]['language']);
         if (empty($item[self::$opt_vi_js_settings]['language']))
@@ -5997,7 +6035,27 @@ class YouTubePrefs
     public static function vi_print_toggle_button()
     {
         ?>
-        <a class="button-primary ytvi-btn-toggle <?php echo self::$alloptions[self::$opt_vi_active] ? 'ytvi-btn-active' : 'ytvi-btn-inactive' ?>">vi ads are: <strong><?php echo self::$alloptions[self::$opt_vi_active] ? 'On' : 'Off' ?></strong></a>
+        <button <?php echo self::vi_script_setup_done() ? '' : ' disabled '; ?> class="button-primary ytvi-btn-toggle <?php echo self::$alloptions[self::$opt_vi_active] ? 'ytvi-btn-active' : 'ytvi-btn-inactive' ?>">
+            vi ads are: <strong><?php echo self::$alloptions[self::$opt_vi_active] ? 'On' : 'Off' ?></strong>
+            <?php
+            if (!self::vi_script_setup_done())
+            {
+                ?>
+                <div class="ytvi-notyet">
+                    <h3>Before you can turn on your ads:</h3>
+                    <ol class="list-ol">
+                        <li>Complete the <em>Video Categories, Appearance, and Placement</em> tabs.</li>
+                        <li>Then click on the <strong>Save Changes</strong> button in the bottom right of this screen.</li>
+                        <li>Then click the top right button to turn vi ads on.</li>
+                    </ol>
+                    <p>
+                        Once your ads are on, complete the <em>Ads.txt</em> tab to have your ads start earning revenue. Then the <em>Profile</em> tab shows you how to receive payments.
+                    </p>
+                </div>
+                <?php
+            }
+            ?>
+        </button>
         <?php
     }
 
@@ -6088,9 +6146,9 @@ class YouTubePrefs
                     <div class="vi-how-works" data-jump="#jumpdescription">
                         <div class="vi-num">1</div>
                         <img src="<?php echo plugins_url(self::$folder_name . '/images/icon-hw-description.png') ?>"/>
-                        <h3>Site Description</h3>
+                        <h3>Video Categories</h3>
                         <p>
-                            Describe your site with a few keywords to help match the right ads.
+                            Categorize your site to help match with the right ads.
                         </p>
                     </div>
                     <div class="vi-how-works" data-jump="#jumpappearance">
@@ -6144,23 +6202,16 @@ class YouTubePrefs
                 </section>
 
                 <section class="pattern" id="jumpdescription">
-                    <h2><span class="vi-num">1</span> Site Description</h2>
+                    <div class="adstxt-help">
+                        <img src="<?php echo plugins_url(self::$folder_name . '/images/adstxt-help.png') . '?ver=' . self::$version; ?>"/>
+                        Trouble getting content that fits your site, even with the proper settings above/below? Contact support at <strong><a href="mailto:ext@embedplus.com">ext@embedplus.com</a></strong>
+                    </div>
+                    <h2><span class="vi-num">1</span> Video Categories</h2>
                     <p>
                         Your video ad will be optimized to relate to your site's content. Note that the quality of the matches improves over time.
                     </p>
                     <table cellspacing="2" cellpadding="5" style="width: 100%;" class="form-table">
                         <tbody>
-                            <tr class="form-field">
-                                <th valign="top" scope="row">
-                                    <label for="<?php echo self::$opt_vi_js_settings ?>[keywords]">Keywords</label>
-                                    <small>Enter a few keywords that describe topics your visitors are likely to be interested in. <strong>Separate by commas.</strong>
-                                        Tip: Try to avoid terms that have multiple meanings; e.g., just the word "record" can refer to music records and even sports records.</small>
-                                </th>
-                                <td>
-                                    <input id="<?php echo self::$opt_vi_js_settings ?>[keywords]" name="<?php echo self::$opt_vi_js_settings ?>[keywords]" value="<?php echo esc_attr($item[self::$opt_vi_js_settings]['keywords']) ?>"
-                                           type="text" maxlength="200" placeholder="Example: cooking, baking, food, recipes, kitchen">
-                                </td>
-                            </tr>
                             <tr class="form-field">
                                 <th valign="top" scope="row">
                                     <label for="<?php echo self::$opt_vi_js_settings ?>[iabCategory]">IAB Category</label>
@@ -6590,6 +6641,17 @@ class YouTubePrefs
                                     </div>
                                 </td>
                             </tr>
+                            <tr class="form-field <?php echo empty($item[self::$opt_vi_js_settings]['keywords']) ? ' hidden ' : '' ?>">
+                                <th valign="top" scope="row">
+                                    <label for="<?php echo self::$opt_vi_js_settings ?>[keywords]">Keywords</label>
+                                    <small>Enter a few keywords that describe topics your visitors are likely to be interested in. <strong>Separate by commas.</strong>
+                                        Tip: Try to avoid terms that have multiple meanings; e.g., just the word "record" can refer to music records and even sports records.</small>
+                                </th>
+                                <td>
+                                    <input id="<?php echo self::$opt_vi_js_settings ?>[keywords]" name="<?php echo self::$opt_vi_js_settings ?>[keywords]" value="<?php echo esc_attr($item[self::$opt_vi_js_settings]['keywords']) ?>"
+                                           type="text" maxlength="200" placeholder="Example: cooking, baking, food, recipes, kitchen">
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </section>
@@ -6814,6 +6876,12 @@ margin: 0 auto;
 
 
                 <section class="pattern" id="jumpadstxt">
+                    <div class="adstxt-help">
+                        <img src="<?php echo plugins_url(self::$folder_name . '/images/adstxt-help.png') . '?ver=' . self::$version; ?>"/>
+                        <p>
+                            Trouble with your ads.txt verification? Contact support at <strong><a href="mailto:ext@embedplus.com">ext@embedplus.com</a></strong>
+                        </p>                        
+                    </div>
                     <h2><span class="vi-num">5</span> Ads.txt Verification</h2>
                     <p>
                         In order for your ads to start generating revenue, verify your ads.txt file:
@@ -6828,9 +6896,6 @@ margin: 0 auto;
                     <p>
                         <code class="adstxt-block">google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</code>
                     </p>                    
-                    <p>
-                        Trouble with your ads.txt verification? Contact support at <strong><a href="mailto:ext@embedplus.com">ext@embedplus.com</a></strong>
-                    </p>
                 </section>
 
 
@@ -7004,11 +7069,12 @@ margin: 0 auto;
                             </p>
                         </li>
                         <li>
-                            <h3>Why am I seeing ads that do not match my site’s topics?</h3>
+                            <h3>Why am I seeing ads that do not match my site's topics?</h3>
                             <ol>
+                                <li>Wait for 24 hours to give the video intelligence service time to learn more about your site.</li>
                                 <li>Check each category and its subcategories to see if there is a better fit for your site’s topics than your initial selections.</li>
-                                <li>Provide more keywords.</li>
-                                <li>If you’re still not seeing well-matched ads, it’s likely that your site’s topics are very specific or they are based on categories in which vi.ai is still building inventory.  In the meantime, try and find other categories that you think will be of interest to your audience.</li>
+                                <li>If you're still not seeing well-matched ads, it's likely that your site's topics are very specific or they are based on categories in which vi.ai is still building inventory.  In the meantime, try and find other categories that you think will be of interest to your audience.</li>
+                                <li>If all else fails, please <a href="#jumpsupport">contact support</a>.</li>
                             </ol>
                         </li>
                     </ul>

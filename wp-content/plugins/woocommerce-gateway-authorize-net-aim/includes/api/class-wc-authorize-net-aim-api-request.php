@@ -18,7 +18,7 @@
  *
  * @package   WC-Gateway-Authorize-Net-AIM/API/Request
  * @author    SkyVerge
- * @copyright Copyright (c) 2011-2018, SkyVerge, Inc.
+ * @copyright Copyright (c) 2011-2019, SkyVerge, Inc.
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
@@ -307,8 +307,8 @@ class WC_Authorize_Net_AIM_API_Request extends Framework\SV_WC_API_XML_Request i
 
 				$line_items[] = array(
 					'itemId'      => $item->id,
-					'name'        => Framework\SV_WC_Helper::str_to_sane_utf8( Framework\SV_WC_Helper::str_truncate( $item->name, 31 ) ),
-					'description' => Framework\SV_WC_Helper::str_to_sane_utf8( Framework\SV_WC_Helper::str_truncate( $item->description, 255 ) ),
+					'name'        => Framework\SV_WC_Helper::str_to_sane_utf8( Framework\SV_WC_Helper::str_truncate( htmlentities( $item->name, ENT_QUOTES, 'UTF-8' ), 31 ) ),
+					'description' => Framework\SV_WC_Helper::str_to_sane_utf8( Framework\SV_WC_Helper::str_truncate( htmlentities( $item->description, ENT_QUOTES, 'UTF-8' ), 255 ) ),
 					'quantity'    => $item->quantity,
 					'unitPrice'   => Framework\SV_WC_Helper::number_format( $item->item_total ),
 				);

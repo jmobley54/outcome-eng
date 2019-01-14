@@ -1,0 +1,6 @@
+== OLD Changelog Entries ==
+
+= 1.0 =
+* First Contact Form to Email stable version released.
+* More configuration options added on the contact form settings area.
+

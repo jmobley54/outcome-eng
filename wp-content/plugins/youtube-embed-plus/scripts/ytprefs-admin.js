@@ -478,6 +478,10 @@
                                             $('.ytvi-step-2').show('fade', {}, 500);
                                         });
                                     }, 3000);
+
+                                    var date_attempt = new Date(), date_expire = new Date();
+                                    date_expire.setTime(date_expire.getTime() + (365 * 24 * 60 * 60 * 1000));
+                                    document.cookie = "vi_signup_attempt=" + date_attempt.toUTCString() + ";expires=" + date_expire.toUTCString() + ";path=" + window._EPYTA_.admin_url;
                                 }
                                 else if (response.type === 'error')
                                 {
@@ -561,6 +565,7 @@
                                 {
                                     $('.ytvi-login-loading').hide('fade', {}, 500, function ()
                                     {
+                                        document.cookie = 'vi_signup_attempt=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
                                         $('.ytvi-login-success-message').html(response.message);
                                         $('.ytvi-login-success').show('fade', {}, 500, function ()
                                         {});
