@@ -1,0 +1,7 @@
+name: outcome-eng
+recipe: pantheon
+config:
+  webroot: .
+  framework: wordpress
+  site: outcome-eng
+  id: d99d3aac-bbd8-4b2d-98a0-9938b367f0a7
